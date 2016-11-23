@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1A1DDF493A002A0ED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E191DDF493A002A0ED0 /* ViewController.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
@@ -18,6 +19,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
+		4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.debug.xcconfig"; sourceTree = "<group>"; };
+		B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DungeonsAndCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E191DDF493A002A0ED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,17 +39,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		28662B0E9030E8BC112ECADE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		502433B368CDF98578ED3261 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */,
+				09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		D14E4E0B1DDF493A002A0ED0 = {
 			isa = PBXGroup;
 			children = (
 				D14E4E161DDF493A002A0ED0 /* DungeonsAndCards */,
 				D14E4E151DDF493A002A0ED0 /* Products */,
+				502433B368CDF98578ED3261 /* Pods */,
+				28662B0E9030E8BC112ECADE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -74,11 +98,19 @@
 		D1D014E11DE5C4BE00E52C03 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D1EF4C651DE5E08000C95AB8 /* Data */,
 				D1D014E21DE5C4CC00E52C03 /* Game.swift */,
 				D1D014E41DE5C4FB00E52C03 /* Party.swift */,
 				D1D014E61DE5C52000E52C03 /* Hero.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D1EF4C651DE5E08000C95AB8 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -88,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D14E4E261DDF493A002A0ED0 /* Build configuration list for PBXNativeTarget "DungeonsAndCards" */;
 			buildPhases = (
+				69971ECA124B85730E21D616 /* [CP] Check Pods Manifest.lock */,
 				D14E4E101DDF493A002A0ED0 /* Sources */,
 				D14E4E111DDF493A002A0ED0 /* Frameworks */,
 				D14E4E121DDF493A002A0ED0 /* Resources */,
+				B5EC3D1E56EB5EA3403462E1 /* [CP] Embed Pods Frameworks */,
+				53D038E110883A0C4E5BC9CE /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -148,6 +183,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		53D038E110883A0C4E5BC9CE /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		69971ECA124B85730E21D616 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		B5EC3D1E56EB5EA3403462E1 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D14E4E101DDF493A002A0ED0 /* Sources */ = {
@@ -279,6 +362,7 @@
 		};
 		D14E4E271DDF493A002A0ED0 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FWD9V5VYJ2;
@@ -292,6 +376,7 @@
 		};
 		D14E4E281DDF493A002A0ED0 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = FWD9V5VYJ2;
