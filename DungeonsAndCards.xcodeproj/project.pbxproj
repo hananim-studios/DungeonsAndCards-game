@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
+		C68475201DE714290081DA95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684751E1DE714290081DA95 /* Interface.storyboard */; };
+		C68475221DE714290081DA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68475211DE714290081DA95 /* Assets.xcassets */; };
+		C68475291DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		C68475301DE714290081DA95 /* InterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684752F1DE714290081DA95 /* InterfaceController.swift */; };
+		C68475321DE714290081DA95 /* ExtensionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475311DE714290081DA95 /* ExtensionDelegate.swift */; };
+		C68475341DE714290081DA95 /* NotificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475331DE714290081DA95 /* NotificationController.swift */; };
+		C68475361DE714290081DA95 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475351DE714290081DA95 /* ComplicationController.swift */; };
+		C68475381DE714290081DA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68475371DE714290081DA95 /* Assets.xcassets */; };
+		C684753C1DE714290081DA95 /* DungeonsAndCardsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1A1DDF493A002A0ED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E191DDF493A002A0ED0 /* ViewController.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
@@ -18,10 +27,64 @@
 		D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E61DE5C52000E52C03 /* Hero.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		C684752A1DE714290081DA95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14E4E0C1DDF493A002A0ED0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C68475271DE714290081DA95;
+			remoteInfo = "DungeonsAndCardsWatch Extension";
+		};
+		C684753A1DE714290081DA95 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D14E4E0C1DDF493A002A0ED0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = C684751B1DE714290081DA95;
+			remoteInfo = DungeonsAndCardsWatch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		C68475421DE714290081DA95 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				C68475291DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68475441DE714290081DA95 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+				C684753C1DE714290081DA95 /* DungeonsAndCardsWatch.app in Embed Watch Content */,
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
 		4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.debug.xcconfig"; sourceTree = "<group>"; };
 		B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DungeonsAndCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCardsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C684751F1DE714290081DA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		C68475211DE714290081DA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C68475231DE714290081DA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "DungeonsAndCardsWatch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C684752E1DE714290081DA95 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		C684752F1DE714290081DA95 /* InterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterfaceController.swift; sourceTree = "<group>"; };
+		C68475311DE714290081DA95 /* ExtensionDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionDelegate.swift; sourceTree = "<group>"; };
+		C68475331DE714290081DA95 /* NotificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationController.swift; sourceTree = "<group>"; };
+		C68475351DE714290081DA95 /* ComplicationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationController.swift; sourceTree = "<group>"; };
+		C68475371DE714290081DA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C68475391DE714290081DA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E191DDF493A002A0ED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -35,6 +98,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		C68475251DE714290081DA95 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D14E4E111DDF493A002A0ED0 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -63,10 +133,44 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C684751D1DE714290081DA95 /* DungeonsAndCardsWatch */ = {
+			isa = PBXGroup;
+			children = (
+				C684751E1DE714290081DA95 /* Interface.storyboard */,
+				C68475211DE714290081DA95 /* Assets.xcassets */,
+				C68475231DE714290081DA95 /* Info.plist */,
+			);
+			path = DungeonsAndCardsWatch;
+			sourceTree = "<group>";
+		};
+		C684752C1DE714290081DA95 /* DungeonsAndCardsWatch Extension */ = {
+			isa = PBXGroup;
+			children = (
+				C684752F1DE714290081DA95 /* InterfaceController.swift */,
+				C68475311DE714290081DA95 /* ExtensionDelegate.swift */,
+				C68475331DE714290081DA95 /* NotificationController.swift */,
+				C68475351DE714290081DA95 /* ComplicationController.swift */,
+				C68475371DE714290081DA95 /* Assets.xcassets */,
+				C68475391DE714290081DA95 /* Info.plist */,
+				C684752D1DE714290081DA95 /* Supporting Files */,
+			);
+			path = "DungeonsAndCardsWatch Extension";
+			sourceTree = "<group>";
+		};
+		C684752D1DE714290081DA95 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C684752E1DE714290081DA95 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D14E4E0B1DDF493A002A0ED0 = {
 			isa = PBXGroup;
 			children = (
 				D14E4E161DDF493A002A0ED0 /* DungeonsAndCards */,
+				C684751D1DE714290081DA95 /* DungeonsAndCardsWatch */,
+				C684752C1DE714290081DA95 /* DungeonsAndCardsWatch Extension */,
 				D14E4E151DDF493A002A0ED0 /* Products */,
 				502433B368CDF98578ED3261 /* Pods */,
 				28662B0E9030E8BC112ECADE /* Frameworks */,
@@ -77,6 +181,8 @@
 			isa = PBXGroup;
 			children = (
 				D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */,
+				C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */,
+				C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +222,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		C684751B1DE714290081DA95 /* DungeonsAndCardsWatch */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C68475431DE714290081DA95 /* Build configuration list for PBXNativeTarget "DungeonsAndCardsWatch" */;
+			buildPhases = (
+				C684751A1DE714290081DA95 /* Resources */,
+				C68475421DE714290081DA95 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				C684752B1DE714290081DA95 /* PBXTargetDependency */,
+			);
+			name = DungeonsAndCardsWatch;
+			productName = DungeonsAndCardsWatch;
+			productReference = C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */;
+			productType = "com.apple.product-type.application.watchapp2";
+		};
+		C68475271DE714290081DA95 /* DungeonsAndCardsWatch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C68475411DE714290081DA95 /* Build configuration list for PBXNativeTarget "DungeonsAndCardsWatch Extension" */;
+			buildPhases = (
+				C68475241DE714290081DA95 /* Sources */,
+				C68475251DE714290081DA95 /* Frameworks */,
+				C68475261DE714290081DA95 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DungeonsAndCardsWatch Extension";
+			productName = "DungeonsAndCardsWatch Extension";
+			productReference = C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */;
+			productType = "com.apple.product-type.watchkit2-extension";
+		};
 		D14E4E131DDF493A002A0ED0 /* DungeonsAndCards */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D14E4E261DDF493A002A0ED0 /* Build configuration list for PBXNativeTarget "DungeonsAndCards" */;
@@ -126,10 +266,12 @@
 				D14E4E121DDF493A002A0ED0 /* Resources */,
 				B5EC3D1E56EB5EA3403462E1 /* [CP] Embed Pods Frameworks */,
 				53D038E110883A0C4E5BC9CE /* [CP] Copy Pods Resources */,
+				C68475441DE714290081DA95 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				C684753B1DE714290081DA95 /* PBXTargetDependency */,
 			);
 			name = DungeonsAndCards;
 			productName = DungeonsAndCards;
@@ -146,6 +288,16 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = hananim;
 				TargetAttributes = {
+					C684751B1DE714290081DA95 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = FWD9V5VYJ2;
+						ProvisioningStyle = Automatic;
+					};
+					C68475271DE714290081DA95 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = GRKYXDG5QL;
+						ProvisioningStyle = Automatic;
+					};
 					D14E4E131DDF493A002A0ED0 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = FWD9V5VYJ2;
@@ -167,11 +319,30 @@
 			projectRoot = "";
 			targets = (
 				D14E4E131DDF493A002A0ED0 /* DungeonsAndCards */,
+				C684751B1DE714290081DA95 /* DungeonsAndCardsWatch */,
+				C68475271DE714290081DA95 /* DungeonsAndCardsWatch Extension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		C684751A1DE714290081DA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68475221DE714290081DA95 /* Assets.xcassets in Resources */,
+				C68475201DE714290081DA95 /* Interface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C68475261DE714290081DA95 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68475381DE714290081DA95 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D14E4E121DDF493A002A0ED0 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -233,6 +404,17 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		C68475241DE714290081DA95 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C68475341DE714290081DA95 /* NotificationController.swift in Sources */,
+				C68475361DE714290081DA95 /* ComplicationController.swift in Sources */,
+				C68475321DE714290081DA95 /* ExtensionDelegate.swift in Sources */,
+				C68475301DE714290081DA95 /* InterfaceController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D14E4E101DDF493A002A0ED0 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -247,7 +429,28 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		C684752B1DE714290081DA95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C68475271DE714290081DA95 /* DungeonsAndCardsWatch Extension */;
+			targetProxy = C684752A1DE714290081DA95 /* PBXContainerItemProxy */;
+		};
+		C684753B1DE714290081DA95 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = C684751B1DE714290081DA95 /* DungeonsAndCardsWatch */;
+			targetProxy = C684753A1DE714290081DA95 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
+		C684751E1DE714290081DA95 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				C684751F1DE714290081DA95 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
 		D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -267,6 +470,76 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		C684753D1DE714290081DA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				IBSC_MODULE = DungeonsAndCardsWatch_Extension;
+				INFOPLIST_FILE = DungeonsAndCardsWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		C684753E1DE714290081DA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				IBSC_MODULE = DungeonsAndCardsWatch_Extension;
+				INFOPLIST_FILE = DungeonsAndCardsWatch/Info.plist;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
+		C684753F1DE714290081DA95 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Debug;
+		};
+		C68475401DE714290081DA95 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+			};
+			name = Release;
+		};
 		D14E4E241DDF493A002A0ED0 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -391,6 +664,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		C68475411DE714290081DA95 /* Build configuration list for PBXNativeTarget "DungeonsAndCardsWatch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C684753F1DE714290081DA95 /* Debug */,
+				C68475401DE714290081DA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		C68475431DE714290081DA95 /* Build configuration list for PBXNativeTarget "DungeonsAndCardsWatch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C684753D1DE714290081DA95 /* Debug */,
+				C684753E1DE714290081DA95 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D14E4E0F1DDF493A002A0ED0 /* Build configuration list for PBXProject "DungeonsAndCards" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
