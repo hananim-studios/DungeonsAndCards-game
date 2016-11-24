@@ -19,8 +19,10 @@
 		C684753C1DE714290081DA95 /* DungeonsAndCardsWatch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */; };
 		C684754C1DE715BA0081DA95 /* DungeonsAndCardsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684754B1DE715BA0081DA95 /* DungeonsAndCardsTests.swift */; };
 		C684755A1DE716110081DA95 /* DungeonsAndCardsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475591DE716110081DA95 /* DungeonsAndCardsUITests.swift */; };
+		C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */; };
+		C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475661DE71C450081DA95 /* IntroViewController.swift */; };
+		C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684756E1DE7301F0081DA95 /* CustomSegue.swift */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
-		D14E4E1A1DDF493A002A0ED0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E191DDF493A002A0ED0 /* ViewController.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
 		D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E201DDF493A002A0ED0 /* LaunchScreen.storyboard */; };
@@ -107,9 +109,11 @@
 		C68475571DE716110081DA95 /* DungeonsAndCardsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DungeonsAndCardsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C68475591DE716110081DA95 /* DungeonsAndCardsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DungeonsAndCardsUITests.swift; sourceTree = "<group>"; };
 		C684755B1DE716110081DA95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
+		C68475661DE71C450081DA95 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
+		C684756E1DE7301F0081DA95 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		D14E4E191DDF493A002A0ED0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D14E4E1C1DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D14E4E211DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -219,6 +223,30 @@
 			path = DungeonsAndCardsUITests;
 			sourceTree = "<group>";
 		};
+		C68475631DE71B0A0081DA95 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */,
+				C68475661DE71C450081DA95 /* IntroViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C68475701DE7344D0081DA95 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C684756E1DE7301F0081DA95 /* CustomSegue.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		C68475711DE7345A0081DA95 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		D14E4E0B1DDF493A002A0ED0 = {
 			isa = PBXGroup;
 			children = (
@@ -248,9 +276,11 @@
 		D14E4E161DDF493A002A0ED0 /* DungeonsAndCards */ = {
 			isa = PBXGroup;
 			children = (
+				C68475711DE7345A0081DA95 /* Shared */,
+				C68475701DE7344D0081DA95 /* Controller */,
+				C68475631DE71B0A0081DA95 /* View */,
 				D1D014E11DE5C4BE00E52C03 /* Model */,
 				D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */,
-				D14E4E191DDF493A002A0ED0 /* ViewController.swift */,
 				D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */,
 				D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */,
 				D14E4E201DDF493A002A0ED0 /* LaunchScreen.storyboard */,
@@ -558,8 +588,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */,
-				D14E4E1A1DDF493A002A0ED0 /* ViewController.swift in Sources */,
+				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,
+				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
+				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,
 			);
