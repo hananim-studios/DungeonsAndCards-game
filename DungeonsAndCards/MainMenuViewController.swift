@@ -16,16 +16,10 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var continueGameButton: UIButton!
     @IBOutlet weak var newGameButton: UIButton!
     
-    //MARK: - Button Actions
-    @IBAction func continueGameButtonPressed(_ sender: Any) {
-    }
-    
-    @IBAction func newGameButtonPressed(_ sender: Any) {
-        performSegue(withIdentifier: "mainMenuToIntro", sender: nil)
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        
+        self.continueGameButton.isHidden = true;
     }
     
     override func viewDidLoad() {
@@ -34,6 +28,14 @@ class MainMenuViewController: UIViewController {
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    }
+    
+    //MARK: - Button Actions
+    @IBAction func continueGameButtonPressed(_ sender: Any) {
+    }
+    
+    @IBAction func newGameButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "mainMenuToIntro", sender: nil)
     }
     
     // MARK: - Navigation

@@ -22,6 +22,7 @@
 		C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */; };
 		C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475661DE71C450081DA95 /* IntroViewController.swift */; };
 		C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684756E1DE7301F0081DA95 /* CustomSegue.swift */; };
+		C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475881DE85C130081DA95 /* ManagePartyViewController.swift */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
@@ -112,6 +113,7 @@
 		C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		C68475661DE71C450081DA95 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		C684756E1DE7301F0081DA95 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
+		C68475881DE85C130081DA95 /* ManagePartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePartyViewController.swift; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E1C1DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 			children = (
 				C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */,
 				C68475661DE71C450081DA95 /* IntroViewController.swift */,
+				C68475881DE85C130081DA95 /* ManagePartyViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -589,6 +592,7 @@
 			files = (
 				D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */,
 				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
+				C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,
 				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
