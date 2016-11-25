@@ -11,18 +11,22 @@ import UIKit
 class IntroViewController: UIViewController {
 
     @IBOutlet weak var backgroundImage: UIImageView!
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
+
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
+    @IBAction func skipIntroPressed(_ sender: Any) {
+        performSegue(withIdentifier: "IntroToManageParty", sender: nil)
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue is CustomSegue {
+            (segue as! CustomSegue).animationType = .fade
+        }
     }
     
-
 }
