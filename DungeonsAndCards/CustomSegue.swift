@@ -15,6 +15,7 @@ enum CustomSegueAnimation {
     case growScale
     case cornerRotate
     case fade
+    case slowFade
 }
 
 // MARK: Segue class
@@ -34,6 +35,8 @@ class CustomSegue: UIStoryboardSegue {
             animateCornerRotate()
         case .fade:
             animateFade()
+        case .slowFade:
+            animateSlowFade()
         }
     }
     
@@ -143,7 +146,26 @@ class CustomSegue: UIStoryboardSegue {
             let toVC = self.destination
             fromVC.present(toVC, animated: false, completion: nil)
         })
-    }}
+    }
+
+    private func animateSlowFade() {
+        let toViewController = destination
+        let fromViewController = source
+        
+        let containerView = fromViewController.view.superview
+        toViewController.view.alpha = 0
+        containerView?.addSubview(toViewController.view)
+        
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+            toViewController.view.alpha = 1
+        }, completion: { finished in
+            let fromVC = self.source
+            let toVC = self.destination
+            fromVC.present(toVC, animated: false, completion: nil)
+        })
+    }
+
+}
 
 // MARK: Unwind Segue class
 class CustomUnwindSegue: UIStoryboardSegue {
@@ -162,6 +184,8 @@ class CustomUnwindSegue: UIStoryboardSegue {
             animateCornerRotate()
         case .fade:
             animateFade()
+        case .slowFade:
+            animateSlowFade()
         }
     }
     
@@ -255,6 +279,23 @@ class CustomUnwindSegue: UIStoryboardSegue {
         containerView?.addSubview(toViewController.view)
         
         UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+            toViewController.view.alpha = 0
+        }, completion: { finished in
+            let fromVC = self.source
+            let toVC = self.destination
+            fromVC.present(toVC, animated: false, completion: nil)
+        })
+    }
+    
+    private func animateSlowFade() {
+        let toViewController = destination
+        let fromViewController = source
+        
+        let containerView = fromViewController.view.superview
+        toViewController.view.alpha = 1
+        containerView?.addSubview(toViewController.view)
+        
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
             toViewController.view.alpha = 0
         }, completion: { finished in
             let fromVC = self.source

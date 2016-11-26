@@ -18,7 +18,7 @@ class IntroViewController: UIViewController {
 
     }
 
-    @IBAction func skipIntroPressed(_ sender: Any) {
+    @IBAction func skipIntroButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "IntroToManageParty", sender: nil)
     }
     
