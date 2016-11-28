@@ -10,40 +10,76 @@ import UIKit
 
 class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     
+    //MARK - Variables
+    private let chooseCardsCellIdentifier = "chooseCardsCollectionCell"
+    private let setCardsCellIdentifier = "setCardsCollectionCell"
+    
+    //MARK - IBOutlets
+    @IBOutlet weak var setCardsCollectionView: UICollectionView!
+    @IBOutlet weak var chooseCardsCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var collectionView: UICollectionView!
-    private let cellIdentifier = "CollectionCell"
-
+    
+    //MARK - ViewController
     override func viewDidAppear(_ animated: Bool) {
-        collectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: UICollectionViewScrollPosition.centeredHorizontally, animated: false)
+        chooseCardsCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
+        setCardsCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        collectionView.backgroundColor = UIColor.clear
-        collectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
+        chooseCardsCollectionView.tag = 0
+        setCardsCollectionView.tag = 1
         
-        collectionView.delegate = self
-        collectionView.dataSource = self
+        chooseCardsCollectionView.backgroundColor = UIColor.clear
+        chooseCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
+        
+        setCardsCollectionView.backgroundColor = UIColor.clear
+        setCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
+        
+        chooseCardsCollectionView.delegate = self
+        chooseCardsCollectionView.dataSource = self
+        
+        setCardsCollectionView.delegate = self
+        setCardsCollectionView.dataSource = self
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
     
+    //MARK - CollectionView Delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        
+        if collectionView.tag == 0 {
+            //Choose Cards Collection View
+            return 5
+        }
+        else {
+            //Set Cards Collection View
+            return 5
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell: AnyObject = collectionView.dequeueReusableCell(withReuseIdentifier: cellIdentifier, for: indexPath as IndexPath)
         
-        return cell as! UICollectionViewCell
+        if collectionView.tag == 0 {
+            //Choose Cards Collection View
+            let cell: AnyObject = collectionView.dequeueReusableCell(withReuseIdentifier: chooseCardsCellIdentifier, for: indexPath as IndexPath)
+            return cell as! UICollectionViewCell
+        }
+        else {
+            //Set Cards Collection View
+            let cell: AnyObject = collectionView.dequeueReusableCell(withReuseIdentifier: setCardsCellIdentifier, for: indexPath as IndexPath)
+            return cell as! UICollectionViewCell
+        }
     }
     
+    //MARK - ScrollView Delegates
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        collectionView.scaledVisibleCells()
+        chooseCardsCollectionView.scaledVisibleCells()
+        setCardsCollectionView.scaledVisibleCells()
     }
     
     // MARK: - Navigation
@@ -53,5 +89,6 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         }
     }
  
-
+    // MARK: - Convenience Methods
+    
 }
