@@ -18,7 +18,7 @@ class MainMenuViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        self.newGameButton.alpha = 1;
         self.continueGameButton.isHidden = true;
     }
     
@@ -36,6 +36,10 @@ class MainMenuViewController: UIViewController {
     
     @IBAction func newGameButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "mainMenuToIntro", sender: nil)
+        
+        UIView.animate(withDuration: 0.1, animations:{
+           self.newGameButton.alpha = 0.0
+        })
     }
     
     // MARK: - Navigation

@@ -20,13 +20,12 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         collectionView.backgroundColor = UIColor.clear
         collectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
         
         collectionView.delegate = self
         collectionView.dataSource = self
-        
-
     }
 
     override func didReceiveMemoryWarning() {
