@@ -16,6 +16,7 @@ class MainMenuViewController: UIViewController {
     @IBOutlet weak var continueGameButton: UIButton!
     @IBOutlet weak var newGameButton: UIButton!
     
+    //MARK: - ViewController
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.newGameButton.alpha = 1;

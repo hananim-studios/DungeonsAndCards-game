@@ -10,14 +10,18 @@ import UIKit
 
 class IntroViewController: UIViewController {
 
+    //MARK - Variables
+    
+    //MARK - IBOutlets
     @IBOutlet weak var backgroundImage: UIImageView!
 
-    
+    //MARK - ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
 
     }
-
+    
+    //MARK: - Button Actions
     @IBAction func skipIntroButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "IntroToManageParty", sender: nil)
     }
