@@ -92,8 +92,28 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     
     //MARK - UICollectionViewFlowLayoutDelegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        let screenSize = UIScreen.main.bounds.width
+        let collectionSize = collectionView.contentSize.width
+        let leftInset = (screenSize - collectionSize)/2
+        let rightInset = leftInset
+        print(rightInset)
+        return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        return UIEdgeInsetsMake(0, 0, 0, 0)
+        if collectionView.tag == 0 {
+            //chooseCardsCollectionView
+            let width = collectionView.bounds.width
+            let height = 0.8*collectionView.bounds.height
+            return CGSize(width: CGFloat(Float(width)/Float(arraySize)), height: height)
+        }
+        else {
+            //setCardsCollectionView
+            let width = collectionView.bounds.width
+            let height = 0.8*collectionView.bounds.height
+            return CGSize(width: 0.80*CGFloat(Float(width)/Float(arraySize)), height: height)
+        }
     }
     
     //MARK - ScrollView Delegates
