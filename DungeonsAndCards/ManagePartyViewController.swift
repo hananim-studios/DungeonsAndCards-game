@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
+class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    let arraySize = 3
     
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -39,10 +41,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         chooseCardsCollectionView.backgroundColor = UIColor.clear
         chooseCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 2.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
         
-        UIView.animate(withDuration: 0.0, delay: 5.0, options: [], animations: {
-            self.setCardsCollectionView.backgroundColor = UIColor.clear
-            self.setCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
-        }, completion: nil)
+        setCardsCollectionView.backgroundColor = UIColor.clear
+        setCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
         
         chooseCardsCollectionView.delegate = self
         chooseCardsCollectionView.dataSource = self
@@ -66,11 +66,11 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView.tag == 0 {
             //Choose Cards Collection View
-            return 5
+            return arraySize
         }
         else {
             //Set Cards Collection View
-            return 5
+            return arraySize
         }
         
     }
