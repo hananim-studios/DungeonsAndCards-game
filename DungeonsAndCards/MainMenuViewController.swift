@@ -11,7 +11,7 @@ import UIKit
 class MainMenuViewController: UIViewController {
 
     // MARK: - Variables
-    
+    override var prefersStatusBarHidden: Bool{ return true }
     // MARK: - IBOutlets
     @IBOutlet weak var continueGameButton: UIButton!
     @IBOutlet weak var newGameButton: UIButton!
@@ -49,7 +49,5 @@ class MainMenuViewController: UIViewController {
             (segue as! CustomSegue).animationType = .slowFade
         }
     }
-    
- 
 
 }
