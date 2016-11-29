@@ -9,5 +9,5 @@
 import Foundation
 
 class Party {
-    let Hero : (slot1: Hero?, slot2: Hero?, slot3: Hero?) = (nil, nil, nil)
+    var Heroes : [Hero?] = []
 }

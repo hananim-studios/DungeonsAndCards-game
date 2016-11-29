@@ -13,4 +13,8 @@ class Hero {
     
     var attack: Int = 0
     var health: (current: Int, total: Int) = (0, 0)
+    
+    init(withTemplate template: String) {
+        self.template = template
+    }
 }
