@@ -24,6 +24,8 @@
 		C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684756E1DE7301F0081DA95 /* CustomSegue.swift */; };
 		C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475881DE85C130081DA95 /* ManagePartyViewController.swift */; };
 		C6AD7AAC1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */; };
+		C6EB01F01DEC64F0004129A7 /* MorrisRoman-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6EB01EE1DEC64F0004129A7 /* MorrisRoman-Black.ttf */; };
+		C6EB01F11DEC64F0004129A7 /* MorrisRomanAlternate-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C6EB01EF1DEC64F0004129A7 /* MorrisRomanAlternate-Black.ttf */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
@@ -116,6 +118,8 @@
 		C684756E1DE7301F0081DA95 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		C68475881DE85C130081DA95 /* ManagePartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePartyViewController.swift; sourceTree = "<group>"; };
 		C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledVisibleCellsCollectionView.swift; sourceTree = "<group>"; };
+		C6EB01EE1DEC64F0004129A7 /* MorrisRoman-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRoman-Black.ttf"; sourceTree = "<group>"; };
+		C6EB01EF1DEC64F0004129A7 /* MorrisRomanAlternate-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRomanAlternate-Black.ttf"; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E1C1DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -252,9 +256,19 @@
 			name = Shared;
 			sourceTree = "<group>";
 		};
+		C6EB01ED1DEC64D6004129A7 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C6EB01EE1DEC64F0004129A7 /* MorrisRoman-Black.ttf */,
+				C6EB01EF1DEC64F0004129A7 /* MorrisRomanAlternate-Black.ttf */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		D14E4E0B1DDF493A002A0ED0 = {
 			isa = PBXGroup;
 			children = (
+				C6EB01ED1DEC64D6004129A7 /* Supporting Files */,
 				C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */,
 				D14E4E161DDF493A002A0ED0 /* DungeonsAndCards */,
 				C684751D1DE714290081DA95 /* DungeonsAndCardsWatch */,
@@ -505,8 +519,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6EB01F01DEC64F0004129A7 /* MorrisRoman-Black.ttf in Resources */,
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
+				C6EB01F11DEC64F0004129A7 /* MorrisRomanAlternate-Black.ttf in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

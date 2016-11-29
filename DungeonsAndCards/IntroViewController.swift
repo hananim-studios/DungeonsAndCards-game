@@ -11,7 +11,8 @@ import UIKit
 class IntroViewController: UIViewController {
 
     //MARK - Variables
-    
+    override var prefersStatusBarHidden: Bool{ return true }
+
     //MARK - IBOutlets
     @IBOutlet weak var backgroundImage: UIImageView!
 
@@ -21,7 +22,7 @@ class IntroViewController: UIViewController {
 
     }
     
-    //MARK: - Button Actions
+    //MARK: - IBOulet Actions
     @IBAction func skipIntroButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "IntroToManageParty", sender: nil)
     }

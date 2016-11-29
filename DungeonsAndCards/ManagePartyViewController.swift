@@ -11,6 +11,7 @@ import UIKit
 class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate {
     
     //MARK - Variables
+    override var prefersStatusBarHidden: Bool{ return true }
     private let chooseCardsCellIdentifier = "chooseCardsCollectionCell"
     private let setCardsCellIdentifier = "setCardsCollectionCell"
     
@@ -18,9 +19,13 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var setCardsCollectionView: UICollectionView!
     @IBOutlet weak var chooseCardsCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var nextButton: UIButton!
     
     //MARK - ViewController
     override func viewDidAppear(_ animated: Bool) {
+        
+        
         chooseCardsCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
         setCardsCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
     }
@@ -32,10 +37,12 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         setCardsCollectionView.tag = 1
         
         chooseCardsCollectionView.backgroundColor = UIColor.clear
-        chooseCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
+        chooseCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 2.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
         
-        setCardsCollectionView.backgroundColor = UIColor.clear
-        setCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
+        UIView.animate(withDuration: 0.0, delay: 5.0, options: [], animations: {
+            self.setCardsCollectionView.backgroundColor = UIColor.clear
+            self.setCardsCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
+        }, completion: nil)
         
         chooseCardsCollectionView.delegate = self
         chooseCardsCollectionView.dataSource = self
@@ -47,6 +54,12 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    //MARK: - IBOulet Actions
+    @IBAction func nextButtonPressed(_ sender: UIButton) {
+    }
+    
+    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+    }    
     
     //MARK - CollectionView Delegates
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
