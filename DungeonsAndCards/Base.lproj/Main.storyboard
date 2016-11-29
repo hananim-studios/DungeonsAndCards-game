@@ -132,7 +132,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="chooseCardsCollectionCell" id="X6J-B9-nR1">
-                                        <rect key="frame" x="0.0" y="4" width="137" height="216"/>
+                                        <rect key="frame" x="0.0" y="3.5" width="137" height="216"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>

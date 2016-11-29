@@ -89,6 +89,13 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         }
     }
     
+    
+    //MARK - UICollectionViewFlowLayoutDelegates
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        
+        return UIEdgeInsetsMake(0, 0, 0, 0)
+    }
+    
     //MARK - ScrollView Delegates
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
         chooseCardsCollectionView.scaledVisibleCells()

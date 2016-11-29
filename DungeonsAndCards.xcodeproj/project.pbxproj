@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
+		C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */; };
+		C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */; };
 		C68475201DE714290081DA95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684751E1DE714290081DA95 /* Interface.storyboard */; };
 		C68475221DE714290081DA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68475211DE714290081DA95 /* Assets.xcassets */; };
 		C68475291DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -96,6 +98,8 @@
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
 		4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.debug.xcconfig"; sourceTree = "<group>"; };
 		B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DungeonsAndCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRoman-Black.ttf"; sourceTree = "<group>"; };
+		C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRomanAlternate-Black.ttf"; sourceTree = "<group>"; };
 		C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCardsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C684751F1DE714290081DA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C68475211DE714290081DA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -181,6 +185,15 @@
 				09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		C60A67D11DEDAB3100C109D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */,
+				C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		C684751D1DE714290081DA95 /* DungeonsAndCardsWatch */ = {
@@ -298,6 +311,7 @@
 		D14E4E161DDF493A002A0ED0 /* DungeonsAndCards */ = {
 			isa = PBXGroup;
 			children = (
+				C60A67D11DEDAB3100C109D8 /* Supporting Files */,
 				D100495C1DEDA4E9004CCFAA /* Extensions */,
 				C68475711DE7345A0081DA95 /* Shared */,
 				C68475701DE7344D0081DA95 /* Controller */,
@@ -522,8 +536,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */,
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
+				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
