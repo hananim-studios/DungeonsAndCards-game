@@ -28,6 +28,9 @@
 		C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475881DE85C130081DA95 /* ManagePartyViewController.swift */; };
 		C6AD7AAC1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */; };
 		D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */; };
+		D11BFE681DEE478F0046086C /* hero.json in Resources */ = {isa = PBXBuildFile; fileRef = D11BFE671DEE478F0046086C /* hero.json */; };
+		D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE691DEE48180046086C /* HeroCollectionView.swift */; };
+		D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE6B1DEE48290046086C /* HeroCell.swift */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
@@ -35,7 +38,6 @@
 		D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E21DE5C4CC00E52C03 /* Game.swift */; };
 		D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E41DE5C4FB00E52C03 /* Party.swift */; };
 		D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E61DE5C52000E52C03 /* Hero.swift */; };
-		D1E74A261DEC4FCE0007F6AA /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E74A251DEC4FCE0007F6AA /* CardCell.swift */; };
 		D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -126,6 +128,9 @@
 		C68475881DE85C130081DA95 /* ManagePartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePartyViewController.swift; sourceTree = "<group>"; };
 		C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledVisibleCellsCollectionView.swift; sourceTree = "<group>"; };
 		D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D11BFE671DEE478F0046086C /* hero.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hero.json; sourceTree = "<group>"; };
+		D11BFE691DEE48180046086C /* HeroCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCollectionView.swift; sourceTree = "<group>"; };
+		D11BFE6B1DEE48290046086C /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E1C1DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -135,7 +140,6 @@
 		D1D014E21DE5C4CC00E52C03 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D1D014E41DE5C4FB00E52C03 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		D1D014E61DE5C52000E52C03 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
-		D1E74A251DEC4FCE0007F6AA /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIOCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -251,12 +255,8 @@
 		C68475631DE71B0A0081DA95 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */,
-				C68475661DE71C450081DA95 /* IntroViewController.swift */,
-				C68475881DE85C130081DA95 /* ManagePartyViewController.swift */,
-				C627A5C41DEDCB38002F6533 /* ItemsViewController.swift */,
-				D1E74A251DEC4FCE0007F6AA /* CardCell.swift */,
-				D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */,
+				D11BFE691DEE48180046086C /* HeroCollectionView.swift */,
+				D11BFE6B1DEE48290046086C /* HeroCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -265,6 +265,10 @@
 			isa = PBXGroup;
 			children = (
 				C684756E1DE7301F0081DA95 /* CustomSegue.swift */,
+				C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */,
+				C68475661DE71C450081DA95 /* IntroViewController.swift */,
+				C68475881DE85C130081DA95 /* ManagePartyViewController.swift */,
+				C627A5C41DEDCB38002F6533 /* ItemsViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -279,9 +283,17 @@
 		D100495C1DEDA4E9004CCFAA /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		D11BFE661DEE47660046086C /* 3rdparty */ = {
+			isa = PBXGroup;
+			children = (
+				D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */,
+				D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */,
+			);
+			name = 3rdparty;
 			sourceTree = "<group>";
 		};
 		D14E4E0B1DDF493A002A0ED0 = {
@@ -314,6 +326,7 @@
 		D14E4E161DDF493A002A0ED0 /* DungeonsAndCards */ = {
 			isa = PBXGroup;
 			children = (
+				D11BFE661DEE47660046086C /* 3rdparty */,
 				C60A67D11DEDAB3100C109D8 /* Supporting Files */,
 				D100495C1DEDA4E9004CCFAA /* Extensions */,
 				C68475711DE7345A0081DA95 /* Shared */,
@@ -343,6 +356,7 @@
 		D1EF4C651DE5E08000C95AB8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				D11BFE671DEE478F0046086C /* hero.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -540,6 +554,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */,
+				D11BFE681DEE478F0046086C /* hero.json in Resources */,
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
@@ -632,13 +647,14 @@
 				D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */,
 				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
 				C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */,
+				D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */,
 				C627A5C51DEDCB38002F6533 /* ItemsViewController.swift in Sources */,
+				D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,
 				C6AD7AAC1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift in Sources */,
 				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
 				D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
-				D1E74A261DEC4FCE0007F6AA /* CardCell.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,
 				D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */,
@@ -863,7 +879,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -908,7 +924,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
