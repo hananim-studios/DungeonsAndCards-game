@@ -29,9 +29,8 @@ class IntroViewController: UIViewController {
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue is CustomSegue {
-            (segue as! CustomSegue).animationType = .fade
-        }
+       
     }
+    
     
 }

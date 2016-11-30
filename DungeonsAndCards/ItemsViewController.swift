@@ -21,7 +21,7 @@ class ItemsViewController: UIViewController, UICollectionViewDataSource, UIColle
     @IBOutlet weak var itemsCollectionView: UICollectionView!
     @IBOutlet weak var cardsCollectionView: UICollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var partyButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     //MARK - ViewController
@@ -56,9 +56,10 @@ class ItemsViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     //MARK: - IBOulet Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        //performSegue(withIdentifier: "", sender: nil)
     }
     
-    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+    @IBAction func partyButtonPressed(_ sender: UIButton) {
     }
     
     @IBAction func goldButtonPressed(_ sender: Any) {
@@ -128,9 +129,7 @@ class ItemsViewController: UIViewController, UICollectionViewDataSource, UIColle
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue is CustomSegue {
-            (segue as! CustomSegue).animationType = .fade
-        }
+       
     }
     
     // MARK: - Convenience Methods
