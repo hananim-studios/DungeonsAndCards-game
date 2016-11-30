@@ -56,9 +56,11 @@ class ItemsViewController: UIViewController, UICollectionViewDataSource, UIColle
     }
     //MARK: - IBOulet Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "managePartyToItemsSegue", sender: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "itemsToManagePartySegue", sender: nil)
     }
     
     @IBAction func goldButtonPressed(_ sender: Any) {
@@ -133,6 +135,11 @@ class ItemsViewController: UIViewController, UICollectionViewDataSource, UIColle
         }
     }
     
+    @IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+        if sender is CustomUnwindSegue {
+            (sender as! CustomUnwindSegue).animationType = .fade
+        }
+    }
     // MARK: - Convenience Methods
     
 }

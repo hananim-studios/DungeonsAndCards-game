@@ -139,7 +139,7 @@ class CustomSegue: UIStoryboardSegue {
         toViewController.view.alpha = 0        
         containerView?.addSubview(toViewController.view)
         
-        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
             toViewController.view.alpha = 1
         }, completion: { finished in
             let fromVC = self.source
@@ -156,7 +156,7 @@ class CustomSegue: UIStoryboardSegue {
         toViewController.view.alpha = 0
         containerView?.addSubview(toViewController.view)
         
-        UIView.animate(withDuration: 2.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: [], animations: {
             toViewController.view.alpha = 1
         }, completion: { finished in
             let fromVC = self.source
@@ -275,15 +275,14 @@ class CustomUnwindSegue: UIStoryboardSegue {
         let fromViewController = source
         
         let containerView = fromViewController.view.superview
-        toViewController.view.alpha = 1
+        toViewController.view.alpha = 0
         containerView?.addSubview(toViewController.view)
         
-        UIView.animate(withDuration: 0.5, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
-            toViewController.view.alpha = 0
+        UIView.animate(withDuration: 0.5, delay: 0.0, options: [], animations: {
+            toViewController.view.alpha = 1
         }, completion: { finished in
             let fromVC = self.source
-            let toVC = self.destination
-            fromVC.present(toVC, animated: false, completion: nil)
+            fromVC.dismiss(animated: false, completion: nil)
         })
     }
     
@@ -292,15 +291,14 @@ class CustomUnwindSegue: UIStoryboardSegue {
         let fromViewController = source
         
         let containerView = fromViewController.view.superview
-        toViewController.view.alpha = 1
+        toViewController.view.alpha = 0
         containerView?.addSubview(toViewController.view)
         
-        UIView.animate(withDuration: 2.0, delay: 0.0, options: UIViewAnimationOptions.curveEaseInOut, animations: {
-            toViewController.view.alpha = 0
+        UIView.animate(withDuration: 2.0, delay: 0.0, options: [], animations: {
+            toViewController.view.alpha = 1
         }, completion: { finished in
             let fromVC = self.source
-            let toVC = self.destination
-            fromVC.present(toVC, animated: false, completion: nil)
+            fromVC.dismiss(animated: false, completion: nil)
         })
     }
 }

@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ds4-Wv-P3J">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ds4-Wv-P3J">
     <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -60,7 +59,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="114.375" y="122.53521126760563"/>
+            <point key="canvasLocation" x="26" y="121"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="bG6-9o-HXH">
@@ -224,7 +223,7 @@
                                 </state>
                                 <connections>
                                     <action selector="goldButtonPressed:" destination="ds4-Wv-P3J" eventType="touchUpInside" id="EEI-xP-XtL"/>
-                                    <segue destination="Rlh-ow-zwy" kind="show" id="EFR-cv-N3N"/>
+                                    <segue destination="Rlh-ow-zwy" kind="presentation" id="EFR-cv-N3N"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89M-Hh-Z5E">
@@ -267,9 +266,12 @@
                         <outlet property="handCollectionView" destination="8Jl-uX-hm4" id="23o-sk-NRi"/>
                         <outlet property="nextButton" destination="7Z9-O5-IF5" id="8tX-UP-Gu9"/>
                         <outlet property="partyCollectionView" destination="N6N-IU-X1n" id="AG6-wD-YtY"/>
+                        <segue destination="E0c-RR-Yts" kind="custom" identifier="managePartyToItemsSegue" customClass="CustomSegue" customModule="DungeonsAndCards" customModuleProvider="target" id="xfp-d1-EfD"/>
+                        <segue destination="bZm-gI-kXC" kind="unwind" identifier="managePartyUnwind" customClass="CustomUnwindSegue" customModule="DungeonsAndCards" customModuleProvider="target" unwindAction="returnFromSegueActionsWithSender:" id="hqH-hg-K4V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iau-eq-DeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="bZm-gI-kXC" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="829" y="885"/>
         </scene>
@@ -427,9 +429,11 @@
                         <outlet property="cardsCollectionView" destination="oeA-ke-iiH" id="4jh-0J-9M7"/>
                         <outlet property="itemsCollectionView" destination="ltB-3P-Spn" id="TVR-GB-jUE"/>
                         <outlet property="nextButton" destination="5Ok-Zb-8DS" id="PnR-B9-2db"/>
+                        <segue destination="0Ec-sh-sPL" kind="unwind" identifier="itemsToManagePartySegue" customClass="CustomUnwindSegue" customModule="DungeonsAndCards" customModuleProvider="target" unwindAction="returnFromSegueActionsWithSender:" id="zmC-Ub-yhM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hq8-Eh-ox4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="0Ec-sh-sPL" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1650" y="884"/>
         </scene>

@@ -49,6 +49,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     }
     //MARK: - IBOulet Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
+        performSegue(withIdentifier: "managePartyToItemsSegue", sender: nil)
     }
     
     @IBAction func cancelButtonPressed(_ sender: UIButton) {
@@ -137,7 +138,12 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
             (segue as! CustomSegue).animationType = .fade
         }
     }
- 
+    
+    @IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
+        if sender is CustomUnwindSegue {
+            (sender as! CustomUnwindSegue).animationType = .fade
+        }
+    }
     // MARK: - Convenience Methods
     
 }
