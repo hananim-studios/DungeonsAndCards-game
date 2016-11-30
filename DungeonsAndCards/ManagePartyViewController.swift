@@ -10,6 +10,9 @@ import UIKit
 
 class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    //MARK - Model
+    var game = Game()
+    
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
     
@@ -36,12 +39,19 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         handCollectionView.delegate = self
         handCollectionView.dataSource = self
+        handCollectionView.dioDataSource = self
+        handCollectionView.dioDelegate = self
         
         partyCollectionView.backgroundColor = UIColor.clear
         partyCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
         
         partyCollectionView.delegate = self
         partyCollectionView.dataSource = self
+        partyCollectionView.dioDataSource = self
+        partyCollectionView.dioDelegate = self
+        partyCollectionView.heroDelegate = self
+        partyCollectionView.receiveDrag = true
+        partyCollectionView.allowFeedback = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -79,7 +89,10 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         if collectionView == handCollectionView {
             // cell for hand
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
+                                                          for: indexPath) as! HeroCell
+            
+            cell.setHero(self.game.handHeroes[indexPath.row])
             
             return cell
         }
@@ -87,12 +100,15 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         if collectionView == partyCollectionView {
             // cell for party
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell", for: indexPath)
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
+                                                          for: indexPath) as! HeroCell
+            
+            cell.setHero(self.game.partyHeroes[indexPath.row])
             
             return cell
         }
         
-        return HeroCell()
+        fatalError("collectionView not implemented")
     }
     
     
@@ -140,4 +156,107 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
  
     // MARK: - Convenience Methods
     
+}
+
+extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionViewDelegate {
+    
+    // DIOCollectionView DataSource
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, dragInfoForItemAtIndexPath indexPath: IndexPath) -> DIODragInfo {
+        
+        if dioCollectionView == handCollectionView {
+            return DIODragInfo(withUserData: self.game.handHeroes[indexPath.row])
+        }
+        
+        if dioCollectionView == partyCollectionView {
+            return DIODragInfo(withUserData: self.game.partyHeroes[indexPath.row])
+        }
+        
+        return DIODragInfo(withUserData: nil)
+    }
+    
+    // DIOCollectionView Delegate
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, draggedItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) {
+        
+        switch(dragState) {
+        case .ended:
+            dioCollectionView.dragView?.removeFromSuperview()
+        default:
+            break
+        }
+        
+        if dioCollectionView == handCollectionView {
+
+        }
+        
+        if dioCollectionView == partyCollectionView {
+            switch(dragState) {
+            case .began:
+                let cell = partyCollectionView.cellForItem(at: indexPath) as? HeroCell
+                self.game.partyHeroes[indexPath.row] = nil
+                cell?.setHero(nil)
+            default:
+                break
+            }
+        }
+    }
+    
+}
+
+extension ManagePartyViewController: HeroCollectionViewDelegate {
+    
+    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEnteredWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
+        
+        if(heroCollectionView == self.partyCollectionView) {
+            if let hero = dragInfo?.userData as? Hero {
+            
+                if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
+            
+                    if cell.hero == nil {
+                        
+                        dragInfo?.sender?.dragView?.isHidden = true
+        
+                        cell.imageView.image = UIImage(named: hero.template)
+                    }
+                }
+            }
+        }
+    }
+    
+    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
+        
+        if(heroCollectionView == self.partyCollectionView) {
+            if let _ = dragInfo?.userData as? Hero {
+                
+                if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
+                    
+                    if cell.hero == nil {
+                        
+                        dragInfo?.sender?.dragView?.isHidden = false
+                        
+                        cell.imageView.image = nil
+                    }
+                }
+            }
+        }
+    }
+    
+    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEndedWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
+        
+        if(heroCollectionView == self.partyCollectionView) {
+            if let hero = dragInfo?.userData as? Hero {
+                
+                if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
+                    
+                    if cell.hero == nil {
+                        dragInfo?.sender?.dragView?.isHidden = true
+                        
+                        self.game.partyHeroes[indexPath.row] = hero
+                        cell.setHero(hero)
+                        
+                        print("entered \(indexPath)")
+                    }
+                }
+            }
+        }
+    }
 }

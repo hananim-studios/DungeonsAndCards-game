@@ -10,14 +10,14 @@ import Foundation
 
 class Game {
     
-    var heroes: [Hero] = []
-    var availableHeroes: [Hero] = []
+    var partyHeroes: [Hero?] = []
+    var handHeroes: [Hero?] = []
     
     init() {
-        self.heroes = [Hero(withTemplate: "wizard"), Hero(withTemplate: "warrior"),
+        self.partyHeroes = [Hero(withTemplate: "wizard"), nil,
                         Hero(withTemplate: "shiny_wizard")]
         
-        self.availableHeroes = [Hero(withTemplate: "gypsy1"), Hero(withTemplate: "warrior"),
+        self.handHeroes = [Hero(withTemplate: "gypsy1"), Hero(withTemplate: "warrior"),
                                 Hero(withTemplate: "noble"), Hero(withTemplate: "wizard"),
                                 Hero(withTemplate: "queen")]
     }
