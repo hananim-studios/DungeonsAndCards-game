@@ -20,7 +20,8 @@ class MainMenuViewController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.newGameButton.alpha = 1;
-        self.continueGameButton.isHidden = true;
+        self.continueGameButton.alpha = 1;
+        self.continueGameButton.isHidden = false;
     }
     
     override func viewDidLoad() {
@@ -33,21 +34,23 @@ class MainMenuViewController: UIViewController {
     
     //MARK: - Button Actions
     @IBAction func continueGameButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: "menuToManagePartySegue", sender: nil)
+        UIView.animate(withDuration: 0.1, animations:{
+            self.newGameButton.alpha = 0.0
+            self.continueGameButton.alpha = 0.0
+        })
     }
     
     @IBAction func newGameButtonPressed(_ sender: Any) {
         performSegue(withIdentifier: "mainMenuToIntro", sender: nil)
-        
         UIView.animate(withDuration: 0.1, animations:{
-           self.newGameButton.alpha = 0.0
+            self.newGameButton.alpha = 0.0
+            self.continueGameButton.alpha = 0.0
         })
     }
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue is CustomSegue {
-            (segue as! CustomSegue).animationType = .slowFade
-        }
+        
     }
-
 }

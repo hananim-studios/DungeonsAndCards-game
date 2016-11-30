@@ -17,20 +17,22 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var partyCollectionView: HeroCollectionView!
     @IBOutlet weak var handCollectionView: HeroCollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
-    @IBOutlet weak var cancelButton: UIButton!
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     
     //MARK - ViewController
-    override func viewDidAppear(_ animated: Bool) {
-        
-        
+    
+    override func viewWillAppear(_ animated: Bool) {
         partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
         handCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         handCollectionView.backgroundColor = UIColor.clear
         handCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 2.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
         
@@ -47,12 +49,13 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
+    
     //MARK: - IBOulet Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
         performSegue(withIdentifier: "managePartyToItemsSegue", sender: nil)
     }
     
-    @IBAction func cancelButtonPressed(_ sender: UIButton) {
+    @IBAction func menuButtonPressed(_ sender: UIButton) {
     }    
     
     @IBAction func goldButtonPressed(_ sender: Any) {
@@ -96,7 +99,6 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         return HeroCell()
     }
     
-    
     //MARK - UICollectionViewFlowLayoutDelegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let screenSize = UIScreen.main.bounds.width
@@ -116,7 +118,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
             return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
         }
         
-        if collectionView == partyCollectionView{
+        if collectionView == partyCollectionView {
             // size of party cell
             let width = collectionView.bounds.width
             let height = 0.8*collectionView.bounds.height
@@ -134,16 +136,9 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue is CustomSegue {
-            (segue as! CustomSegue).animationType = .fade
-        }
+       
     }
     
-    @IBAction func returnFromSegueActions(sender: UIStoryboardSegue){
-        if sender is CustomUnwindSegue {
-            (sender as! CustomUnwindSegue).animationType = .fade
-        }
-    }
     // MARK: - Convenience Methods
     
 }
