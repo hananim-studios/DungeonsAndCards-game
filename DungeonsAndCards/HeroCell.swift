@@ -16,6 +16,10 @@ class HeroCell: UICollectionViewCell {
         //fatalError("init(coder:) has not been implemented")
     }
     
+    init() {
+        super.init(frame: CGRect.zero)
+    }
+    
     func setHero(_ hero: Hero) {
         self.imageView.image = UIImage(named: hero.template)
     }
