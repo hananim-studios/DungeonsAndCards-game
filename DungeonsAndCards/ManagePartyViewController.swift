@@ -25,13 +25,9 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     
     //MARK - ViewController
     
-    override func viewWillAppear(_ animated: Bool) {
+    override func viewDidAppear(_ animated: Bool) {
         partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
         handCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
-    }
-    
-    override func viewDidAppear(_ animated: Bool) {
-        
     }
     
     override func viewDidLoad() {

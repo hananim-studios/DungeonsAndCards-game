@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -152,13 +152,27 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="00w-r4-bpi">
+                                                    <rect key="frame" x="-0.6666666666666714" y="0.0" width="137.33333333333331" height="216"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.87402003552055341" green="0.88267369923857864" blue="0.88267369923857864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="00w-r4-bpi" firstAttribute="height" secondItem="X6J-B9-nR1" secondAttribute="height" id="OWS-M7-So1"/>
+                                            <constraint firstItem="00w-r4-bpi" firstAttribute="width" secondItem="X6J-B9-nR1" secondAttribute="width" id="RyO-Ih-o3W"/>
+                                            <constraint firstItem="00w-r4-bpi" firstAttribute="centerY" secondItem="X6J-B9-nR1" secondAttribute="centerY" id="irY-9c-uT8"/>
+                                            <constraint firstItem="00w-r4-bpi" firstAttribute="centerX" secondItem="X6J-B9-nR1" secondAttribute="centerX" id="sJH-9V-eDa"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="00w-r4-bpi" id="SkG-59-xen"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-O5-IF5">
-                                <rect key="frame" x="327" y="692" width="67" height="30"/>
+                                <rect key="frame" x="314" y="692" width="80" height="30"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -183,13 +197,27 @@
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mol-AR-D4y">
+                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
+                                                </imageView>
+                                            </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.87402003549999996" green="0.88267369920000005" blue="0.88267369920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstItem="mol-AR-D4y" firstAttribute="height" secondItem="sd7-DK-hh3" secondAttribute="height" id="CVI-JR-jIm"/>
+                                            <constraint firstItem="mol-AR-D4y" firstAttribute="width" secondItem="sd7-DK-hh3" secondAttribute="width" id="DMS-RO-Ph7"/>
+                                            <constraint firstItem="mol-AR-D4y" firstAttribute="centerY" secondItem="sd7-DK-hh3" secondAttribute="centerY" id="Gf8-yO-kev"/>
+                                            <constraint firstItem="mol-AR-D4y" firstAttribute="centerX" secondItem="sd7-DK-hh3" secondAttribute="centerX" id="JzP-Yb-DNq"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="imageView" destination="mol-AR-D4y" id="b9C-eF-Nc5"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Hh-Oo7">
-                                <rect key="frame" x="366" y="73" width="32" height="30"/>
+                                <rect key="frame" x="355" y="73" width="43" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BQQ-z7-C4C"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="LgP-lX-Grh"/>
@@ -204,7 +232,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89M-Hh-Z5E">
-                                <rect key="frame" x="323" y="69" width="42" height="41"/>
+                                <rect key="frame" x="312" y="69" width="42" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="1vF-nr-Qc9"/>
                                     <constraint firstAttribute="height" constant="41" id="Awl-zB-7Mn"/>
@@ -274,7 +302,7 @@
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ui-x5-1YM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="tIt-mW-LeJ">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tIt-mW-LeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
