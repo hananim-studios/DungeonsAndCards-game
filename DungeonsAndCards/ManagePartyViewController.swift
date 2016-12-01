@@ -8,6 +8,8 @@
 
 import UIKit
 
+
+
 class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model
@@ -88,8 +90,6 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView == handCollectionView {
             
-            // - MARK: EVENT: PLAYER DRAGGED HERO FROM HAND TO PARTY
-            
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
             
@@ -99,8 +99,6 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         }
         
         if collectionView == partyCollectionView {
-            
-            // - MARK: EVENT: PLAYER CHANGED POSITION OF HERO IN PARTY
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
@@ -160,21 +158,23 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
 extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionViewDelegate {
     
     // DIOCollectionView DataSource
-    func dioCollectionView(_ dioCollectionView: DIOCollectionView, dragInfoForItemAtIndexPath indexPath: IndexPath) -> DIODragInfo {
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, userDataForItemAtIndexPath indexPath: IndexPath) -> Any? {
         
         if dioCollectionView == handCollectionView {
-            return DIODragInfo(withUserData: self.game.handHeroes[indexPath.row])
+            return self.game.handHeroes[indexPath.row]
         }
-        
+            
         if dioCollectionView == partyCollectionView {
-            return DIODragInfo(withUserData: self.game.partyHeroes[indexPath.row])
+            return self.game.partyHeroes[indexPath.row]
         }
         
-        return DIODragInfo(withUserData: nil)
+        return nil
     }
     
     // DIOCollectionView Delegate
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, draggedItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) {
+        
+        guard let cell = partyCollectionView.cellForItem(at: indexPath) as? HeroCell else { return }
         
         switch(dragState) {
         case .ended:
@@ -184,7 +184,7 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
         }
         
         if dioCollectionView == handCollectionView {
-
+            
         }
         
         if dioCollectionView == partyCollectionView {
@@ -192,11 +192,8 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
             case .began:
                 
                 // - MARK: EVENT: PLAYER DISCARDED HERO
-                
-                let cell = partyCollectionView.cellForItem(at: indexPath) as? HeroCell
                 self.game.partyHeroes[indexPath.row] = nil
-                cell?.setHero(nil)
-                
+                cell.setHero(nil)
                 
             default:
                 break
@@ -211,15 +208,15 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
     func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEnteredWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
         
         if(heroCollectionView == self.partyCollectionView) {
-            if let hero = dragInfo?.userData as? Hero {
+            if (dragInfo?.userData as? Hero) != nil {
             
                 if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
             
                     if cell.hero == nil {
                         
                         UIView.animate(withDuration: 0.4, animations: {
-                            dragInfo?.sender?.dragView?.alpha = 1.0
-                            dragInfo?.sender?.dragView?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                            dragInfo?.sender.dragView?.alpha = 1.0
+                            dragInfo?.sender.dragView?.transform = CGAffineTransform.transformFromRect(from: dragInfo!.sender.dragView!.frame, toRect: cell.frame)
                         })
         
                         //cell.imageView.image = UIImage(named: hero.template)
@@ -232,13 +229,14 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
     func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
         
         if(heroCollectionView == self.partyCollectionView) {
+            
             if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
                 
                 if cell.hero == nil {
                     
                     UIView.animate(withDuration: 0.4, animations: {
-                        dragInfo?.sender?.dragView?.alpha = 0.95
-                        dragInfo?.sender?.dragView?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                        dragInfo?.sender.dragView?.alpha = 0.95
+                        dragInfo?.sender.dragView?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
                     })
                 }
             }
@@ -247,19 +245,50 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
     
     func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEndedWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
         
-        if(heroCollectionView == self.partyCollectionView) {
-            if let hero = dragInfo?.userData as? Hero {
+        guard let dragInfo = dragInfo else { return }
+        guard let hero = dragInfo.userData as? Hero else { return }
+        guard let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell else { return }
+        
+        let senderView = dragInfo.sender
+        
+        if(senderView == self.handCollectionView) { // DRAGGED FROM HAND
+            if cell.hero == nil {
                 
-                if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
+                
+                if(heroCollectionView == self.partyCollectionView) { // TO PARTY
                     
-                    if cell.hero == nil {
-                        dragInfo?.sender?.dragView?.isHidden = true
-                        
-                        self.game.partyHeroes[indexPath.row] = hero
-                        cell.setHero(hero)
-                        
-                        print("entered \(indexPath)")
-                    }
+                    // - MARK: EVENT: PLAYER DRAGGED HERO FROM HAND TO PARTY
+                    // REFACTOR HINT: DELEGATE THIS BEHAVIOR
+                    
+                    dragInfo.sender.dragView?.isHidden = true
+                    
+                    self.game.handHeroes[dragInfo.indexPath.row] = Hero(withTemplate: "shiny_wizard")
+                    senderView.reloadItems(at: [dragInfo.indexPath])
+                    senderView.reloadData()
+                    
+                    self.game.partyHeroes[indexPath.row] = hero
+                    cell.setHero(hero)
+                    
+                    print("entered \(indexPath)")
+                }
+            }
+        }
+        
+        if(senderView == self.partyCollectionView) { // DRAGGED FROM PARTY
+            if cell.hero == nil {
+                
+                
+                if(heroCollectionView == self.partyCollectionView) { // TO PARTY
+                    
+                    // - MARK: EVENT: PLAYER DRAGGED HERO FROM PARTY TO PARTY
+                    // REFACTOR HINT: DELEGATE THIS BEHAVIOR
+                    
+                    dragInfo.sender.dragView?.isHidden = true
+                    
+                    self.game.partyHeroes[indexPath.row] = hero
+                    cell.setHero(hero)
+                    
+                    print("entered \(indexPath)")
                 }
             }
         }
