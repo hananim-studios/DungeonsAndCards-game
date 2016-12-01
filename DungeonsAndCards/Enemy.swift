@@ -1,31 +1,22 @@
 //
-//  Hero.swift
+//  Enemy.swift
 //  DungeonsAndCards
 //
-//  Created by Matheus Martins on 11/23/16.
+//  Created by Gabriela de Carvalho Barros Bezerra on 01/12/16.
 //  Copyright © 2016 hananim. All rights reserved.
 //
 
 import Foundation
 import SwiftyJSON
 
-class Hero {
-
-//    var template: String = "default"
-//    
-//    var attack: Int = 0
-//    var health: (current: Int, total: Int) = (0, 0)
-//    
-//    init(withTemplate template: String) {
-//        self.template = template
-//    }
-
+class Enemy {
+    
     var name: String?
     var description: String?
     var pic: String?
     var damage: Int?
     var health: Int?
-    var gold: Int?
+    let gold: Int?
     
     init(json: JSON) {
         
@@ -66,5 +57,4 @@ class Hero {
         }
         
     }
-
 }

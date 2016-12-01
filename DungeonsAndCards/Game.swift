@@ -7,12 +7,12 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Game {
     
     var partyHeroes: [Hero?] = []
     var handHeroes: [Hero?] = []
-    
     init() {
         self.partyHeroes = [Hero(withTemplate: "wizard"), nil,
                         Hero(withTemplate: "shiny_wizard")]
@@ -21,4 +21,12 @@ class Game {
                                 Hero(withTemplate: "noble"), Hero(withTemplate: "wizard"),
                                 Hero(withTemplate: "queen")]
     }
+
+//    var partyHeroes: Party
+//    
+//    init(){
+//        
+//    }
+//    
+    
 }

@@ -26,6 +26,7 @@ class MainMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let party = Party.init()
     }
 
     override func didReceiveMemoryWarning() {

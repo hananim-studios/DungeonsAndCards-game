@@ -30,9 +30,13 @@ class HeroCell: UICollectionViewCell {
     func setHero(_ hero: Hero?) {
         
         self.hero = hero
-        
-        if let hero = hero {
-            self.imageView.image = UIImage(named: hero.template)
+
+        guard let hero = hero else {
+            fatalError()
+        }
+
+        if let pic = hero.pic {
+                self.imageView.image = UIImage(named: pic)
         } else {
             self.imageView.image = nil
         }

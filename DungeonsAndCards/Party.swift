@@ -7,7 +7,28 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Party {
-    var Heroes : [Hero?] = []
+    
+    var heroes : [Hero?] = []
+    var hand : [Hero?] = []
+    
+    lazy var heroesJSON: JSON = HeroesJSON.load()
+    
+    init(){
+        
+        for _ in 0...4 {
+            let i = arc4random_uniform(UInt32(heroesJSON.count))
+            let randomHero = HeroesJSON.heroAtIndex(index: Int(i))
+            hand.append(randomHero)
+        }
+        
+        for _ in 0...2 {
+            let i = arc4random_uniform(UInt32(heroesJSON.count))
+        }
+        
+    }
+    
+    
 }
