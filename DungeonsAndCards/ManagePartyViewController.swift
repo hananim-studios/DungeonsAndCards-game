@@ -93,7 +93,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         if collectionView == handCollectionView {
-            // cell for hand
+            
+            // - MARK: EVENT: PLAYER DRAGGED HERO FROM HAND TO PARTY
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
@@ -104,7 +105,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         }
         
         if collectionView == partyCollectionView {
-            // cell for party
+            
+            // - MARK: EVENT: PLAYER CHANGED POSITION OF HERO IN PARTY
             
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
@@ -194,9 +196,14 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
         if dioCollectionView == partyCollectionView {
             switch(dragState) {
             case .began:
+                
+                // - MARK: EVENT: PLAYER DISCARDED HERO
+                
                 let cell = partyCollectionView.cellForItem(at: indexPath) as? HeroCell
                 self.game.partyHeroes[indexPath.row] = nil
                 cell?.setHero(nil)
+                
+                
             default:
                 break
             }
@@ -216,9 +223,12 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
             
                     if cell.hero == nil {
                         
-                        dragInfo?.sender?.dragView?.isHidden = true
+                        UIView.animate(withDuration: 0.4, animations: {
+                            dragInfo?.sender?.dragView?.alpha = 1.0
+                            dragInfo?.sender?.dragView?.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+                        })
         
-                        cell.imageView.image = UIImage(named: hero.template)
+                        //cell.imageView.image = UIImage(named: hero.template)
                     }
                 }
             }
@@ -228,16 +238,14 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
     func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
         
         if(heroCollectionView == self.partyCollectionView) {
-            if let _ = dragInfo?.userData as? Hero {
+            if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
                 
-                if let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroCell {
+                if cell.hero == nil {
                     
-                    if cell.hero == nil {
-                        
-                        dragInfo?.sender?.dragView?.isHidden = false
-                        
-                        cell.imageView.image = nil
-                    }
+                    UIView.animate(withDuration: 0.4, animations: {
+                        dragInfo?.sender?.dragView?.alpha = 0.95
+                        dragInfo?.sender?.dragView?.transform = CGAffineTransform(scaleX: 1.2, y: 1.2)
+                    })
                 }
             }
         }
