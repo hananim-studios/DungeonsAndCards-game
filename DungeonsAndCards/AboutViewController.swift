@@ -1,5 +1,5 @@
 //
-//  ShoppingViewController.swift
+//  AboutViewController.swift
 //  DungeonsAndCards
 //
 //  Created by Matheus Vasconcelos de Sousa on 01/12/16.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ShoppingViewController: UIViewController {
+class AboutViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,7 +22,7 @@ class ShoppingViewController: UIViewController {
     }
     
     @IBAction func dismissButtonPressed(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
 
     /*

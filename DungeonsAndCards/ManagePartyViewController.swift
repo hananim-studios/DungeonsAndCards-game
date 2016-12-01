@@ -58,10 +58,10 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     
     //MARK: - IBOulet Actions
     @IBAction func nextButtonPressed(_ sender: UIButton) {
-        performSegue(withIdentifier: "managePartyToItemsSegue", sender: nil)
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton) {
+        _ = navigationController?.popViewController(animated: true)
     }    
     
     @IBAction func goldButtonPressed(_ sender: Any) {
