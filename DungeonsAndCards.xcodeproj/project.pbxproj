@@ -15,6 +15,7 @@
 		C68063711DF04CF7003ACD19 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063701DF04CF7003ACD19 /* BattleViewController.swift */; };
 		C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063721DF04DDE003ACD19 /* AboutViewController.swift */; };
 		C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063741DF04DEC003ACD19 /* SettingsViewController.swift */; };
+		C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */; };
 		C68475201DE714290081DA95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684751E1DE714290081DA95 /* Interface.storyboard */; };
 		C68475221DE714290081DA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68475211DE714290081DA95 /* Assets.xcassets */; };
 		C68475291DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -112,6 +113,7 @@
 		C68063701DF04CF7003ACD19 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		C68063721DF04DDE003ACD19 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C68063741DF04DEC003ACD19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldOverlayViewController.swift; sourceTree = "<group>"; };
 		C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCardsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C684751F1DE714290081DA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C68475211DE714290081DA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -281,6 +283,7 @@
 				C627A5C41DEDCB38002F6533 /* ItemsViewController.swift */,
 				C680636E1DF04B5D003ACD19 /* ShoppingViewController.swift */,
 				C68063701DF04CF7003ACD19 /* BattleViewController.swift */,
+				C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -670,6 +673,7 @@
 				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
 				D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
+				C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,
 				D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */,

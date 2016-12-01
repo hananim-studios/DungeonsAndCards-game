@@ -10,26 +10,29 @@ import UIKit
 
 class BattleViewController: UIViewController {
 
+    // MARK: - Variables
+    override var prefersStatusBarHidden: Bool{ return true }
+    // MARK: - IBOutlets
+    @IBOutlet weak var continueGameButton: UIButton!
+    @IBOutlet weak var newGameButton: UIButton!
+    
+    //MARK: - ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
-    */
+    
+    //MARK: - Button Actions
+    
+    @IBAction func menuButtonPressed(_ sender: Any) {
+        _ = navigationController?.popViewController(animated: true)
+    }
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+    }
 
 }

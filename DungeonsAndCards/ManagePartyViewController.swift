@@ -24,7 +24,9 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var nextButton: UIButton!
     
     //MARK - ViewController
-    
+    override func viewWillAppear(_ animated: Bool) {
+        
+    }
     override func viewDidAppear(_ animated: Bool) {
         partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
         handCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
@@ -66,6 +68,10 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     
     @IBAction func goldButtonPressed(_ sender: Any) {
         //Img and Label Function
+    }
+    
+    @IBAction func callGold(_ sender: Any) {
+    
     }
     
     //MARK - CollectionView Delegates

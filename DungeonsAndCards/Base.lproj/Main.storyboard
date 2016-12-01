@@ -207,7 +207,7 @@
         <!--Manage Party View Controller-->
         <scene sceneID="fxe-tn-OQt">
             <objects>
-                <viewController id="ds4-Wv-P3J" customClass="ManagePartyViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ManageParty" id="ds4-Wv-P3J" customClass="ManagePartyViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iIZ-VJ-hDW"/>
                         <viewControllerLayoutGuide type="bottom" id="mbU-vp-VOn"/>
@@ -347,6 +347,15 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-zu-EBh">
+                                <rect key="frame" x="20" y="80" width="56" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="callGold"/>
+                                <connections>
+                                    <action selector="callGold:" destination="ds4-Wv-P3J" eventType="touchUpInside" id="YHf-XN-kti"/>
+                                    <segue destination="Mkv-NR-cp3" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="ID6-Xe-qEi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -382,6 +391,151 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iau-eq-DeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1826" y="866"/>
+        </scene>
+        <!--Gold Overlay View Controller-->
+        <scene sceneID="GfD-qo-yth">
+            <objects>
+                <viewController id="Mkv-NR-cp3" customClass="GoldOverlayViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="TfM-jj-mAj"/>
+                        <viewControllerLayoutGuide type="bottom" id="pMl-5f-uWN"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="rRJ-Gr-2Rv">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vru-fB-2VB">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="XRD-8g-02k">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x4-DC-3TB">
+                                <rect key="frame" x="0.0" y="451" width="414" height="194"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or complete one of your" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ0-RA-AN7">
+                                        <rect key="frame" x="81" y="32" width="253" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="on the Apple Watch" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgI-32-Cco">
+                                        <rect key="frame" x="108" y="99" width="211" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to earn a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-zD-2Sc">
+                                        <rect key="frame" x="108" y="132" width="96" height="29"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Quests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-qs-WAB">
+                                        <rect key="frame" x="130" y="65" width="164" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
+                                        <color key="textColor" red="0.94269293546676636" green="0.72619825601577759" blue="0.07447882741689682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reward" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-9E-wyC">
+                                        <rect key="frame" x="214" y="129" width="112" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="37"/>
+                                        <color key="textColor" red="0.9426929355" green="0.72619825599999999" blue="0.074478827420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="D14-i4-Tf7">
+                                <rect key="frame" x="51" y="291" width="313" height="122"/>
+                                <color key="backgroundColor" red="0.9506794810295105" green="0.72613948583602905" blue="0.082499377429485321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="122" id="FKg-eM-Mn6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="35"/>
+                                <state key="normal">
+                                    <string key="title">Watch this  Ad  and
+
+find a TREASURE</string>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-wp-0Z3">
+                                <rect key="frame" x="0.0" y="126" width="414" height="128"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and the King doesn't have it..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NL-YB-nmd">
+                                        <rect key="frame" x="138" y="79" width="265" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="265" id="gLV-zC-gRh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="23"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need more Gold!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzL-MW-zVL">
+                                        <rect key="frame" x="17" y="34" width="262" height="31"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="262" id="ahM-uv-Vaj"/>
+                                            <constraint firstAttribute="height" constant="31" id="imO-V0-zRh"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="0NL-YB-nmd" secondAttribute="bottom" constant="18" id="MI8-Ch-qAK"/>
+                                    <constraint firstItem="XzL-MW-zVL" firstAttribute="top" secondItem="YqW-wp-0Z3" secondAttribute="top" constant="34" id="WBi-Tf-NDz"/>
+                                    <constraint firstItem="XzL-MW-zVL" firstAttribute="leading" secondItem="YqW-wp-0Z3" secondAttribute="leading" constant="17" id="WTc-WW-GZw"/>
+                                    <constraint firstItem="0NL-YB-nmd" firstAttribute="top" secondItem="XzL-MW-zVL" secondAttribute="bottom" constant="14" id="qkm-9o-8HX"/>
+                                    <constraint firstAttribute="trailing" secondItem="0NL-YB-nmd" secondAttribute="trailing" constant="11" id="tPf-5O-dOA"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fx-gM-CZu">
+                                <rect key="frame" x="330" y="687" width="61" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="30"/>
+                                <state key="normal" title="Close">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="closeButtonPressed:" destination="Mkv-NR-cp3" eventType="touchUpInside" id="Xd6-sA-tRw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="top" secondItem="TfM-jj-mAj" secondAttribute="bottom" constant="106" id="9ci-kb-qVw"/>
+                            <constraint firstItem="D14-i4-Tf7" firstAttribute="top" secondItem="YqW-wp-0Z3" secondAttribute="bottom" constant="37" id="Gob-Pf-Jsy"/>
+                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="leading" secondItem="5x4-DC-3TB" secondAttribute="leading" id="WSE-Pb-jXV"/>
+                            <constraint firstItem="pMl-5f-uWN" firstAttribute="top" secondItem="5x4-DC-3TB" secondAttribute="bottom" constant="91" id="ZSp-mv-eLM"/>
+                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="trailing" secondItem="5x4-DC-3TB" secondAttribute="trailing" id="c8X-2O-taq"/>
+                            <constraint firstItem="D14-i4-Tf7" firstAttribute="leading" secondItem="rRJ-Gr-2Rv" secondAttribute="leadingMargin" constant="31" id="cdG-7g-QYr"/>
+                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="centerX" secondItem="D14-i4-Tf7" secondAttribute="centerX" id="e0U-ms-4AF"/>
+                            <constraint firstAttribute="trailing" secondItem="YqW-wp-0Z3" secondAttribute="trailing" id="qew-We-Eg1"/>
+                            <constraint firstItem="D14-i4-Tf7" firstAttribute="top" secondItem="rRJ-Gr-2Rv" secondAttribute="top" constant="291" id="qju-a7-Rax"/>
+                            <constraint firstItem="5x4-DC-3TB" firstAttribute="top" secondItem="D14-i4-Tf7" secondAttribute="bottom" constant="38" id="tNR-F4-4US"/>
+                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="leading" secondItem="rRJ-Gr-2Rv" secondAttribute="leading" id="vaH-GM-UXJ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AXB-vz-fpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2685.507246376812" y="1594.5652173913045"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B0V-yi-Ipz">
@@ -435,6 +589,7 @@
         <!--Settings View Controller-->
         <scene sceneID="bim-R2-DBd">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6d-rG-cKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="uML-qF-pX2" customClass="SettingsViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xst-y2-6MW"/>
@@ -459,7 +614,6 @@
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l6d-rG-cKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="867"/>
         </scene>
@@ -583,13 +737,13 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cU-gf-WG6">
-                                <rect key="frame" x="20" y="685" width="86" height="43"/>
+                                <rect key="frame" x="20" y="685" width="88" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="IQ6-bQ-d8a"/>
-                                    <constraint firstAttribute="width" constant="86" id="MkY-RU-g2P"/>
+                                    <constraint firstAttribute="width" constant="88" id="MkY-RU-g2P"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
-                                <state key="normal" title="Menu">
+                                <state key="normal" title="Party">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -640,7 +794,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFe-8E-Pho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2686" y="866"/>
+            <point key="canvasLocation" x="2685.507246376812" y="865.76086956521749"/>
         </scene>
         <!--Battle View Controller-->
         <scene sceneID="OZN-Z8-aEQ">
@@ -715,9 +869,12 @@
                                     <constraint firstAttribute="width" constant="86" id="m11-nm-ZyH"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
-                                <state key="normal" title="Menu">
+                                <state key="normal" title="Items">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="bA7-Dj-wn9" eventType="touchUpInside" id="izr-BB-R8K"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCk-F6-Nhk">
                                 <rect key="frame" x="161.66666666666666" y="66" width="91" height="37"/>
