@@ -16,6 +16,10 @@
 		C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063721DF04DDE003ACD19 /* AboutViewController.swift */; };
 		C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063741DF04DEC003ACD19 /* SettingsViewController.swift */; };
 		C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */; };
+		C680637C1DF19D9E003ACD19 /* QuestRowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680637B1DF19D9E003ACD19 /* QuestRowController.swift */; };
+		C680637E1DF19FF3003ACD19 /* Quest.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680637D1DF19FF3003ACD19 /* Quest.swift */; };
+		C68063801DF1A759003ACD19 /* QuestManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680637F1DF1A759003ACD19 /* QuestManager.swift */; };
+		C68063821DF1C3C1003ACD19 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C68063811DF1C3C1003ACD19 /* HealthKit.framework */; };
 		C68475201DE714290081DA95 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C684751E1DE714290081DA95 /* Interface.storyboard */; };
 		C68475221DE714290081DA95 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C68475211DE714290081DA95 /* Assets.xcassets */; };
 		C68475291DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
@@ -116,6 +120,11 @@
 		C68063721DF04DDE003ACD19 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C68063741DF04DEC003ACD19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldOverlayViewController.swift; sourceTree = "<group>"; };
+		C680637B1DF19D9E003ACD19 /* QuestRowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestRowController.swift; sourceTree = "<group>"; };
+		C680637D1DF19FF3003ACD19 /* Quest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Quest.swift; sourceTree = "<group>"; };
+		C680637F1DF1A759003ACD19 /* QuestManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QuestManager.swift; sourceTree = "<group>"; };
+		C68063811DF1C3C1003ACD19 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/HealthKit.framework; sourceTree = DEVELOPER_DIR; };
+		C68063831DF1C3C1003ACD19 /* DungeonsAndCardsWatch Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "DungeonsAndCardsWatch Extension.entitlements"; sourceTree = "<group>"; };
 		C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCardsWatch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C684751F1DE714290081DA95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
 		C68475211DE714290081DA95 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -162,6 +171,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C68063821DF1C3C1003ACD19 /* HealthKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -193,6 +203,7 @@
 		28662B0E9030E8BC112ECADE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				C68063811DF1C3C1003ACD19 /* HealthKit.framework */,
 				B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */,
 			);
 			name = Frameworks;
@@ -229,10 +240,14 @@
 		C684752C1DE714290081DA95 /* DungeonsAndCardsWatch Extension */ = {
 			isa = PBXGroup;
 			children = (
+				C68063831DF1C3C1003ACD19 /* DungeonsAndCardsWatch Extension.entitlements */,
+				C680637B1DF19D9E003ACD19 /* QuestRowController.swift */,
 				C684752F1DE714290081DA95 /* InterfaceController.swift */,
 				C68475311DE714290081DA95 /* ExtensionDelegate.swift */,
 				C68475331DE714290081DA95 /* NotificationController.swift */,
 				C68475351DE714290081DA95 /* ComplicationController.swift */,
+				C680637D1DF19FF3003ACD19 /* Quest.swift */,
+				C680637F1DF1A759003ACD19 /* QuestManager.swift */,
 				C68475371DE714290081DA95 /* Assets.xcassets */,
 				C68475391DE714290081DA95 /* Info.plist */,
 				C684752D1DE714290081DA95 /* Supporting Files */,
@@ -510,8 +525,13 @@
 					};
 					C68475271DE714290081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = FWD9V5VYJ2;
+						DevelopmentTeam = GRKYXDG5QL;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HealthKit.watchos = {
+								enabled = 1;
+							};
+						};
 					};
 					C68475481DE715BA0081DA95 = {
 						CreatedOnToolsVersion = 8.1;
@@ -654,7 +674,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C680637E1DF19FF3003ACD19 /* Quest.swift in Sources */,
+				C680637C1DF19D9E003ACD19 /* QuestRowController.swift in Sources */,
 				C68475341DE714290081DA95 /* NotificationController.swift in Sources */,
+				C68063801DF1A759003ACD19 /* QuestManager.swift in Sources */,
 				C68475361DE714290081DA95 /* ComplicationController.swift in Sources */,
 				C68475321DE714290081DA95 /* ExtensionDelegate.swift in Sources */,
 				C68475301DE714290081DA95 /* InterfaceController.swift in Sources */,
@@ -798,7 +821,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				CODE_SIGN_ENTITLEMENTS = "DungeonsAndCardsWatch Extension/DungeonsAndCardsWatch Extension.entitlements";
+				DEVELOPMENT_TEAM = GRKYXDG5QL;
 				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
@@ -815,7 +839,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				CODE_SIGN_ENTITLEMENTS = "DungeonsAndCardsWatch Extension/DungeonsAndCardsWatch Extension.entitlements";
+				DEVELOPMENT_TEAM = GRKYXDG5QL;
 				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
