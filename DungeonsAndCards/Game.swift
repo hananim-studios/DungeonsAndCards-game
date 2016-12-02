@@ -10,6 +10,7 @@ import Foundation
 
 class Game {
     
+    var money: Int = 10
     var partyHeroes: [Hero?] = []
     var handHeroes: [Hero?] = []
     

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
-    <device id="retina5_5" orientation="portrait">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
+    <device id="retina4_0" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -24,11 +24,11 @@
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fC-2p-l22">
-                                <rect key="frame" x="125" y="362.66666666666669" width="164" height="37"/>
+                                <rect key="frame" x="78" y="278.5" width="164" height="37"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
                                 <state key="normal" title="Continue Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -38,7 +38,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Yp-4K-GHd">
-                                <rect key="frame" x="149" y="408.66666666666669" width="117" height="37"/>
+                                <rect key="frame" x="102" y="324.5" width="117" height="37"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
                                 <state key="normal" title="New Game">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -48,7 +48,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jxQ-1i-emc">
-                                <rect key="frame" x="164" y="453.66666666666669" width="87" height="37"/>
+                                <rect key="frame" x="117" y="369.5" width="87" height="37"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
                                 <state key="normal" title="Settings">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -59,7 +59,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DXl-uc-JT9">
-                                <rect key="frame" x="176" y="498.66666666666663" width="64" height="36.999999999999886"/>
+                                <rect key="frame" x="129" y="414.5" width="64" height="37"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
                                 <state key="normal" title="About">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -70,13 +70,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dungeons &amp; Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7G-fG-TE2">
-                                <rect key="frame" x="29" y="222.66666666666666" width="357" height="28"/>
+                                <rect key="frame" x="25" y="138.5" width="271" height="28"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3l-eL-nmu">
-                                <rect key="frame" x="312" y="72" width="42" height="41"/>
+                                <rect key="frame" x="222" y="72" width="42" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="0al-OD-YxB"/>
                                 </constraints>
@@ -86,7 +86,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-ig-Lau">
-                                <rect key="frame" x="362" y="77" width="32" height="30"/>
+                                <rect key="frame" x="272" y="77" width="32" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="akN-wx-UBI"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="rf3-mS-1Wb"/>
@@ -141,14 +141,14 @@
                         <viewControllerLayoutGuide type="bottom" id="Ddm-eA-J1D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Qhk-9P-pOu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="door" translatesAutoresizingMaskIntoConstraints="NO" id="Kqo-oj-PjF">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LwU-Ls-hRz">
-                                <rect key="frame" x="368" y="686" width="30" height="30"/>
+                                <rect key="frame" x="274" y="518" width="30" height="30"/>
                                 <state key="normal" title="Skip">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -185,7 +185,7 @@
                         <viewControllerLayoutGuide type="bottom" id="KfF-PD-TFh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="Zkg-Dt-6He">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bmw-4W-eqb">
@@ -213,11 +213,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mbU-vp-VOn"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="jEZ-Ny-LI4">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-uX-hm4" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="362" width="414" height="307"/>
+                                <rect key="frame" x="-4" y="278" width="328" height="223"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dr1-Ex-phX">
                                     <size key="itemSize" width="137" height="216"/>
@@ -227,14 +227,14 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HeroCell" id="X6J-B9-nR1" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="13.666666666666666" width="137" height="216"/>
+                                        <rect key="frame" x="0.0" y="-29" width="137" height="216"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="00w-r4-bpi">
-                                                    <rect key="frame" x="-0.6666666666666714" y="0.0" width="137.33333333333331" height="216"/>
+                                                    <rect key="frame" x="-0.5" y="0.0" width="137" height="216"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -252,7 +252,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-O5-IF5">
-                                <rect key="frame" x="327" y="692" width="67" height="30"/>
+                                <rect key="frame" x="237" y="524" width="67" height="30"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -263,7 +263,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-IU-X1n" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="155" width="410" height="183"/>
+                                <rect key="frame" x="-4" y="155" width="324" height="99"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BXH-Ds-2H0">
                                     <size key="itemSize" width="88" height="133"/>
@@ -273,7 +273,7 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCell" id="sd7-DK-hh3" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="25" width="88" height="133"/>
+                                        <rect key="frame" x="0.0" y="-17" width="88" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
@@ -298,7 +298,7 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Hh-Oo7">
-                                <rect key="frame" x="366" y="73" width="32" height="30"/>
+                                <rect key="frame" x="276" y="73" width="32" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BQQ-z7-C4C"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="LgP-lX-Grh"/>
@@ -313,7 +313,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89M-Hh-Z5E">
-                                <rect key="frame" x="323" y="69" width="42" height="41"/>
+                                <rect key="frame" x="233" y="69" width="42" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="1vF-nr-Qc9"/>
                                     <constraint firstAttribute="height" constant="41" id="Awl-zB-7Mn"/>
@@ -324,7 +324,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="phn-gh-w8T">
-                                <rect key="frame" x="20" y="685" width="86" height="43"/>
+                                <rect key="frame" x="16" y="517" width="86" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="86" id="FAG-st-Zhu"/>
                                     <constraint firstAttribute="height" constant="43" id="opW-ju-8wm"/>
@@ -338,7 +338,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Party" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP6-EC-UDk">
-                                <rect key="frame" x="161.66666666666666" y="66" width="91" height="37"/>
+                                <rect key="frame" x="114.5" y="66" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="2rf-YA-7iV"/>
                                     <constraint firstAttribute="width" constant="91" id="kOw-PW-Dhp"/>
@@ -401,148 +401,153 @@
                         <viewControllerLayoutGuide type="bottom" id="pMl-5f-uWN"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" contentMode="scaleToFill" id="rRJ-Gr-2Rv">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vru-fB-2VB">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" id="XRD-8g-02k">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vru-fB-2VB">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="XRD-8g-02k">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <view alpha="0.80000000000000004" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-wp-0Z3">
+                                            <rect key="frame" x="0.0" y="43" width="320" height="128"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="You need more Gold!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="XzL-MW-zVL">
+                                                    <rect key="frame" x="8" y="25" width="263" height="31"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and the King doesn't have it..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NL-YB-nmd">
+                                                    <rect key="frame" x="48" y="61.5" width="264" height="20"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="23"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstItem="XzL-MW-zVL" firstAttribute="top" secondItem="YqW-wp-0Z3" secondAttribute="top" constant="25" id="2cj-WV-cps"/>
+                                                <constraint firstAttribute="trailing" secondItem="0NL-YB-nmd" secondAttribute="trailing" constant="8" id="98A-0t-8f5"/>
+                                                <constraint firstItem="XzL-MW-zVL" firstAttribute="leading" secondItem="YqW-wp-0Z3" secondAttribute="leading" constant="8" id="BQ0-dQ-omg"/>
+                                                <constraint firstItem="0NL-YB-nmd" firstAttribute="top" secondItem="XzL-MW-zVL" secondAttribute="bottom" constant="8" id="ovP-Tk-lOn"/>
+                                            </constraints>
+                                        </view>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="D14-i4-Tf7">
+                                            <rect key="frame" x="0.0" y="213" width="320" height="142"/>
+                                            <color key="backgroundColor" red="0.9506794810295105" green="0.72613948583602905" blue="0.082499377429485321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="35"/>
+                                            <state key="normal">
+                                                <string key="title">Watch this  Ad  and
+
+find a TREASURE</string>
+                                                <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                    <integer key="value" value="10"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                        </button>
+                                        <view alpha="0.80000001192092896" contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5x4-DC-3TB">
+                                            <rect key="frame" x="0.0" y="373" width="320" height="194"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="or complete one of your" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ0-RA-AN7">
+                                                    <rect key="frame" x="8" y="8" width="253" height="31"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Daily Quests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-qs-WAB">
+                                                    <rect key="frame" x="28" y="39" width="164" height="31"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
+                                                    <color key="textColor" red="0.94269293546676636" green="0.72619825601577759" blue="0.07447882741689682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="on the Apple Watch" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgI-32-Cco">
+                                                    <rect key="frame" x="50" y="78" width="211" height="31"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="to earn a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-zD-2Sc">
+                                                    <rect key="frame" x="50" y="117" width="96" height="29"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Reward" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-9E-wyC">
+                                                    <rect key="frame" x="154" y="116" width="112" height="31"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="37"/>
+                                                    <color key="textColor" red="0.9426929355" green="0.72619825599999999" blue="0.074478827420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fx-gM-CZu">
+                                                    <rect key="frame" x="248" y="149" width="60" height="38"/>
+                                                    <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="30"/>
+                                                    <state key="normal" title="Close">
+                                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    </state>
+                                                    <connections>
+                                                        <action selector="closeButtonPressed:" destination="Mkv-NR-cp3" eventType="touchUpInside" id="Xd6-sA-tRw"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="0fx-gM-CZu" secondAttribute="bottom" constant="-45" id="0dT-Jp-Xud"/>
+                                                <constraint firstItem="fVV-zD-2Sc" firstAttribute="leading" secondItem="5x4-DC-3TB" secondAttribute="leading" constant="50" id="45k-Mf-yhf"/>
+                                                <constraint firstItem="gJ0-RA-AN7" firstAttribute="leading" secondItem="5x4-DC-3TB" secondAttribute="leading" constant="8" id="AMz-VG-a50"/>
+                                                <constraint firstItem="vgI-32-Cco" firstAttribute="leading" secondItem="5x4-DC-3TB" secondAttribute="leading" constant="50" id="OTu-Ma-WYJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="0fx-gM-CZu" secondAttribute="trailing" constant="12" id="QuT-8f-XEB"/>
+                                                <constraint firstItem="vgI-32-Cco" firstAttribute="top" secondItem="xLT-qs-WAB" secondAttribute="bottom" constant="8" id="XWF-1D-Ypy"/>
+                                                <constraint firstItem="0Qf-9E-wyC" firstAttribute="leading" secondItem="fVV-zD-2Sc" secondAttribute="trailing" constant="8" id="Zm6-Z1-o0p"/>
+                                                <constraint firstItem="xLT-qs-WAB" firstAttribute="top" secondItem="gJ0-RA-AN7" secondAttribute="bottom" id="fD2-gV-Jhi"/>
+                                                <constraint firstItem="fVV-zD-2Sc" firstAttribute="top" secondItem="vgI-32-Cco" secondAttribute="bottom" constant="8" id="heU-QD-uhj"/>
+                                                <constraint firstItem="0Qf-9E-wyC" firstAttribute="top" secondItem="vgI-32-Cco" secondAttribute="bottom" constant="7" id="nQ2-Te-1Ib"/>
+                                                <constraint firstItem="xLT-qs-WAB" firstAttribute="leading" secondItem="5x4-DC-3TB" secondAttribute="leading" constant="28" id="oyi-jw-iD7"/>
+                                                <constraint firstItem="gJ0-RA-AN7" firstAttribute="top" secondItem="5x4-DC-3TB" secondAttribute="top" constant="8" id="wsh-DZ-gnL"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="D14-i4-Tf7" firstAttribute="height" secondItem="XRD-8g-02k" secondAttribute="height" multiplier="0.25" id="1sg-o6-Gu1"/>
+                                        <constraint firstItem="5x4-DC-3TB" firstAttribute="width" secondItem="XRD-8g-02k" secondAttribute="width" id="3bN-ng-nX7"/>
+                                        <constraint firstItem="YqW-wp-0Z3" firstAttribute="height" secondItem="XRD-8g-02k" secondAttribute="height" multiplier="0.25" id="97p-fx-Dcy"/>
+                                        <constraint firstItem="YqW-wp-0Z3" firstAttribute="width" secondItem="XRD-8g-02k" secondAttribute="width" id="9lD-A5-g2n"/>
+                                        <constraint firstItem="5x4-DC-3TB" firstAttribute="height" secondItem="XRD-8g-02k" secondAttribute="height" multiplier="0.25" id="LeT-hB-Bz8"/>
+                                        <constraint firstItem="YqW-wp-0Z3" firstAttribute="centerX" secondItem="XRD-8g-02k" secondAttribute="centerX" id="Ui0-86-3Uv"/>
+                                        <constraint firstItem="YqW-wp-0Z3" firstAttribute="top" secondItem="XRD-8g-02k" secondAttribute="top" constant="43" id="WIk-j1-vyI"/>
+                                        <constraint firstItem="D14-i4-Tf7" firstAttribute="centerX" secondItem="XRD-8g-02k" secondAttribute="centerX" id="bOQ-7l-P6d"/>
+                                        <constraint firstItem="5x4-DC-3TB" firstAttribute="centerX" secondItem="XRD-8g-02k" secondAttribute="centerX" id="ebX-tB-pIJ"/>
+                                        <constraint firstItem="D14-i4-Tf7" firstAttribute="centerY" secondItem="XRD-8g-02k" secondAttribute="centerY" id="gUr-q9-hFg"/>
+                                        <constraint firstAttribute="bottom" secondItem="5x4-DC-3TB" secondAttribute="bottom" constant="1" id="v75-ka-rSh"/>
+                                        <constraint firstItem="D14-i4-Tf7" firstAttribute="width" secondItem="XRD-8g-02k" secondAttribute="width" id="yKz-Zc-dHp"/>
+                                    </constraints>
                                 </view>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
-                            <view alpha="0.80000001192092896" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5x4-DC-3TB">
-                                <rect key="frame" x="0.0" y="451" width="414" height="194"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="or complete one of your" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ0-RA-AN7">
-                                        <rect key="frame" x="81" y="32" width="253" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="on the Apple Watch" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgI-32-Cco">
-                                        <rect key="frame" x="108" y="99" width="211" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="to earn a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-zD-2Sc">
-                                        <rect key="frame" x="108" y="132" width="96" height="29"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Daily Quests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-qs-WAB">
-                                        <rect key="frame" x="130" y="65" width="164" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
-                                        <color key="textColor" red="0.94269293546676636" green="0.72619825601577759" blue="0.07447882741689682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reward" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-9E-wyC">
-                                        <rect key="frame" x="214" y="129" width="112" height="31"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="37"/>
-                                        <color key="textColor" red="0.9426929355" green="0.72619825599999999" blue="0.074478827420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="characterWrap" translatesAutoresizingMaskIntoConstraints="NO" id="D14-i4-Tf7">
-                                <rect key="frame" x="51" y="291" width="313" height="122"/>
-                                <color key="backgroundColor" red="0.9506794810295105" green="0.72613948583602905" blue="0.082499377429485321" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="122" id="FKg-eM-Mn6"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="35"/>
-                                <state key="normal">
-                                    <string key="title">Watch this  Ad  and
-
-find a TREASURE</string>
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </button>
-                            <view alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YqW-wp-0Z3">
-                                <rect key="frame" x="0.0" y="126" width="414" height="128"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and the King doesn't have it..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NL-YB-nmd">
-                                        <rect key="frame" x="138" y="79" width="265" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="265" id="gLV-zC-gRh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="23"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need more Gold!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XzL-MW-zVL">
-                                        <rect key="frame" x="17" y="34" width="262" height="31"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="262" id="ahM-uv-Vaj"/>
-                                            <constraint firstAttribute="height" constant="31" id="imO-V0-zRh"/>
-                                        </constraints>
-                                        <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="bottom" secondItem="0NL-YB-nmd" secondAttribute="bottom" constant="18" id="MI8-Ch-qAK"/>
-                                    <constraint firstItem="XzL-MW-zVL" firstAttribute="top" secondItem="YqW-wp-0Z3" secondAttribute="top" constant="34" id="WBi-Tf-NDz"/>
-                                    <constraint firstItem="XzL-MW-zVL" firstAttribute="leading" secondItem="YqW-wp-0Z3" secondAttribute="leading" constant="17" id="WTc-WW-GZw"/>
-                                    <constraint firstItem="0NL-YB-nmd" firstAttribute="top" secondItem="XzL-MW-zVL" secondAttribute="bottom" constant="14" id="qkm-9o-8HX"/>
-                                    <constraint firstAttribute="trailing" secondItem="0NL-YB-nmd" secondAttribute="trailing" constant="11" id="tPf-5O-dOA"/>
-                                </constraints>
-                            </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0fx-gM-CZu">
-                                <rect key="frame" x="330" y="687" width="61" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="30"/>
-                                <state key="normal" title="Close">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="closeButtonPressed:" destination="Mkv-NR-cp3" eventType="touchUpInside" id="Xd6-sA-tRw"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="top" secondItem="TfM-jj-mAj" secondAttribute="bottom" constant="106" id="9ci-kb-qVw"/>
-                            <constraint firstItem="D14-i4-Tf7" firstAttribute="top" secondItem="YqW-wp-0Z3" secondAttribute="bottom" constant="37" id="Gob-Pf-Jsy"/>
-                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="leading" secondItem="5x4-DC-3TB" secondAttribute="leading" id="WSE-Pb-jXV"/>
-                            <constraint firstItem="pMl-5f-uWN" firstAttribute="top" secondItem="5x4-DC-3TB" secondAttribute="bottom" constant="91" id="ZSp-mv-eLM"/>
-                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="trailing" secondItem="5x4-DC-3TB" secondAttribute="trailing" id="c8X-2O-taq"/>
-                            <constraint firstItem="D14-i4-Tf7" firstAttribute="leading" secondItem="rRJ-Gr-2Rv" secondAttribute="leadingMargin" constant="31" id="cdG-7g-QYr"/>
-                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="centerX" secondItem="D14-i4-Tf7" secondAttribute="centerX" id="e0U-ms-4AF"/>
-                            <constraint firstAttribute="trailing" secondItem="YqW-wp-0Z3" secondAttribute="trailing" id="qew-We-Eg1"/>
-                            <constraint firstItem="D14-i4-Tf7" firstAttribute="top" secondItem="rRJ-Gr-2Rv" secondAttribute="top" constant="291" id="qju-a7-Rax"/>
-                            <constraint firstItem="5x4-DC-3TB" firstAttribute="top" secondItem="D14-i4-Tf7" secondAttribute="bottom" constant="38" id="tNR-F4-4US"/>
-                            <constraint firstItem="YqW-wp-0Z3" firstAttribute="leading" secondItem="rRJ-Gr-2Rv" secondAttribute="leading" id="vaH-GM-UXJ"/>
+                            <constraint firstItem="Vru-fB-2VB" firstAttribute="centerY" secondItem="rRJ-Gr-2Rv" secondAttribute="centerY" id="51Z-vS-xj2"/>
+                            <constraint firstItem="Vru-fB-2VB" firstAttribute="centerX" secondItem="rRJ-Gr-2Rv" secondAttribute="centerX" id="P5j-Np-Sos"/>
+                            <constraint firstItem="Vru-fB-2VB" firstAttribute="height" secondItem="rRJ-Gr-2Rv" secondAttribute="height" id="Zx2-dX-zcZ"/>
+                            <constraint firstItem="Vru-fB-2VB" firstAttribute="width" secondItem="rRJ-Gr-2Rv" secondAttribute="width" id="hWt-D6-jV5"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXB-vz-fpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685.507246376812" y="1594.5652173913045"/>
+            <point key="canvasLocation" x="2685" y="1594.0140845070423"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B0V-yi-Ipz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ui-x5-1YM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="tIt-mW-LeJ">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tIt-mW-LeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -564,11 +569,11 @@ find a TREASURE</string>
                         <viewControllerLayoutGuide type="bottom" id="Kp1-2L-z9q"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="45o-yK-1SU">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a4Q-Vg-FWx">
-                                <rect key="frame" x="20" y="20" width="54" height="30"/>
+                                <rect key="frame" x="16" y="20" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
                                     <action selector="dismissButtonPressed:" destination="RJL-Jl-5GK" eventType="touchUpInside" id="uf3-l0-sKh"/>
@@ -589,18 +594,17 @@ find a TREASURE</string>
         <!--Settings View Controller-->
         <scene sceneID="bim-R2-DBd">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="l6d-rG-cKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="uML-qF-pX2" customClass="SettingsViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xst-y2-6MW"/>
                         <viewControllerLayoutGuide type="bottom" id="8KM-eS-VSG"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="WII-MF-WOj">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2oG-CR-Bca">
-                                <rect key="frame" x="20" y="20" width="54" height="30"/>
+                                <rect key="frame" x="16" y="20" width="54" height="30"/>
                                 <state key="normal" title="Dismiss"/>
                                 <connections>
                                     <action selector="dismissButtonPressed:" destination="uML-qF-pX2" eventType="touchUpInside" id="v4P-Jv-GsC"/>
@@ -614,6 +618,7 @@ find a TREASURE</string>
                         </constraints>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6d-rG-cKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="964" y="867"/>
         </scene>
@@ -626,11 +631,11 @@ find a TREASURE</string>
                         <viewControllerLayoutGuide type="bottom" id="q78-Lb-M4D"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="lXa-Rx-xSC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-YC-izH" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="362" width="414" height="307"/>
+                                <rect key="frame" x="-4" y="278" width="328" height="223"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OFT-Cs-MNr">
                                     <size key="itemSize" width="137" height="216"/>
@@ -640,14 +645,14 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HeroCell" id="Kwn-9I-zmz" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="13.666666666666666" width="137" height="216"/>
+                                        <rect key="frame" x="0.0" y="-29" width="137" height="216"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Q8-Gh-eOf">
-                                                    <rect key="frame" x="-0.6666666666666714" y="0.0" width="137.33333333333331" height="216"/>
+                                                    <rect key="frame" x="-0.5" y="0.0" width="137" height="216"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -665,7 +670,7 @@ find a TREASURE</string>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ5-FC-PJz">
-                                <rect key="frame" x="309" y="692" width="85" height="30"/>
+                                <rect key="frame" x="219" y="524" width="85" height="30"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
                                 <state key="normal" title="Battle">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -676,7 +681,7 @@ find a TREASURE</string>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-mZ-jKQ" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="155" width="410" height="183"/>
+                                <rect key="frame" x="-4" y="155" width="324" height="99"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qSP-Ew-LHR">
                                     <size key="itemSize" width="88" height="133"/>
@@ -686,7 +691,7 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCell" id="nau-Mr-EtE" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="25" width="88" height="133"/>
+                                        <rect key="frame" x="0.0" y="-17" width="88" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
@@ -711,7 +716,7 @@ find a TREASURE</string>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="awy-B1-Vuc">
-                                <rect key="frame" x="366" y="73" width="32" height="30"/>
+                                <rect key="frame" x="276" y="73" width="32" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gab-tt-9O1"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="OCz-h8-iUp"/>
@@ -726,7 +731,7 @@ find a TREASURE</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dOF-at-43a">
-                                <rect key="frame" x="323" y="69" width="42" height="41"/>
+                                <rect key="frame" x="233" y="69" width="42" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="tVn-lA-tsl"/>
                                     <constraint firstAttribute="height" constant="41" id="wQv-se-YaD"/>
@@ -737,7 +742,7 @@ find a TREASURE</string>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1cU-gf-WG6">
-                                <rect key="frame" x="20" y="685" width="88" height="43"/>
+                                <rect key="frame" x="16" y="517" width="88" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="IQ6-bQ-d8a"/>
                                     <constraint firstAttribute="width" constant="88" id="MkY-RU-g2P"/>
@@ -751,7 +756,7 @@ find a TREASURE</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Items" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="COa-CB-aqR">
-                                <rect key="frame" x="161.66666666666666" y="66" width="91" height="37"/>
+                                <rect key="frame" x="114.5" y="66" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="91" id="Yca-EZ-uDl"/>
                                     <constraint firstAttribute="height" constant="37" id="rWc-TE-JU4"/>
@@ -805,11 +810,11 @@ find a TREASURE</string>
                         <viewControllerLayoutGuide type="bottom" id="blI-wW-Che"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="3cF-u9-fqu">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="16f-hJ-Eg5" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="362" width="414" height="307"/>
+                                <rect key="frame" x="-4" y="278" width="328" height="223"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gtB-Er-HcH">
                                     <size key="itemSize" width="137" height="216"/>
@@ -819,14 +824,14 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HeroCell" id="neY-7i-eS7" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="13.666666666666666" width="137" height="216"/>
+                                        <rect key="frame" x="0.0" y="-29" width="137" height="216"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-re-n8V">
-                                                    <rect key="frame" x="-0.6666666666666714" y="0.0" width="137.33333333333331" height="216"/>
+                                                    <rect key="frame" x="-0.5" y="0.0" width="137" height="216"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -844,7 +849,7 @@ find a TREASURE</string>
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LD7-Ct-Kgv">
-                                <rect key="frame" x="366" y="73" width="32" height="30"/>
+                                <rect key="frame" x="276" y="73" width="32" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="3oH-w5-kDg"/>
                                     <constraint firstAttribute="height" constant="30" id="gaa-Mt-9lC"/>
@@ -855,7 +860,7 @@ find a TREASURE</string>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zeY-DM-Ng3">
-                                <rect key="frame" x="323" y="69" width="42" height="41"/>
+                                <rect key="frame" x="233" y="69" width="42" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="IDC-Ir-Hdz"/>
                                     <constraint firstAttribute="height" constant="41" id="ZQP-kc-Wcc"/>
@@ -863,7 +868,7 @@ find a TREASURE</string>
                                 <state key="normal" backgroundImage="gold"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5RW-AQ-2gr">
-                                <rect key="frame" x="20" y="685" width="86" height="43"/>
+                                <rect key="frame" x="16" y="517" width="86" height="43"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="dpW-Xa-Nyg"/>
                                     <constraint firstAttribute="width" constant="86" id="m11-nm-ZyH"/>
@@ -877,7 +882,7 @@ find a TREASURE</string>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hCk-F6-Nhk">
-                                <rect key="frame" x="161.66666666666666" y="66" width="91" height="37"/>
+                                <rect key="frame" x="114.5" y="66" width="91" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="Hqb-jW-P8p"/>
                                     <constraint firstAttribute="width" constant="91" id="Qka-OX-6UJ"/>

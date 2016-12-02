@@ -43,6 +43,8 @@
 		D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E21DE5C4CC00E52C03 /* Game.swift */; };
 		D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E41DE5C4FB00E52C03 /* Party.swift */; };
 		D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E61DE5C52000E52C03 /* Hero.swift */; };
+		D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B271DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift */; };
+		D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B2A1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift */; };
 		D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -150,6 +152,8 @@
 		D1D014E21DE5C4CC00E52C03 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D1D014E41DE5C4FB00E52C03 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		D1D014E61DE5C52000E52C03 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
+		D1D12B271DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIOCollectionViewDataSource.swift; sourceTree = "<group>"; };
+		D1D12B2A1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
 		D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIOCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -305,8 +309,8 @@
 		D11BFE661DEE47660046086C /* 3rdparty */ = {
 			isa = PBXGroup;
 			children = (
-				D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */,
-				D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */,
+				D1D12B291DF0B10D0045CE29 /* Extensions */,
+				D1D12B261DF0B0EC0045CE29 /* DIOCollectionView */,
 			);
 			name = 3rdparty;
 			sourceTree = "<group>";
@@ -366,6 +370,24 @@
 				D1D014E61DE5C52000E52C03 /* Hero.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		D1D12B261DF0B0EC0045CE29 /* DIOCollectionView */ = {
+			isa = PBXGroup;
+			children = (
+				D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */,
+				D1D12B271DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift */,
+			);
+			name = DIOCollectionView;
+			sourceTree = "<group>";
+		};
+		D1D12B291DF0B10D0045CE29 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */,
+				D1D12B2A1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		D1EF4C651DE5E08000C95AB8 /* Data */ = {
@@ -488,24 +510,24 @@
 					};
 					C68475271DE714290081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GRKYXDG5QL;
+						DevelopmentTeam = FWD9V5VYJ2;
 						ProvisioningStyle = Automatic;
 					};
 					C68475481DE715BA0081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GRKYXDG5QL;
+						DevelopmentTeam = FWD9V5VYJ2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D14E4E131DDF493A002A0ED0;
 					};
 					C68475561DE716110081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GRKYXDG5QL;
+						DevelopmentTeam = FWD9V5VYJ2;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D14E4E131DDF493A002A0ED0;
 					};
 					D14E4E131DDF493A002A0ED0 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GRKYXDG5QL;
+						DevelopmentTeam = FWD9V5VYJ2;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -663,6 +685,7 @@
 				D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */,
 				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
 				C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */,
+				D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */,
 				D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */,
 				C680636F1DF04B5D003ACD19 /* ShoppingViewController.swift in Sources */,
 				C627A5C51DEDCB38002F6533 /* ItemsViewController.swift in Sources */,
@@ -673,6 +696,7 @@
 				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
 				D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
+				D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */,
 				C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,
@@ -774,7 +798,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
@@ -791,7 +815,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
@@ -808,7 +832,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = DungeonsAndCardsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsTests";
@@ -822,7 +846,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = DungeonsAndCardsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsTests";
@@ -835,7 +859,7 @@
 		C684755F1DE716110081DA95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = DungeonsAndCardsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsUITests";
@@ -848,7 +872,7 @@
 		C68475601DE716110081DA95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = DungeonsAndCardsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsUITests";
@@ -959,7 +983,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = DungeonsAndCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards;
@@ -974,7 +998,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				DEVELOPMENT_TEAM = FWD9V5VYJ2;
 				INFOPLIST_FILE = DungeonsAndCards/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards;
