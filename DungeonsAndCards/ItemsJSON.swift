@@ -23,7 +23,7 @@ class ItemsJSON {
             
             self.json = JSON(data: data as Data)
             
-            print("Loaded Items JSON")
+            print("loaded Items JSON")
             
             return true
             

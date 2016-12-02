@@ -23,7 +23,7 @@ class EnemiesJSON {
             
             self.json = JSON(data: data as Data)
             
-            print("Loaded Enemies JSON")
+            print("loaded Enemies JSON")
             
             return true
             

@@ -13,7 +13,7 @@ class HeroesJSON {
     
     static var json: JSON? = nil
     
-    static func load() -> JSON {
+    static func load() -> Bool {
         
         do {
             
@@ -21,11 +21,11 @@ class HeroesJSON {
             
             let data = try NSData(contentsOf: NSURL(fileURLWithPath: path!) as URL, options: .mappedIfSafe)
             
-            print("Loaded Heroes JSON")
+            print("loaded Heroes JSON")
 
             self.json = JSON(data: data as Data)
             
-            return JSON(data: data as Data)
+            return true
             
         } catch {
             
@@ -35,7 +35,7 @@ class HeroesJSON {
     
     static func heroAtIndex(index: Int) -> Hero? {
         
-        if let json = self.json {
+        if let json = json {
             return Hero(json: json["heroes"][index])
         }
         

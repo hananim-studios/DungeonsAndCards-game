@@ -11,15 +11,6 @@ import SwiftyJSON
 
 class Hero {
 
-//    var template: String = "default"
-//    
-//    var attack: Int = 0
-//    var health: (current: Int, total: Int) = (0, 0)
-//    
-//    init(withTemplate template: String) {
-//        self.template = template
-//    }
-
     var name: String?
     var description: String?
     var pic: String?

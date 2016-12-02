@@ -2,33 +2,40 @@
 //  Party.swift
 //  DungeonsAndCards
 //
-//  Created by Matheus Martins on 11/23/16.
+//  Created by Gabriela de Carvalho Barros Bezerra on 01/12/16.
 //  Copyright © 2016 hananim. All rights reserved.
 //
 
 import Foundation
-import SwiftyJSON
+
+protocol PartyDelegate {
+    
+    func didHireHero (hero: Hero, atSlot slot: Int)
+    func didDismissHero (hero: Hero, atSlot slot: Int)
+    
+}
 
 class Party {
     
-    var heroes : [Hero?] = []
-    var hand : [Hero?] = []
+    var heroes: [Hero?] = [nil,nil,nil]
     
-    lazy var heroesJSON: JSON = HeroesJSON.load()
+    var delegate: PartyDelegate?
     
-    init(){
+    //MARK - Implement Protocol Functions
+    func hireHero(hero: Hero, atSlot slot: Int) {
         
-        for _ in 0...4 {
-            let i = arc4random_uniform(UInt32(heroesJSON.count))
-            let randomHero = HeroesJSON.heroAtIndex(index: Int(i))
-            hand.append(randomHero)
-        }
+        heroes[slot] = hero
         
-        for _ in 0...2 {
-            let i = arc4random_uniform(UInt32(heroesJSON.count))
-        }
+        print("*****\n Heroes:\n\(heroes)\n*****")
         
+        delegate?.didHireHero(hero: hero, atSlot: slot)
     }
     
-    
+    func dismissHero(hero: Hero, atSlot slot: Int) {
+        
+        heroes[slot] = nil
+        
+        delegate?.didDismissHero(hero: hero, atSlot: slot)
+        
+    }
 }
