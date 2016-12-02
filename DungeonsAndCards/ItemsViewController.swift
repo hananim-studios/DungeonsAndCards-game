@@ -92,7 +92,7 @@ class ItemsViewController: UIViewController, UICollectionViewDataSource, UIColle
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
             
-            cell.setHero(self.game.handHeroes[indexPath.row])
+            cell.setHero(self.game.hand.heroes[indexPath.row])
             
             return cell
         }
@@ -103,7 +103,7 @@ class ItemsViewController: UIViewController, UICollectionViewDataSource, UIColle
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
             
-            cell.setHero(self.game.partyHeroes[indexPath.row])
+            cell.setHero(self.game.party.heroes[indexPath.row])
             
             return cell
         }

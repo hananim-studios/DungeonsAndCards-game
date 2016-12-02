@@ -14,14 +14,15 @@ class Game {
     var gold: Int = 0
     var dungeonLevel: Int = 0
     
-    var currentHand: Hand?
+    var hand: Hand
     
     var party: Party = Party()
     
     init(){
-        if HeroesJSON.load(){
-            self.currentHand = Hand()
-        }
+        if !HeroesJSON.load() { fatalError("Unable to load heroes.json") }
+        
+        self.hand = Hand()
+        self.party = Party()
     }
         
 }

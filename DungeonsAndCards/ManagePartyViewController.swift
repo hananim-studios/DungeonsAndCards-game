@@ -53,7 +53,9 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         partyCollectionView.dioDelegate = self
         partyCollectionView.heroDelegate = self
         partyCollectionView.receiveDrag = true
-        partyCollectionView.allowFeedback = true
+        partyCollectionView.allowFeedback = false
+        
+        self.game.party.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
@@ -99,7 +101,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
             
-            cell.setHero(self.game.handHeroes[indexPath.row])
+            cell.setHero(self.game.hand.heroes[indexPath.row])
             
             return cell
         }
@@ -109,7 +111,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
                                                           for: indexPath) as! HeroCell
             
-            cell.setHero(self.game.partyHeroes[indexPath.row])
+            cell.setHero(self.game.party.heroes[indexPath.row])
             
             return cell
         }
@@ -167,11 +169,11 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, userDataForItemAtIndexPath indexPath: IndexPath) -> Any? {
         
         if dioCollectionView == handCollectionView {
-            return self.game.handHeroes[indexPath.row]
+            return self.game.hand.heroes[indexPath.row]
         }
             
         if dioCollectionView == partyCollectionView {
-            return self.game.partyHeroes[indexPath.row]
+            return self.game.party.heroes[indexPath.row]
         }
         
         return nil
@@ -195,11 +197,10 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
         
         if dioCollectionView == partyCollectionView {
             switch(dragState) {
-            case .began:
+            case .ended:
                 
                 // - MARK: EVENT: PLAYER DISCARDED HERO
-                self.game.partyHeroes[indexPath.row] = nil
-                cell.setHero(nil)
+                self.game.party.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
                 
             default:
                 break
@@ -268,14 +269,7 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
                     
                     dragInfo.sender.dragView?.isHidden = true
                     
-                    self.game.handHeroes[dragInfo.indexPath.row] = Hero(withTemplate: "shiny_wizard")
-                    senderView.reloadItems(at: [dragInfo.indexPath])
-                    senderView.reloadData()
-                    
-                    self.game.partyHeroes[indexPath.row] = hero
-                    cell.setHero(hero)
-                    
-                    print("entered \(indexPath)")
+                    self.game.party.hireHero(hero: hero, atSlot: indexPath.row)
                 }
             }
         }
@@ -291,12 +285,32 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
                     
                     dragInfo.sender.dragView?.isHidden = true
                     
-                    self.game.partyHeroes[indexPath.row] = hero
-                    cell.setHero(hero)
+                    //self.game.partyHeroes[indexPath.row] = hero
+                    //cell.setHero(hero)
                     
                     print("entered \(indexPath)")
                 }
             }
+        }
+    }
+}
+
+extension ManagePartyViewController: PartyDelegate {
+    
+    func didHireHero(hero: Hero, atSlot slot: Int) {
+        
+        self.game.party.heroes[slot] = hero
+        
+        if let cell = self.partyCollectionView.cellForItem(at: IndexPath(row: slot, section: 0)) as? HeroCell {
+            cell.setHero(hero)
+        }
+    }
+    
+    func didDismissHero(hero: Hero, atSlot slot: Int) {
+        self.game.party.heroes[slot] = nil
+        
+        if let cell = self.partyCollectionView.cellForItem(at: IndexPath(row: slot, section: 0)) as? HeroCell {
+            cell.setHero(nil)
         }
     }
 }

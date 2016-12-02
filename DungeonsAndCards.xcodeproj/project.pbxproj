@@ -33,7 +33,6 @@
 		C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475881DE85C130081DA95 /* ManagePartyViewController.swift */; };
 		C6AD7AAC1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */; };
 		D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */; };
-		D11BFE681DEE478F0046086C /* hero.json in Resources */ = {isa = PBXBuildFile; fileRef = D11BFE671DEE478F0046086C /* hero.json */; };
 		D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE691DEE48180046086C /* HeroCollectionView.swift */; };
 		D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE6B1DEE48290046086C /* HeroCell.swift */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
@@ -45,6 +44,13 @@
 		D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E61DE5C52000E52C03 /* Hero.swift */; };
 		D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B271DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift */; };
 		D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B2A1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift */; };
+		D1D12B2D1DF1A7450045CE29 /* Hand.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B2C1DF1A7450045CE29 /* Hand.swift */; };
+		D1D12B2F1DF1A7960045CE29 /* HeroesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B2E1DF1A7960045CE29 /* HeroesJSON.swift */; };
+		D1D12B311DF1A7AE0045CE29 /* ItemsJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B301DF1A7AE0045CE29 /* ItemsJSON.swift */; };
+		D1D12B331DF1A7C50045CE29 /* EnemiesJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B321DF1A7C50045CE29 /* EnemiesJSON.swift */; };
+		D1D12B351DF1A7D00045CE29 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B341DF1A7D00045CE29 /* Item.swift */; };
+		D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D12B361DF1A9BB0045CE29 /* Enemy.swift */; };
+		D1D12B391DF1AAD50045CE29 /* heroes.json in Resources */ = {isa = PBXBuildFile; fileRef = D1D12B381DF1AAD50045CE29 /* heroes.json */; };
 		D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */; };
 /* End PBXBuildFile section */
 
@@ -140,7 +146,6 @@
 		C68475881DE85C130081DA95 /* ManagePartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePartyViewController.swift; sourceTree = "<group>"; };
 		C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledVisibleCellsCollectionView.swift; sourceTree = "<group>"; };
 		D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		D11BFE671DEE478F0046086C /* hero.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hero.json; sourceTree = "<group>"; };
 		D11BFE691DEE48180046086C /* HeroCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCollectionView.swift; sourceTree = "<group>"; };
 		D11BFE6B1DEE48290046086C /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +159,13 @@
 		D1D014E61DE5C52000E52C03 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
 		D1D12B271DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIOCollectionViewDataSource.swift; sourceTree = "<group>"; };
 		D1D12B2A1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGAffineTransform+Extensions.swift"; sourceTree = "<group>"; };
+		D1D12B2C1DF1A7450045CE29 /* Hand.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hand.swift; sourceTree = "<group>"; };
+		D1D12B2E1DF1A7960045CE29 /* HeroesJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroesJSON.swift; sourceTree = "<group>"; };
+		D1D12B301DF1A7AE0045CE29 /* ItemsJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsJSON.swift; sourceTree = "<group>"; };
+		D1D12B321DF1A7C50045CE29 /* EnemiesJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemiesJSON.swift; sourceTree = "<group>"; };
+		D1D12B341DF1A7D00045CE29 /* Item.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		D1D12B361DF1A9BB0045CE29 /* Enemy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Enemy.swift; sourceTree = "<group>"; };
+		D1D12B381DF1AAD50045CE29 /* heroes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = heroes.json; sourceTree = "<group>"; };
 		D1E74A271DEC5E1B0007F6AA /* DIOCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DIOCollectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -364,10 +376,16 @@
 		D1D014E11DE5C4BE00E52C03 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				D1D12B2E1DF1A7960045CE29 /* HeroesJSON.swift */,
+				D1D12B301DF1A7AE0045CE29 /* ItemsJSON.swift */,
+				D1D12B321DF1A7C50045CE29 /* EnemiesJSON.swift */,
 				D1EF4C651DE5E08000C95AB8 /* Data */,
 				D1D014E21DE5C4CC00E52C03 /* Game.swift */,
 				D1D014E41DE5C4FB00E52C03 /* Party.swift */,
+				D1D12B2C1DF1A7450045CE29 /* Hand.swift */,
 				D1D014E61DE5C52000E52C03 /* Hero.swift */,
+				D1D12B361DF1A9BB0045CE29 /* Enemy.swift */,
+				D1D12B341DF1A7D00045CE29 /* Item.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -393,7 +411,7 @@
 		D1EF4C651DE5E08000C95AB8 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D11BFE671DEE478F0046086C /* hero.json */,
+				D1D12B381DF1AAD50045CE29 /* heroes.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -590,8 +608,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D1D12B391DF1AAD50045CE29 /* heroes.json in Resources */,
 				C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */,
-				D11BFE681DEE478F0046086C /* hero.json in Resources */,
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
@@ -686,17 +704,23 @@
 				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
 				C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */,
 				D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */,
+				D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */,
 				D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */,
 				C680636F1DF04B5D003ACD19 /* ShoppingViewController.swift in Sources */,
 				C627A5C51DEDCB38002F6533 /* ItemsViewController.swift in Sources */,
 				D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,
 				C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */,
+				D1D12B2F1DF1A7960045CE29 /* HeroesJSON.swift in Sources */,
 				C6AD7AAC1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift in Sources */,
+				D1D12B331DF1A7C50045CE29 /* EnemiesJSON.swift in Sources */,
 				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
+				D1D12B311DF1A7AE0045CE29 /* ItemsJSON.swift in Sources */,
 				D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */,
+				D1D12B2D1DF1A7450045CE29 /* Hand.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
 				D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */,
+				D1D12B351DF1A7D00045CE29 /* Item.swift in Sources */,
 				C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,

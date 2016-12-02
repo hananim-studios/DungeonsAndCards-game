@@ -32,7 +32,7 @@ class HeroCell: UICollectionViewCell {
         self.hero = hero
         
         if let hero = hero {
-            self.imageView.image = UIImage(named: hero.template)
+            self.imageView.image = UIImage(named: hero.pic!)
         } else {
             self.imageView.image = nil
         }
