@@ -7,19 +7,21 @@
 //
 
 import Foundation
+import SwiftyJSON
 
 class Game {
+
+    var gold: Int = 0
+    var dungeonLevel: Int = 0
     
-    var money: Int = 10
-    var partyHeroes: [Hero?] = []
-    var handHeroes: [Hero?] = []
+    var currentHand: Hand?
     
-    init() {
-        self.partyHeroes = [Hero(withTemplate: "wizard"), nil,
-                        Hero(withTemplate: "shiny_wizard")]
-        
-        self.handHeroes = [Hero(withTemplate: "gypsy1"), Hero(withTemplate: "warrior"),
-                                Hero(withTemplate: "noble"), Hero(withTemplate: "wizard"),
-                                Hero(withTemplate: "queen")]
+    var party: Party = Party()
+    
+    init(){
+        if HeroesJSON.load(){
+            self.currentHand = Hand()
+        }
     }
+        
 }
