@@ -1,0 +1,36 @@
+{
+    "heroes": [
+               {
+               "name": "Queen",
+               "pic": "queen",
+               "description": "The Queen is beloved by the king, the people, and the church, for she has a great heart. She can go through the hardest times without losing her serenity. Everything in the name of love and charity.",
+               "health": 30,
+               "damage": 3,
+               "gold": 15
+               },
+               {
+               "name": "Host",
+               "pic": "wizard",
+               "description": "Sometimes, the Host volunteers to travel with the adventurers that come to his Inn. He likes to keep everyone happy, to give advices and to tell stories.",
+               "health": 10,
+               "damage": 10,
+               "gold": 0
+               },
+               {
+               "name": "The Paladin ",
+               "pic": "warrior",
+               "description": "The Paladin is famous among the entire Kingdom, symbol of the honor and dignity. He's known as a great warrior and hero, but this isn't true, he's scared of cockroaches.",
+               "health": 20,
+               "damage": 10,
+               "gold": 15
+               },
+               {
+               "name": "The Gypsy",
+               "pic": "gypsy1",
+               "description": "The gypsy is a gorgeous middle-aged woman, that looks younger that she realy is. She lives alone and knows very well how to take care of herself. She uses runes and cards to foresee the future, and hoaxes say that even powerful men like the King's advisor pay to listen to her profecies.",
+               "health": 10,
+               "damage": 15,
+               "gold": 10
+               }
+               ]
+}
