@@ -26,3 +26,8 @@ class Game {
     }
         
 }
+
+extension Game {
+    
+    static var sharedInstance = Game()
+}

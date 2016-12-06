@@ -70,7 +70,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dungeons &amp; Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7G-fG-TE2">
-                                <rect key="frame" x="25" y="138.5" width="271" height="28"/>
+                                <rect key="frame" x="25" y="139" width="271" height="27.5"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -174,7 +174,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fkT-Qy-91L" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826.25" y="121.47887323943662"/>
+            <point key="canvasLocation" x="1824" y="79"/>
         </scene>
         <!--Shopping View Controller-->
         <scene sceneID="0ON-cp-m36">
@@ -202,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ac-Qp-0Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2640" y="122.53521126760563"/>
+            <point key="canvasLocation" x="2754" y="78"/>
         </scene>
         <!--Manage Party View Controller-->
         <scene sceneID="fxe-tn-OQt">
@@ -347,15 +347,6 @@
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aTt-zu-EBh">
-                                <rect key="frame" x="20" y="80" width="56" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="callGold"/>
-                                <connections>
-                                    <action selector="callGold:" destination="ds4-Wv-P3J" eventType="touchUpInside" id="YHf-XN-kti"/>
-                                    <segue destination="Mkv-NR-cp3" kind="presentation" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="ID6-Xe-qEi"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -390,7 +381,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iau-eq-DeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1826" y="866"/>
+            <point key="canvasLocation" x="1839" y="907"/>
         </scene>
         <!--Gold Overlay View Controller-->
         <scene sceneID="GfD-qo-yth">
@@ -540,14 +531,14 @@ find a TREASURE</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AXB-vz-fpI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685" y="1594.0140845070423"/>
+            <point key="canvasLocation" x="1838" y="1721"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B0V-yi-Ipz">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ui-x5-1YM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tIt-mW-LeJ">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="tIt-mW-LeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -589,7 +580,7 @@ find a TREASURE</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wR5-iX-STW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="145" y="867"/>
+            <point key="canvasLocation" x="114" y="908"/>
         </scene>
         <!--Settings View Controller-->
         <scene sceneID="bim-R2-DBd">
@@ -620,12 +611,12 @@ find a TREASURE</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l6d-rG-cKh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="964" y="867"/>
+            <point key="canvasLocation" x="1020" y="907"/>
         </scene>
-        <!--Items View Controller-->
+        <!--Shop View Controller-->
         <scene sceneID="Xaq-PH-UDE">
             <objects>
-                <viewController id="9Md-nM-ccB" customClass="ItemsViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="9Md-nM-ccB" customClass="ShopViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="ky8-Bm-5Gq"/>
                         <viewControllerLayoutGuide type="bottom" id="q78-Lb-M4D"/>
@@ -634,8 +625,8 @@ find a TREASURE</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-YC-izH" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="278" width="328" height="223"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-YC-izH" customClass="ItemCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="342" width="328" height="159"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OFT-Cs-MNr">
                                     <size key="itemSize" width="137" height="216"/>
@@ -645,7 +636,7 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HeroCell" id="Kwn-9I-zmz" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-29" width="137" height="216"/>
+                                        <rect key="frame" x="0.0" y="-61" width="137" height="216"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
@@ -681,7 +672,7 @@ find a TREASURE</string>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-mZ-jKQ" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="155" width="324" height="99"/>
+                                <rect key="frame" x="-4" y="118" width="324" height="198"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qSP-Ew-LHR">
                                     <size key="itemSize" width="88" height="133"/>
@@ -690,27 +681,39 @@ find a TREASURE</string>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCell" id="nau-Mr-EtE" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-17" width="88" height="133"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroItemCell" id="nau-Mr-EtE" customClass="HeroItemCell" customModule="DungeonsAndCards" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="33" width="88" height="133"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                             <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Xe6-y1-sET">
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="far-yR-AwJ">
                                                     <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
-                                                </imageView>
+                                                    <subviews>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GTm-jP-nE0" userLabel="Hero Image View">
+                                                            <rect key="frame" x="0.0" y="0.0" width="88" height="88.5"/>
+                                                        </imageView>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uqg-T0-5eF">
+                                                            <rect key="frame" x="0.0" y="88.5" width="88" height="44.5"/>
+                                                        </imageView>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="Uqg-T0-5eF" firstAttribute="height" secondItem="GTm-jP-nE0" secondAttribute="height" multiplier="0.5" id="rnm-qK-dF4"/>
+                                                    </constraints>
+                                                </stackView>
                                             </subviews>
                                         </view>
                                         <color key="backgroundColor" red="0.87402003549999996" green="0.88267369920000005" blue="0.88267369920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
-                                            <constraint firstItem="Xe6-y1-sET" firstAttribute="width" secondItem="nau-Mr-EtE" secondAttribute="width" id="7lh-OC-BDj"/>
-                                            <constraint firstItem="Xe6-y1-sET" firstAttribute="height" secondItem="nau-Mr-EtE" secondAttribute="height" id="eKQ-BR-Qna"/>
-                                            <constraint firstItem="Xe6-y1-sET" firstAttribute="centerY" secondItem="nau-Mr-EtE" secondAttribute="centerY" id="mDU-2e-Xyb"/>
-                                            <constraint firstItem="Xe6-y1-sET" firstAttribute="centerX" secondItem="nau-Mr-EtE" secondAttribute="centerX" id="yfd-pH-VfN"/>
+                                            <constraint firstItem="far-yR-AwJ" firstAttribute="centerY" secondItem="nau-Mr-EtE" secondAttribute="centerY" id="3lo-mt-Cng"/>
+                                            <constraint firstItem="far-yR-AwJ" firstAttribute="width" secondItem="nau-Mr-EtE" secondAttribute="width" id="CzF-B3-VNu"/>
+                                            <constraint firstItem="far-yR-AwJ" firstAttribute="height" secondItem="nau-Mr-EtE" secondAttribute="height" id="DED-9C-T45"/>
+                                            <constraint firstItem="far-yR-AwJ" firstAttribute="centerX" secondItem="nau-Mr-EtE" secondAttribute="centerX" id="RbB-RS-yHF"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="imageView" destination="Xe6-y1-sET" id="6oX-mK-bbL"/>
+                                            <outlet property="heroImageView" destination="GTm-jP-nE0" id="eQm-XW-wSs"/>
+                                            <outlet property="itemImageView" destination="Uqg-T0-5eF" id="HOs-IC-Zyr"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -777,11 +780,11 @@ find a TREASURE</string>
                             <constraint firstItem="XFW-mZ-jKQ" firstAttribute="trailing" secondItem="AXy-YC-izH" secondAttribute="trailing" constant="-4" id="EQP-9V-xgS"/>
                             <constraint firstItem="dOF-at-43a" firstAttribute="top" secondItem="ky8-Bm-5Gq" secondAttribute="bottom" constant="5" id="NUL-Mb-dfU"/>
                             <constraint firstItem="AXy-YC-izH" firstAttribute="leading" secondItem="lXa-Rx-xSC" secondAttribute="leadingMargin" constant="-20" id="Obn-z3-EfK"/>
-                            <constraint firstItem="XFW-mZ-jKQ" firstAttribute="top" secondItem="ky8-Bm-5Gq" secondAttribute="bottom" constant="91" id="Ojz-wN-dQz"/>
-                            <constraint firstItem="AXy-YC-izH" firstAttribute="top" secondItem="XFW-mZ-jKQ" secondAttribute="bottom" constant="24" id="Q7s-uO-VAH"/>
+                            <constraint firstItem="XFW-mZ-jKQ" firstAttribute="top" secondItem="ky8-Bm-5Gq" secondAttribute="bottom" constant="54" id="Ojz-wN-dQz"/>
+                            <constraint firstItem="AXy-YC-izH" firstAttribute="top" secondItem="XFW-mZ-jKQ" secondAttribute="bottom" constant="26" id="Q7s-uO-VAH"/>
                             <constraint firstAttribute="leadingMargin" secondItem="1cU-gf-WG6" secondAttribute="leading" id="Whn-fZ-FED"/>
                             <constraint firstItem="q78-Lb-M4D" firstAttribute="top" secondItem="1cU-gf-WG6" secondAttribute="bottom" constant="8" id="cKj-9N-s2e"/>
-                            <constraint firstItem="AXy-YC-izH" firstAttribute="height" secondItem="lXa-Rx-xSC" secondAttribute="height" multiplier="0.5" constant="-61" id="dI5-Gh-a5L"/>
+                            <constraint firstItem="AXy-YC-izH" firstAttribute="height" secondItem="lXa-Rx-xSC" secondAttribute="height" multiplier="0.5" constant="-125" id="dI5-Gh-a5L"/>
                             <constraint firstItem="wZ5-FC-PJz" firstAttribute="top" secondItem="AXy-YC-izH" secondAttribute="bottom" constant="23" id="jB9-DM-nR4"/>
                             <constraint firstItem="COa-CB-aqR" firstAttribute="top" secondItem="ky8-Bm-5Gq" secondAttribute="bottom" constant="2" id="p4W-o7-MV2"/>
                             <constraint firstItem="q78-Lb-M4D" firstAttribute="top" secondItem="AXy-YC-izH" secondAttribute="bottom" constant="67" id="qGk-hK-8B3"/>
@@ -791,15 +794,15 @@ find a TREASURE</string>
                     </view>
                     <navigationItem key="navigationItem" id="tam-DN-CmH"/>
                     <connections>
-                        <outlet property="cardsCollectionView" destination="XFW-mZ-jKQ" id="Udq-6p-S9f"/>
-                        <outlet property="itemsCollectionView" destination="AXy-YC-izH" id="Ddw-c4-wdT"/>
+                        <outlet property="itemCollectionView" destination="AXy-YC-izH" id="nSG-Oe-sjd"/>
                         <outlet property="menuButton" destination="1cU-gf-WG6" id="bE9-Oj-X4O"/>
                         <outlet property="nextButton" destination="wZ5-FC-PJz" id="CxD-Ix-nYX"/>
+                        <outlet property="partyCollectionView" destination="XFW-mZ-jKQ" id="eKZ-LB-NP4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFe-8E-Pho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2685.507246376812" y="865.76086956521749"/>
+            <point key="canvasLocation" x="2754.375" y="906.33802816901414"/>
         </scene>
         <!--Battle View Controller-->
         <scene sceneID="OZN-Z8-aEQ">
@@ -912,7 +915,7 @@ find a TREASURE</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRC-0u-0Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3461" y="866"/>
+            <point key="canvasLocation" x="3793" y="907"/>
         </scene>
     </scenes>
     <resources>
@@ -920,7 +923,7 @@ find a TREASURE</string>
         <image name="gold" width="132" height="128"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="E7x-O6-584"/>
+        <segue reference="QT9-Io-ld4"/>
         <segue reference="0GM-DA-Qtb"/>
     </inferredMetricsTieBreakers>
 </document>

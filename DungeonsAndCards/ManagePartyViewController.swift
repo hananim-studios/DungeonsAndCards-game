@@ -13,7 +13,7 @@ import UIKit
 class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model
-    var game = Game()
+    var game = Game.sharedInstance
     
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -177,6 +177,15 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
         }
         
         return nil
+    }
+    
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, shouldDragItemAtIndexPath indexPath: IndexPath) -> Bool {
+        if dioCollectionView == partyCollectionView {
+            return self.game.party.heroes[indexPath.row] != nil
+        }
+        else {
+            return true
+        }
     }
     
     // DIOCollectionView Delegate

@@ -10,8 +10,7 @@
 		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
 		C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */; };
 		C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */; };
-		C627A5C51DEDCB38002F6533 /* ItemsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C627A5C41DEDCB38002F6533 /* ItemsViewController.swift */; };
-		C680636F1DF04B5D003ACD19 /* ShoppingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C680636E1DF04B5D003ACD19 /* ShoppingViewController.swift */; };
+		C627A5C51DEDCB38002F6533 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C627A5C41DEDCB38002F6533 /* ShopViewController.swift */; };
 		C68063711DF04CF7003ACD19 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063701DF04CF7003ACD19 /* BattleViewController.swift */; };
 		C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063721DF04DDE003ACD19 /* AboutViewController.swift */; };
 		C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063741DF04DEC003ACD19 /* SettingsViewController.swift */; };
@@ -39,6 +38,7 @@
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
 		D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E201DDF493A002A0ED0 /* LaunchScreen.storyboard */; };
+		D18D660B1DF6DE5E00C68178 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */; };
 		D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E21DE5C4CC00E52C03 /* Game.swift */; };
 		D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E41DE5C4FB00E52C03 /* Party.swift */; };
 		D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E61DE5C52000E52C03 /* Hero.swift */; };
@@ -116,8 +116,7 @@
 		B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DungeonsAndCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRoman-Black.ttf"; sourceTree = "<group>"; };
 		C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRomanAlternate-Black.ttf"; sourceTree = "<group>"; };
-		C627A5C41DEDCB38002F6533 /* ItemsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemsViewController.swift; sourceTree = "<group>"; };
-		C680636E1DF04B5D003ACD19 /* ShoppingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShoppingViewController.swift; sourceTree = "<group>"; };
+		C627A5C41DEDCB38002F6533 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
 		C68063701DF04CF7003ACD19 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		C68063721DF04DDE003ACD19 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C68063741DF04DEC003ACD19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -154,6 +153,7 @@
 		D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D14E4E211DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D14E4E231DDF493A002A0ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
 		D1D014E21DE5C4CC00E52C03 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D1D014E41DE5C4FB00E52C03 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		D1D014E61DE5C52000E52C03 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
@@ -283,6 +283,7 @@
 			children = (
 				D11BFE691DEE48180046086C /* HeroCollectionView.swift */,
 				D11BFE6B1DEE48290046086C /* HeroCell.swift */,
+				D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -296,8 +297,7 @@
 				C68063721DF04DDE003ACD19 /* AboutViewController.swift */,
 				C68475661DE71C450081DA95 /* IntroViewController.swift */,
 				C68475881DE85C130081DA95 /* ManagePartyViewController.swift */,
-				C627A5C41DEDCB38002F6533 /* ItemsViewController.swift */,
-				C680636E1DF04B5D003ACD19 /* ShoppingViewController.swift */,
+				C627A5C41DEDCB38002F6533 /* ShopViewController.swift */,
 				C68063701DF04CF7003ACD19 /* BattleViewController.swift */,
 				C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */,
 			);
@@ -706,8 +706,7 @@
 				D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */,
 				D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */,
 				D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */,
-				C680636F1DF04B5D003ACD19 /* ShoppingViewController.swift in Sources */,
-				C627A5C51DEDCB38002F6533 /* ItemsViewController.swift in Sources */,
+				C627A5C51DEDCB38002F6533 /* ShopViewController.swift in Sources */,
 				D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,
 				C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */,
@@ -720,6 +719,7 @@
 				D1D12B2D1DF1A7450045CE29 /* Hand.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
 				D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */,
+				D18D660B1DF6DE5E00C68178 /* ItemCollectionView.swift in Sources */,
 				D1D12B351DF1A7D00045CE29 /* Item.swift in Sources */,
 				C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
