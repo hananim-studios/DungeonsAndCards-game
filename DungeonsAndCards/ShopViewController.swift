@@ -206,10 +206,10 @@ extension ShopViewController: DIOCollectionViewDataSource, DIOCollectionViewDele
         
         if dioCollectionView == partyCollectionView {
             switch(dragState) {
-            case .ended:
+            //case .ended:
                 
                 // - MARK: EVENT: PLAYER DISCARDED HERO
-                self.game.party.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
+                //self.game.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
                 
             default:
                 break

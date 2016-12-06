@@ -9,9 +9,17 @@
 import Foundation
 import SwiftyJSON
 
-class Game {
+protocol GameDelegate {
+    func game(_ game: Game, changedGoldTo gold: Int)
+    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int)
+    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int)
+}
 
-    var gold: Int = 0
+class Game {
+    
+    var delegate: GameDelegate?
+
+    var gold: Int = 200
     var dungeonLevel: Int = 0
     
     var hand: Hand
@@ -30,4 +38,25 @@ class Game {
 extension Game {
     
     static var sharedInstance = Game()
+    
+    //MARK - Implement Protocol Functions
+    func hireHero(hero: Hero, atSlot slot: Int) {
+        
+        if gold >= hero.gold! {
+            
+            self.gold -= hero.gold!
+            
+            self.party.heroes[slot] = hero
+        
+            delegate?.game(self, didHireHero: hero, atSlot: slot)
+            delegate?.game(self, changedGoldTo: self.gold)
+        }
+    }
+    
+    func dismissHero(hero: Hero, atSlot slot: Int) {
+            
+        self.party.heroes[slot] = nil
+        
+        delegate?.game(self, didDismissHero: hero, atSlot: slot)
+    }
 }

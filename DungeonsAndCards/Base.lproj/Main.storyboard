@@ -202,7 +202,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ac-Qp-0Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754" y="78"/>
+            <point key="canvasLocation" x="3791" y="78"/>
         </scene>
         <!--Manage Party View Controller-->
         <scene sceneID="fxe-tn-OQt">
@@ -298,13 +298,13 @@
                                 </cells>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Hh-Oo7">
-                                <rect key="frame" x="276" y="73" width="32" height="30"/>
+                                <rect key="frame" x="259" y="73" width="49" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="BQQ-z7-C4C"/>
                                     <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="LgP-lX-Grh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
-                                <state key="normal" title="90">
+                                <state key="normal" title="200">
                                     <color key="titleColor" red="0.98937231302261353" green="0.80151832103729248" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
@@ -313,7 +313,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89M-Hh-Z5E">
-                                <rect key="frame" x="233" y="69" width="42" height="41"/>
+                                <rect key="frame" x="216" y="69" width="42" height="41"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="42" id="1vF-nr-Qc9"/>
                                     <constraint firstAttribute="height" constant="41" id="Awl-zB-7Mn"/>
@@ -373,6 +373,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="RYR-ta-DdK"/>
                     <connections>
+                        <outlet property="goldButton" destination="ZOe-Hh-Oo7" id="7TY-wo-lFd"/>
                         <outlet property="handCollectionView" destination="8Jl-uX-hm4" id="23o-sk-NRi"/>
                         <outlet property="menuButton" destination="phn-gh-w8T" id="r5Q-k0-YPd"/>
                         <outlet property="nextButton" destination="7Z9-O5-IF5" id="8tX-UP-Gu9"/>
@@ -381,7 +382,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iau-eq-DeC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1839" y="907"/>
+            <point key="canvasLocation" x="1838" y="907"/>
         </scene>
         <!--Gold Overlay View Controller-->
         <scene sceneID="GfD-qo-yth">
@@ -802,7 +803,7 @@ find a TREASURE</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFe-8E-Pho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2754.375" y="906.33802816901414"/>
+            <point key="canvasLocation" x="2951" y="906"/>
         </scene>
         <!--Battle View Controller-->
         <scene sceneID="OZN-Z8-aEQ">
@@ -924,6 +925,6 @@ find a TREASURE</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QT9-Io-ld4"/>
-        <segue reference="0GM-DA-Qtb"/>
+        <segue reference="eAi-JD-nAP"/>
     </inferredMetricsTieBreakers>
 </document>

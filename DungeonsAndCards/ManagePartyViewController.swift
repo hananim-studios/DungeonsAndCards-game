@@ -24,14 +24,17 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var goldButton: UIButton!
     
     //MARK - ViewController
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.goldButton.setTitle(self.game.gold.description, for: .normal)
     }
     override func viewDidAppear(_ animated: Bool) {
         partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
         handCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
+        
+        self.game.delegate = self
     }
     
     override func viewDidLoad() {
@@ -54,10 +57,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         partyCollectionView.heroDelegate = self
         partyCollectionView.receiveDrag = true
         partyCollectionView.allowFeedback = false
-        
-        self.game.party.delegate = self
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -67,7 +68,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton) {
-        _ = navigationController?.popViewController(animated: true)
+        //_ = navigationController?.popViewController(animated: true)
     }    
     
     @IBAction func goldButtonPressed(_ sender: Any) {
@@ -209,7 +210,7 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
             case .ended:
                 
                 // - MARK: EVENT: PLAYER DISCARDED HERO
-                self.game.party.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
+                self.game.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
                 
             default:
                 break
@@ -278,7 +279,7 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
                     
                     dragInfo.sender.dragView?.isHidden = true
                     
-                    self.game.party.hireHero(hero: hero, atSlot: indexPath.row)
+                    self.game.hireHero(hero: hero, atSlot: indexPath.row)
                 }
             }
         }
@@ -304,9 +305,13 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
     }
 }
 
-extension ManagePartyViewController: PartyDelegate {
+extension ManagePartyViewController: GameDelegate {
     
-    func didHireHero(hero: Hero, atSlot slot: Int) {
+    func game(_ game: Game, changedGoldTo gold: Int) {
+        
+        self.goldButton.setTitle(gold.description, for: .normal)
+    }
+    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int) {
         
         self.game.party.heroes[slot] = hero
         
@@ -314,8 +319,8 @@ extension ManagePartyViewController: PartyDelegate {
             cell.setHero(hero)
         }
     }
-    
-    func didDismissHero(hero: Hero, atSlot slot: Int) {
+    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int) {
+        
         self.game.party.heroes[slot] = nil
         
         if let cell = self.partyCollectionView.cellForItem(at: IndexPath(row: slot, section: 0)) as? HeroCell {
