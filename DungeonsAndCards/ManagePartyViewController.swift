@@ -46,6 +46,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         handCollectionView.dataSource = self
         handCollectionView.dioDataSource = self
         handCollectionView.dioDelegate = self
+        handCollectionView.register(UINib(nibName: "HeroHandCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroHandCell")
         
         partyCollectionView.backgroundColor = UIColor.clear
         partyCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
@@ -57,6 +58,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         partyCollectionView.heroDelegate = self
         partyCollectionView.receiveDrag = true
         partyCollectionView.allowFeedback = false
+        partyCollectionView.register(UINib(nibName: "HeroPartyCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroPartyCell")
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,8 +101,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView == handCollectionView {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
-                                                          for: indexPath) as! HeroCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroHandCell",
+                                                          for: indexPath) as! HeroHandCell
             
             cell.setHero(self.game.hand.heroes[indexPath.row])
             
@@ -109,8 +111,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView == partyCollectionView {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
-                                                          for: indexPath) as! HeroCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroPartyCell",
+                                                          for: indexPath) as! HeroPartyCell
             
             cell.setHero(self.game.party.heroes[indexPath.row])
             
@@ -134,16 +136,23 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView == handCollectionView {
             // size of hand cell
-            let width = collectionView.bounds.width
-            let height = 0.8*collectionView.bounds.height
-            return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            //let width = collectionView.bounds.width
+            //let height = 0.9*collectionView.bounds.height
+            //return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            let height = 0.9*collectionView.bounds.height
+            
+            return CGSize(width: height/2, height: height)
         }
         
         if collectionView == partyCollectionView {
             // size of party cell
-            let width = collectionView.bounds.width
-            let height = 0.8*collectionView.bounds.height
-            return CGSize(width: 0.80*CGFloat(Float(width)/Float(3)), height: height)
+            //let width = collectionView.bounds.width
+            //let height = 0.9*collectionView.bounds.height
+            //return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            
+            let height = 0.9*collectionView.bounds.height
+            
+            return CGSize(width: height/2, height: height)
         }
         
         return CGSize.zero
@@ -187,6 +196,10 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
         else {
             return true
         }
+    }
+    
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView {
+        return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroCell).hero!.pic!))
     }
     
     // DIOCollectionView Delegate

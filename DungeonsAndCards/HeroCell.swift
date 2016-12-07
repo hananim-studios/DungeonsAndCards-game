@@ -8,34 +8,75 @@
 
 import UIKit
 
-class HeroCell: UICollectionViewCell {
+class HeroPartyCell: HeroCell {
+
+    @IBOutlet weak var attackLabel: UILabel!
+    @IBOutlet weak var healthLabel: UILabel!
     
-    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var heroImageView: UIImageView!
     
-    var hero: Hero?
-    
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        //fatalError("init(coder:) has not been implemented")
+    override func awakeFromNib() {
+        healthLabel.adjustsFontSizeToFitWidth = true
+        attackLabel.adjustsFontSizeToFitWidth = true
     }
     
-    override func didMoveToSuperview() {
-        /*self.superview!.addConstraints([
-            NSLayoutConstraint(item: self.imageView, attribute: .bottom, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: .bottom, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.imageView, attribute: .top, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: .top, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.imageView, attribute: .right, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: .right, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: self.imageView, attribute: .left, relatedBy: NSLayoutRelation.equal, toItem: self, attribute: .left, multiplier: 1, constant: 0)])*/
-    }
-    
-    func setHero(_ hero: Hero?) {
+    override func setHero(_ hero: Hero?) {
         
-        self.hero = hero
+        super.setHero(hero)
         
         if let hero = hero {
-            self.imageView.image = UIImage(named: hero.pic!)
+            self.heroImageView.image = UIImage(named: hero.pic!)
+            self.attackLabel.text = hero.damage?.description
+            self.healthLabel.text = hero.health?.description
         } else {
-            self.imageView.image = nil
+            self.heroImageView.image = nil
+            self.attackLabel.text = "?"
+            self.healthLabel.text = "?"
         }
+    }
+}
+
+class HeroHandCell: HeroCell {
+    
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var attackLabel: UILabel!
+    @IBOutlet weak var healthLabel: UILabel!
+    @IBOutlet weak var costLabel: UILabel!
+    
+    @IBOutlet weak var heroImageView: UIImageView!
+    
+    override func awakeFromNib() {
+        titleLabel.adjustsFontSizeToFitWidth = true
+        healthLabel.adjustsFontSizeToFitWidth = true
+        attackLabel.adjustsFontSizeToFitWidth = true
+    }
+    
+    override func setHero(_ hero: Hero?) {
+        
+        super.setHero(hero)
+        
+        if let hero = hero {
+            self.heroImageView.image = UIImage(named: hero.pic!)
+            self.titleLabel.text = hero.name
+            self.attackLabel.text = hero.damage?.description
+            self.healthLabel.text = hero.health?.description
+            self.costLabel.text = hero.gold?.description
+        } else {
+            self.heroImageView.image = nil
+            self.titleLabel.text = "???"
+            self.attackLabel.text = "?"
+            self.healthLabel.text = "?"
+            self.costLabel.text = "?"
+        }
+    }
+}
+
+class HeroCell: UICollectionViewCell {
+    
+    weak var hero: Hero?
+
+    func setHero(_ hero: Hero?) {
+        self.hero = hero
     }
 }
 

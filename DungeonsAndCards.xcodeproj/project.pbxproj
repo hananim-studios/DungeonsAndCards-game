@@ -42,6 +42,8 @@
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
 		D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E201DDF493A002A0ED0 /* LaunchScreen.storyboard */; };
+		D15155021DF8301400C25638 /* HeroHandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15155011DF8301400C25638 /* HeroHandCell.xib */; };
+		D17445B91DF850C3000527F5 /* HeroPartyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17445B81DF850C3000527F5 /* HeroPartyCell.xib */; };
 		D18D660B1DF6DE5E00C68178 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */; };
 		D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E21DE5C4CC00E52C03 /* Game.swift */; };
 		D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E41DE5C4FB00E52C03 /* Party.swift */; };
@@ -162,6 +164,8 @@
 		D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D14E4E211DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D14E4E231DDF493A002A0ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D15155011DF8301400C25638 /* HeroHandCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroHandCell.xib; sourceTree = "<group>"; };
+		D17445B81DF850C3000527F5 /* HeroPartyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroPartyCell.xib; sourceTree = "<group>"; };
 		D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
 		D1D014E21DE5C4CC00E52C03 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D1D014E41DE5C4FB00E52C03 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
@@ -296,8 +300,8 @@
 		C68475631DE71B0A0081DA95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D15155001DF82FF600C25638 /* Cells */,
 				D11BFE691DEE48180046086C /* HeroCollectionView.swift */,
-				D11BFE6B1DEE48290046086C /* HeroCell.swift */,
 				D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */,
 			);
 			name = View;
@@ -386,6 +390,16 @@
 				D14E4E231DDF493A002A0ED0 /* Info.plist */,
 			);
 			path = DungeonsAndCards;
+			sourceTree = "<group>";
+		};
+		D15155001DF82FF600C25638 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				D15155011DF8301400C25638 /* HeroHandCell.xib */,
+				D17445B81DF850C3000527F5 /* HeroPartyCell.xib */,
+				D11BFE6B1DEE48290046086C /* HeroCell.swift */,
+			);
+			name = Cells;
 			sourceTree = "<group>";
 		};
 		D1D014E11DE5C4BE00E52C03 /* Model */ = {
@@ -628,9 +642,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D17445B91DF850C3000527F5 /* HeroPartyCell.xib in Resources */,
 				D1D12B391DF1AAD50045CE29 /* heroes.json in Resources */,
 				C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */,
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
+				D15155021DF8301400C25638 /* HeroHandCell.xib in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
