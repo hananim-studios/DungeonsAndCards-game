@@ -1,0 +1,84 @@
+{
+    "enemies": [
+                {
+                "name": "Cockroach",
+                "pic": "cockroach",
+                "description": "The cockroach (a.k.a. roach) can awaken one's deepest fears...",
+                "health": 10,
+                "damage": 5,
+                "gold": 7
+                },
+                {
+                "name": "Rat",
+                "pic": "rat",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 8,
+                "damage": 8,
+                "gold": 12
+                },
+                {
+                "name": "Bat",
+                "pic": "bat",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 26,
+                "damage": 5,
+                "gold": 19
+                },
+                {
+                "name": "Troll",
+                "pic": "troll",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 6,
+                "damage": 15,
+                "gold": 22
+                },
+                {
+                "name": "Shadow",
+                "pic": "shadow",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 28,
+                "damage": 14,
+                "gold": 29
+                },
+                {
+                "name": "Undead",
+                "pic": "undead",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 8,
+                "damage": 12,
+                "gold": 24
+                },
+                {
+                "name": "Salamander",
+                "pic": "salamander",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 17,
+                "damage": 22,
+                "gold": 31
+                },
+                {
+                "name": "Minotaur",
+                "pic": "minotaur",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 20,
+                "damage": 25,
+                "gold": 37
+                },
+                {
+                "name": "Fire Elemental",
+                "pic": "fireElemental",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 16,
+                "damage": 17,
+                "gold": 29
+                },
+                {
+                "name": "Dragon",
+                "pic": "dragon",
+                "description": "Isn't it a cute little murderous thing?",
+                "health": 29,
+                "damage": 25,
+                "gold": 50
+                }
+                ]
+}

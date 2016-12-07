@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		14973A351DF8459600FDFC8E /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A331DF8459600FDFC8E /* enemies.json */; };
+		14973A361DF8459600FDFC8E /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A341DF8459600FDFC8E /* items.json */; };
 		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
 		C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */; };
 		C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */; };
@@ -118,6 +120,8 @@
 
 /* Begin PBXFileReference section */
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
+		14973A331DF8459600FDFC8E /* enemies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
+		14973A341DF8459600FDFC8E /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.debug.xcconfig"; sourceTree = "<group>"; };
 		B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DungeonsAndCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRoman-Black.ttf"; sourceTree = "<group>"; };
@@ -441,6 +445,8 @@
 			isa = PBXGroup;
 			children = (
 				D1D12B381DF1AAD50045CE29 /* heroes.json */,
+				14973A331DF8459600FDFC8E /* enemies.json */,
+				14973A341DF8459600FDFC8E /* items.json */,
 			);
 			name = Data;
 			sourceTree = "<group>";
@@ -552,12 +558,12 @@
 				TargetAttributes = {
 					C684751B1DE714290081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = FWD9V5VYJ2;
+						DevelopmentTeam = 526YR6WHWC;
 						ProvisioningStyle = Automatic;
 					};
 					C68475271DE714290081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = GRKYXDG5QL;
+						DevelopmentTeam = 526YR6WHWC;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.HealthKit.watchos = {
@@ -567,13 +573,13 @@
 					};
 					C68475481DE715BA0081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = FWD9V5VYJ2;
+						DevelopmentTeam = 526YR6WHWC;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D14E4E131DDF493A002A0ED0;
 					};
 					C68475561DE716110081DA95 = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = FWD9V5VYJ2;
+						DevelopmentTeam = 526YR6WHWC;
 						ProvisioningStyle = Automatic;
 						TestTargetID = D14E4E131DDF493A002A0ED0;
 					};
@@ -648,6 +654,8 @@
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D15155021DF8301400C25638 /* HeroHandCell.xib in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
+				14973A361DF8459600FDFC8E /* items.json in Resources */,
+				14973A351DF8459600FDFC8E /* enemies.json in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
 			);
@@ -826,7 +834,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				IBSC_MODULE = DungeonsAndCardsWatch_Extension;
 				INFOPLIST_FILE = DungeonsAndCardsWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp;
@@ -844,7 +852,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				IBSC_MODULE = DungeonsAndCardsWatch_Extension;
 				INFOPLIST_FILE = DungeonsAndCardsWatch/Info.plist;
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp;
@@ -862,7 +870,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "DungeonsAndCardsWatch Extension/DungeonsAndCardsWatch Extension.entitlements";
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
@@ -880,7 +889,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_ENTITLEMENTS = "DungeonsAndCardsWatch Extension/DungeonsAndCardsWatch Extension.entitlements";
-				DEVELOPMENT_TEAM = GRKYXDG5QL;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = "DungeonsAndCardsWatch Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards.watchkitapp.watchkitextension;
@@ -897,7 +907,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCardsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsTests";
@@ -911,7 +921,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCardsTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsTests";
@@ -924,7 +934,7 @@
 		C684755F1DE716110081DA95 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCardsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsUITests";
@@ -937,7 +947,7 @@
 		C68475601DE716110081DA95 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				DEVELOPMENT_TEAM = FWD9V5VYJ2;
+				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCardsUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.hananim-studios.DungeonsAndCardsUITests";

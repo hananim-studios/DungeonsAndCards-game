@@ -1,0 +1,104 @@
+{
+    "items": [
+              {
+              "name": "red",
+              "pic": "red",
+              "gold": 5,
+              "effects": {
+              "addHealth": 5,
+              "addDamage": 0,
+              "superArmor": 0
+              }
+              },
+              {
+              "name": "pink",
+              "pic": "pink",
+              "gold": 10,
+              "effects": {
+              "addHealth": 10,
+              "addDamage": 0,
+              "superArmor": 0
+              }
+              },
+              {
+              "name": "violet",
+              "pic": "blue",
+              "gold": 10,
+              "effects": {
+              "addHealth": 5,
+              "addDamage": 5,
+              "superArmor": 0
+              }
+              },
+              {
+              "name": "blue",
+              "pic": "blue",
+              "gold": 5,
+              "effects": {
+              "addHealth": 0,
+              "addDamage": 5,
+              "superArmor": 0
+              }
+              },
+              {
+              "name": "cyan",
+              "pic": "blue",
+              "gold": 10,
+              "effects": {
+              "addHealth": 0,
+              "addDamage": 10,
+              "superArmor": 0
+              }
+              },
+              {
+              "name": "Indigo",
+              "pic": "blue",
+              "gold": 15,
+              "effects": {
+              "addHealth": 10,
+              "addDamage": 10,
+              "superArmor": 0
+              }
+              },
+              {
+              "name": "Milk",
+              "pic": "white",
+              "gold": 15,
+              "effects": {
+              "addHealth": 0,
+              "addDamage": 15,
+              "superArmor": 1
+              }
+              },
+              {
+              "name": "Black",
+              "pic": "black",
+              "gold": 20,
+              "effects": {
+              "addHealth": 0,
+              "addDamage": 0,
+              "superArmor": 2
+              }
+              },
+              {
+              "name": "Green",
+              "pic": "green",
+              "gold": 9,
+              "effects": {
+              "addHealth": 9,
+              "addDamage": 9,
+              "superArmor": 0
+              }
+              },
+              {
+              "name": "Orange",
+              "pic": "orange",
+              "gold": 4,
+              "effects": {
+              "addHealth": 4,
+              "addDamage": 0,
+              "superArmor": 0
+              }
+              }
+              ]
+}

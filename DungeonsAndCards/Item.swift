@@ -26,7 +26,7 @@ enum ItemEffect {
         case "addHealth":
             self = .addHealth(value: tuple.value.intValue)
             
-        case "greatAttack":
+        case "addDamage":
             self = .addDamage(value: tuple.value.intValue)
             
         case "superArmor":
@@ -44,6 +44,7 @@ class Item {
     
     var name: String?
     var pic: String?
+    var gold: Int?
     var effects: [ItemEffect] = []
     
     init(json: JSON) {
@@ -56,6 +57,12 @@ class Item {
         
         if let pic = json["pic"].string {
             self.pic = pic
+        } else {
+            fatalError("Malformed JSON")
+        }
+        
+        if let gold = json["gold"].int {
+            self.gold = gold
         } else {
             fatalError("Malformed JSON")
         }
