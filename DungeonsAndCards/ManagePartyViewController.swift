@@ -199,7 +199,7 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
     }
     
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView {
-        return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroCell).hero!.pic!))
+        return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroCell).hero!.pic))
     }
     
     // DIOCollectionView Delegate
@@ -319,6 +319,14 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
 }
 
 extension ManagePartyViewController: GameDelegate {
+    
+    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int) {
+        
+    }
+    
+    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int) {
+        
+    }
     
     func game(_ game: Game, changedGoldTo gold: Int) {
         

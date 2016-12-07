@@ -25,9 +25,9 @@ class HeroPartyCell: HeroCell {
         super.setHero(hero)
         
         if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.pic!)
-            self.attackLabel.text = hero.damage?.description
-            self.healthLabel.text = hero.health?.description
+            self.heroImageView.image = UIImage(named: hero.pic)
+            self.attackLabel.text = hero.damage.description
+            self.healthLabel.text = hero.health.description
         } else {
             self.heroImageView.image = nil
             self.attackLabel.text = "?"
@@ -56,11 +56,11 @@ class HeroHandCell: HeroCell {
         super.setHero(hero)
         
         if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.pic!)
+            self.heroImageView.image = UIImage(named: hero.pic)
             self.titleLabel.text = hero.name
-            self.attackLabel.text = hero.damage?.description
-            self.healthLabel.text = hero.health?.description
-            self.costLabel.text = hero.gold?.description
+            self.attackLabel.text = hero.damage.description
+            self.healthLabel.text = hero.health.description
+            self.costLabel.text = hero.gold.description
         } else {
             self.heroImageView.image = nil
             self.titleLabel.text = "???"
@@ -106,8 +106,8 @@ class HeroItemCell: UICollectionViewCell {
         self.hero = hero
         
         if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.pic!)
-            self.itemImageView.image = UIImage(named: hero.pic!)
+            self.heroImageView.image = UIImage(named: hero.pic)
+            self.itemImageView.image = UIImage(named: hero.pic)
         } else {
             self.heroImageView.image = nil
             self.itemImageView.image = nil
@@ -118,7 +118,7 @@ class HeroItemCell: UICollectionViewCell {
         self.item = item
         
         if let item = item {
-            self.itemImageView.image = UIImage(named: item.pic!)
+            self.itemImageView.image = UIImage(named: item.pic)
         } else {
             self.itemImageView.image = nil
         }

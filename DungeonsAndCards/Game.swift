@@ -12,7 +12,9 @@ import SwiftyJSON
 protocol GameDelegate {
     func game(_ game: Game, changedGoldTo gold: Int)
     func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int)
+    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int)
     func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int)
+    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int)
 }
 
 class Game {
@@ -20,6 +22,7 @@ class Game {
     var delegate: GameDelegate?
 
     var gold: Int = 200
+    
     var dungeonLevel: Int = 0
     
     var hand: Hand
@@ -32,7 +35,7 @@ class Game {
         self.hand = Hand()
         self.party = Party()
     }
-        
+    
 }
 
 extension Game {
@@ -42,9 +45,9 @@ extension Game {
     //MARK - Implement Protocol Functions
     func hireHero(hero: Hero, atSlot slot: Int) {
         
-        if gold >= hero.gold! {
+        if self.gold >= hero.gold {
             
-            self.gold -= hero.gold!
+            self.gold -= hero.gold
             
             self.party.heroes[slot] = hero
         
@@ -58,5 +61,20 @@ extension Game {
         self.party.heroes[slot] = nil
         
         delegate?.game(self, didDismissHero: hero, atSlot: slot)
+    }
+    
+    func swapHero(heroAt selectedIndex: Int, withHeroAtIndex swapIndex: Int){
+        
+        let swap = self.party.heroes[selectedIndex]
+        self.party.heroes[selectedIndex] = self.party.heroes[swapIndex]
+        self.party.heroes[swapIndex] = swap
+        
+        delegate?.game(self, didSwapHero: selectedIndex, swapHeroIndex: swapIndex)
+    }
+    
+    func buyItem(item: Item, atSlot slot: Int) {
+        
+        
+        
     }
 }

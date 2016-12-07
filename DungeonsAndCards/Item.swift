@@ -13,9 +13,9 @@ enum ItemEffect {
     
     case None
     
-    case addHealth(value: Int)
+    case AddHealth(value: Int)
     
-    case addDamage(value: Int)
+    case AddDamage(value: Int)
     
     case SuperArmor(value: Int)
     
@@ -24,10 +24,10 @@ enum ItemEffect {
         switch(tuple.key) {
             
         case "addHealth":
-            self = .addHealth(value: tuple.value.intValue)
+            self = .AddHealth(value: tuple.value.intValue)
             
         case "addDamage":
-            self = .addDamage(value: tuple.value.intValue)
+            self = .AddDamage(value: tuple.value.intValue)
             
         case "superArmor":
             self = .SuperArmor(value: tuple.value.intValue)
@@ -42,9 +42,9 @@ enum ItemEffect {
 
 class Item {
     
-    var name: String?
-    var pic: String?
-    var gold: Int?
+    var name: String
+    var pic: String
+    var gold: Int
     var effects: [ItemEffect] = []
     
     init(json: JSON) {

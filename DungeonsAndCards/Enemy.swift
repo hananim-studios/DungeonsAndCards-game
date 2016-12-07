@@ -11,12 +11,12 @@ import SwiftyJSON
 
 class Enemy {
     
-    var name: String?
-    var description: String?
-    var pic: String?
-    var damage: Int?
-    var health: Int?
-    let gold: Int?
+    var name: String
+    var description: String
+    var pic: String
+    var damage: Int
+    var health: Int
+    let gold: Int
     
     init(json: JSON) {
         

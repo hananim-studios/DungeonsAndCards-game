@@ -12,7 +12,7 @@
               },
               {
               "name": "pink",
-              "pic": "pink",
+              "pic": "red",
               "gold": 10,
               "effects": {
               "addHealth": 10,
@@ -22,7 +22,7 @@
               },
               {
               "name": "violet",
-              "pic": "blue",
+              "pic": "red",
               "gold": 10,
               "effects": {
               "addHealth": 5,
@@ -32,7 +32,7 @@
               },
               {
               "name": "blue",
-              "pic": "blue",
+              "pic": "red",
               "gold": 5,
               "effects": {
               "addHealth": 0,
@@ -42,7 +42,7 @@
               },
               {
               "name": "cyan",
-              "pic": "blue",
+              "pic": "red",
               "gold": 10,
               "effects": {
               "addHealth": 0,
@@ -52,7 +52,7 @@
               },
               {
               "name": "Indigo",
-              "pic": "blue",
+              "pic": "red",
               "gold": 15,
               "effects": {
               "addHealth": 10,
@@ -62,7 +62,7 @@
               },
               {
               "name": "Milk",
-              "pic": "white",
+              "pic": "red",
               "gold": 15,
               "effects": {
               "addHealth": 0,
@@ -72,7 +72,7 @@
               },
               {
               "name": "Black",
-              "pic": "black",
+              "pic": "red",
               "gold": 20,
               "effects": {
               "addHealth": 0,
@@ -82,7 +82,7 @@
               },
               {
               "name": "Green",
-              "pic": "green",
+              "pic": "red",
               "gold": 9,
               "effects": {
               "addHealth": 9,
@@ -92,7 +92,7 @@
               },
               {
               "name": "Orange",
-              "pic": "orange",
+              "pic": "red",
               "gold": 4,
               "effects": {
               "addHealth": 4,
