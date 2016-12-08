@@ -24,12 +24,26 @@
                                 <tableRow identifier="QuestRow" id="nQy-gD-Jfg" customClass="QuestRowController" customModule="DungeonsAndCardsWatch_Extension">
                                     <group key="rootItem" width="1" alignment="left" id="MWc-4t-o2H">
                                         <items>
-                                            <separator alignment="left" verticalAlignment="center" id="qvW-Og-p7O"/>
-                                            <label width="1" widthAdjustment="-4" height="1" alignment="left" verticalAlignment="center" text="Label" id="oCk-fM-99v"/>
+                                            <group width="88" alignment="left" verticalAlignment="center" id="KUS-Zt-tYe">
+                                                <items>
+                                                    <separator width="2" alignment="left" verticalAlignment="center" id="i18-YM-b9v"/>
+                                                    <label width="98" height="0.90000000000000002" alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="oCk-fM-99v">
+                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                    </label>
+                                                </items>
+                                            </group>
+                                            <group width="36" height="1" alignment="right" verticalAlignment="center" backgroundImage="quest0.png" contentMode="scaleAspectFit" layout="vertical" id="4E8-TC-ipJ">
+                                                <items>
+                                                    <label alignment="left" id="Zao-88-20B"/>
+                                                </items>
+                                                <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                            </group>
                                         </items>
                                     </group>
                                     <connections>
                                         <outlet property="mainLabel" destination="oCk-fM-99v" id="ca2-xy-n7I"/>
+                                        <outlet property="ringQuest" destination="4E8-TC-ipJ" id="0D9-Jg-MPe"/>
+                                        <outlet property="separator" destination="i18-YM-b9v" id="l4S-y5-dNY"/>
                                     </connections>
                                 </tableRow>
                             </items>

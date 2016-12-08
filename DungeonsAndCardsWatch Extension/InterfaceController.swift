@@ -9,15 +9,17 @@
 import WatchKit
 import Foundation
 
-class InterfaceController: WKInterfaceController {
+class InterfaceController: WKInterfaceController, QuestManagerDelegate {
 
     @IBOutlet var questsTable: WKInterfaceTable!
-    var array = ["a", "b", "c"]
+    var array = QuestManager.sharedInstance.quests
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        QuestManager.sharedInstance.delegate = self
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         populateTable(self.questsTable)
+        
     }
     
     override func willActivate() {
@@ -30,6 +32,46 @@ class InterfaceController: WKInterfaceController {
         super.didDeactivate()
     }
     
+    func questsDidUpdate() {
+        populateTable(self.questsTable)
+    }
+    
+    func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double) {
+        
+        //Configuring Table Cells
+        
+        questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
+        
+        for (index, content) in self.array.enumerated() {
+            
+            let controller = questsTable.rowController(at: index) as! QuestRowController
+            
+            controller.ringQuest.setBackgroundImageNamed("quest")
+            controller.mainLabel.setText(content.name)
+            if(content.active == true){
+                let nextValue: Double?
+                switch content.questType {
+                case .exercise:
+                    nextValue = exercise
+                case .move:
+                    nextValue = move
+                case .stand:
+                    nextValue = stand
+                case .tap:
+                    nextValue = tap
+                }
+                print("current:\(nextValue!) , next:\(content.currentQuestObjective) ")
+                if nextValue! > 0 && nextValue! != content.currentQuestObjective {
+                    controller.ringQuest.startAnimatingWithImages(in: NSMakeRange(Int(content.currentQuestObjective), Int(nextValue!)), duration: 0.5, repeatCount: 1)
+                }
+            }
+            else {
+                controller.mainLabel.setAlpha(0.5)
+            }
+            
+        }
+    }
+    
     func populateTable(_ table: WKInterfaceTable) {
         
         //Configuring Table Cells
@@ -40,9 +82,17 @@ class InterfaceController: WKInterfaceController {
             
             let controller = table.rowController(at: index) as! QuestRowController
             
-            controller.mainLabel.setText(content)
+            controller.ringQuest.setBackgroundImageNamed("quest")
+            controller.mainLabel.setText(content.name)
+            if(content.active == true){
+
+            }
+            else {
+                controller.mainLabel.setAlpha(0.5)
+            }
             
         }
     }
+
 
 }

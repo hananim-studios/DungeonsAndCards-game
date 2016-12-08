@@ -9,22 +9,37 @@
 import Foundation
 import HealthKit
 
-enum QuestType : Int {
-    case exercise = 1
-    case move = 2
-    case stand = 3
-    case tap = 4
+enum QuestType : Double {
+    case exercise = 40 //raw value will be quest objectives
+    case move = 200
+    case stand = 100
+    case tap = 80
 }
 
 class Quest {
+    let name: String
     var active : Bool
-    var questObjective : Int
-    var questType: QuestType 
+    var questObjective : Double
+    var currentQuestObjective : Double
+    var questType: QuestType
     
     init(with questType: QuestType) {
+        self.currentQuestObjective = 0
         self.questType = questType
         self.active = false
         self.questObjective = questType.rawValue
+        switch self.questType{
+        case .exercise:
+            self.name = "Faça exercício"
+        case .move:
+            self.name = "Faça um movimento"
+        case .stand:
+            self.name = "Se levante"
+        case .tap:
+            self.name = "Aperte várias vezes"
+
+
+        }
     }
 }
 
