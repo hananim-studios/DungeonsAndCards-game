@@ -33,16 +33,16 @@ class ItemsJSON {
         }
     }
     
-    static func cardAtGroup(name: String) -> Item? {
+    static func itemAtIndex(index: Int) -> Item? {
         
         if let json = self.json {
-            return Item(json: json["items"][name])
+            return Item(json: json["items"][index])
         }
         
         return nil
     }
     
-    static func heroesCount() -> Int {
+    static func count() -> Int {
         
         if let json = self.json {
             return json["items"].count

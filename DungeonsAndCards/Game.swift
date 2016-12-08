@@ -27,13 +27,19 @@ class Game {
     
     var hand: Hand
     
-    var party: Party = Party()
+    var party: Party
+    
+    var itemShop: ItemShop
+    
     
     init(){
-        if !HeroesJSON.load() { fatalError("Unable to load heroes.json") }
+        if !HeroesJSON.load()  { fatalError("Unable to load heroes.json") }
+        if !ItemsJSON.load()   { fatalError("Unable to load items.json") }
+        if !EnemiesJSON.load() { fatalError("Unable to load enemies.json") }
         
         self.hand = Hand()
         self.party = Party()
+        self.itemShop = ItemShop()
     }
     
 }
@@ -50,6 +56,14 @@ extension Game {
             self.gold -= hero.gold
             
             self.party.heroes[slot] = hero
+    
+//            for i in 0...self.hand.heroes.count-1{
+//                if self.hand.heroes[i] == hero {
+//                  //self.hand.heroes[i] = nil
+//                    self.hand.heroes.remove(at: i)
+//                    return
+//                }
+//            }
         
             delegate?.game(self, didHireHero: hero, atSlot: slot)
             delegate?.game(self, changedGoldTo: self.gold)
@@ -73,8 +87,14 @@ extension Game {
     }
     
     func buyItem(item: Item, atSlot slot: Int) {
-        
-        
-        
+        if self.gold >= item.gold {
+            
+            self.gold -= item.gold
+            
+            self.itemShop.items[slot] = item
+            
+            delegate?.game(self, didBuyItem: item, atSlot: slot)
+            delegate?.game(self, changedGoldTo: self.gold)
+        }
     }
 }

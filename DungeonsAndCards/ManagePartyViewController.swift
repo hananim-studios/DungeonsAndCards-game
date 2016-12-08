@@ -128,7 +128,6 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         let collectionSize = collectionView.contentSize.width
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
-        print(rightInset)
         return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)
     }
     

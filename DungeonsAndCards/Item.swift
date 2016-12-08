@@ -75,3 +75,13 @@ class Item {
     }
 }
 
+extension Item: Equatable {
+    static func == (lhs:Item, rhs:Item) -> Bool {
+        if lhs.name == rhs.name {
+            return true
+        } else {
+            return false
+        }
+    }
+}
+

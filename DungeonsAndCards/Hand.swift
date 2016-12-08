@@ -22,13 +22,12 @@ class Hand {
             if let randomHero = HeroesJSON.heroAtIndex(index:Int(i)) {
                 if !heroes.contains(randomHero){
                     heroes.append(randomHero)
-                    print("  append '\(randomHero.name)' succeeded")
+                    print("  \(heroes.count-1) append '\(randomHero.name)' succeeded")
                 }
             }
         }
         
     }
-    
     
 }
 
