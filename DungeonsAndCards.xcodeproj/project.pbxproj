@@ -147,6 +147,11 @@
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
 		D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E201DDF493A002A0ED0 /* LaunchScreen.storyboard */; };
+		D14EE1DA1DF992A500820FB5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14EE1D91DF992A500820FB5 /* ItemCell.swift */; };
+		D14EE1DC1DF992AE00820FB5 /* HeroItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */; };
+		D14EE1DE1DF992B500820FB5 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DD1DF992B500820FB5 /* ItemCell.xib */; };
+		D14EE1E01DF9A60C00820FB5 /* EnemyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */; };
+		D14EE1E21DF9A6AF00820FB5 /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */; };
 		D15155021DF8301400C25638 /* HeroHandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15155011DF8301400C25638 /* HeroHandCell.xib */; };
 		D17445B91DF850C3000527F5 /* HeroPartyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17445B81DF850C3000527F5 /* HeroPartyCell.xib */; };
 		D18D660B1DF6DE5E00C68178 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */; };
@@ -374,6 +379,11 @@
 		D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D14E4E211DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D14E4E231DDF493A002A0ED0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D14EE1D91DF992A500820FB5 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
+		D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroItemCell.xib; sourceTree = "<group>"; };
+		D14EE1DD1DF992B500820FB5 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
+		D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyView.xib; sourceTree = "<group>"; };
+		D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
 		D15155011DF8301400C25638 /* HeroHandCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroHandCell.xib; sourceTree = "<group>"; };
 		D17445B81DF850C3000527F5 /* HeroPartyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroPartyCell.xib; sourceTree = "<group>"; };
 		D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
@@ -636,6 +646,8 @@
 		C68475631DE71B0A0081DA95 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */,
+				D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */,
 				D15155001DF82FF600C25638 /* Cells */,
 				D11BFE691DEE48180046086C /* HeroCollectionView.swift */,
 				D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */,
@@ -733,7 +745,10 @@
 			children = (
 				D15155011DF8301400C25638 /* HeroHandCell.xib */,
 				D17445B81DF850C3000527F5 /* HeroPartyCell.xib */,
+				D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */,
+				D14EE1DD1DF992B500820FB5 /* ItemCell.xib */,
 				D11BFE6B1DEE48290046086C /* HeroCell.swift */,
+				D14EE1D91DF992A500820FB5 /* ItemCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -1088,7 +1103,10 @@
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D15155021DF8301400C25638 /* HeroHandCell.xib in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
+				D14EE1E01DF9A60C00820FB5 /* EnemyView.xib in Resources */,
+				D14EE1DC1DF992AE00820FB5 /* HeroItemCell.xib in Resources */,
 				14973A361DF8459600FDFC8E /* items.json in Resources */,
+				D14EE1DE1DF992B500820FB5 /* ItemCell.xib in Resources */,
 				14973A351DF8459600FDFC8E /* enemies.json in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
@@ -1186,6 +1204,7 @@
 				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
 				C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */,
 				D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */,
+				D14EE1E21DF9A6AF00820FB5 /* EnemyView.swift in Sources */,
 				D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */,
 				D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */,
 				C627A5C51DEDCB38002F6533 /* ShopViewController.swift in Sources */,
@@ -1208,6 +1227,7 @@
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,
 				D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */,
 				146670F21DF981DC00102CD1 /* ItemShop.swift in Sources */,
+				D14EE1DA1DF992A500820FB5 /* ItemCell.swift in Sources */,
 				C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -225,28 +225,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HeroCell" id="X6J-B9-nR1" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-5" width="137" height="216"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="00w-r4-bpi">
-                                                    <rect key="frame" x="-0.5" y="0.0" width="137" height="216"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="0.87402003552055341" green="0.88267369923857864" blue="0.88267369923857864" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="00w-r4-bpi" firstAttribute="height" secondItem="X6J-B9-nR1" secondAttribute="height" id="OWS-M7-So1"/>
-                                            <constraint firstItem="00w-r4-bpi" firstAttribute="width" secondItem="X6J-B9-nR1" secondAttribute="width" id="RyO-Ih-o3W"/>
-                                            <constraint firstItem="00w-r4-bpi" firstAttribute="centerY" secondItem="X6J-B9-nR1" secondAttribute="centerY" id="irY-9c-uT8"/>
-                                            <constraint firstItem="00w-r4-bpi" firstAttribute="centerX" secondItem="X6J-B9-nR1" secondAttribute="centerX" id="sJH-9V-eDa"/>
-                                        </constraints>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-O5-IF5">
                                 <rect key="frame" x="237" y="515" width="67" height="45"/>
@@ -268,28 +247,7 @@
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroCell" id="sd7-DK-hh3" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-3.5" width="88" height="133"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mol-AR-D4y">
-                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="0.87402003549999996" green="0.88267369920000005" blue="0.88267369920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="mol-AR-D4y" firstAttribute="height" secondItem="sd7-DK-hh3" secondAttribute="height" id="CVI-JR-jIm"/>
-                                            <constraint firstItem="mol-AR-D4y" firstAttribute="width" secondItem="sd7-DK-hh3" secondAttribute="width" id="DMS-RO-Ph7"/>
-                                            <constraint firstItem="mol-AR-D4y" firstAttribute="centerY" secondItem="sd7-DK-hh3" secondAttribute="centerY" id="Gf8-yO-kev"/>
-                                            <constraint firstItem="mol-AR-D4y" firstAttribute="centerX" secondItem="sd7-DK-hh3" secondAttribute="centerX" id="JzP-Yb-DNq"/>
-                                        </constraints>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Hh-Oo7">
                                 <rect key="frame" x="259" y="73" width="49" height="30"/>
@@ -532,7 +490,7 @@ find a TREASURE</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ui-x5-1YM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tIt-mW-LeJ">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="tIt-mW-LeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -619,40 +577,16 @@ find a TREASURE</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-YC-izH" customClass="ItemCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="342" width="328" height="159"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AXy-YC-izH" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="358" width="328" height="143"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="OFT-Cs-MNr">
-                                    <size key="itemSize" width="137" height="216"/>
+                                    <size key="itemSize" width="129" height="65"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HeroCell" id="Kwn-9I-zmz" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-60.5" width="137" height="216"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9Q8-Gh-eOf">
-                                                    <rect key="frame" x="-0.5" y="0.0" width="137" height="216"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="0.87402003549999996" green="0.88267369920000005" blue="0.88267369920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="9Q8-Gh-eOf" firstAttribute="width" secondItem="Kwn-9I-zmz" secondAttribute="width" id="37H-X6-YK8"/>
-                                            <constraint firstItem="9Q8-Gh-eOf" firstAttribute="centerX" secondItem="Kwn-9I-zmz" secondAttribute="centerX" id="H28-tB-HJW"/>
-                                            <constraint firstItem="9Q8-Gh-eOf" firstAttribute="centerY" secondItem="Kwn-9I-zmz" secondAttribute="centerY" id="Tbr-VL-Wsz"/>
-                                            <constraint firstItem="9Q8-Gh-eOf" firstAttribute="height" secondItem="Kwn-9I-zmz" secondAttribute="height" id="VlH-hb-thf"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="imageView" destination="9Q8-Gh-eOf" id="pMW-M0-4jC"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wZ5-FC-PJz">
                                 <rect key="frame" x="219" y="524" width="85" height="30"/>
@@ -666,7 +600,7 @@ find a TREASURE</string>
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="XFW-mZ-jKQ" customClass="HeroCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="118" width="324" height="198"/>
+                                <rect key="frame" x="-4" y="118" width="324" height="232"/>
                                 <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="qSP-Ew-LHR">
                                     <size key="itemSize" width="88" height="133"/>
@@ -674,43 +608,7 @@ find a TREASURE</string>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="HeroItemCell" id="nau-Mr-EtE" customClass="HeroItemCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="32.5" width="88" height="133"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="far-yR-AwJ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="88" height="133"/>
-                                                    <subviews>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GTm-jP-nE0" userLabel="Hero Image View">
-                                                            <rect key="frame" x="0.0" y="0.0" width="88" height="88.5"/>
-                                                        </imageView>
-                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Uqg-T0-5eF">
-                                                            <rect key="frame" x="0.0" y="88.5" width="88" height="44.5"/>
-                                                        </imageView>
-                                                    </subviews>
-                                                    <constraints>
-                                                        <constraint firstItem="Uqg-T0-5eF" firstAttribute="height" secondItem="GTm-jP-nE0" secondAttribute="height" multiplier="0.5" id="rnm-qK-dF4"/>
-                                                    </constraints>
-                                                </stackView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="0.87402003549999996" green="0.88267369920000005" blue="0.88267369920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="far-yR-AwJ" firstAttribute="centerY" secondItem="nau-Mr-EtE" secondAttribute="centerY" id="3lo-mt-Cng"/>
-                                            <constraint firstItem="far-yR-AwJ" firstAttribute="width" secondItem="nau-Mr-EtE" secondAttribute="width" id="CzF-B3-VNu"/>
-                                            <constraint firstItem="far-yR-AwJ" firstAttribute="height" secondItem="nau-Mr-EtE" secondAttribute="height" id="DED-9C-T45"/>
-                                            <constraint firstItem="far-yR-AwJ" firstAttribute="centerX" secondItem="nau-Mr-EtE" secondAttribute="centerX" id="RbB-RS-yHF"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="heroImageView" destination="GTm-jP-nE0" id="eQm-XW-wSs"/>
-                                            <outlet property="itemImageView" destination="Uqg-T0-5eF" id="HOs-IC-Zyr"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="awy-B1-Vuc">
                                 <rect key="frame" x="276" y="73" width="32" height="30"/>
@@ -775,10 +673,10 @@ find a TREASURE</string>
                             <constraint firstItem="dOF-at-43a" firstAttribute="top" secondItem="ky8-Bm-5Gq" secondAttribute="bottom" constant="5" id="NUL-Mb-dfU"/>
                             <constraint firstItem="AXy-YC-izH" firstAttribute="leading" secondItem="lXa-Rx-xSC" secondAttribute="leadingMargin" constant="-20" id="Obn-z3-EfK"/>
                             <constraint firstItem="XFW-mZ-jKQ" firstAttribute="top" secondItem="ky8-Bm-5Gq" secondAttribute="bottom" constant="54" id="Ojz-wN-dQz"/>
-                            <constraint firstItem="AXy-YC-izH" firstAttribute="top" secondItem="XFW-mZ-jKQ" secondAttribute="bottom" constant="26" id="Q7s-uO-VAH"/>
+                            <constraint firstItem="AXy-YC-izH" firstAttribute="top" secondItem="XFW-mZ-jKQ" secondAttribute="bottom" constant="8" id="Q7s-uO-VAH"/>
                             <constraint firstAttribute="leadingMargin" secondItem="1cU-gf-WG6" secondAttribute="leading" id="Whn-fZ-FED"/>
                             <constraint firstItem="q78-Lb-M4D" firstAttribute="top" secondItem="1cU-gf-WG6" secondAttribute="bottom" constant="8" id="cKj-9N-s2e"/>
-                            <constraint firstItem="AXy-YC-izH" firstAttribute="height" secondItem="lXa-Rx-xSC" secondAttribute="height" multiplier="0.5" constant="-125" id="dI5-Gh-a5L"/>
+                            <constraint firstItem="AXy-YC-izH" firstAttribute="height" secondItem="lXa-Rx-xSC" secondAttribute="height" multiplier="0.5" constant="-141" id="dI5-Gh-a5L"/>
                             <constraint firstItem="wZ5-FC-PJz" firstAttribute="top" secondItem="AXy-YC-izH" secondAttribute="bottom" constant="23" id="jB9-DM-nR4"/>
                             <constraint firstItem="COa-CB-aqR" firstAttribute="top" secondItem="ky8-Bm-5Gq" secondAttribute="bottom" constant="2" id="p4W-o7-MV2"/>
                             <constraint firstItem="q78-Lb-M4D" firstAttribute="top" secondItem="AXy-YC-izH" secondAttribute="bottom" constant="67" id="qGk-hK-8B3"/>
@@ -788,6 +686,7 @@ find a TREASURE</string>
                     </view>
                     <navigationItem key="navigationItem" id="tam-DN-CmH"/>
                     <connections>
+                        <outlet property="goldButton" destination="awy-B1-Vuc" id="PBO-QC-pz7"/>
                         <outlet property="itemCollectionView" destination="AXy-YC-izH" id="nSG-Oe-sjd"/>
                         <outlet property="menuButton" destination="1cU-gf-WG6" id="bE9-Oj-X4O"/>
                         <outlet property="nextButton" destination="wZ5-FC-PJz" id="CxD-Ix-nYX"/>
@@ -796,7 +695,7 @@ find a TREASURE</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lFe-8E-Pho" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2951" y="906"/>
+            <point key="canvasLocation" x="2949.375" y="905.28169014084506"/>
         </scene>
         <!--Battle View Controller-->
         <scene sceneID="OZN-Z8-aEQ">
@@ -819,31 +718,7 @@ find a TREASURE</string>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" reuseIdentifier="HeroCell" id="neY-7i-eS7" customClass="HeroCell" customModule="DungeonsAndCards" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="-28.5" width="137" height="216"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="0.0" y="0.0" width="137" height="216"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ciR-re-n8V">
-                                                    <rect key="frame" x="-0.5" y="0.0" width="137" height="216"/>
-                                                </imageView>
-                                            </subviews>
-                                        </view>
-                                        <color key="backgroundColor" red="0.87402003549999996" green="0.88267369920000005" blue="0.88267369920000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <constraints>
-                                            <constraint firstItem="ciR-re-n8V" firstAttribute="height" secondItem="neY-7i-eS7" secondAttribute="height" id="jhG-Oi-pKZ"/>
-                                            <constraint firstItem="ciR-re-n8V" firstAttribute="centerY" secondItem="neY-7i-eS7" secondAttribute="centerY" id="ruP-Ck-wBC"/>
-                                            <constraint firstItem="ciR-re-n8V" firstAttribute="centerX" secondItem="neY-7i-eS7" secondAttribute="centerX" id="sUH-CH-HI4"/>
-                                            <constraint firstItem="ciR-re-n8V" firstAttribute="width" secondItem="neY-7i-eS7" secondAttribute="width" id="vol-Al-3IW"/>
-                                        </constraints>
-                                        <connections>
-                                            <outlet property="imageView" destination="ciR-re-n8V" id="oZg-ww-8kT"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
+                                <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="LD7-Ct-Kgv">
                                 <rect key="frame" x="276" y="73" width="32" height="30"/>
@@ -906,6 +781,10 @@ find a TREASURE</string>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="vje-Np-vDu"/>
+                    <connections>
+                        <outlet property="goldButton" destination="LD7-Ct-Kgv" id="66z-uQ-AUj"/>
+                        <outlet property="partyCollectionView" destination="16f-hJ-Eg5" id="UeM-mx-XOB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yRC-0u-0Ls" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -918,6 +797,6 @@ find a TREASURE</string>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="QT9-Io-ld4"/>
-        <segue reference="eAi-JD-nAP"/>
+        <segue reference="0GM-DA-Qtb"/>
     </inferredMetricsTieBreakers>
 </document>
