@@ -18,10 +18,11 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     //MARK - IBOutlets
     @IBOutlet weak var partyCollectionView: HeroCollectionView!
-    @IBOutlet weak var itemCollectionView: ItemCollectionView!
+    @IBOutlet weak var itemCollectionView: HeroCollectionView!
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var goldButton: UIButton!
     
     //MARK - ViewController
     
@@ -39,6 +40,8 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
         itemCollectionView.dataSource = self
         itemCollectionView.dioDataSource = self
         itemCollectionView.dioDelegate = self
+        itemCollectionView.register(UINib(nibName: "ItemCell", bundle: Bundle.main), forCellWithReuseIdentifier: "ItemCell")
+        itemCollectionView.heroDelegate = self
         
         partyCollectionView.backgroundColor = UIColor.clear
         partyCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
@@ -50,6 +53,11 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
         //partyCollectionView.heroDelegate = self
         partyCollectionView.receiveDrag = true
         partyCollectionView.allowFeedback = true
+        partyCollectionView.register(UINib(nibName: "HeroItemCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroItemCell")
+        partyCollectionView.heroDelegate = self
+        
+        self.game.delegate = self
+        updateGold()
     }
     
     override func didReceiveMemoryWarning() {
@@ -89,10 +97,10 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
         if collectionView == itemCollectionView {
             // cell for hand
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
-                                                          for: indexPath) as! HeroCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "ItemCell",
+                                                          for: indexPath) as! ItemCell
             
-            cell.setHero(self.game.hand.heroes[indexPath.row])
+            cell.setItem(ItemsJSON.itemAtIndex(index: 0))
             
             return cell
         }
@@ -105,6 +113,7 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
                                                       for: indexPath) as! HeroItemCell
         
             cell.setHero(self.game.party.heroes[indexPath.row])
+            cell.setItem(self.game.itemShop.items[indexPath.row]) // TODO: SET ITEM
         
             return cell
         }
@@ -140,9 +149,9 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
         
         if collectionView == itemCollectionView {
             // size of hand cell
-            let width = collectionView.bounds.width
-            let height = 0.8*collectionView.bounds.height
-            return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            //let width = collectionView.bounds.width
+            let height = 0.9*collectionView.bounds.height
+            return CGSize(width: height/3, height: height)
         }
         
         if collectionView == partyCollectionView {
@@ -167,7 +176,9 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
     }
     
     // MARK: - Convenience Methods
-    
+    func updateGold() {
+        self.goldButton.setTitle(self.game.gold.description, for: .normal)
+    }
 }
 
 extension ShopViewController: DIOCollectionViewDataSource, DIOCollectionViewDelegate {
@@ -176,7 +187,7 @@ extension ShopViewController: DIOCollectionViewDataSource, DIOCollectionViewDele
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, userDataForItemAtIndexPath indexPath: IndexPath) -> Any? {
         
         if dioCollectionView == itemCollectionView {
-            return nil// item //self.game.party.heroes[indexPath.row]
+            return self.game.itemShop.items[indexPath.row]
         }
         
         return nil
@@ -217,4 +228,82 @@ extension ShopViewController: DIOCollectionViewDataSource, DIOCollectionViewDele
         }
     }
     
+}
+
+extension ShopViewController: HeroCollectionViewDelegate {
+    
+    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEndedWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
+        
+        guard let dragInfo = dragInfo else { return }
+        guard let item = dragInfo.userData as? Item else { return }
+        guard let cell = heroCollectionView.cellForItem(at: indexPath) as? HeroItemCell else { return }
+        
+        let senderView = dragInfo.sender
+        
+        if(senderView == self.itemCollectionView) { // DRAGGED FROM HAND
+            if cell.item == nil {
+                
+                
+                if(heroCollectionView == self.partyCollectionView) { // TO PARTY
+                    
+                    // - MARK: EVENT: PLAYER DRAGGED HERO FROM HAND TO PARTY
+                    // REFACTOR HINT: DELEGATE THIS BEHAVIOR
+                    
+                    dragInfo.sender.dragView?.isHidden = true
+                    
+                    self.game.buyItem(item: item, atSlot: indexPath.row)
+                    cell.setItem(item)
+                }
+            }
+        }
+        
+        if(senderView == self.partyCollectionView) { // DRAGGED FROM PARTY
+            if cell.hero == nil {
+                
+                
+                if(heroCollectionView == self.partyCollectionView) { // TO PARTY
+                    
+                    // - MARK: EVENT: PLAYER DRAGGED HERO FROM PARTY TO PARTY
+                    // REFACTOR HINT: DELEGATE THIS BEHAVIOR
+                    
+                    dragInfo.sender.dragView?.isHidden = true
+                    
+                    //self.game.partyHeroes[indexPath.row] = hero
+                    //cell.setHero(hero)
+                    
+                    print("entered \(indexPath)")
+                }
+            }
+        }
+    }
+    
+    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEnteredWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
+        
+    }
+    
+    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
+        
+    }
+}
+
+extension ShopViewController: GameDelegate {
+    func game(_ game: Game, changedGoldTo gold: Int) {
+        updateGold()
+    }
+    
+    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int) {
+        
+    }
+    
+    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int) {
+        
+    }
+    
+    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int) {
+        
+    }
+    
+    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int) {
+        
+    }
 }
