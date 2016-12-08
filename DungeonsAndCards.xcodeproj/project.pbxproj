@@ -14,6 +14,108 @@
 		C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */; };
 		C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */; };
 		C627A5C51DEDCB38002F6533 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C627A5C41DEDCB38002F6533 /* ShopViewController.swift */; };
+		C64376131DF9AD1C00BAFDCA /* quest0.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375AE1DF9AD1C00BAFDCA /* quest0.png */; };
+		C64376141DF9AD1C00BAFDCA /* quest1.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375AF1DF9AD1C00BAFDCA /* quest1.png */; };
+		C64376151DF9AD1C00BAFDCA /* quest2.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B01DF9AD1C00BAFDCA /* quest2.png */; };
+		C64376161DF9AD1C00BAFDCA /* quest3.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B11DF9AD1C00BAFDCA /* quest3.png */; };
+		C64376171DF9AD1C00BAFDCA /* quest4.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B21DF9AD1C00BAFDCA /* quest4.png */; };
+		C64376181DF9AD1C00BAFDCA /* quest5.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B31DF9AD1C00BAFDCA /* quest5.png */; };
+		C64376191DF9AD1C00BAFDCA /* quest6.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B41DF9AD1C00BAFDCA /* quest6.png */; };
+		C643761A1DF9AD1C00BAFDCA /* quest7.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B51DF9AD1C00BAFDCA /* quest7.png */; };
+		C643761B1DF9AD1C00BAFDCA /* quest8.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B61DF9AD1C00BAFDCA /* quest8.png */; };
+		C643761C1DF9AD1C00BAFDCA /* quest9.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B71DF9AD1C00BAFDCA /* quest9.png */; };
+		C643761D1DF9AD1C00BAFDCA /* quest10.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B81DF9AD1C00BAFDCA /* quest10.png */; };
+		C643761E1DF9AD1C00BAFDCA /* quest11.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B91DF9AD1C00BAFDCA /* quest11.png */; };
+		C643761F1DF9AD1C00BAFDCA /* quest12.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375BA1DF9AD1C00BAFDCA /* quest12.png */; };
+		C64376201DF9AD1C00BAFDCA /* quest13.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375BB1DF9AD1C00BAFDCA /* quest13.png */; };
+		C64376211DF9AD1C00BAFDCA /* quest14.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375BC1DF9AD1C00BAFDCA /* quest14.png */; };
+		C64376221DF9AD1C00BAFDCA /* quest15.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375BD1DF9AD1C00BAFDCA /* quest15.png */; };
+		C64376231DF9AD1C00BAFDCA /* quest16.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375BE1DF9AD1C00BAFDCA /* quest16.png */; };
+		C64376241DF9AD1C00BAFDCA /* quest17.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375BF1DF9AD1C00BAFDCA /* quest17.png */; };
+		C64376251DF9AD1C00BAFDCA /* quest18.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C01DF9AD1C00BAFDCA /* quest18.png */; };
+		C64376261DF9AD1C00BAFDCA /* quest19.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C11DF9AD1C00BAFDCA /* quest19.png */; };
+		C64376271DF9AD1C00BAFDCA /* quest20.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C21DF9AD1C00BAFDCA /* quest20.png */; };
+		C64376281DF9AD1C00BAFDCA /* quest21.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C31DF9AD1C00BAFDCA /* quest21.png */; };
+		C64376291DF9AD1C00BAFDCA /* quest22.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C41DF9AD1C00BAFDCA /* quest22.png */; };
+		C643762A1DF9AD1C00BAFDCA /* quest23.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C51DF9AD1C00BAFDCA /* quest23.png */; };
+		C643762B1DF9AD1C00BAFDCA /* quest24.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C61DF9AD1C00BAFDCA /* quest24.png */; };
+		C643762C1DF9AD1C00BAFDCA /* quest25.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C71DF9AD1C00BAFDCA /* quest25.png */; };
+		C643762D1DF9AD1C00BAFDCA /* quest26.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C81DF9AD1C00BAFDCA /* quest26.png */; };
+		C643762E1DF9AD1C00BAFDCA /* quest27.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375C91DF9AD1C00BAFDCA /* quest27.png */; };
+		C643762F1DF9AD1C00BAFDCA /* quest28.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375CA1DF9AD1C00BAFDCA /* quest28.png */; };
+		C64376301DF9AD1C00BAFDCA /* quest29.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375CB1DF9AD1C00BAFDCA /* quest29.png */; };
+		C64376311DF9AD1C00BAFDCA /* quest30.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375CC1DF9AD1C00BAFDCA /* quest30.png */; };
+		C64376321DF9AD1C00BAFDCA /* quest31.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375CD1DF9AD1C00BAFDCA /* quest31.png */; };
+		C64376331DF9AD1C00BAFDCA /* quest32.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375CE1DF9AD1C00BAFDCA /* quest32.png */; };
+		C64376341DF9AD1C00BAFDCA /* quest33.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375CF1DF9AD1C00BAFDCA /* quest33.png */; };
+		C64376351DF9AD1C00BAFDCA /* quest34.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D01DF9AD1C00BAFDCA /* quest34.png */; };
+		C64376361DF9AD1C00BAFDCA /* quest35.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D11DF9AD1C00BAFDCA /* quest35.png */; };
+		C64376371DF9AD1C00BAFDCA /* quest36.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D21DF9AD1C00BAFDCA /* quest36.png */; };
+		C64376381DF9AD1C00BAFDCA /* quest37.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D31DF9AD1C00BAFDCA /* quest37.png */; };
+		C64376391DF9AD1C00BAFDCA /* quest38.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D41DF9AD1C00BAFDCA /* quest38.png */; };
+		C643763A1DF9AD1C00BAFDCA /* quest39.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D51DF9AD1C00BAFDCA /* quest39.png */; };
+		C643763B1DF9AD1C00BAFDCA /* quest40.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D61DF9AD1C00BAFDCA /* quest40.png */; };
+		C643763C1DF9AD1C00BAFDCA /* quest41.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D71DF9AD1C00BAFDCA /* quest41.png */; };
+		C643763D1DF9AD1C00BAFDCA /* quest42.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D81DF9AD1C00BAFDCA /* quest42.png */; };
+		C643763E1DF9AD1C00BAFDCA /* quest43.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375D91DF9AD1C00BAFDCA /* quest43.png */; };
+		C643763F1DF9AD1C00BAFDCA /* quest44.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375DA1DF9AD1C00BAFDCA /* quest44.png */; };
+		C64376401DF9AD1C00BAFDCA /* quest45.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375DB1DF9AD1C00BAFDCA /* quest45.png */; };
+		C64376411DF9AD1C00BAFDCA /* quest46.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375DC1DF9AD1C00BAFDCA /* quest46.png */; };
+		C64376421DF9AD1C00BAFDCA /* quest47.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375DD1DF9AD1C00BAFDCA /* quest47.png */; };
+		C64376431DF9AD1C00BAFDCA /* quest48.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375DE1DF9AD1C00BAFDCA /* quest48.png */; };
+		C64376441DF9AD1C00BAFDCA /* quest49.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375DF1DF9AD1C00BAFDCA /* quest49.png */; };
+		C64376451DF9AD1C00BAFDCA /* quest50.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E01DF9AD1C00BAFDCA /* quest50.png */; };
+		C64376461DF9AD1C00BAFDCA /* quest51.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E11DF9AD1C00BAFDCA /* quest51.png */; };
+		C64376471DF9AD1C00BAFDCA /* quest52.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E21DF9AD1C00BAFDCA /* quest52.png */; };
+		C64376481DF9AD1C00BAFDCA /* quest53.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E31DF9AD1C00BAFDCA /* quest53.png */; };
+		C64376491DF9AD1C00BAFDCA /* quest54.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E41DF9AD1C00BAFDCA /* quest54.png */; };
+		C643764A1DF9AD1C00BAFDCA /* quest55.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E51DF9AD1C00BAFDCA /* quest55.png */; };
+		C643764B1DF9AD1C00BAFDCA /* quest56.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E61DF9AD1C00BAFDCA /* quest56.png */; };
+		C643764C1DF9AD1C00BAFDCA /* quest57.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E71DF9AD1C00BAFDCA /* quest57.png */; };
+		C643764D1DF9AD1C00BAFDCA /* quest58.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E81DF9AD1C00BAFDCA /* quest58.png */; };
+		C643764E1DF9AD1C00BAFDCA /* quest59.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375E91DF9AD1C00BAFDCA /* quest59.png */; };
+		C643764F1DF9AD1C00BAFDCA /* quest60.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375EA1DF9AD1C00BAFDCA /* quest60.png */; };
+		C64376501DF9AD1C00BAFDCA /* quest61.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375EB1DF9AD1C00BAFDCA /* quest61.png */; };
+		C64376511DF9AD1C00BAFDCA /* quest62.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375EC1DF9AD1C00BAFDCA /* quest62.png */; };
+		C64376521DF9AD1C00BAFDCA /* quest63.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375ED1DF9AD1C00BAFDCA /* quest63.png */; };
+		C64376531DF9AD1C00BAFDCA /* quest64.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375EE1DF9AD1C00BAFDCA /* quest64.png */; };
+		C64376541DF9AD1C00BAFDCA /* quest65.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375EF1DF9AD1C00BAFDCA /* quest65.png */; };
+		C64376551DF9AD1C00BAFDCA /* quest66.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F01DF9AD1C00BAFDCA /* quest66.png */; };
+		C64376561DF9AD1C00BAFDCA /* quest67.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F11DF9AD1C00BAFDCA /* quest67.png */; };
+		C64376571DF9AD1C00BAFDCA /* quest68.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F21DF9AD1C00BAFDCA /* quest68.png */; };
+		C64376581DF9AD1C00BAFDCA /* quest69.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F31DF9AD1C00BAFDCA /* quest69.png */; };
+		C64376591DF9AD1C00BAFDCA /* quest70.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F41DF9AD1C00BAFDCA /* quest70.png */; };
+		C643765A1DF9AD1C00BAFDCA /* quest71.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F51DF9AD1C00BAFDCA /* quest71.png */; };
+		C643765B1DF9AD1C00BAFDCA /* quest72.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F61DF9AD1C00BAFDCA /* quest72.png */; };
+		C643765C1DF9AD1C00BAFDCA /* quest73.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F71DF9AD1C00BAFDCA /* quest73.png */; };
+		C643765D1DF9AD1C00BAFDCA /* quest74.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F81DF9AD1C00BAFDCA /* quest74.png */; };
+		C643765E1DF9AD1C00BAFDCA /* quest75.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375F91DF9AD1C00BAFDCA /* quest75.png */; };
+		C643765F1DF9AD1C00BAFDCA /* quest76.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375FA1DF9AD1C00BAFDCA /* quest76.png */; };
+		C64376601DF9AD1C00BAFDCA /* quest77.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375FB1DF9AD1C00BAFDCA /* quest77.png */; };
+		C64376611DF9AD1C00BAFDCA /* quest78.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375FC1DF9AD1C00BAFDCA /* quest78.png */; };
+		C64376621DF9AD1C00BAFDCA /* quest79.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375FD1DF9AD1C00BAFDCA /* quest79.png */; };
+		C64376631DF9AD1C00BAFDCA /* quest80.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375FE1DF9AD1C00BAFDCA /* quest80.png */; };
+		C64376641DF9AD1C00BAFDCA /* quest81.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375FF1DF9AD1C00BAFDCA /* quest81.png */; };
+		C64376651DF9AD1C00BAFDCA /* quest82.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376001DF9AD1C00BAFDCA /* quest82.png */; };
+		C64376661DF9AD1C00BAFDCA /* quest83.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376011DF9AD1C00BAFDCA /* quest83.png */; };
+		C64376671DF9AD1C00BAFDCA /* quest84.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376021DF9AD1C00BAFDCA /* quest84.png */; };
+		C64376681DF9AD1C00BAFDCA /* quest85.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376031DF9AD1C00BAFDCA /* quest85.png */; };
+		C64376691DF9AD1C00BAFDCA /* quest86.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376041DF9AD1C00BAFDCA /* quest86.png */; };
+		C643766A1DF9AD1C00BAFDCA /* quest87.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376051DF9AD1C00BAFDCA /* quest87.png */; };
+		C643766B1DF9AD1C00BAFDCA /* quest88.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376061DF9AD1C00BAFDCA /* quest88.png */; };
+		C643766C1DF9AD1C00BAFDCA /* quest89.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376071DF9AD1C00BAFDCA /* quest89.png */; };
+		C643766D1DF9AD1C00BAFDCA /* quest90.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376081DF9AD1C00BAFDCA /* quest90.png */; };
+		C643766E1DF9AD1C00BAFDCA /* quest91.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376091DF9AD1C00BAFDCA /* quest91.png */; };
+		C643766F1DF9AD1C00BAFDCA /* quest92.png in Resources */ = {isa = PBXBuildFile; fileRef = C643760A1DF9AD1C00BAFDCA /* quest92.png */; };
+		C64376701DF9AD1C00BAFDCA /* quest93.png in Resources */ = {isa = PBXBuildFile; fileRef = C643760B1DF9AD1C00BAFDCA /* quest93.png */; };
+		C64376711DF9AD1C00BAFDCA /* quest94.png in Resources */ = {isa = PBXBuildFile; fileRef = C643760C1DF9AD1C00BAFDCA /* quest94.png */; };
+		C64376721DF9AD1C00BAFDCA /* quest95.png in Resources */ = {isa = PBXBuildFile; fileRef = C643760D1DF9AD1C00BAFDCA /* quest95.png */; };
+		C64376731DF9AD1C00BAFDCA /* quest96.png in Resources */ = {isa = PBXBuildFile; fileRef = C643760E1DF9AD1C00BAFDCA /* quest96.png */; };
+		C64376741DF9AD1C00BAFDCA /* quest97.png in Resources */ = {isa = PBXBuildFile; fileRef = C643760F1DF9AD1C00BAFDCA /* quest97.png */; };
+		C64376751DF9AD1C00BAFDCA /* quest98.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376101DF9AD1C00BAFDCA /* quest98.png */; };
+		C64376761DF9AD1C00BAFDCA /* quest99.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376111DF9AD1C00BAFDCA /* quest99.png */; };
+		C64376771DF9AD1C00BAFDCA /* quest100.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376121DF9AD1C00BAFDCA /* quest100.png */; };
+		C64376791DF9AD3300BAFDCA /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64376781DF9AD3300BAFDCA /* HealthKitManager.swift */; };
 		C68063711DF04CF7003ACD19 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063701DF04CF7003ACD19 /* BattleViewController.swift */; };
 		C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063721DF04DDE003ACD19 /* AboutViewController.swift */; };
 		C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063741DF04DEC003ACD19 /* SettingsViewController.swift */; };
@@ -129,6 +231,108 @@
 		C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRoman-Black.ttf"; sourceTree = "<group>"; };
 		C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRomanAlternate-Black.ttf"; sourceTree = "<group>"; };
 		C627A5C41DEDCB38002F6533 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		C64375AE1DF9AD1C00BAFDCA /* quest0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest0.png; sourceTree = "<group>"; };
+		C64375AF1DF9AD1C00BAFDCA /* quest1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest1.png; sourceTree = "<group>"; };
+		C64375B01DF9AD1C00BAFDCA /* quest2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest2.png; sourceTree = "<group>"; };
+		C64375B11DF9AD1C00BAFDCA /* quest3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest3.png; sourceTree = "<group>"; };
+		C64375B21DF9AD1C00BAFDCA /* quest4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest4.png; sourceTree = "<group>"; };
+		C64375B31DF9AD1C00BAFDCA /* quest5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest5.png; sourceTree = "<group>"; };
+		C64375B41DF9AD1C00BAFDCA /* quest6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest6.png; sourceTree = "<group>"; };
+		C64375B51DF9AD1C00BAFDCA /* quest7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest7.png; sourceTree = "<group>"; };
+		C64375B61DF9AD1C00BAFDCA /* quest8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest8.png; sourceTree = "<group>"; };
+		C64375B71DF9AD1C00BAFDCA /* quest9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest9.png; sourceTree = "<group>"; };
+		C64375B81DF9AD1C00BAFDCA /* quest10.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest10.png; sourceTree = "<group>"; };
+		C64375B91DF9AD1C00BAFDCA /* quest11.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest11.png; sourceTree = "<group>"; };
+		C64375BA1DF9AD1C00BAFDCA /* quest12.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest12.png; sourceTree = "<group>"; };
+		C64375BB1DF9AD1C00BAFDCA /* quest13.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest13.png; sourceTree = "<group>"; };
+		C64375BC1DF9AD1C00BAFDCA /* quest14.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest14.png; sourceTree = "<group>"; };
+		C64375BD1DF9AD1C00BAFDCA /* quest15.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest15.png; sourceTree = "<group>"; };
+		C64375BE1DF9AD1C00BAFDCA /* quest16.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest16.png; sourceTree = "<group>"; };
+		C64375BF1DF9AD1C00BAFDCA /* quest17.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest17.png; sourceTree = "<group>"; };
+		C64375C01DF9AD1C00BAFDCA /* quest18.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest18.png; sourceTree = "<group>"; };
+		C64375C11DF9AD1C00BAFDCA /* quest19.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest19.png; sourceTree = "<group>"; };
+		C64375C21DF9AD1C00BAFDCA /* quest20.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest20.png; sourceTree = "<group>"; };
+		C64375C31DF9AD1C00BAFDCA /* quest21.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest21.png; sourceTree = "<group>"; };
+		C64375C41DF9AD1C00BAFDCA /* quest22.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest22.png; sourceTree = "<group>"; };
+		C64375C51DF9AD1C00BAFDCA /* quest23.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest23.png; sourceTree = "<group>"; };
+		C64375C61DF9AD1C00BAFDCA /* quest24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest24.png; sourceTree = "<group>"; };
+		C64375C71DF9AD1C00BAFDCA /* quest25.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest25.png; sourceTree = "<group>"; };
+		C64375C81DF9AD1C00BAFDCA /* quest26.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest26.png; sourceTree = "<group>"; };
+		C64375C91DF9AD1C00BAFDCA /* quest27.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest27.png; sourceTree = "<group>"; };
+		C64375CA1DF9AD1C00BAFDCA /* quest28.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest28.png; sourceTree = "<group>"; };
+		C64375CB1DF9AD1C00BAFDCA /* quest29.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest29.png; sourceTree = "<group>"; };
+		C64375CC1DF9AD1C00BAFDCA /* quest30.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest30.png; sourceTree = "<group>"; };
+		C64375CD1DF9AD1C00BAFDCA /* quest31.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest31.png; sourceTree = "<group>"; };
+		C64375CE1DF9AD1C00BAFDCA /* quest32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest32.png; sourceTree = "<group>"; };
+		C64375CF1DF9AD1C00BAFDCA /* quest33.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest33.png; sourceTree = "<group>"; };
+		C64375D01DF9AD1C00BAFDCA /* quest34.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest34.png; sourceTree = "<group>"; };
+		C64375D11DF9AD1C00BAFDCA /* quest35.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest35.png; sourceTree = "<group>"; };
+		C64375D21DF9AD1C00BAFDCA /* quest36.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest36.png; sourceTree = "<group>"; };
+		C64375D31DF9AD1C00BAFDCA /* quest37.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest37.png; sourceTree = "<group>"; };
+		C64375D41DF9AD1C00BAFDCA /* quest38.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest38.png; sourceTree = "<group>"; };
+		C64375D51DF9AD1C00BAFDCA /* quest39.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest39.png; sourceTree = "<group>"; };
+		C64375D61DF9AD1C00BAFDCA /* quest40.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest40.png; sourceTree = "<group>"; };
+		C64375D71DF9AD1C00BAFDCA /* quest41.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest41.png; sourceTree = "<group>"; };
+		C64375D81DF9AD1C00BAFDCA /* quest42.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest42.png; sourceTree = "<group>"; };
+		C64375D91DF9AD1C00BAFDCA /* quest43.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest43.png; sourceTree = "<group>"; };
+		C64375DA1DF9AD1C00BAFDCA /* quest44.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest44.png; sourceTree = "<group>"; };
+		C64375DB1DF9AD1C00BAFDCA /* quest45.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest45.png; sourceTree = "<group>"; };
+		C64375DC1DF9AD1C00BAFDCA /* quest46.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest46.png; sourceTree = "<group>"; };
+		C64375DD1DF9AD1C00BAFDCA /* quest47.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest47.png; sourceTree = "<group>"; };
+		C64375DE1DF9AD1C00BAFDCA /* quest48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest48.png; sourceTree = "<group>"; };
+		C64375DF1DF9AD1C00BAFDCA /* quest49.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest49.png; sourceTree = "<group>"; };
+		C64375E01DF9AD1C00BAFDCA /* quest50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest50.png; sourceTree = "<group>"; };
+		C64375E11DF9AD1C00BAFDCA /* quest51.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest51.png; sourceTree = "<group>"; };
+		C64375E21DF9AD1C00BAFDCA /* quest52.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest52.png; sourceTree = "<group>"; };
+		C64375E31DF9AD1C00BAFDCA /* quest53.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest53.png; sourceTree = "<group>"; };
+		C64375E41DF9AD1C00BAFDCA /* quest54.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest54.png; sourceTree = "<group>"; };
+		C64375E51DF9AD1C00BAFDCA /* quest55.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest55.png; sourceTree = "<group>"; };
+		C64375E61DF9AD1C00BAFDCA /* quest56.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest56.png; sourceTree = "<group>"; };
+		C64375E71DF9AD1C00BAFDCA /* quest57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest57.png; sourceTree = "<group>"; };
+		C64375E81DF9AD1C00BAFDCA /* quest58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest58.png; sourceTree = "<group>"; };
+		C64375E91DF9AD1C00BAFDCA /* quest59.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest59.png; sourceTree = "<group>"; };
+		C64375EA1DF9AD1C00BAFDCA /* quest60.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest60.png; sourceTree = "<group>"; };
+		C64375EB1DF9AD1C00BAFDCA /* quest61.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest61.png; sourceTree = "<group>"; };
+		C64375EC1DF9AD1C00BAFDCA /* quest62.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest62.png; sourceTree = "<group>"; };
+		C64375ED1DF9AD1C00BAFDCA /* quest63.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest63.png; sourceTree = "<group>"; };
+		C64375EE1DF9AD1C00BAFDCA /* quest64.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest64.png; sourceTree = "<group>"; };
+		C64375EF1DF9AD1C00BAFDCA /* quest65.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest65.png; sourceTree = "<group>"; };
+		C64375F01DF9AD1C00BAFDCA /* quest66.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest66.png; sourceTree = "<group>"; };
+		C64375F11DF9AD1C00BAFDCA /* quest67.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest67.png; sourceTree = "<group>"; };
+		C64375F21DF9AD1C00BAFDCA /* quest68.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest68.png; sourceTree = "<group>"; };
+		C64375F31DF9AD1C00BAFDCA /* quest69.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest69.png; sourceTree = "<group>"; };
+		C64375F41DF9AD1C00BAFDCA /* quest70.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest70.png; sourceTree = "<group>"; };
+		C64375F51DF9AD1C00BAFDCA /* quest71.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest71.png; sourceTree = "<group>"; };
+		C64375F61DF9AD1C00BAFDCA /* quest72.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest72.png; sourceTree = "<group>"; };
+		C64375F71DF9AD1C00BAFDCA /* quest73.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest73.png; sourceTree = "<group>"; };
+		C64375F81DF9AD1C00BAFDCA /* quest74.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest74.png; sourceTree = "<group>"; };
+		C64375F91DF9AD1C00BAFDCA /* quest75.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest75.png; sourceTree = "<group>"; };
+		C64375FA1DF9AD1C00BAFDCA /* quest76.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest76.png; sourceTree = "<group>"; };
+		C64375FB1DF9AD1C00BAFDCA /* quest77.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest77.png; sourceTree = "<group>"; };
+		C64375FC1DF9AD1C00BAFDCA /* quest78.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest78.png; sourceTree = "<group>"; };
+		C64375FD1DF9AD1C00BAFDCA /* quest79.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest79.png; sourceTree = "<group>"; };
+		C64375FE1DF9AD1C00BAFDCA /* quest80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest80.png; sourceTree = "<group>"; };
+		C64375FF1DF9AD1C00BAFDCA /* quest81.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest81.png; sourceTree = "<group>"; };
+		C64376001DF9AD1C00BAFDCA /* quest82.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest82.png; sourceTree = "<group>"; };
+		C64376011DF9AD1C00BAFDCA /* quest83.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest83.png; sourceTree = "<group>"; };
+		C64376021DF9AD1C00BAFDCA /* quest84.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest84.png; sourceTree = "<group>"; };
+		C64376031DF9AD1C00BAFDCA /* quest85.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest85.png; sourceTree = "<group>"; };
+		C64376041DF9AD1C00BAFDCA /* quest86.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest86.png; sourceTree = "<group>"; };
+		C64376051DF9AD1C00BAFDCA /* quest87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest87.png; sourceTree = "<group>"; };
+		C64376061DF9AD1C00BAFDCA /* quest88.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest88.png; sourceTree = "<group>"; };
+		C64376071DF9AD1C00BAFDCA /* quest89.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest89.png; sourceTree = "<group>"; };
+		C64376081DF9AD1C00BAFDCA /* quest90.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest90.png; sourceTree = "<group>"; };
+		C64376091DF9AD1C00BAFDCA /* quest91.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest91.png; sourceTree = "<group>"; };
+		C643760A1DF9AD1C00BAFDCA /* quest92.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest92.png; sourceTree = "<group>"; };
+		C643760B1DF9AD1C00BAFDCA /* quest93.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest93.png; sourceTree = "<group>"; };
+		C643760C1DF9AD1C00BAFDCA /* quest94.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest94.png; sourceTree = "<group>"; };
+		C643760D1DF9AD1C00BAFDCA /* quest95.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest95.png; sourceTree = "<group>"; };
+		C643760E1DF9AD1C00BAFDCA /* quest96.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest96.png; sourceTree = "<group>"; };
+		C643760F1DF9AD1C00BAFDCA /* quest97.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest97.png; sourceTree = "<group>"; };
+		C64376101DF9AD1C00BAFDCA /* quest98.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest98.png; sourceTree = "<group>"; };
+		C64376111DF9AD1C00BAFDCA /* quest99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest99.png; sourceTree = "<group>"; };
+		C64376121DF9AD1C00BAFDCA /* quest100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest100.png; sourceTree = "<group>"; };
+		C64376781DF9AD3300BAFDCA /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
 		C68063701DF04CF7003ACD19 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		C68063721DF04DDE003ACD19 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C68063741DF04DEC003ACD19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -249,9 +453,137 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		C64375AD1DF9AD0A00BAFDCA /* quest */ = {
+			isa = PBXGroup;
+			children = (
+				C64375AE1DF9AD1C00BAFDCA /* quest0.png */,
+				C64375AF1DF9AD1C00BAFDCA /* quest1.png */,
+				C64375B01DF9AD1C00BAFDCA /* quest2.png */,
+				C64375B11DF9AD1C00BAFDCA /* quest3.png */,
+				C64375B21DF9AD1C00BAFDCA /* quest4.png */,
+				C64375B31DF9AD1C00BAFDCA /* quest5.png */,
+				C64375B41DF9AD1C00BAFDCA /* quest6.png */,
+				C64375B51DF9AD1C00BAFDCA /* quest7.png */,
+				C64375B61DF9AD1C00BAFDCA /* quest8.png */,
+				C64375B71DF9AD1C00BAFDCA /* quest9.png */,
+				C64375B81DF9AD1C00BAFDCA /* quest10.png */,
+				C64375B91DF9AD1C00BAFDCA /* quest11.png */,
+				C64375BA1DF9AD1C00BAFDCA /* quest12.png */,
+				C64375BB1DF9AD1C00BAFDCA /* quest13.png */,
+				C64375BC1DF9AD1C00BAFDCA /* quest14.png */,
+				C64375BD1DF9AD1C00BAFDCA /* quest15.png */,
+				C64375BE1DF9AD1C00BAFDCA /* quest16.png */,
+				C64375BF1DF9AD1C00BAFDCA /* quest17.png */,
+				C64375C01DF9AD1C00BAFDCA /* quest18.png */,
+				C64375C11DF9AD1C00BAFDCA /* quest19.png */,
+				C64375C21DF9AD1C00BAFDCA /* quest20.png */,
+				C64375C31DF9AD1C00BAFDCA /* quest21.png */,
+				C64375C41DF9AD1C00BAFDCA /* quest22.png */,
+				C64375C51DF9AD1C00BAFDCA /* quest23.png */,
+				C64375C61DF9AD1C00BAFDCA /* quest24.png */,
+				C64375C71DF9AD1C00BAFDCA /* quest25.png */,
+				C64375C81DF9AD1C00BAFDCA /* quest26.png */,
+				C64375C91DF9AD1C00BAFDCA /* quest27.png */,
+				C64375CA1DF9AD1C00BAFDCA /* quest28.png */,
+				C64375CB1DF9AD1C00BAFDCA /* quest29.png */,
+				C64375CC1DF9AD1C00BAFDCA /* quest30.png */,
+				C64375CD1DF9AD1C00BAFDCA /* quest31.png */,
+				C64375CE1DF9AD1C00BAFDCA /* quest32.png */,
+				C64375CF1DF9AD1C00BAFDCA /* quest33.png */,
+				C64375D01DF9AD1C00BAFDCA /* quest34.png */,
+				C64375D11DF9AD1C00BAFDCA /* quest35.png */,
+				C64375D21DF9AD1C00BAFDCA /* quest36.png */,
+				C64375D31DF9AD1C00BAFDCA /* quest37.png */,
+				C64375D41DF9AD1C00BAFDCA /* quest38.png */,
+				C64375D51DF9AD1C00BAFDCA /* quest39.png */,
+				C64375D61DF9AD1C00BAFDCA /* quest40.png */,
+				C64375D71DF9AD1C00BAFDCA /* quest41.png */,
+				C64375D81DF9AD1C00BAFDCA /* quest42.png */,
+				C64375D91DF9AD1C00BAFDCA /* quest43.png */,
+				C64375DA1DF9AD1C00BAFDCA /* quest44.png */,
+				C64375DB1DF9AD1C00BAFDCA /* quest45.png */,
+				C64375DC1DF9AD1C00BAFDCA /* quest46.png */,
+				C64375DD1DF9AD1C00BAFDCA /* quest47.png */,
+				C64375DE1DF9AD1C00BAFDCA /* quest48.png */,
+				C64375DF1DF9AD1C00BAFDCA /* quest49.png */,
+				C64375E01DF9AD1C00BAFDCA /* quest50.png */,
+				C64375E11DF9AD1C00BAFDCA /* quest51.png */,
+				C64375E21DF9AD1C00BAFDCA /* quest52.png */,
+				C64375E31DF9AD1C00BAFDCA /* quest53.png */,
+				C64375E41DF9AD1C00BAFDCA /* quest54.png */,
+				C64375E51DF9AD1C00BAFDCA /* quest55.png */,
+				C64375E61DF9AD1C00BAFDCA /* quest56.png */,
+				C64375E71DF9AD1C00BAFDCA /* quest57.png */,
+				C64375E81DF9AD1C00BAFDCA /* quest58.png */,
+				C64375E91DF9AD1C00BAFDCA /* quest59.png */,
+				C64375EA1DF9AD1C00BAFDCA /* quest60.png */,
+				C64375EB1DF9AD1C00BAFDCA /* quest61.png */,
+				C64375EC1DF9AD1C00BAFDCA /* quest62.png */,
+				C64375ED1DF9AD1C00BAFDCA /* quest63.png */,
+				C64375EE1DF9AD1C00BAFDCA /* quest64.png */,
+				C64375EF1DF9AD1C00BAFDCA /* quest65.png */,
+				C64375F01DF9AD1C00BAFDCA /* quest66.png */,
+				C64375F11DF9AD1C00BAFDCA /* quest67.png */,
+				C64375F21DF9AD1C00BAFDCA /* quest68.png */,
+				C64375F31DF9AD1C00BAFDCA /* quest69.png */,
+				C64375F41DF9AD1C00BAFDCA /* quest70.png */,
+				C64375F51DF9AD1C00BAFDCA /* quest71.png */,
+				C64375F61DF9AD1C00BAFDCA /* quest72.png */,
+				C64375F71DF9AD1C00BAFDCA /* quest73.png */,
+				C64375F81DF9AD1C00BAFDCA /* quest74.png */,
+				C64375F91DF9AD1C00BAFDCA /* quest75.png */,
+				C64375FA1DF9AD1C00BAFDCA /* quest76.png */,
+				C64375FB1DF9AD1C00BAFDCA /* quest77.png */,
+				C64375FC1DF9AD1C00BAFDCA /* quest78.png */,
+				C64375FD1DF9AD1C00BAFDCA /* quest79.png */,
+				C64375FE1DF9AD1C00BAFDCA /* quest80.png */,
+				C64375FF1DF9AD1C00BAFDCA /* quest81.png */,
+				C64376001DF9AD1C00BAFDCA /* quest82.png */,
+				C64376011DF9AD1C00BAFDCA /* quest83.png */,
+				C64376021DF9AD1C00BAFDCA /* quest84.png */,
+				C64376031DF9AD1C00BAFDCA /* quest85.png */,
+				C64376041DF9AD1C00BAFDCA /* quest86.png */,
+				C64376051DF9AD1C00BAFDCA /* quest87.png */,
+				C64376061DF9AD1C00BAFDCA /* quest88.png */,
+				C64376071DF9AD1C00BAFDCA /* quest89.png */,
+				C64376081DF9AD1C00BAFDCA /* quest90.png */,
+				C64376091DF9AD1C00BAFDCA /* quest91.png */,
+				C643760A1DF9AD1C00BAFDCA /* quest92.png */,
+				C643760B1DF9AD1C00BAFDCA /* quest93.png */,
+				C643760C1DF9AD1C00BAFDCA /* quest94.png */,
+				C643760D1DF9AD1C00BAFDCA /* quest95.png */,
+				C643760E1DF9AD1C00BAFDCA /* quest96.png */,
+				C643760F1DF9AD1C00BAFDCA /* quest97.png */,
+				C64376101DF9AD1C00BAFDCA /* quest98.png */,
+				C64376111DF9AD1C00BAFDCA /* quest99.png */,
+				C64376121DF9AD1C00BAFDCA /* quest100.png */,
+			);
+			name = quest;
+			sourceTree = "<group>";
+		};
+		C643767A1DF9AD5400BAFDCA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C64376781DF9AD3300BAFDCA /* HealthKitManager.swift */,
+				C680637F1DF1A759003ACD19 /* QuestManager.swift */,
+				C680637D1DF19FF3003ACD19 /* Quest.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C643767B1DF9AD7100BAFDCA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				C680637B1DF19D9E003ACD19 /* QuestRowController.swift */,
+				C684752F1DE714290081DA95 /* InterfaceController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		C684751D1DE714290081DA95 /* DungeonsAndCardsWatch */ = {
 			isa = PBXGroup;
 			children = (
+				C64375AD1DF9AD0A00BAFDCA /* quest */,
 				C684751E1DE714290081DA95 /* Interface.storyboard */,
 				C68475211DE714290081DA95 /* Assets.xcassets */,
 				C68475231DE714290081DA95 /* Info.plist */,
@@ -263,13 +595,11 @@
 			isa = PBXGroup;
 			children = (
 				C68063831DF1C3C1003ACD19 /* DungeonsAndCardsWatch Extension.entitlements */,
-				C680637B1DF19D9E003ACD19 /* QuestRowController.swift */,
-				C684752F1DE714290081DA95 /* InterfaceController.swift */,
+				C643767A1DF9AD5400BAFDCA /* Model */,
+				C643767B1DF9AD7100BAFDCA /* Controller */,
 				C68475311DE714290081DA95 /* ExtensionDelegate.swift */,
 				C68475331DE714290081DA95 /* NotificationController.swift */,
 				C68475351DE714290081DA95 /* ComplicationController.swift */,
-				C680637D1DF19FF3003ACD19 /* Quest.swift */,
-				C680637F1DF1A759003ACD19 /* QuestManager.swift */,
 				C68475371DE714290081DA95 /* Assets.xcassets */,
 				C68475391DE714290081DA95 /* Info.plist */,
 				C684752D1DE714290081DA95 /* Supporting Files */,
@@ -620,8 +950,109 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C643761E1DF9AD1C00BAFDCA /* quest11.png in Resources */,
+				C643761F1DF9AD1C00BAFDCA /* quest12.png in Resources */,
+				C64376381DF9AD1C00BAFDCA /* quest37.png in Resources */,
+				C64376141DF9AD1C00BAFDCA /* quest1.png in Resources */,
+				C64376771DF9AD1C00BAFDCA /* quest100.png in Resources */,
+				C643765B1DF9AD1C00BAFDCA /* quest72.png in Resources */,
+				C643764A1DF9AD1C00BAFDCA /* quest55.png in Resources */,
 				C68475221DE714290081DA95 /* Assets.xcassets in Resources */,
+				C64376651DF9AD1C00BAFDCA /* quest82.png in Resources */,
+				C64376321DF9AD1C00BAFDCA /* quest31.png in Resources */,
+				C643762B1DF9AD1C00BAFDCA /* quest24.png in Resources */,
+				C64376201DF9AD1C00BAFDCA /* quest13.png in Resources */,
+				C64376161DF9AD1C00BAFDCA /* quest3.png in Resources */,
+				C64376311DF9AD1C00BAFDCA /* quest30.png in Resources */,
+				C64376631DF9AD1C00BAFDCA /* quest80.png in Resources */,
+				C64376171DF9AD1C00BAFDCA /* quest4.png in Resources */,
+				C64376411DF9AD1C00BAFDCA /* quest46.png in Resources */,
+				C64376601DF9AD1C00BAFDCA /* quest77.png in Resources */,
+				C64376591DF9AD1C00BAFDCA /* quest70.png in Resources */,
+				C64376341DF9AD1C00BAFDCA /* quest33.png in Resources */,
+				C64376251DF9AD1C00BAFDCA /* quest18.png in Resources */,
+				C64376351DF9AD1C00BAFDCA /* quest34.png in Resources */,
+				C643766B1DF9AD1C00BAFDCA /* quest88.png in Resources */,
+				C643761B1DF9AD1C00BAFDCA /* quest8.png in Resources */,
+				C64376331DF9AD1C00BAFDCA /* quest32.png in Resources */,
+				C64376181DF9AD1C00BAFDCA /* quest5.png in Resources */,
+				C643766D1DF9AD1C00BAFDCA /* quest90.png in Resources */,
+				C643766C1DF9AD1C00BAFDCA /* quest89.png in Resources */,
+				C64376621DF9AD1C00BAFDCA /* quest79.png in Resources */,
+				C64376761DF9AD1C00BAFDCA /* quest99.png in Resources */,
+				C64376701DF9AD1C00BAFDCA /* quest93.png in Resources */,
+				C64376531DF9AD1C00BAFDCA /* quest64.png in Resources */,
+				C643765D1DF9AD1C00BAFDCA /* quest74.png in Resources */,
+				C643762F1DF9AD1C00BAFDCA /* quest28.png in Resources */,
+				C64376231DF9AD1C00BAFDCA /* quest16.png in Resources */,
+				C64376511DF9AD1C00BAFDCA /* quest62.png in Resources */,
+				C64376721DF9AD1C00BAFDCA /* quest95.png in Resources */,
+				C643763B1DF9AD1C00BAFDCA /* quest40.png in Resources */,
+				C64376441DF9AD1C00BAFDCA /* quest49.png in Resources */,
+				C64376501DF9AD1C00BAFDCA /* quest61.png in Resources */,
+				C64376461DF9AD1C00BAFDCA /* quest51.png in Resources */,
+				C64376271DF9AD1C00BAFDCA /* quest20.png in Resources */,
+				C64376551DF9AD1C00BAFDCA /* quest66.png in Resources */,
+				C64376481DF9AD1C00BAFDCA /* quest53.png in Resources */,
 				C68475201DE714290081DA95 /* Interface.storyboard in Resources */,
+				C643765E1DF9AD1C00BAFDCA /* quest75.png in Resources */,
+				C64376451DF9AD1C00BAFDCA /* quest50.png in Resources */,
+				C643764C1DF9AD1C00BAFDCA /* quest57.png in Resources */,
+				C64376731DF9AD1C00BAFDCA /* quest96.png in Resources */,
+				C64376151DF9AD1C00BAFDCA /* quest2.png in Resources */,
+				C64376491DF9AD1C00BAFDCA /* quest54.png in Resources */,
+				C64376291DF9AD1C00BAFDCA /* quest22.png in Resources */,
+				C64376431DF9AD1C00BAFDCA /* quest48.png in Resources */,
+				C64376681DF9AD1C00BAFDCA /* quest85.png in Resources */,
+				C643764B1DF9AD1C00BAFDCA /* quest56.png in Resources */,
+				C643762D1DF9AD1C00BAFDCA /* quest26.png in Resources */,
+				C64376401DF9AD1C00BAFDCA /* quest45.png in Resources */,
+				C643763F1DF9AD1C00BAFDCA /* quest44.png in Resources */,
+				C643764F1DF9AD1C00BAFDCA /* quest60.png in Resources */,
+				C64376641DF9AD1C00BAFDCA /* quest81.png in Resources */,
+				C643763D1DF9AD1C00BAFDCA /* quest42.png in Resources */,
+				C643761D1DF9AD1C00BAFDCA /* quest10.png in Resources */,
+				C64376741DF9AD1C00BAFDCA /* quest97.png in Resources */,
+				C643761C1DF9AD1C00BAFDCA /* quest9.png in Resources */,
+				C64376521DF9AD1C00BAFDCA /* quest63.png in Resources */,
+				C643762E1DF9AD1C00BAFDCA /* quest27.png in Resources */,
+				C64376211DF9AD1C00BAFDCA /* quest14.png in Resources */,
+				C64376691DF9AD1C00BAFDCA /* quest86.png in Resources */,
+				C64376261DF9AD1C00BAFDCA /* quest19.png in Resources */,
+				C643763E1DF9AD1C00BAFDCA /* quest43.png in Resources */,
+				C64376361DF9AD1C00BAFDCA /* quest35.png in Resources */,
+				C64376561DF9AD1C00BAFDCA /* quest67.png in Resources */,
+				C64376131DF9AD1C00BAFDCA /* quest0.png in Resources */,
+				C64376281DF9AD1C00BAFDCA /* quest21.png in Resources */,
+				C643762A1DF9AD1C00BAFDCA /* quest23.png in Resources */,
+				C64376581DF9AD1C00BAFDCA /* quest69.png in Resources */,
+				C643766E1DF9AD1C00BAFDCA /* quest91.png in Resources */,
+				C643766A1DF9AD1C00BAFDCA /* quest87.png in Resources */,
+				C64376611DF9AD1C00BAFDCA /* quest78.png in Resources */,
+				C643764E1DF9AD1C00BAFDCA /* quest59.png in Resources */,
+				C64376571DF9AD1C00BAFDCA /* quest68.png in Resources */,
+				C64376241DF9AD1C00BAFDCA /* quest17.png in Resources */,
+				C64376301DF9AD1C00BAFDCA /* quest29.png in Resources */,
+				C64376371DF9AD1C00BAFDCA /* quest36.png in Resources */,
+				C64376751DF9AD1C00BAFDCA /* quest98.png in Resources */,
+				C643761A1DF9AD1C00BAFDCA /* quest7.png in Resources */,
+				C64376221DF9AD1C00BAFDCA /* quest15.png in Resources */,
+				C643765A1DF9AD1C00BAFDCA /* quest71.png in Resources */,
+				C643765C1DF9AD1C00BAFDCA /* quest73.png in Resources */,
+				C64376391DF9AD1C00BAFDCA /* quest38.png in Resources */,
+				C64376421DF9AD1C00BAFDCA /* quest47.png in Resources */,
+				C64376661DF9AD1C00BAFDCA /* quest83.png in Resources */,
+				C643766F1DF9AD1C00BAFDCA /* quest92.png in Resources */,
+				C64376191DF9AD1C00BAFDCA /* quest6.png in Resources */,
+				C64376671DF9AD1C00BAFDCA /* quest84.png in Resources */,
+				C643764D1DF9AD1C00BAFDCA /* quest58.png in Resources */,
+				C643763C1DF9AD1C00BAFDCA /* quest41.png in Resources */,
+				C643763A1DF9AD1C00BAFDCA /* quest39.png in Resources */,
+				C64376471DF9AD1C00BAFDCA /* quest52.png in Resources */,
+				C643765F1DF9AD1C00BAFDCA /* quest76.png in Resources */,
+				C643762C1DF9AD1C00BAFDCA /* quest25.png in Resources */,
+				C64376541DF9AD1C00BAFDCA /* quest65.png in Resources */,
+				C64376711DF9AD1C00BAFDCA /* quest94.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -721,6 +1152,7 @@
 			files = (
 				C680637E1DF19FF3003ACD19 /* Quest.swift in Sources */,
 				C680637C1DF19D9E003ACD19 /* QuestRowController.swift in Sources */,
+				C64376791DF9AD3300BAFDCA /* HealthKitManager.swift in Sources */,
 				C68475341DE714290081DA95 /* NotificationController.swift in Sources */,
 				C68063801DF1A759003ACD19 /* QuestManager.swift in Sources */,
 				C68475361DE714290081DA95 /* ComplicationController.swift in Sources */,
@@ -1064,6 +1496,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCards/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1079,6 +1512,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCards/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
