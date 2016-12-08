@@ -20,6 +20,10 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSHealthShareUsageDescription</key>
+	<string>share</string>
+	<key>NSHealthUpdateUsageDescription</key>
+	<string>update</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>MorrisRoman-Black.ttf</string>
@@ -32,6 +36,7 @@
 	<key>UIRequiredDeviceCapabilities</key>
 	<array>
 		<string>armv7</string>
+		<string>healthkit</string>
 	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>

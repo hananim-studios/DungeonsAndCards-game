@@ -11,5 +11,6 @@ import WatchKit
 class QuestRowController: NSObject {
     
     @IBOutlet var mainLabel: WKInterfaceLabel!
-    
+    @IBOutlet var separator: WKInterfaceSeparator!
+    @IBOutlet var ringQuest: WKInterfaceGroup!
 }
