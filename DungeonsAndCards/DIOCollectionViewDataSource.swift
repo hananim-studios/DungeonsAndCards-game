@@ -16,6 +16,8 @@ protocol DIOCollectionViewDataSource: class {
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView
     
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, animationsForItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) -> (animations: () -> Void, duration: TimeInterval)
+    
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, shouldDragItemAtIndexPath indexPath: IndexPath) -> Bool
 }
 
 extension DIOCollectionViewDataSource {
@@ -64,6 +66,10 @@ extension DIOCollectionViewDataSource {
         }
         
         return (animations: animations, duration: 0.2)
+    }
+    
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, shouldDragItemAtIndexPath indexPath: IndexPath) -> Bool {
+        return true
     }
     
 }

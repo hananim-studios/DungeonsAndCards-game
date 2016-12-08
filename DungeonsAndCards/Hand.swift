@@ -11,22 +11,23 @@ import SwiftyJSON
 
 class Hand {
     
-    var heroes : [Hero?] = []
+    var heroes : [Hero] = []
     
     init(){
     
         print("creating new Hand...")
         
-        for _ in 0...4 {
+        while (heroes.count < 5) {
           let i = arc4random_uniform(UInt32(HeroesJSON.count()))
             if let randomHero = HeroesJSON.heroAtIndex(index:Int(i)) {
-                heroes.append(randomHero)
-                print("  append '\(randomHero.name)' succeeded")
+                if !heroes.contains(randomHero){
+                    heroes.append(randomHero)
+                    print("  \(heroes.count-1) append '\(randomHero.name)' succeeded")
+                }
             }
         }
         
     }
-    
     
 }
 

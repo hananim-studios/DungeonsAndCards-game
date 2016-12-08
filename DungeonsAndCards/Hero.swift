@@ -11,12 +11,12 @@ import SwiftyJSON
 
 class Hero {
 
-    var name: String?
-    var description: String?
-    var pic: String?
-    var damage: Int?
-    var health: Int?
-    var gold: Int?
+    var name: String
+    var description: String
+    var pic: String
+    var damage: Int
+    var health: Int
+    var gold: Int
     
     init(json: JSON) {
         
@@ -58,4 +58,14 @@ class Hero {
         
     }
 
+}
+
+extension Hero: Equatable {
+    static func == (lhs:Hero, rhs:Hero) -> Bool {
+        if lhs.name == rhs.name {
+            return true
+        } else {
+            return false
+        }
+    }
 }

@@ -134,6 +134,11 @@ class DIOCollectionView: UICollectionView {
             isValidIndexPath(indexPath: indexPath) else { return }
         guard let cell = self.cellForItem(at: indexPath) else { return }
         
+        // ask DataSource if should drag
+        if !dataSource.dioCollectionView(self, shouldDragItemAtIndexPath: indexPath) {
+            return
+        }
+        
         // get dragInfo from dataSource
         self.dragInfo = DIODragInfo(
             withUserData: self.dioDataSource?.dioCollectionView(self, userDataForItemAtIndexPath: indexPath),

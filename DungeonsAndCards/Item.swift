@@ -13,9 +13,9 @@ enum ItemEffect {
     
     case None
     
-    case addHealth(value: Int)
+    case AddHealth(value: Int)
     
-    case addDamage(value: Int)
+    case AddDamage(value: Int)
     
     case SuperArmor(value: Int)
     
@@ -24,10 +24,10 @@ enum ItemEffect {
         switch(tuple.key) {
             
         case "addHealth":
-            self = .addHealth(value: tuple.value.intValue)
+            self = .AddHealth(value: tuple.value.intValue)
             
-        case "greatAttack":
-            self = .addDamage(value: tuple.value.intValue)
+        case "addDamage":
+            self = .AddDamage(value: tuple.value.intValue)
             
         case "superArmor":
             self = .SuperArmor(value: tuple.value.intValue)
@@ -42,8 +42,9 @@ enum ItemEffect {
 
 class Item {
     
-    var name: String?
-    var pic: String?
+    var name: String
+    var pic: String
+    var gold: Int
     var effects: [ItemEffect] = []
     
     init(json: JSON) {
@@ -60,10 +61,26 @@ class Item {
             fatalError("Malformed JSON")
         }
         
+        if let gold = json["gold"].int {
+            self.gold = gold
+        } else {
+            fatalError("Malformed JSON")
+        }
+        
         if let effect = json["effects"].dictionary {
             for effectJson in effect {
                 self.effects.append(ItemEffect(tuple: effectJson))
             }
+        }
+    }
+}
+
+extension Item: Equatable {
+    static func == (lhs:Item, rhs:Item) -> Bool {
+        if lhs.name == rhs.name {
+            return true
+        } else {
+            return false
         }
     }
 }

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="8EE-yj-HoZ" customClass="HeroHandCell" customModule="DungeonsAndCards">
+            <rect key="frame" x="0.0" y="0.0" width="189" height="296"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="189" height="296"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ck1-pr-RpY" userLabel="Card Image">
+                        <rect key="frame" x="0.0" y="0.0" width="189" height="276"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nWs-dW-Ae6" userLabel="Attack Container">
+                        <rect key="frame" x="4.5" y="252" width="85.5" height="24"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="A6w-DU-ogO"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wWG-RF-03I" userLabel="Name Container">
+                        <rect key="frame" x="9.5" y="0.0" width="170" height="37"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="dqc-54-B1y"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wst-Sp-zxs" userLabel="Name Label">
+                        <rect key="frame" x="46.5" y="8.5" width="97.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="m8Y-fV-bwT">
+                        <rect key="frame" x="28.5" y="252" width="61.5" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="FPS-O9-5Ft" userLabel="Attack Icon">
+                        <rect key="frame" x="4.5" y="252" width="24" height="24"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mEQ-vt-y8H" userLabel="Health Container">
+                        <rect key="frame" x="99.5" y="252" width="85" height="24"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="24" id="ywe-0y-hTU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mmu-go-eQa">
+                        <rect key="frame" x="123.5" y="252" width="61" height="24"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="4Hl-Mg-iHz" userLabel="Health Icon">
+                        <rect key="frame" x="99.5" y="252" width="24" height="24"/>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNE-Bx-ogI">
+                        <rect key="frame" x="81" y="278" width="27" height="16"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="kvw-s8-IVK">
+                                <rect key="frame" x="0.0" y="0.0" width="16" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="16" id="0Q6-QU-2kX"/>
+                                    <constraint firstAttribute="width" constant="16" id="78a-jy-L4i"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWy-Ee-gau">
+                                <rect key="frame" x="16" y="0.0" width="11" height="16"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="m8Y-fV-bwT" firstAttribute="top" secondItem="nWs-dW-Ae6" secondAttribute="top" id="036-oj-q9w"/>
+                <constraint firstItem="nWs-dW-Ae6" firstAttribute="width" secondItem="Ck1-pr-RpY" secondAttribute="width" multiplier="0.45" id="0km-FI-Vqw"/>
+                <constraint firstItem="mEQ-vt-y8H" firstAttribute="centerX" secondItem="Ck1-pr-RpY" secondAttribute="centerX" multiplier="1.5" id="10g-mI-V4v"/>
+                <constraint firstAttribute="bottom" secondItem="qNE-Bx-ogI" secondAttribute="bottom" constant="2" id="7eQ-04-lOY"/>
+                <constraint firstItem="Ck1-pr-RpY" firstAttribute="centerY" secondItem="8EE-yj-HoZ" secondAttribute="centerY" constant="-10" id="9fo-cg-1mu"/>
+                <constraint firstItem="Ck1-pr-RpY" firstAttribute="height" secondItem="8EE-yj-HoZ" secondAttribute="height" constant="-20" id="9sI-cr-cff"/>
+                <constraint firstItem="nWs-dW-Ae6" firstAttribute="centerX" secondItem="Ck1-pr-RpY" secondAttribute="centerX" multiplier="0.5" id="Au8-Se-aAA"/>
+                <constraint firstItem="mmu-go-eQa" firstAttribute="leading" secondItem="4Hl-Mg-iHz" secondAttribute="trailing" id="Fm4-Cy-eeI"/>
+                <constraint firstItem="mmu-go-eQa" firstAttribute="bottom" secondItem="mEQ-vt-y8H" secondAttribute="bottom" id="Iks-Ec-gEr"/>
+                <constraint firstItem="wWG-RF-03I" firstAttribute="centerX" secondItem="Ck1-pr-RpY" secondAttribute="centerX" id="KX4-IV-4HY"/>
+                <constraint firstItem="Ck1-pr-RpY" firstAttribute="width" secondItem="8EE-yj-HoZ" secondAttribute="width" id="KjI-vL-upR"/>
+                <constraint firstItem="mEQ-vt-y8H" firstAttribute="width" secondItem="Ck1-pr-RpY" secondAttribute="width" multiplier="0.45" id="M3H-Wj-O0d"/>
+                <constraint firstItem="FPS-O9-5Ft" firstAttribute="centerY" secondItem="nWs-dW-Ae6" secondAttribute="centerY" id="Mpt-E4-e29"/>
+                <constraint firstItem="m8Y-fV-bwT" firstAttribute="bottom" secondItem="nWs-dW-Ae6" secondAttribute="bottom" id="OXh-ZP-46i"/>
+                <constraint firstItem="4Hl-Mg-iHz" firstAttribute="height" secondItem="mEQ-vt-y8H" secondAttribute="height" id="UoC-5X-wgv"/>
+                <constraint firstItem="mmu-go-eQa" firstAttribute="top" secondItem="mEQ-vt-y8H" secondAttribute="top" id="VlT-VY-PPe"/>
+                <constraint firstItem="m8Y-fV-bwT" firstAttribute="trailing" secondItem="nWs-dW-Ae6" secondAttribute="trailing" id="Xga-ys-Pjr"/>
+                <constraint firstItem="4Hl-Mg-iHz" firstAttribute="centerY" secondItem="mEQ-vt-y8H" secondAttribute="centerY" id="YbA-Cn-joy"/>
+                <constraint firstItem="4Hl-Mg-iHz" firstAttribute="width" secondItem="mEQ-vt-y8H" secondAttribute="height" id="ZMg-Wk-IFt"/>
+                <constraint firstItem="nWs-dW-Ae6" firstAttribute="bottom" secondItem="Ck1-pr-RpY" secondAttribute="bottom" id="bGB-UX-R6y"/>
+                <constraint firstItem="FPS-O9-5Ft" firstAttribute="leading" secondItem="nWs-dW-Ae6" secondAttribute="leading" id="d07-06-IyV"/>
+                <constraint firstItem="m8Y-fV-bwT" firstAttribute="leading" secondItem="FPS-O9-5Ft" secondAttribute="trailing" id="d5S-xi-2sa"/>
+                <constraint firstItem="qNE-Bx-ogI" firstAttribute="centerX" secondItem="8EE-yj-HoZ" secondAttribute="centerX" id="hAZ-Ff-jjX"/>
+                <constraint firstItem="qNE-Bx-ogI" firstAttribute="top" secondItem="Ck1-pr-RpY" secondAttribute="bottom" constant="2" id="hVy-n2-KIg"/>
+                <constraint firstItem="wst-Sp-zxs" firstAttribute="centerX" secondItem="wWG-RF-03I" secondAttribute="centerX" id="j74-Fc-kc6"/>
+                <constraint firstItem="wWG-RF-03I" firstAttribute="width" secondItem="Ck1-pr-RpY" secondAttribute="width" multiplier="0.9" id="jMU-YL-w2m"/>
+                <constraint firstItem="Ck1-pr-RpY" firstAttribute="top" secondItem="wWG-RF-03I" secondAttribute="bottom" constant="-37" id="lFH-hL-gkV"/>
+                <constraint firstItem="FPS-O9-5Ft" firstAttribute="height" secondItem="nWs-dW-Ae6" secondAttribute="height" id="lOL-si-5Ni"/>
+                <constraint firstItem="FPS-O9-5Ft" firstAttribute="width" secondItem="nWs-dW-Ae6" secondAttribute="height" id="nUx-kM-ORn"/>
+                <constraint firstItem="4Hl-Mg-iHz" firstAttribute="leading" secondItem="mEQ-vt-y8H" secondAttribute="leading" id="ngN-AX-kEw"/>
+                <constraint firstItem="wst-Sp-zxs" firstAttribute="centerY" secondItem="wWG-RF-03I" secondAttribute="centerY" id="qTz-wd-Ykq"/>
+                <constraint firstItem="mEQ-vt-y8H" firstAttribute="bottom" secondItem="Ck1-pr-RpY" secondAttribute="bottom" id="th2-Us-swc"/>
+                <constraint firstItem="Ck1-pr-RpY" firstAttribute="centerX" secondItem="8EE-yj-HoZ" secondAttribute="centerX" id="tke-rl-Xjb"/>
+                <constraint firstItem="mmu-go-eQa" firstAttribute="trailing" secondItem="mEQ-vt-y8H" secondAttribute="trailing" id="uOu-rj-sBQ"/>
+            </constraints>
+            <size key="customSize" width="189" height="296"/>
+            <connections>
+                <outlet property="attackLabel" destination="m8Y-fV-bwT" id="VSS-yW-qK0"/>
+                <outlet property="costLabel" destination="AWy-Ee-gau" id="j8O-kQ-wOc"/>
+                <outlet property="healthLabel" destination="mmu-go-eQa" id="rM6-xO-tJC"/>
+                <outlet property="heroImageView" destination="Ck1-pr-RpY" id="HJw-DW-AzW"/>
+                <outlet property="titleLabel" destination="wst-Sp-zxs" id="uuJ-ee-xpk"/>
+            </connections>
+            <point key="canvasLocation" x="-189.5" y="100"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="gold" width="132" height="128"/>
+    </resources>
+</document>

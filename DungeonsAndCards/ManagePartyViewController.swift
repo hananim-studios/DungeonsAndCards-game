@@ -13,7 +13,7 @@ import UIKit
 class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model
-    var game = Game()
+    var game = Game.sharedInstance
     
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -24,14 +24,17 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     @IBOutlet weak var backgroundImage: UIImageView!
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
+    @IBOutlet weak var goldButton: UIButton!
     
     //MARK - ViewController
     override func viewWillAppear(_ animated: Bool) {
-        
+        self.goldButton.setTitle(self.game.gold.description, for: .normal)
     }
     override func viewDidAppear(_ animated: Bool) {
         partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
         handCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
+        
+        self.game.delegate = self
     }
     
     override func viewDidLoad() {
@@ -43,6 +46,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         handCollectionView.dataSource = self
         handCollectionView.dioDataSource = self
         handCollectionView.dioDelegate = self
+        handCollectionView.register(UINib(nibName: "HeroHandCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroHandCell")
         
         partyCollectionView.backgroundColor = UIColor.clear
         partyCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
@@ -54,10 +58,9 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         partyCollectionView.heroDelegate = self
         partyCollectionView.receiveDrag = true
         partyCollectionView.allowFeedback = false
-        
-        self.game.party.delegate = self
+        partyCollectionView.register(UINib(nibName: "HeroPartyCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroPartyCell")
     }
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
@@ -67,7 +70,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton) {
-        _ = navigationController?.popViewController(animated: true)
+        //_ = navigationController?.popViewController(animated: true)
     }    
     
     @IBAction func goldButtonPressed(_ sender: Any) {
@@ -98,8 +101,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView == handCollectionView {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
-                                                          for: indexPath) as! HeroCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroHandCell",
+                                                          for: indexPath) as! HeroHandCell
             
             cell.setHero(self.game.hand.heroes[indexPath.row])
             
@@ -108,8 +111,8 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView == partyCollectionView {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroCell",
-                                                          for: indexPath) as! HeroCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroPartyCell",
+                                                          for: indexPath) as! HeroPartyCell
             
             cell.setHero(self.game.party.heroes[indexPath.row])
             
@@ -125,7 +128,6 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         let collectionSize = collectionView.contentSize.width
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
-        print(rightInset)
         return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)
     }
     
@@ -133,16 +135,23 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
         
         if collectionView == handCollectionView {
             // size of hand cell
-            let width = collectionView.bounds.width
-            let height = 0.8*collectionView.bounds.height
-            return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            //let width = collectionView.bounds.width
+            //let height = 0.9*collectionView.bounds.height
+            //return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            let height = 0.9*collectionView.bounds.height
+            
+            return CGSize(width: height/2, height: height)
         }
         
         if collectionView == partyCollectionView {
             // size of party cell
-            let width = collectionView.bounds.width
-            let height = 0.8*collectionView.bounds.height
-            return CGSize(width: 0.80*CGFloat(Float(width)/Float(3)), height: height)
+            //let width = collectionView.bounds.width
+            //let height = 0.9*collectionView.bounds.height
+            //return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            
+            let height = 0.9*collectionView.bounds.height
+            
+            return CGSize(width: height/2, height: height)
         }
         
         return CGSize.zero
@@ -179,6 +188,19 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
         return nil
     }
     
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, shouldDragItemAtIndexPath indexPath: IndexPath) -> Bool {
+        if dioCollectionView == partyCollectionView {
+            return self.game.party.heroes[indexPath.row] != nil
+        }
+        else {
+            return true
+        }
+    }
+    
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView {
+        return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroCell).hero!.pic))
+    }
+    
     // DIOCollectionView Delegate
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, draggedItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) {
         
@@ -200,7 +222,7 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
             case .ended:
                 
                 // - MARK: EVENT: PLAYER DISCARDED HERO
-                self.game.party.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
+                self.game.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
                 
             default:
                 break
@@ -269,7 +291,7 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
                     
                     dragInfo.sender.dragView?.isHidden = true
                     
-                    self.game.party.hireHero(hero: hero, atSlot: indexPath.row)
+                    self.game.hireHero(hero: hero, atSlot: indexPath.row)
                 }
             }
         }
@@ -295,9 +317,21 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
     }
 }
 
-extension ManagePartyViewController: PartyDelegate {
+extension ManagePartyViewController: GameDelegate {
     
-    func didHireHero(hero: Hero, atSlot slot: Int) {
+    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int) {
+        
+    }
+    
+    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int) {
+        
+    }
+    
+    func game(_ game: Game, changedGoldTo gold: Int) {
+        
+        self.goldButton.setTitle(gold.description, for: .normal)
+    }
+    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int) {
         
         self.game.party.heroes[slot] = hero
         
@@ -305,8 +339,8 @@ extension ManagePartyViewController: PartyDelegate {
             cell.setHero(hero)
         }
     }
-    
-    func didDismissHero(hero: Hero, atSlot slot: Int) {
+    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int) {
+        
         self.game.party.heroes[slot] = nil
         
         if let cell = self.partyCollectionView.cellForItem(at: IndexPath(row: slot, section: 0)) as? HeroCell {
