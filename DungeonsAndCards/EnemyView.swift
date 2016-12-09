@@ -9,9 +9,18 @@
 import Foundation
 import UIKit
 
-class EnemyView: UICollectionViewCell {
+class EnemyView: UICollectionViewCell, DIOCollectionViewDestination {
     @IBOutlet weak var healthLabel: UILabel!
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var enemyImageView: UIImageView!
     
+    var onAttackedByHero: ((_ hero: Hero) -> Void)?
+    
+    override func awakeFromNib() {
+        
+    }
+    
+    func receivedDragWithDragInfo(_ dragInfo: DIODragInfo?, andDragState dragState: DIODragState) {
+        self.onAttackedByHero?(dragInfo!.userData as! Hero)
+    }
 }
