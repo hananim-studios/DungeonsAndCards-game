@@ -11,9 +11,9 @@ import HealthKit
 
 enum QuestType : Double {
     case exercise = 40 //raw value will be quest objectives
-    case move = 200
-    case stand = 100
-    case tap = 80
+    case move = 30
+    case stand = 20
+    case tap = 10
 }
 
 class Quest {
@@ -37,7 +37,6 @@ class Quest {
             self.name = "Get up"
         case .tap:
             self.name = "Tap"
-
 
         }
     }

@@ -30,7 +30,7 @@ class HealthKitManager {
     
     //MARK: - Methods
     @objc func query() {
-        i += 7
+        i += 5
         var components = Calendar.current.dateComponents([.day, .month, .year, .era], from: Date())
         components.calendar = Calendar.current
         let predicate = NSPredicate(format: "%K = %@", argumentArray: [HKPredicateKeyPathDateComponents, components])

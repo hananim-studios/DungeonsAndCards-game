@@ -37,6 +37,11 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
     }
     
     //MARK: - QuestManagerDelegate Methods
+    func questDidComplete() {
+        populateTable(self.questsTable)
+        print(array)
+    }
+    
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double) {
         
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
@@ -59,9 +64,12 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
                 case .tap:
                     nextValue = tap
                 }
-//                print("current:\(nextValue!) , next:\(content.currentQuestObjective) ")
+                print("Quest: \(content.name)")
+                print("current:\(content.currentQuestObjective) , next:\(nextValue!) ")
+                print("Current%: \(Int(content.currentQuestObjective*100/content.questObjective)), next %: \(Int(nextValue!*100/content.questObjective))")
+                
                 if nextValue! > 0 && nextValue! != content.currentQuestObjective {
-                    controller.ringQuest.startAnimatingWithImages(in: NSMakeRange(Int(content.currentQuestObjective), Int(nextValue!)), duration: 0.5, repeatCount: 1)
+                    controller.ringQuest.startAnimatingWithImages(in: NSMakeRange(Int(content.currentQuestObjective*100/content.questObjective), Int(nextValue!*100/content.questObjective)), duration: 0.5, repeatCount: 1)
                 }
             }
             else {

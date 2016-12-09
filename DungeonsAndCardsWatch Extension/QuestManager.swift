@@ -10,6 +10,7 @@ import Foundation
 
 protocol QuestManagerDelegate {
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double)
+    func questDidComplete()
 }
 
 class QuestManager: HeathKitManagerDelegate {
@@ -18,6 +19,7 @@ class QuestManager: HeathKitManagerDelegate {
     let healthKitManager = HealthKitManager()
     static let sharedInstance = QuestManager()
     var quests: [Quest]
+    var inactive: [Quest]
     
     init(){
         
@@ -27,14 +29,15 @@ class QuestManager: HeathKitManagerDelegate {
         let tapQuest = Quest(with: .tap)
         
         self.quests = [exerciseQuest, moveQuest, standQuest, tapQuest]
+        self.inactive = [Quest]()
         sortQuest()
         
         healthKitManager.delegate = self
-        
     }
     
     //MARK: - Methods
     private func sortQuest(){
+        
         //Randomize a quest
         let index = Int(arc4random_uniform(UInt32(quests.count)))
         let quest = quests[index]
@@ -57,25 +60,44 @@ class QuestManager: HeathKitManagerDelegate {
     }
     
     private func isQuestCompleted(_ quest: Quest) -> Bool {
-        
-        switch quest.questType {
-            case .exercise:
-                break;
-            case .move:
-                break;
-            case .stand:
-                break;
-            case .tap:
-                break;
+        if quest.currentQuestObjective >= quest.questObjective {
+            print("Quest: \(quest.name) is completed with current Objective: \(quest.currentQuestObjective)")
+            return true
         }
-        return true
+        return false
+    }
+    
+    private func restartQuest(_ quest: Quest) {
+        print("Quest: \(quest.name) was restarted")
+        quest.currentQuestObjective = 0
+        quest.active = false
+    }
+    
+    private func sendQuestToInactiveArray(_ quest: Quest){
+        var index: Int?
+        for element in quests{
+            if element == quest {
+               index = quests.index(of: element)
+            }
+        }
+        if let i = index {
+            quests.remove(at: i)
+            inactive.append(quest)
+            print("Quest: \(quest.name) was removed from quests array (size: \(quests.count) and sent to inactiveArray (size: \(inactive.count))")
+        }
+    }
+    
+    private func shouldReset() {
+        if quests.count < 1 {
+            quests = inactive
+            inactive.removeAll()
+        }
     }
     
     //MARK: - HealthKitManagerDelegate Methods
     func didUpdateSummary(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double) {
         
         self.delegate?.didUpdateQuests(withExercise: exercise, Move: move, Stand: stand, andTap: tap)
-        
         for quest in quests {
             switch quest.questType {
             case .exercise:
@@ -86,9 +108,15 @@ class QuestManager: HeathKitManagerDelegate {
                 quest.currentQuestObjective = stand
             case .tap:
                 quest.currentQuestObjective = tap
+            }
+            
+            if self.isQuestCompleted(quest) {
                 
+                sendQuestToInactiveArray(quest)
+                delegate?.questDidComplete()
+//                shouldReset()
+//                sortQuest()
             }
         }
     }
-    
 }
