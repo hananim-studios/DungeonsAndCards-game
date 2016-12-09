@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		146670F21DF981DC00102CD1 /* ItemShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146670F11DF981DC00102CD1 /* ItemShop.swift */; };
+		146670F41DFAD02B00102CD1 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146670F31DFAD02B00102CD1 /* Dungeon.swift */; };
 		14973A351DF8459600FDFC8E /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A331DF8459600FDFC8E /* enemies.json */; };
 		14973A361DF8459600FDFC8E /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A341DF8459600FDFC8E /* items.json */; };
 		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
@@ -229,6 +230,7 @@
 /* Begin PBXFileReference section */
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
 		146670F11DF981DC00102CD1 /* ItemShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemShop.swift; sourceTree = "<group>"; };
+		146670F31DFAD02B00102CD1 /* Dungeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
 		14973A331DF8459600FDFC8E /* enemies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
 		14973A341DF8459600FDFC8E /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.debug.xcconfig"; sourceTree = "<group>"; };
@@ -766,6 +768,7 @@
 				146670F11DF981DC00102CD1 /* ItemShop.swift */,
 				D1D014E61DE5C52000E52C03 /* Hero.swift */,
 				D1D12B361DF1A9BB0045CE29 /* Enemy.swift */,
+				146670F31DFAD02B00102CD1 /* Dungeon.swift */,
 				D1D12B341DF1A7D00045CE29 /* Item.swift */,
 			);
 			name = Model;
@@ -1228,6 +1231,7 @@
 				D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */,
 				146670F21DF981DC00102CD1 /* ItemShop.swift in Sources */,
 				D14EE1DA1DF992A500820FB5 /* ItemCell.swift in Sources */,
+				146670F41DFAD02B00102CD1 /* Dungeon.swift in Sources */,
 				C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

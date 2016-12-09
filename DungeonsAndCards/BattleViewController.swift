@@ -83,19 +83,7 @@ extension BattleViewController: GameDelegate {
         updateGold()
     }
     
-    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int) {
-        
-    }
-    
-    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int) {
-        
-    }
-    
-    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int) {
-        
-    }
-    
-    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int) {
+    func game(_ game: Game, didAttack slot: Int){
         
     }
 }

@@ -287,6 +287,11 @@ extension ShopViewController: HeroCollectionViewDelegate {
 }
 
 extension ShopViewController: GameDelegate {
+    
+    func game(_ game: Game, didAttack hero: Hero, onHeroAtSlot slot: Int) {
+        
+    }
+    
     func game(_ game: Game, changedGoldTo gold: Int) {
         updateGold()
     }
@@ -300,6 +305,10 @@ extension ShopViewController: GameDelegate {
     }
     
     func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int) {
+        
+    }
+    
+    func game(_ game: Game, didUseItem item: Item, onHeroAtSlot slot: Int) {
         
     }
     

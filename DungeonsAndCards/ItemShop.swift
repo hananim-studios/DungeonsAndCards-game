@@ -28,3 +28,8 @@ class ItemShop {
     }
     
 }
+
+class ItemBag {
+    
+    var bag : [Item?] = [nil,nil,nil]    
+}

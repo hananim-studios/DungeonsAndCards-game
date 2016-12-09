@@ -4,13 +4,14 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EnemyView" customModule="DungeonsAndCards" customModuleProvider="target"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="9bK-2P-kUB" customClass="EnemyView" customModule="DungeonsAndCards" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="189" height="296"/>
@@ -23,36 +24,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="189" height="296"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oWY-3m-aeO" userLabel="Health Container">
-                        <rect key="frame" x="10" y="0.0" width="170.5" height="24"/>
+                        <rect key="frame" x="9" y="0.0" width="171" height="24"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="uKQ-Ny-oFd"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SFW-Tq-eRX">
-                        <rect key="frame" x="34" y="0.0" width="146.5" height="24"/>
+                        <rect key="frame" x="33" y="0.0" width="147" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="uCA-tE-A3j" userLabel="Health Icon">
-                        <rect key="frame" x="10" y="0.0" width="24" height="24"/>
+                        <rect key="frame" x="9" y="0.0" width="24" height="24"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="5k2-yA-HoG" userLabel="Attack Container">
-                        <rect key="frame" x="9" y="272" width="170.5" height="24"/>
+                        <rect key="frame" x="9" y="272" width="171" height="24"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="24" id="KAO-da-QjR"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e1Q-4b-2gW">
-                        <rect key="frame" x="33.5" y="272" width="146" height="24"/>
+                        <rect key="frame" x="33" y="272" width="147" height="24"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="tSA-YJ-lWD" userLabel="Attack Icon">
-                        <rect key="frame" x="9" y="272" width="24.5" height="24"/>
+                        <rect key="frame" x="9" y="272" width="24" height="24"/>
                     </imageView>
                 </subviews>
             </view>
@@ -89,7 +90,6 @@
                 <outlet property="attackLabel" destination="e1Q-4b-2gW" id="KHe-6a-2K9"/>
                 <outlet property="enemyImageView" destination="6VD-ar-qbd" id="dRB-sy-xUd"/>
                 <outlet property="healthLabel" destination="SFW-Tq-eRX" id="FX1-1T-H9K"/>
-                <outlet property="heroImageView" destination="6VD-ar-qbd" id="AV7-e1-P72"/>
             </connections>
             <point key="canvasLocation" x="165.5" y="100"/>
         </collectionViewCell>

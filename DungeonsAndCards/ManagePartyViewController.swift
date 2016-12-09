@@ -319,6 +319,10 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
 
 extension ManagePartyViewController: GameDelegate {
     
+    func game(_ game: Game, didAttack hero: Hero, onHeroAtSlot slot: Int) {
+        
+    }
+    
     func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int) {
         
     }
@@ -327,10 +331,15 @@ extension ManagePartyViewController: GameDelegate {
         
     }
     
+    func game(_ game: Game, didUseItem item: Item, onHeroAtSlot slot: Int) {
+        
+    }
+    
     func game(_ game: Game, changedGoldTo gold: Int) {
         
         self.goldButton.setTitle(gold.description, for: .normal)
     }
+    
     func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int) {
         
         self.game.party.heroes[slot] = hero
@@ -339,6 +348,7 @@ extension ManagePartyViewController: GameDelegate {
             cell.setHero(hero)
         }
     }
+    
     func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int) {
         
         self.game.party.heroes[slot] = nil
