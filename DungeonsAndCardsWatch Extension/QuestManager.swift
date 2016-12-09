@@ -10,7 +10,8 @@ import Foundation
 
 protocol QuestManagerDelegate {
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double)
-    func questDidComplete()
+    func questRemoved(_ quest: Quest)
+    func refillQuestArray( array: [Quest])
 }
 
 class QuestManager: HeathKitManagerDelegate {
@@ -21,17 +22,16 @@ class QuestManager: HeathKitManagerDelegate {
     var quests: [Quest]
     var inactive: [Quest]
     
-    init(){
+    private init(){
         
         let exerciseQuest = Quest(with: .exercise)
         let moveQuest = Quest(with: .move)
         let standQuest = Quest(with: .stand)
-        let tapQuest = Quest(with: .tap)
+        //let tapQuest = Quest(with: .tap)
         
-        self.quests = [exerciseQuest, moveQuest, standQuest, tapQuest]
+        self.quests = [exerciseQuest, moveQuest, standQuest/*, tapQuest*/]
         self.inactive = [Quest]()
         sortQuest()
-        
         healthKitManager.delegate = self
     }
     
@@ -51,7 +51,7 @@ class QuestManager: HeathKitManagerDelegate {
     }
     
     private func initQuest(_ quest :Quest){
-        
+
         for element in quests {
             if quest == element {
                 element.active = true
@@ -60,36 +60,54 @@ class QuestManager: HeathKitManagerDelegate {
     }
     
     private func isQuestCompleted(_ quest: Quest) -> Bool {
-        if quest.currentQuestObjective >= quest.questObjective {
-            print("Quest: \(quest.name) is completed with current Objective: \(quest.currentQuestObjective)")
-            return true
+       
+        if quest.active == true {
+            
+            if quest.currentQuestObjective >= quest.questObjective {
+                print("Quest: \(quest.name) is completed with current Objective: \(quest.currentQuestObjective)")
+                return true
+            }
         }
         return false
     }
     
-    private func restartQuest(_ quest: Quest) {
-        print("Quest: \(quest.name) was restarted")
-        quest.currentQuestObjective = 0
-        quest.active = false
+    private func setInactive(_ quest: Quest) {
+       
+        if quest.active == true {
+        
+            print("Quest: \(quest.name) was set inactive")
+            quest.currentQuestObjective = 0
+            quest.active = false
+        }
     }
     
     private func sendQuestToInactiveArray(_ quest: Quest){
-        var index: Int?
-        for element in quests{
-            if element == quest {
-               index = quests.index(of: element)
+        
+        if quest.active == true {
+        
+            var index: Int?
+            for element in quests{
+                if element == quest {
+                   index = quests.index(of: element)
+                }
             }
-        }
-        if let i = index {
-            quests.remove(at: i)
-            inactive.append(quest)
-            print("Quest: \(quest.name) was removed from quests array (size: \(quests.count) and sent to inactiveArray (size: \(inactive.count))")
+            if let i = index {
+                quests.remove(at: i)
+                setInactive(quest)
+                delegate?.questRemoved(quest)
+                inactive.append(quest)
+                print("Quest: \(quest.name) was removed from quests array (size: \(quests.count) and sent to inactiveArray (size: \(inactive.count))")
+            }
         }
     }
     
     private func shouldReset() {
-        if quests.count < 1 {
-            quests = inactive
+      
+        if quests.count == 0 {
+            for element in inactive {
+                quests.append(element)
+            }
+            self.delegate?.refillQuestArray(array: quests)
             inactive.removeAll()
         }
     }
@@ -111,11 +129,9 @@ class QuestManager: HeathKitManagerDelegate {
             }
             
             if self.isQuestCompleted(quest) {
-                
                 sendQuestToInactiveArray(quest)
-                delegate?.questDidComplete()
-//                shouldReset()
-//                sortQuest()
+                shouldReset()
+                sortQuest()
             }
         }
     }

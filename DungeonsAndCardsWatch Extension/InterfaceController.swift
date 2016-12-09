@@ -37,9 +37,25 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
     }
     
     //MARK: - QuestManagerDelegate Methods
-    func questDidComplete() {
+    func questRemoved(_ quest: Quest) {
+        var index: Int?
+        for element in self.array{
+            if element == quest {
+                index = self.array.index(of: element)
+            }
+        }
+        if let i = index {
+            self.array.remove(at: i)
+            print("Quest: \(quest.name) was removed from VIEW (size: \(self.array.count)")
+        }
         populateTable(self.questsTable)
-        print(array)
+    }
+    
+    func refillQuestArray(array: [Quest]) {
+        self.array.removeAll()
+        for quest in array {
+            self.array.append(quest)
+        }
     }
     
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double) {
@@ -69,7 +85,12 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
                 print("Current%: \(Int(content.currentQuestObjective*100/content.questObjective)), next %: \(Int(nextValue!*100/content.questObjective))")
                 
                 if nextValue! > 0 && nextValue! != content.currentQuestObjective {
-                    controller.ringQuest.startAnimatingWithImages(in: NSMakeRange(Int(content.currentQuestObjective*100/content.questObjective), Int(nextValue!*100/content.questObjective)), duration: 0.5, repeatCount: 1)
+                    controller.ringQuest.startAnimatingWithImages(in:
+                        NSMakeRange(
+                            Int(content.completionPercentage*100),
+                            Int(nextValue!*100/content.questObjective)),
+                                                                  duration: 0.5,
+                                                                  repeatCount: 1)
                 }
             }
             else {
