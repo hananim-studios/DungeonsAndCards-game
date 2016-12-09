@@ -36,9 +36,8 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
         populateTable(self.questsTable)
     }
     
+    //MARK: - QuestManagerDelegate Methods
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double) {
-        
-        //Configuring Table Cells
         
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         
@@ -60,7 +59,7 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
                 case .tap:
                     nextValue = tap
                 }
-                print("current:\(nextValue!) , next:\(content.currentQuestObjective) ")
+//                print("current:\(nextValue!) , next:\(content.currentQuestObjective) ")
                 if nextValue! > 0 && nextValue! != content.currentQuestObjective {
                     controller.ringQuest.startAnimatingWithImages(in: NSMakeRange(Int(content.currentQuestObjective), Int(nextValue!)), duration: 0.5, repeatCount: 1)
                 }
@@ -68,14 +67,12 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
             else {
                 controller.mainLabel.setAlpha(0.5)
             }
-            
         }
     }
     
+    //MARK: - Convenience Methods
     func populateTable(_ table: WKInterfaceTable) {
-        
-        //Configuring Table Cells
-        
+                
         table.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         
         for (index, content) in self.array.enumerated() {
@@ -90,7 +87,6 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
             else {
                 controller.mainLabel.setAlpha(0.5)
             }
-            
         }
     }
 

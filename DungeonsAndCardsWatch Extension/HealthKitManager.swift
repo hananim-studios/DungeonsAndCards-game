@@ -28,6 +28,7 @@ class HealthKitManager {
         }
     }
     
+    //MARK: - Methods
     @objc func query() {
         i += 7
         var components = Calendar.current.dateComponents([.day, .month, .year, .era], from: Date())

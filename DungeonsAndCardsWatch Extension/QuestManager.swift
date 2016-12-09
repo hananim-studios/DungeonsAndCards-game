@@ -18,7 +18,7 @@ class QuestManager: HeathKitManagerDelegate {
     let healthKitManager = HealthKitManager()
     static let sharedInstance = QuestManager()
     var quests: [Quest]
-   
+    
     init(){
         
         let exerciseQuest = Quest(with: .exercise)
@@ -33,6 +33,45 @@ class QuestManager: HeathKitManagerDelegate {
         
     }
     
+    //MARK: - Methods
+    private func sortQuest(){
+        //Randomize a quest
+        let index = Int(arc4random_uniform(UInt32(quests.count)))
+        let quest = quests[index]
+        
+        //Initialize a quest
+        initQuest(quest)
+        
+        //Add quest in the beginning of array
+        quests.remove(at: index)
+        quests.insert(quest, at: 0)
+    }
+    
+    private func initQuest(_ quest :Quest){
+        
+        for element in quests {
+            if quest == element {
+                element.active = true
+            }
+        }
+    }
+    
+    private func isQuestCompleted(_ quest: Quest) -> Bool {
+        
+        switch quest.questType {
+            case .exercise:
+                break;
+            case .move:
+                break;
+            case .stand:
+                break;
+            case .tap:
+                break;
+        }
+        return true
+    }
+    
+    //MARK: - HealthKitManagerDelegate Methods
     func didUpdateSummary(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double) {
         
         self.delegate?.didUpdateQuests(withExercise: exercise, Move: move, Stand: stand, andTap: tap)
@@ -50,43 +89,6 @@ class QuestManager: HeathKitManagerDelegate {
                 
             }
         }
-    }
-    
-    private func sortQuest(){
-        //Randomize a quest
-        let index = Int(arc4random_uniform(UInt32(quests.count)))
-        let quest = quests[index]
-        
-        //Initialize a quest
-        initQuest(quest)
-        
-        //Add quest in the beginning of array
-        quests.remove(at: index)
-        quests.insert(quest, at: 0)
-    }
-    
-    func initQuest(_ quest :Quest){
-        
-        for element in quests {
-            if quest == element {
-                element.active = true
-            }
-        }
-    }
-    
-    func isQuestCompleted(_ quest: Quest) -> Bool {
-        
-        switch quest.questType {
-            case .exercise:
-                break;
-            case .move:
-                break;
-            case .stand:
-                break;
-            case .tap:
-                break;
-        }
-        return true
     }
     
 }

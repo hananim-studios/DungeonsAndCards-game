@@ -30,13 +30,13 @@ class Quest {
         self.questObjective = questType.rawValue
         switch self.questType{
         case .exercise:
-            self.name = "Faça exercício"
+            self.name = "Exercise"
         case .move:
-            self.name = "Faça um movimento"
+            self.name = "Move"
         case .stand:
-            self.name = "Se levante"
+            self.name = "Get up"
         case .tap:
-            self.name = "Aperte várias vezes"
+            self.name = "Tap"
 
 
         }
