@@ -33,16 +33,16 @@ class EnemiesJSON {
         }
     }
     
-    static func cardAtGroup(name: String) ->  Enemy? {
+    static func enemyAtIndex(index: Int) ->  Enemy? {
         
         if let json = self.json {
-            return Enemy(json: json["enemies"][name])
+            return Enemy(json: json["enemies"][index])
         }
         
         return nil
     }
     
-    static func enemiesCount() -> Int {
+    static func count() -> Int {
         
         if let json = self.json {
             return json["enemies"].count

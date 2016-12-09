@@ -10,11 +10,44 @@ import Foundation
 import SwiftyJSON
 
 protocol GameDelegate {
+    
     func game(_ game: Game, changedGoldTo gold: Int)
+    
     func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int)
     func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int)
     func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int)
+    
     func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int)
+    func game(_ game: Game, didUseItem item: Item, onHeroAtSlot slot: Int)
+    
+    func game(_ game: Game, didAttack slot: Int)
+    
+}
+
+extension GameDelegate {
+    
+    // Gold
+    func game(_ game: Game, changedGoldTo gold: Int){
+    }
+    
+    // Hero
+    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int){
+    }
+    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int){
+    }
+    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int){
+    }
+    
+    // Item
+    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int){
+    }
+    func game(_ game: Game, didUseItem item: Item, onHeroAtSlot slot: Int){
+    }
+    
+    //Battle
+    func game(_ game: Game, didAttack slot: Int){
+    }
+    
 }
 
 class Game {
@@ -26,11 +59,12 @@ class Game {
     var dungeonLevel: Int = 0
     
     var hand: Hand
-    
     var party: Party
     
     var itemShop: ItemShop
-    
+    var itemBag: ItemBag
+
+    var dungeon: Dungeon
     
     init(){
         if !HeroesJSON.load()  { fatalError("Unable to load heroes.json") }
@@ -39,7 +73,11 @@ class Game {
         
         self.hand = Hand()
         self.party = Party()
+        
         self.itemShop = ItemShop()
+        self.itemBag = ItemBag()
+    
+        self.dungeon = Dungeon()
     }
     
 }
@@ -57,6 +95,7 @@ extension Game {
             
             self.party.heroes[slot] = hero
     
+/// Remove hired hero from hand
 //            for i in 0...self.hand.heroes.count-1{
 //                if self.hand.heroes[i] == hero {
 //                  //self.hand.heroes[i] = nil
@@ -91,10 +130,51 @@ extension Game {
             
             self.gold -= item.gold
             
-            self.itemShop.items[slot] = item
+            self.itemBag.bag[slot] = item
             
             delegate?.game(self, didBuyItem: item, atSlot: slot)
             delegate?.game(self, changedGoldTo: self.gold)
         }
     }
+    
+    func useItem(item: Item, onHeroAtSlot slot: Int){
+        for effect in item.effects {
+            switch effect {
+            case let .AddHealth(value: health):
+                self.party.heroes[slot]?.health += health
+                break
+            case let .AddDamage(value: damage):
+                self.party.heroes[slot]?.damage += damage
+                break
+            case let .SuperArmor(value: superArmor):
+                self.party.heroes[slot]?.health += superArmor
+                break
+            default:
+                print("unknown effect")
+                break
+            }
+        }
+        self.itemBag.bag.remove(at: slot)
+        delegate?.game(self, didUseItem: item, onHeroAtSlot: slot)
+    }
+    
+    func attack(slot: Int) {
+        
+        self.party.heroes[slot]!.health -= self.dungeon.enemies.last!.damage
+        self.dungeon.enemies.last!.health -= self.party.heroes[slot]!.damage
+        
+        if self.dungeon.enemies.last!.health <= 0 {
+            self.dungeon.enemies.removeLast()
+            print("Enemy defeated!")
+        }
+        
+        if self.party.heroes[slot]!.health <= 0 {
+            self.party.heroes.remove(at: slot)
+            print("You lost a hero!")
+        }
+        
+        delegate?.game(self, didAttack: slot)
+    }
+
+
 }

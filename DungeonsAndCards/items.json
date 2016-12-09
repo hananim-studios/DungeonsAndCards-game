@@ -67,7 +67,7 @@
               "effects": {
               "addHealth": 0,
               "addDamage": 15,
-              "superArmor": 1
+              "superArmor": 999
               }
               },
               {
@@ -77,7 +77,7 @@
               "effects": {
               "addHealth": 0,
               "addDamage": 0,
-              "superArmor": 2
+              "superArmor": 999
               }
               },
               {

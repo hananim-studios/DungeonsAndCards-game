@@ -58,3 +58,13 @@ class Enemy {
         
     }
 }
+
+extension Enemy: Equatable {
+    static func == (lhs: Enemy, rhs: Enemy) -> Bool {
+        if lhs.name == rhs.name {
+            return true
+        } else {
+            return false
+        }
+    }
+}
