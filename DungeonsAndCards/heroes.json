@@ -2,83 +2,83 @@
     "heroes": [
                {
                "name": "Queen",
-               "pic": "queen",
+               "image": "queen",
                "description": "The Queen is beloved by the king, the people, and the church, for she has a great heart. She can go through the hardest times without losing her serenity. Everything in the name of love and charity.",
                "health": 30,
-               "damage": 5,
-               "gold": 24
+               "attack": 5,
+               "price": 24
                },
                {
                "name": "Host",
-               "pic": "wizard",
+               "image": "wizard",
                "description": "Sometimes, the Host volunteers to travel with the adventurers that come to his Inn. He likes to keep everyone happy, to give advices and to tell stories.",
                "health": 13,
-               "damage": 9,
-               "gold": 3
+               "attack": 9,
+               "price": 3
                },
                {
                "name": "The Paladin ",
-               "pic": "warrior",
+               "image": "warrior",
                "description": "The Paladin is famous among the entire Kingdom, symbol of the honor and dignity. He's known as a great warrior and hero, but this isn't true, he's scared of cockroaches.",
                "health": 22,
-               "damage": 28,
-               "gold": 25
+               "attack": 28,
+               "price": 25
                },
                {
                "name": "The Gypsy",
-               "pic": "gypsy",
+               "image": "gypsy",
                "description": "The gypsy is a gorgeous middle-aged woman, that looks younger that she realy is. She lives alone and knows very well how to take care of herself. She uses runes and cards to foresee the future, and hoaxes say that even powerful men like the King's advisor pay to listen to her profecies.",
                "health": 19,
-               "damage": 19,
-               "gold": 9
+               "attack": 19,
+               "price": 9
                },
                {
                "name": "Drunk Man",
-               "pic": "drunk",
+               "image": "drunk",
                "description": "Isn't it indescribable?",
                "health": 7,
-               "damage": 21,
-               "gold": 5
+               "attack": 21,
+               "price": 5
                },
                {
                "name": "King's Advisor",
-               "pic": "advisor",
+               "image": "advisor",
                "description": "Isn't it indescribable?",
                "health": 26,
-               "damage": 20,
-               "gold": 22
+               "attack": 20,
+               "price": 22
                },
                {
                "name": "Elise",
-               "pic": "elise",
+               "image": "elise",
                "description": "Isn't it indescribable?",
                "health": 17,
-               "damage": 16,
-               "gold": 15
+               "attack": 16,
+               "price": 15
                },
                {
                "name": "Sergeant",
-               "pic": "sergeant",
+               "image": "sergeant",
                "description": "Isn't it indescribable?",
                "health": 20,
-               "damage": 25,
-               "gold": 27
+               "attack": 25,
+               "price": 27
                },
                {
                "name": "Wizard",
-               "pic": "wizard",
+               "image": "wizard",
                "description": "Isn't it implacável?",
                "health": 14,
-               "damage": 29,
-               "gold": 13
+               "attack": 29,
+               "price": 13
                },
                {
                "name": "Soldier",
-               "pic": "soldier",
+               "image": "soldier",
                "description": "Isn't it indescribable?",
                "health": 15,
-               "damage": 15,
-               "gold": 8
+               "attack": 15,
+               "price": 8
                }
                ]
 }

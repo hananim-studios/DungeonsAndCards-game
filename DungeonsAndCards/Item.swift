@@ -40,38 +40,45 @@ enum ItemEffect {
     
 }
 
-class Item {
+class Item: GameObject {
     
-    var name: String
-    var pic: String
-    var gold: Int
+    var name: String = ""
+    var image: String = ""
+    var price: Int = 1
     var effects: [ItemEffect] = []
+    
+    static func invalid() -> Item {
+        let item = Item()
+        item.isValid = false
+        
+        item.name = "Invalid"
+        item.image = "invalid"
+        item.price = 1
+        
+        return item
+    }
+    
+    private override init() {
+        super.init()
+    }
     
     init(json: JSON) {
         
-        if let name = json["name"].string {
-            self.name = name
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let name = json["name"].string
+        assert(name != nil, "(🚩) - name not found in json")
+        self.name = name ?? "JSON Error"
         
-        if let pic = json["pic"].string {
-            self.pic = pic
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let image = json["image"].string
+        assert(image != nil, "(🚩) - image not found in json")
+        self.image = image ?? "jsonerror"
         
-        if let gold = json["gold"].int {
-            self.gold = gold
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let price = json["price"].int
+        assert(price != nil, "(🚩) - price not found in json")
+        self.price = price ?? 1
         
-        if let effect = json["effects"].dictionary {
-            for effectJson in effect {
-                self.effects.append(ItemEffect(tuple: effectJson))
-            }
-        }
+        let effects = json["effects"].dictionary
+        assert(price != nil, "(🚩) - effects not found in json")
+        self.effects = effects?.map { ItemEffect(tuple: $0) } ?? []
     }
 }
 

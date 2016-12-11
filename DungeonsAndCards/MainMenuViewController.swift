@@ -8,24 +8,47 @@
 
 import UIKit
 
+// MARK: - MainMenuDelegate
+extension MainMenuViewController: MainMenuDelegate {
+    
+    func didStartGame(_ game: Game) {
+        
+    }
+    
+    func didContinueGame(_ game: Game) {
+        
+    }
+}
+
+// MARK: - UIViewController
 class MainMenuViewController: UIViewController {
+    
+    // MARK: - Model
+    var model = MainMenu()
 
     // MARK: - Variables
     override var prefersStatusBarHidden: Bool{ return true }
+    
     // MARK: - IBOutlets
     @IBOutlet weak var continueGameButton: UIButton!
     @IBOutlet weak var newGameButton: UIButton!
     
     //MARK: - ViewController
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // setup model
+        model.delegate = self
+        
+        // setup UI
+        continueGameButton.isEnabled = Game.hasSavedGame
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.newGameButton.alpha = 1;
         self.continueGameButton.alpha = 1;
         self.continueGameButton.isHidden = false;
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
     }
 
     override func didReceiveMemoryWarning() {

@@ -14,13 +14,38 @@ class EnemyView: UICollectionViewCell, DIOCollectionViewDestination {
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var enemyImageView: UIImageView!
     
+    var enemy: Enemy?
+    
     var onAttackedByHero: ((_ hero: Hero) -> Void)?
     
     override func awakeFromNib() {
-        
+        self.isUserInteractionEnabled = true
     }
     
     func receivedDragWithDragInfo(_ dragInfo: DIODragInfo?, andDragState dragState: DIODragState) {
-        self.onAttackedByHero?(dragInfo!.userData as! Hero)
+        
+        switch dragState {
+        case let .ended(location):
+            handleDragEnded(dragInfo: dragInfo, atLocation: location)
+        default:
+            break
+        }
+    }
+    
+    func handleDragEnded(dragInfo: DIODragInfo?, atLocation location: CGPoint) {
+        self.onAttackedByHero?(dragInfo?.userData as! Hero)
+    }
+    
+    func setEnemy(enemy: Enemy?) {
+        
+        if let enemy = enemy {
+            self.healthLabel.text = enemy.health.description
+            self.attackLabel.text = enemy.damage.description
+            self.enemyImageView.image = UIImage(named: enemy.pic)
+        } else {
+            self.healthLabel.text = "?"
+            self.attackLabel.text = "?"
+            self.enemyImageView.image = nil
+        }
     }
 }

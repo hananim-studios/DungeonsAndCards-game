@@ -28,8 +28,8 @@ class HeroItemCell: HeroCell {
         super.setHero(hero)
         
         if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.pic)
-            self.attackLabel.text = hero.damage.description
+            self.heroImageView.image = UIImage(named: hero.image)
+            self.attackLabel.text = hero.attack.description
             self.healthLabel.text = hero.health.description
         } else {
             self.heroImageView.image = nil
@@ -41,7 +41,7 @@ class HeroItemCell: HeroCell {
     func setItem(_ item: Item?) {
         
         if let item = item {
-            self.itemImageView.image = UIImage(named: item.pic)
+            self.itemImageView.image = UIImage(named: item.image)
         } else {
             self.heroImageView.image = nil
         }
@@ -65,8 +65,8 @@ class HeroPartyCell: HeroCell {
         super.setHero(hero)
         
         if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.pic)
-            self.attackLabel.text = hero.damage.description
+            self.heroImageView.image = UIImage(named: hero.image)
+            self.attackLabel.text = hero.attack.description
             self.healthLabel.text = hero.health.description
         } else {
             self.heroImageView.image = nil
@@ -96,11 +96,11 @@ class HeroHandCell: HeroCell {
         super.setHero(hero)
         
         if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.pic)
+            self.heroImageView.image = UIImage(named: hero.image)
             self.titleLabel.text = hero.name
-            self.attackLabel.text = hero.damage.description
+            self.attackLabel.text = hero.attack.description
             self.healthLabel.text = hero.health.description
-            self.costLabel.text = hero.gold.description
+            self.costLabel.text = hero.price.description
         } else {
             self.heroImageView.image = nil
             self.titleLabel.text = "???"

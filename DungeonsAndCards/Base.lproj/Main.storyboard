@@ -72,7 +72,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dungeons &amp; Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7G-fG-TE2">
-                                <rect key="frame" x="25" y="139" width="271" height="28"/>
+                                <rect key="frame" x="25" y="139.5" width="271" height="27.5"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="32"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
@@ -713,7 +713,6 @@ find a TREASURE</string>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="16f-hJ-Eg5" customClass="DIOCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="278" width="328" height="223"/>
-                                <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gtB-Er-HcH">
                                     <size key="itemSize" width="137" height="216"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -794,7 +793,7 @@ find a TREASURE</string>
                     </view>
                     <navigationItem key="navigationItem" id="vje-Np-vDu"/>
                     <connections>
-                        <outlet property="enemyView" destination="Tpz-Ej-ksQ" id="HNd-OU-k7a"/>
+                        <outlet property="enemyView" destination="Tpz-Ej-ksQ" id="sXS-wd-MeN"/>
                         <outlet property="goldButton" destination="LD7-Ct-Kgv" id="66z-uQ-AUj"/>
                         <outlet property="partyCollectionView" destination="16f-hJ-Eg5" id="UeM-mx-XOB"/>
                     </connections>

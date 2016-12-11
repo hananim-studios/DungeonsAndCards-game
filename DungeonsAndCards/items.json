@@ -2,8 +2,8 @@
     "items": [
               {
               "name": "red",
-              "pic": "red",
-              "gold": 5,
+              "image": "red",
+              "price": 5,
               "effects": {
               "addHealth": 5,
               "addDamage": 0,
@@ -12,8 +12,8 @@
               },
               {
               "name": "pink",
-              "pic": "red",
-              "gold": 10,
+              "image": "red",
+              "price": 10,
               "effects": {
               "addHealth": 10,
               "addDamage": 0,
@@ -22,8 +22,8 @@
               },
               {
               "name": "violet",
-              "pic": "red",
-              "gold": 10,
+              "image": "red",
+              "price": 10,
               "effects": {
               "addHealth": 5,
               "addDamage": 5,
@@ -32,8 +32,8 @@
               },
               {
               "name": "blue",
-              "pic": "red",
-              "gold": 5,
+              "image": "red",
+              "price": 5,
               "effects": {
               "addHealth": 0,
               "addDamage": 5,
@@ -42,8 +42,8 @@
               },
               {
               "name": "cyan",
-              "pic": "red",
-              "gold": 10,
+              "image": "red",
+              "price": 10,
               "effects": {
               "addHealth": 0,
               "addDamage": 10,
@@ -52,8 +52,8 @@
               },
               {
               "name": "Indigo",
-              "pic": "red",
-              "gold": 15,
+              "image": "red",
+              "price": 15,
               "effects": {
               "addHealth": 10,
               "addDamage": 10,
@@ -62,8 +62,8 @@
               },
               {
               "name": "Milk",
-              "pic": "red",
-              "gold": 15,
+              "image": "red",
+              "price": 15,
               "effects": {
               "addHealth": 0,
               "addDamage": 15,
@@ -72,8 +72,8 @@
               },
               {
               "name": "Black",
-              "pic": "red",
-              "gold": 20,
+              "image": "red",
+              "price": 20,
               "effects": {
               "addHealth": 0,
               "addDamage": 0,
@@ -82,8 +82,8 @@
               },
               {
               "name": "Green",
-              "pic": "red",
-              "gold": 9,
+              "image": "red",
+              "price": 9,
               "effects": {
               "addHealth": 9,
               "addDamage": 9,
@@ -92,8 +92,8 @@
               },
               {
               "name": "Orange",
-              "pic": "red",
-              "gold": 4,
+              "image": "red",
+              "price": 4,
               "effects": {
               "addHealth": 4,
               "addDamage": 0,

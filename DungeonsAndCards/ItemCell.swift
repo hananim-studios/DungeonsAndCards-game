@@ -13,11 +13,15 @@ class ItemCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
     
+    var item: Item?
+    
     func setItem(_ item: Item?) {
+        
+        self.item = item
         
         if let item = item {
             
-            self.imageView.image = UIImage(named: item.pic)
+            self.imageView.image = UIImage(named: item.image)
         } else {
             
             self.imageView.image = nil

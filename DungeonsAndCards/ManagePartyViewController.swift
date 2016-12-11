@@ -10,10 +10,10 @@ import UIKit
 
 
 
-class ManagePartyViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
+class ManagePartyViewController: BaseGameViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model
-    var game = Game.sharedInstance
+    var context = ManagePartyContext(withGame: Game.newGame())
     
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -28,13 +28,11 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
     
     //MARK - ViewController
     override func viewWillAppear(_ animated: Bool) {
-        self.goldButton.setTitle(self.game.gold.description, for: .normal)
+        self.goldButton.setTitle(context.game.money.description, for: .normal)
     }
     override func viewDidAppear(_ animated: Bool) {
         partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
         handCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
-        
-        self.game.delegate = self
     }
     
     override func viewDidLoad() {
@@ -104,7 +102,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroHandCell",
                                                           for: indexPath) as! HeroHandCell
             
-            cell.setHero(self.game.hand.heroes[indexPath.row])
+            cell.setHero(context.shop.hero(atIndex: indexPath.row))
             
             return cell
         }
@@ -114,7 +112,7 @@ class ManagePartyViewController: UIViewController, UICollectionViewDataSource, U
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroPartyCell",
                                                           for: indexPath) as! HeroPartyCell
             
-            cell.setHero(self.game.party.heroes[indexPath.row])
+            cell.setHero(context.party.slot(atIndex: indexPath.row).hero)
             
             return cell
         }
@@ -178,27 +176,37 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, userDataForItemAtIndexPath indexPath: IndexPath) -> Any? {
         
         if dioCollectionView == handCollectionView {
-            return self.game.hand.heroes[indexPath.row]
+            return context.shop.hero(atIndex: indexPath.row)
         }
             
         if dioCollectionView == partyCollectionView {
-            return self.game.party.heroes[indexPath.row]
+            return context.party.slot(atIndex: indexPath.row).hasHero
         }
         
-        return nil
+        fatalError("collectionView not implemented")
     }
     
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, shouldDragItemAtIndexPath indexPath: IndexPath) -> Bool {
         if dioCollectionView == partyCollectionView {
-            return self.game.party.heroes[indexPath.row] != nil
+            
+            if context.party.hasSlot(atIndex: indexPath.row) {
+                
+                return context.party.slot(atIndex: indexPath.row).hasHero
+            }
+            
+            return false
         }
-        else {
-            return true
+            
+        if dioCollectionView == handCollectionView {
+            
+            return context.shop.hasHero(atIndex: indexPath.row)
         }
+        
+        fatalError("collectionView not implemented")
     }
     
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView {
-        return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroCell).hero!.pic))
+        return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroCell).hero!.image))
     }
     
     // DIOCollectionView Delegate
@@ -222,7 +230,8 @@ extension ManagePartyViewController: DIOCollectionViewDataSource, DIOCollectionV
             case .ended:
                 
                 // - MARK: EVENT: PLAYER DISCARDED HERO
-                self.game.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
+                //self.game.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
+                context.removeHero(atPartyIndex: indexPath.row)
                 
             default:
                 break
@@ -291,7 +300,9 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
                     
                     dragInfo.sender.dragView?.isHidden = true
                     
-                    self.game.hireHero(hero: hero, atSlot: indexPath.row)
+                    //self.game.hireHero(hero: hero, atSlot: indexPath.row)
+                    
+                    context.buyHero(atShopIndex: dragInfo.indexPath.row, toPartyIndex: indexPath.row)
                 }
             }
         }
@@ -319,7 +330,7 @@ extension ManagePartyViewController: HeroCollectionViewDelegate {
 
 extension ManagePartyViewController: GameDelegate {
     
-    func game(_ game: Game, didAttack hero: Hero, onHeroAtSlot slot: Int) {
+    /*func game(_ game: Game, didAttack hero: Hero, onHeroAtSlot slot: Int) {
         
     }
     
@@ -356,5 +367,5 @@ extension ManagePartyViewController: GameDelegate {
         if let cell = self.partyCollectionView.cellForItem(at: IndexPath(row: slot, section: 0)) as? HeroCell {
             cell.setHero(nil)
         }
-    }
+    }*/
 }

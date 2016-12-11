@@ -16,6 +16,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.requestAccessToHealthKit()
+        
+        // MARK: - Load JSON
+        if !HeroesJSON.load()   { fatalError("(☠) - HeroesJSON.load() failed") }
+        if !ItemsJSON.load()    { fatalError("(☠) - ItemsJSON.load() failed") }
+        if !EnemiesJSON.load()  { fatalError("(☠) - EenemiesJSON.load() failed") }
+        
+        // MARK: - Setup UserDefaults
+        if UserDefaults.standard.bool(forKey: "hasLaunchedOnce") {
+            
+            UserDefaults.standard.set(true, forKey: "hasLaunchedOnce")
+            UserDefaults.standard.set(false, forKey: "hasSavedGame")
+            
+            UserDefaults.standard.synchronize()
+        }
+        
         return true
     }
 

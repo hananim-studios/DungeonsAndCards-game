@@ -11,7 +11,7 @@ import SwiftyJSON
 
 protocol GameDelegate {
     
-    func game(_ game: Game, changedGoldTo gold: Int)
+    func game(_ game: Game, changedmoneyTo money: Int)
     
     func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int)
     func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int)
@@ -26,8 +26,8 @@ protocol GameDelegate {
 
 extension GameDelegate {
     
-    // Gold
-    func game(_ game: Game, changedGoldTo gold: Int){
+    // money
+    func game(_ game: Game, changedmoneyTo money: Int){
     }
     
     // Hero
@@ -52,46 +52,67 @@ extension GameDelegate {
 
 class Game {
     
+    static var hasSavedGame: Bool {
+        return UserDefaults.standard.bool(forKey: "hasSavedGame")
+    }
+    
     var delegate: GameDelegate?
 
-    var gold: Int = 200
+    private(set) var money: Int = 200
     
     var dungeonLevel: Int = 0
     
-    var hand: Hand
     var party: Party
     
+    var heroShop: HeroShop
     var itemShop: ItemShop
-    var itemBag: ItemBag
-
-    var dungeon: Dungeon
     
-    init(){
-        if !HeroesJSON.load()  { fatalError("Unable to load heroes.json") }
-        if !ItemsJSON.load()   { fatalError("Unable to load items.json") }
-        if !EnemiesJSON.load() { fatalError("Unable to load enemies.json") }
-        
-        self.hand = Hand()
+    //var dungeon: Dungeon
+    
+    private init() {
         self.party = Party()
-        
+        self.heroShop = HeroShop()
         self.itemShop = ItemShop()
-        self.itemBag = ItemBag()
+    }
     
-        self.dungeon = Dungeon()
+    static func newGame() -> Game {
+        
+        let newGame = Game()
+        
+        return newGame
+    }
+    
+    static func savedGame() throws -> Game {
+        
+        if Game.hasSavedGame {
+            
+            // TODO: - Implement loading savedGame
+            return Game()
+            
+        } else {
+            assertionFailure("(🚩) called Game.saveGame(), but Game.hasSavedGame is false")
+            
+            // fallback to new game
+            return Game.newGame()
+        }
+    }
+    
+    func canSpendMoney(_ money: Int) -> Bool {
+        return self.money >= money
     }
     
 }
 
-extension Game {
+/*extension Game {
     
-    static var sharedInstance = Game()
+    //static var sharedInstance = Game()
     
     //MARK - Implement Protocol Functions
     func hireHero(hero: Hero, atSlot slot: Int) {
         
-        if self.gold >= hero.gold {
+        if self.money >= hero.price {
             
-            self.gold -= hero.gold
+            self.money -= hero.price
             
             self.party.heroes[slot] = hero
     
@@ -105,35 +126,35 @@ extension Game {
 //            }
         
             delegate?.game(self, didHireHero: hero, atSlot: slot)
-            delegate?.game(self, changedGoldTo: self.gold)
+            delegate?.game(self, changedmoneyTo: self.money)
         }
     }
     
     func dismissHero(hero: Hero, atSlot slot: Int) {
             
-        self.party.heroes[slot] = nil
+        //self.party. = nil
         
         delegate?.game(self, didDismissHero: hero, atSlot: slot)
     }
     
     func swapHero(heroAt selectedIndex: Int, withHeroAtIndex swapIndex: Int){
         
-        let swap = self.party.heroes[selectedIndex]
-        self.party.heroes[selectedIndex] = self.party.heroes[swapIndex]
-        self.party.heroes[swapIndex] = swap
+        //let swap = self.party.heroes[selectedIndex]
+        //self.party.heroes[selectedIndex] = self.party.heroes[swapIndex]
+        //self.party.heroes[swapIndex] = swap
         
         delegate?.game(self, didSwapHero: selectedIndex, swapHeroIndex: swapIndex)
     }
     
     func buyItem(item: Item, atSlot slot: Int) {
-        if self.gold >= item.gold {
+        if self.money >= item.price {
             
-            self.gold -= item.gold
+            //self.money -= item.price
             
-            self.itemBag.bag[slot] = item
+            //self.itemBag.bag[slot] = item
             
             delegate?.game(self, didBuyItem: item, atSlot: slot)
-            delegate?.game(self, changedGoldTo: self.gold)
+            delegate?.game(self, changedmoneyTo: self.money)
         }
     }
     
@@ -177,4 +198,4 @@ extension Game {
     }
 
 
-}
+}*/

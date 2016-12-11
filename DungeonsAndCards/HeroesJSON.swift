@@ -12,6 +12,7 @@ import SwiftyJSON
 class HeroesJSON {
     
     static var json: JSON? = nil
+    static var loaded = false
     
     static func load() -> Bool {
         
@@ -20,10 +21,9 @@ class HeroesJSON {
             let path = Bundle.main.path(forResource: "heroes", ofType: "json")
             
             let data = try NSData(contentsOf: NSURL(fileURLWithPath: path!) as URL, options: .mappedIfSafe)
-            
-            print("loaded Heroes JSON")
 
-            self.json = JSON(data: data as Data)
+            HeroesJSON.json = JSON(data: data as Data)
+            HeroesJSON.loaded = true
             
             return true
             
@@ -33,13 +33,13 @@ class HeroesJSON {
         }
     }
     
-    static func heroAtIndex(index: Int) -> Hero? {
+    static func heroAtIndex(index: Int) -> Hero {
         
         if let json = json {
             return Hero(json: json["heroes"][index])
         }
         
-        return nil
+        return Hero.invalid()
     }
     
     static func count() -> Int {

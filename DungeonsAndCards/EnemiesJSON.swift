@@ -11,7 +11,8 @@ import SwiftyJSON
 
 class EnemiesJSON {
     
-    static var json: JSON? = nil
+    static var json: JSON?
+    static var loaded = false
     
     static func load() -> Bool {
         
@@ -21,9 +22,8 @@ class EnemiesJSON {
             
             let data = try NSData(contentsOf: NSURL(fileURLWithPath: path!) as URL, options: .mappedIfSafe)
             
-            self.json = JSON(data: data as Data)
-            
-            print("loaded Enemies JSON")
+            EnemiesJSON.json = JSON(data: data as Data)
+            EnemiesJSON.loaded = true
             
             return true
             

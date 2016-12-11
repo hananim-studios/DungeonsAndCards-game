@@ -11,7 +11,7 @@ import UIKit
 class ShopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model
-    var game = Game.sharedInstance
+    var game = Game.newGame()
     
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -112,8 +112,8 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroItemCell",
                                                       for: indexPath) as! HeroItemCell
         
-            cell.setHero(self.game.party.heroes[indexPath.row])
-            cell.setItem(self.game.itemShop.items[indexPath.row]) // TODO: SET ITEM
+            cell.setHero(self.game.party.slot(atIndex: indexPath.row).hero)
+            cell.setItem(self.game.party.slot(atIndex: indexPath.row).item) // TODO: SET ITEM
         
             return cell
         }
@@ -177,7 +177,7 @@ class ShopViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     // MARK: - Convenience Methods
     func updateGold() {
-        self.goldButton.setTitle(self.game.gold.description, for: .normal)
+        self.goldButton.setTitle(self.game.money.description, for: .normal)
     }
 }
 
@@ -195,7 +195,7 @@ extension ShopViewController: DIOCollectionViewDataSource, DIOCollectionViewDele
     
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, shouldDragItemAtIndexPath indexPath: IndexPath) -> Bool {
         if dioCollectionView == partyCollectionView {
-            return self.game.party.heroes[indexPath.row] != nil
+            return self.game.party.slot(atIndex: indexPath.row).hasHero
         }
         else {
             return true
@@ -228,6 +228,19 @@ extension ShopViewController: DIOCollectionViewDataSource, DIOCollectionViewDele
         }
     }
     
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView {
+        
+        if(dioCollectionView == partyCollectionView) {
+            return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroItemCell).item!.image))
+        }
+        
+        if(dioCollectionView == itemCollectionView) {
+            return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! ItemCell).item!.image))
+        }
+        
+        fatalError("collectionView not implemented")
+    }
+    
 }
 
 extension ShopViewController: HeroCollectionViewDelegate {
@@ -251,7 +264,7 @@ extension ShopViewController: HeroCollectionViewDelegate {
                     
                     dragInfo.sender.dragView?.isHidden = true
                     
-                    self.game.buyItem(item: item, atSlot: indexPath.row)
+                    fatalError()//self.game.buyItem(item: item, atSlot: indexPath.row)
                     cell.setItem(item)
                 }
             }
