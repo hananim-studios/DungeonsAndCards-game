@@ -11,11 +11,13 @@ import Foundation
 
 class InterfaceController: WKInterfaceController, QuestManagerDelegate {
 
+    @IBOutlet var emptyMessageLabel: WKInterfaceLabel!
     @IBOutlet var questsTable: WKInterfaceTable!
     var array = QuestManager.sharedInstance.quests
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        self.emptyMessageLabel.setHidden(true)
         QuestManager.sharedInstance.delegate = self
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         populateTable(self.questsTable)
@@ -37,6 +39,26 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
     }
     
     //MARK: - QuestManagerDelegate Methods
+    func didInvalidateTimer() {
+        self.questsTable.setHidden(true)
+        self.emptyMessageLabel.setHidden(false)
+    }
+    
+    func questSorted(quest: Quest) {
+        var index: Int?
+        for element in array{
+            if element == quest {
+                element.active = true
+                quest.active = true
+                index = array.index(of: element)
+            }
+        }
+        if let i = index {
+            array.remove(at: i)
+            array.insert(quest, at: 0)
+        }
+    }
+    
     func questRemoved(_ quest: Quest) {
         var index: Int?
         for element in self.array{

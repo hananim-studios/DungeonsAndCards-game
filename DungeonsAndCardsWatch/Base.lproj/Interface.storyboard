@@ -17,6 +17,9 @@
                         <group width="1" alignment="left" layout="vertical" id="oTS-bX-gA7">
                             <items>
                                 <label alignment="left" text="Quests" id="wek-Fq-7Z8"/>
+                                <label alignment="left" text="No quests available" id="73p-cq-Wwe">
+                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                </label>
                             </items>
                         </group>
                         <table alignment="left" id="gHP-MD-Ags">
@@ -50,6 +53,7 @@
                         </table>
                     </items>
                     <connections>
+                        <outlet property="emptyMessageLabel" destination="73p-cq-Wwe" id="kwK-B5-SEt"/>
                         <outlet property="questsTable" destination="gHP-MD-Ags" id="HwK-vT-FVt"/>
                     </connections>
                 </controller>
