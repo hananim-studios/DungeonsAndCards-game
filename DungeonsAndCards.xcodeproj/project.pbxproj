@@ -117,6 +117,8 @@
 		C64376761DF9AD1C00BAFDCA /* quest99.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376111DF9AD1C00BAFDCA /* quest99.png */; };
 		C64376771DF9AD1C00BAFDCA /* quest100.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376121DF9AD1C00BAFDCA /* quest100.png */; };
 		C64376791DF9AD3300BAFDCA /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64376781DF9AD3300BAFDCA /* HealthKitManager.swift */; };
+		C643767D1DFEE38200BAFDCA /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643767C1DFEE38200BAFDCA /* ConnectionManager.swift */; };
+		C643767E1DFEE38200BAFDCA /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C643767C1DFEE38200BAFDCA /* ConnectionManager.swift */; };
 		C68063711DF04CF7003ACD19 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063701DF04CF7003ACD19 /* BattleViewController.swift */; };
 		C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063721DF04DDE003ACD19 /* AboutViewController.swift */; };
 		C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063741DF04DEC003ACD19 /* SettingsViewController.swift */; };
@@ -345,6 +347,7 @@
 		C64376111DF9AD1C00BAFDCA /* quest99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest99.png; sourceTree = "<group>"; };
 		C64376121DF9AD1C00BAFDCA /* quest100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest100.png; sourceTree = "<group>"; };
 		C64376781DF9AD3300BAFDCA /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
+		C643767C1DFEE38200BAFDCA /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		C68063701DF04CF7003ACD19 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		C68063721DF04DDE003ACD19 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C68063741DF04DEC003ACD19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -602,6 +605,14 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		C643767F1DFEE42000BAFDCA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				C643767C1DFEE38200BAFDCA /* ConnectionManager.swift */,
+			);
+			name = Shared;
+			sourceTree = "<group>";
+		};
 		C684751D1DE714290081DA95 /* DungeonsAndCardsWatch */ = {
 			isa = PBXGroup;
 			children = (
@@ -726,6 +737,7 @@
 		D14E4E0B1DDF493A002A0ED0 = {
 			isa = PBXGroup;
 			children = (
+				C643767F1DFEE42000BAFDCA /* Shared */,
 				C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */,
 				D14E4E161DDF493A002A0ED0 /* DungeonsAndCards */,
 				C684751D1DE714290081DA95 /* DungeonsAndCardsWatch */,
@@ -1206,6 +1218,7 @@
 				C680637C1DF19D9E003ACD19 /* QuestRowController.swift in Sources */,
 				C64376791DF9AD3300BAFDCA /* HealthKitManager.swift in Sources */,
 				C68475341DE714290081DA95 /* NotificationController.swift in Sources */,
+				C643767E1DFEE38200BAFDCA /* ConnectionManager.swift in Sources */,
 				C68063801DF1A759003ACD19 /* QuestManager.swift in Sources */,
 				C68475361DE714290081DA95 /* ComplicationController.swift in Sources */,
 				C68475321DE714290081DA95 /* ExtensionDelegate.swift in Sources */,
@@ -1245,6 +1258,7 @@
 				D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */,
 				D11BFE6A1DEE48180046086C /* DACCollectionView.swift in Sources */,
 				D12677EC1DFE4AB800DA93F9 /* BattleContext.swift in Sources */,
+				C643767D1DFEE38200BAFDCA /* ConnectionManager.swift in Sources */,
 				C627A5C51DEDCB38002F6533 /* ItemShopViewController.swift in Sources */,
 				D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,

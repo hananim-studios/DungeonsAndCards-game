@@ -17,6 +17,7 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        //ConnectionManager.sharedConnectionManager.delegate = self
         self.emptyMessageLabel.setHidden(true)
         QuestManager.sharedInstance.delegate = self
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
