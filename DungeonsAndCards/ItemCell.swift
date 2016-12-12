@@ -13,18 +13,19 @@ class ItemCell: UICollectionViewCell {
     
     @IBOutlet var imageView: UIImageView!
     
-    var item: Item?
+    func displayItem(_ item: Item) {
+        
+        self.subviews.forEach {
+            $0.isHidden = false
+        }
+        
+        self.imageView.image = UIImage(named: item.image)
+    }
     
-    func setItem(_ item: Item?) {
+    func hideItem() {
         
-        self.item = item
-        
-        if let item = item {
-            
-            self.imageView.image = UIImage(named: item.image)
-        } else {
-            
-            self.imageView.image = nil
+        self.subviews.forEach {
+            $0.isHidden = true
         }
     }
 }

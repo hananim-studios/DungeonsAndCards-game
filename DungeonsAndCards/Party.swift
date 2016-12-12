@@ -15,27 +15,65 @@ protocol PartyDelegate {
 }
 
 class PartySlot: GameObject {
-    private(set) var hero: Hero?
-    private(set) var item: Item?
+    
+    private var hero: Hero?
+    private var item: Item?
+    
     
     var hasHero: Bool {
         return hero != nil
     }
     
+    func getHero() -> Hero {
+        
+        guard hero != nil else {
+            assertionFailure("(🚩) - tried to access hero at slot without hero")
+            return Hero.invalid()
+        }
+        
+        return hero!
+    }
+    
+    var onSetHero: ((Hero) -> Void)?
+    func setHero(_ hero: Hero) {
+        self.hero = hero
+        onSetHero?(hero)
+    }
+    
+    var onRemoveHero: (() -> Void)?
+    func removeHero() {
+        self.hero = nil
+        onRemoveHero?()
+    }
+    
+    func getItem() -> Item {
+        
+        guard item != nil else {
+            assertionFailure("(🚩) - tried to access item at slot without item")
+            return Item.invalid()
+        }
+        
+        return item!
+    }
+
     var hasItem: Bool {
         return item != nil
     }
     
-    func setHero(hero: Hero) {
-        self.hero = hero
+    var onSetItem: ((Item) -> Void)?
+    func setItem(_ item: Item) {
+        self.item = item
+        onSetItem?(item)
     }
     
-    func setItem(item: Item) {
-        self.item = item
+    var onRemoveItem: (() -> Void)?
+    func removeItem() {
+        self.hero = nil
     }
     
     static func invalid() -> PartySlot {
         let slot = PartySlot()
+        slot.isValid = false
         
         slot.hero = nil
         slot.item = nil
@@ -46,7 +84,7 @@ class PartySlot: GameObject {
 
 class Party {
     
-    private let slotCount = 3
+    let slotCount = 3
     private var slots: [PartySlot]
     
     init() {
@@ -67,7 +105,7 @@ class Party {
     func slot(atIndex index: Int) -> PartySlot {
         
         guard hasSlot(atIndex: index) else {
-            assertionFailure("(🚩) - tried to access hero at invalid index")
+            assertionFailure("(🚩) - tried to access PartySlot at invalid index")
             return PartySlot.invalid()
         }
         

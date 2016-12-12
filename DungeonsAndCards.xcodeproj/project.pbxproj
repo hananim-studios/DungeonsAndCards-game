@@ -14,7 +14,7 @@
 		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
 		C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */; };
 		C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */; };
-		C627A5C51DEDCB38002F6533 /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C627A5C41DEDCB38002F6533 /* ShopViewController.swift */; };
+		C627A5C51DEDCB38002F6533 /* ItemShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C627A5C41DEDCB38002F6533 /* ItemShopViewController.swift */; };
 		C64376131DF9AD1C00BAFDCA /* quest0.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375AE1DF9AD1C00BAFDCA /* quest0.png */; };
 		C64376141DF9AD1C00BAFDCA /* quest1.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375AF1DF9AD1C00BAFDCA /* quest1.png */; };
 		C64376151DF9AD1C00BAFDCA /* quest2.png in Resources */ = {isa = PBXBuildFile; fileRef = C64375B01DF9AD1C00BAFDCA /* quest2.png */; };
@@ -139,16 +139,17 @@
 		C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */; };
 		C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475661DE71C450081DA95 /* IntroViewController.swift */; };
 		C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = C684756E1DE7301F0081DA95 /* CustomSegue.swift */; };
-		C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475881DE85C130081DA95 /* ManagePartyViewController.swift */; };
+		C68475891DE85C130081DA95 /* HeroShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68475881DE85C130081DA95 /* HeroShopViewController.swift */; };
 		C6AD7AAC1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */; };
 		D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */; };
-		D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE691DEE48180046086C /* HeroCollectionView.swift */; };
+		D11BFE6A1DEE48180046086C /* DACCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE691DEE48180046086C /* DACCollectionView.swift */; };
 		D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE6B1DEE48290046086C /* HeroCell.swift */; };
 		D12677DC1DFC922A00DA93F9 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677DB1DFC922A00DA93F9 /* MainMenu.swift */; };
-		D12677DF1DFCA41300DA93F9 /* BaseGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677DE1DFCA41300DA93F9 /* BaseGameViewController.swift */; };
-		D12677E11DFCA5F500DA93F9 /* ManagePartyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677E01DFCA5F500DA93F9 /* ManagePartyContext.swift */; };
+		D12677E11DFCA5F500DA93F9 /* HeroShopContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677E01DFCA5F500DA93F9 /* HeroShopContext.swift */; };
 		D12677E41DFCA85900DA93F9 /* Context.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677E31DFCA85900DA93F9 /* Context.swift */; };
 		D12677E61DFCD93900DA93F9 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677E51DFCD93900DA93F9 /* GameObject.swift */; };
+		D12677E81DFDCFA900DA93F9 /* ItemShopContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677E71DFDCFA900DA93F9 /* ItemShopContext.swift */; };
+		D12677EC1DFE4AB800DA93F9 /* BattleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
@@ -158,9 +159,8 @@
 		D14EE1DE1DF992B500820FB5 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DD1DF992B500820FB5 /* ItemCell.xib */; };
 		D14EE1E01DF9A60C00820FB5 /* EnemyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */; };
 		D14EE1E21DF9A6AF00820FB5 /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */; };
-		D15155021DF8301400C25638 /* HeroHandCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15155011DF8301400C25638 /* HeroHandCell.xib */; };
+		D15155021DF8301400C25638 /* HeroShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15155011DF8301400C25638 /* HeroShopCell.xib */; };
 		D17445B91DF850C3000527F5 /* HeroPartyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17445B81DF850C3000527F5 /* HeroPartyCell.xib */; };
-		D18D660B1DF6DE5E00C68178 /* ItemCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */; };
 		D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E21DE5C4CC00E52C03 /* Game.swift */; };
 		D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E41DE5C4FB00E52C03 /* Party.swift */; };
 		D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E61DE5C52000E52C03 /* Hero.swift */; };
@@ -242,7 +242,7 @@
 		B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DungeonsAndCards.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRoman-Black.ttf"; sourceTree = "<group>"; };
 		C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MorrisRomanAlternate-Black.ttf"; sourceTree = "<group>"; };
-		C627A5C41DEDCB38002F6533 /* ShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		C627A5C41DEDCB38002F6533 /* ItemShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemShopViewController.swift; sourceTree = "<group>"; };
 		C64375AE1DF9AD1C00BAFDCA /* quest0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest0.png; sourceTree = "<group>"; };
 		C64375AF1DF9AD1C00BAFDCA /* quest1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest1.png; sourceTree = "<group>"; };
 		C64375B01DF9AD1C00BAFDCA /* quest2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest2.png; sourceTree = "<group>"; };
@@ -375,16 +375,17 @@
 		C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuViewController.swift; sourceTree = "<group>"; };
 		C68475661DE71C450081DA95 /* IntroViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		C684756E1DE7301F0081DA95 /* CustomSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
-		C68475881DE85C130081DA95 /* ManagePartyViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePartyViewController.swift; sourceTree = "<group>"; };
+		C68475881DE85C130081DA95 /* HeroShopViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroShopViewController.swift; sourceTree = "<group>"; };
 		C6AD7AAB1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScaledVisibleCellsCollectionView.swift; sourceTree = "<group>"; };
 		D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
-		D11BFE691DEE48180046086C /* HeroCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCollectionView.swift; sourceTree = "<group>"; };
+		D11BFE691DEE48180046086C /* DACCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DACCollectionView.swift; sourceTree = "<group>"; };
 		D11BFE6B1DEE48290046086C /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		D12677DB1DFC922A00DA93F9 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
-		D12677DE1DFCA41300DA93F9 /* BaseGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseGameViewController.swift; sourceTree = "<group>"; };
-		D12677E01DFCA5F500DA93F9 /* ManagePartyContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManagePartyContext.swift; sourceTree = "<group>"; };
+		D12677E01DFCA5F500DA93F9 /* HeroShopContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroShopContext.swift; sourceTree = "<group>"; };
 		D12677E31DFCA85900DA93F9 /* Context.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Context.swift; sourceTree = "<group>"; };
 		D12677E51DFCD93900DA93F9 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
+		D12677E71DFDCFA900DA93F9 /* ItemShopContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemShopContext.swift; sourceTree = "<group>"; };
+		D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleContext.swift; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E1C1DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -396,9 +397,8 @@
 		D14EE1DD1DF992B500820FB5 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
 		D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyView.xib; sourceTree = "<group>"; };
 		D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
-		D15155011DF8301400C25638 /* HeroHandCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroHandCell.xib; sourceTree = "<group>"; };
+		D15155011DF8301400C25638 /* HeroShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroShopCell.xib; sourceTree = "<group>"; };
 		D17445B81DF850C3000527F5 /* HeroPartyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroPartyCell.xib; sourceTree = "<group>"; };
-		D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCollectionView.swift; sourceTree = "<group>"; };
 		D1D014E21DE5C4CC00E52C03 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		D1D014E41DE5C4FB00E52C03 /* Party.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Party.swift; sourceTree = "<group>"; };
 		D1D014E61DE5C52000E52C03 /* Hero.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hero.swift; sourceTree = "<group>"; };
@@ -661,8 +661,7 @@
 				D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */,
 				D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */,
 				D15155001DF82FF600C25638 /* Cells */,
-				D11BFE691DEE48180046086C /* HeroCollectionView.swift */,
-				D18D660A1DF6DE5E00C68178 /* ItemCollectionView.swift */,
+				D11BFE691DEE48180046086C /* DACCollectionView.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -670,15 +669,14 @@
 		C68475701DE7344D0081DA95 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				D12677DE1DFCA41300DA93F9 /* BaseGameViewController.swift */,
-				C68475881DE85C130081DA95 /* ManagePartyViewController.swift */,
-				C684756E1DE7301F0081DA95 /* CustomSegue.swift */,
 				C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */,
+				C68475881DE85C130081DA95 /* HeroShopViewController.swift */,
+				C627A5C41DEDCB38002F6533 /* ItemShopViewController.swift */,
+				C68063701DF04CF7003ACD19 /* BattleViewController.swift */,
+				C684756E1DE7301F0081DA95 /* CustomSegue.swift */,
 				C68063741DF04DEC003ACD19 /* SettingsViewController.swift */,
 				C68063721DF04DDE003ACD19 /* AboutViewController.swift */,
 				C68475661DE71C450081DA95 /* IntroViewController.swift */,
-				C627A5C41DEDCB38002F6533 /* ShopViewController.swift */,
-				C68063701DF04CF7003ACD19 /* BattleViewController.swift */,
 				C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */,
 			);
 			name = Controller;
@@ -711,7 +709,9 @@
 			isa = PBXGroup;
 			children = (
 				D12677E31DFCA85900DA93F9 /* Context.swift */,
-				D12677E01DFCA5F500DA93F9 /* ManagePartyContext.swift */,
+				D12677E01DFCA5F500DA93F9 /* HeroShopContext.swift */,
+				D12677E71DFDCFA900DA93F9 /* ItemShopContext.swift */,
+				D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */,
 			);
 			name = Context;
 			sourceTree = "<group>";
@@ -773,7 +773,7 @@
 		D15155001DF82FF600C25638 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
-				D15155011DF8301400C25638 /* HeroHandCell.xib */,
+				D15155011DF8301400C25638 /* HeroShopCell.xib */,
 				D17445B81DF850C3000527F5 /* HeroPartyCell.xib */,
 				D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */,
 				D14EE1DD1DF992B500820FB5 /* ItemCell.xib */,
@@ -1135,7 +1135,7 @@
 				D1D12B391DF1AAD50045CE29 /* heroes.json in Resources */,
 				C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */,
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
-				D15155021DF8301400C25638 /* HeroHandCell.xib in Resources */,
+				D15155021DF8301400C25638 /* HeroShopCell.xib in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
 				D14EE1E01DF9A60C00820FB5 /* EnemyView.xib in Resources */,
 				D14EE1DC1DF992AE00820FB5 /* HeroItemCell.xib in Resources */,
@@ -1233,18 +1233,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D12677E81DFDCFA900DA93F9 /* ItemShopContext.swift in Sources */,
 				C68063711DF04CF7003ACD19 /* BattleViewController.swift in Sources */,
 				D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */,
-				D12677DF1DFCA41300DA93F9 /* BaseGameViewController.swift in Sources */,
 				D12677E41DFCA85900DA93F9 /* Context.swift in Sources */,
 				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
-				C68475891DE85C130081DA95 /* ManagePartyViewController.swift in Sources */,
+				C68475891DE85C130081DA95 /* HeroShopViewController.swift in Sources */,
 				D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */,
 				D12677DC1DFC922A00DA93F9 /* MainMenu.swift in Sources */,
 				D14EE1E21DF9A6AF00820FB5 /* EnemyView.swift in Sources */,
 				D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */,
-				D11BFE6A1DEE48180046086C /* HeroCollectionView.swift in Sources */,
-				C627A5C51DEDCB38002F6533 /* ShopViewController.swift in Sources */,
+				D11BFE6A1DEE48180046086C /* DACCollectionView.swift in Sources */,
+				D12677EC1DFE4AB800DA93F9 /* BattleContext.swift in Sources */,
+				C627A5C51DEDCB38002F6533 /* ItemShopViewController.swift in Sources */,
 				D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,
 				C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */,
@@ -1258,10 +1259,9 @@
 				D1D12B2D1DF1A7450045CE29 /* HeroShop.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
 				D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */,
-				D18D660B1DF6DE5E00C68178 /* ItemCollectionView.swift in Sources */,
 				D1D12B351DF1A7D00045CE29 /* Item.swift in Sources */,
 				C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */,
-				D12677E11DFCA5F500DA93F9 /* ManagePartyContext.swift in Sources */,
+				D12677E11DFCA5F500DA93F9 /* HeroShopContext.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,
 				D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */,

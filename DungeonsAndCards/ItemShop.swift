@@ -11,25 +11,48 @@ import SwiftyJSON
 
 class ItemShop {
     
-    var items : [Item] = []
+    let itemCount = 5
+    private var items : [Item]
     
-    init(){
+    init() {
         
-        print("creating new shelf of items...")
+        self.items = []
         
-        for i in 0...ItemsJSON.count()-1 {
-          
-            if let item = ItemsJSON.itemAtIndex(index:Int(i)) {
-                    items.append(item)
-                    print("  \(i) append '\(item.name)' succeeded")
-            }
+        for i in 0..<itemCount {
+            
+            items.append(ItemsJSON.itemAtIndex(index: i))
         }
-        
     }
     
-}
-
-class ItemBag {
+    func hasItem(atIndex index: Int) -> Bool {
+        return (0...items.count).contains(index)
+    }
     
-    var bag : [Item?] = [nil,nil,nil]    
+    func item(atIndex index: Int) -> Item {
+        
+        guard hasItem(atIndex: index) else {
+            assertionFailure("(🚩) - tried to access item at invalid index")
+            return Item.invalid()
+        }
+        
+        return items[index]
+    }
+    
+    var onSetItemAtIndex: ((Item, Int) -> Void)?
+    func setItem(_ item: Item, atIndex index: Int) {
+        
+        guard hasItem(atIndex: index) else {
+            
+            assertionFailure("(🚩) - tried to set item at invalid index")
+            return
+        }
+        
+        
+        items[index] = item
+    }
+    
+    func price(forHeroAtIndex index: Int) -> Int {
+        
+        return item(atIndex: index).price
+    }
 }

@@ -33,13 +33,13 @@ class ItemsJSON {
         }
     }
     
-    static func itemAtIndex(index: Int) -> Item? {
+    static func itemAtIndex(index: Int) -> Item {
         
         if let json = self.json {
             return Item(json: json["items"][index])
         }
         
-        return nil
+        return Item.invalid()
     }
     
     static func count() -> Int {

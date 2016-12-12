@@ -10,8 +10,8 @@ import UIKit
 
 class BattleViewController: UIViewController {
 
-    // Model
-    let game = Game.newGame()
+    //MARK - Model
+    var context: BattleContext!
     
     // MARK: - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -25,6 +25,8 @@ class BattleViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        assert(context != nil, "loaded without context")
+        
         partyCollectionView.register(UINib(nibName: "HeroItemCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroItemCell")
         partyCollectionView.dataSource = self
         partyCollectionView.dioDelegate = self
@@ -35,9 +37,6 @@ class BattleViewController: UIViewController {
         enemyView.frame = oldView!.frame
         oldView!.removeFromSuperview()
         self.view.addSubview(enemyView)
-        
-        
-        self.game.delegate = self
         
         updateGold()
     }
@@ -57,7 +56,7 @@ class BattleViewController: UIViewController {
     }
     
     func updateGold() {
-        self.goldButton.setTitle(self.game.money.description, for: .normal)
+        self.goldButton.setTitle(context.game.money.description, for: .normal)
     }
 
 }
@@ -69,7 +68,7 @@ extension BattleViewController: DIOCollectionViewDataSource, DIOCollectionViewDe
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, userDataForItemAtIndexPath indexPath: IndexPath) -> Any? {
         
         if dioCollectionView == partyCollectionView {
-            return self.game.party.slot(atIndex: indexPath.row).hero
+            return context.party.slot(atIndex: indexPath.row).getHero()
         }
         
         return nil
@@ -77,40 +76,16 @@ extension BattleViewController: DIOCollectionViewDataSource, DIOCollectionViewDe
     
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, shouldDragItemAtIndexPath indexPath: IndexPath) -> Bool {
         if dioCollectionView == partyCollectionView {
-            return self.game.party.slot(atIndex: indexPath.row).hasHero
+            return context.party.slot(atIndex: indexPath.row).hasHero
         }
         else {
             return true
         }
     }
     
-    func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView {
-        return UIImageView(image: UIImage(named: (dioCollectionView.cellForItem(at: indexPath) as! HeroCell).hero!.image))
-    }
-    
     // DIOCollectionView Delegate
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, draggedItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) {
         
-        guard let cell = partyCollectionView.cellForItem(at: indexPath) as? HeroCell else { return }
-        
-        switch(dragState) {
-        case .ended:
-            dioCollectionView.dragView?.removeFromSuperview()
-        default:
-            break
-        }
-        
-        if dioCollectionView == partyCollectionView {
-            switch(dragState) {
-            //case .ended:
-                
-                // - MARK: EVENT: PLAYER DISCARDED HERO
-                //self.game.dismissHero(hero: cell.hero!, atSlot: indexPath.row)
-                
-            default:
-                break
-            }
-        }
     }
 }
 
@@ -131,23 +106,12 @@ extension BattleViewController: UICollectionViewDataSource, UICollectionViewDele
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroItemCell",
                                                           for: indexPath) as! HeroItemCell
             
-            cell.setHero(self.game.party.slot(atIndex: indexPath.row).hero)
-            cell.setItem(self.game.party.slot(atIndex: indexPath.row).item)
+            cell.displayHero(context.party.slot(atIndex: indexPath.row).getHero())
+            cell.displayItem(context.party.slot(atIndex: indexPath.row).getItem())
             
             return cell
         }
         
         fatalError("collectionView not implemented")
-    }
-}
-
-extension BattleViewController: GameDelegate {
-    
-    func game(_ game: Game, changedGoldTo gold: Int) {
-        updateGold()
-    }
-    
-    func game(_ game: Game, didAttack slot: Int){
-        
     }
 }

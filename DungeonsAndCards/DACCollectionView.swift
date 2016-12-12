@@ -1,5 +1,5 @@
 //
-//  HeroCollectionView.swift
+//  DACCollectionView.swift
 //  DungeonsAndCards
 //
 //  Created by Matheus Martins on 11/29/16.
@@ -9,18 +9,18 @@
 import Foundation
 import UIKit
 
-protocol HeroCollectionViewDelegate {
+protocol DACCollectionViewDelegate {
     
-    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEnteredWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath)
+    func dacCollectionView(_ dacCollectionView: DACCollectionView, dragEnteredWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath)
     
-    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath)
+    func dacCollectionView(_ dacCollectionView: DACCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath)
     
-    func heroCollectionView(_ heroCollectionView: HeroCollectionView, dragEndedWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath)
+    func dacCollectionView(_ dacCollectionView: DACCollectionView, dragEndedWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath)
 }
 
-class HeroCollectionView : DIOCollectionView, DIOCollectionViewDestination {
+class DACCollectionView : DIOCollectionView, DIOCollectionViewDestination {
     
-    var heroDelegate: HeroCollectionViewDelegate?
+    var dacDelegate: DACCollectionViewDelegate?
     
     var receiveDrag: Bool = false
     
@@ -48,7 +48,7 @@ class HeroCollectionView : DIOCollectionView, DIOCollectionViewDestination {
     
     func handleDragEntered(dragInfo: DIODragInfo?, atLocation location: CGPoint) {
         if let indexPath = self.indexPathForItem(at: location) {
-            self.heroDelegate?.heroCollectionView(self, dragEnteredWithDragInfo: dragInfo, atIndexPath: indexPath)
+            self.dacDelegate?.dacCollectionView(self, dragEnteredWithDragInfo: dragInfo, atIndexPath: indexPath)
         }
     }
     
@@ -59,11 +59,11 @@ class HeroCollectionView : DIOCollectionView, DIOCollectionViewDestination {
             
             if(indexPath != self.lastIndexPathTarget) {
                 // if last drag was different
-                self.heroDelegate?.heroCollectionView(self, dragEnteredWithDragInfo: dragInfo, atIndexPath: indexPath)
+                self.dacDelegate?.dacCollectionView(self, dragEnteredWithDragInfo: dragInfo, atIndexPath: indexPath)
                 
                 if(self.lastIndexPathTarget.row != -1) {
                     
-                    //self.heroDelegate?.heroCollectionView(self, dragLeftWithDragInfo: dragInfo, atIndexPath: indexPath)
+                    //self.dacDelegate?.dacCollectionView(self, dragLeftWithDragInfo: dragInfo, atIndexPath: indexPath)
                 }
             }
             
@@ -73,7 +73,7 @@ class HeroCollectionView : DIOCollectionView, DIOCollectionViewDestination {
         // if drag is not over an item
             if(self.lastIndexPathTarget.row != -1) {
                 
-                self.heroDelegate?.heroCollectionView(self, dragLeftWithDragInfo: dragInfo, atIndexPath: self.lastIndexPathTarget)
+                self.dacDelegate?.dacCollectionView(self, dragLeftWithDragInfo: dragInfo, atIndexPath: self.lastIndexPathTarget)
                 
                 self.lastIndexPathTarget = IndexPath(row: -1, section: -1)
             }
@@ -82,7 +82,7 @@ class HeroCollectionView : DIOCollectionView, DIOCollectionViewDestination {
     
     func handleDragEnded(dragInfo: DIODragInfo?, atLocation location: CGPoint) {
         if let indexPath = self.indexPathForItem(at: location) {
-            self.heroDelegate?.heroCollectionView(self, dragEndedWithDragInfo: dragInfo, atIndexPath: indexPath)
+            self.dacDelegate?.dacCollectionView(self, dragEndedWithDragInfo: dragInfo, atIndexPath: indexPath)
         }
     }
 }

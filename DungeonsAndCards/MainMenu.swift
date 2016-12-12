@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol MainMenuDelegate {
+/*protocol MainMenuDelegate {
     func didStartGame(_ game: Game)
     func didContinueGame(_ game: Game)
 }
@@ -17,24 +17,26 @@ extension MainMenuDelegate {
     
     func didStartGame(_ game: Game)     {}
     func didContinueGame(_ game: Game)  {}
-}
+}*/
 
 class MainMenu {
     
-    var delegate: MainMenuDelegate?
+    //var delegate: MainMenuDelegate?
     
+    var onStartGame: ((Game) -> Void)?
     func startGame() {
         
         let game = Game.newGame()
         
-        delegate?.didStartGame(game)
+        onStartGame?(game)
     }
     
+    var onContinueGame: ((Game) -> Void)?
     func continueGame() {
         
-        let game = Game.newGame()
+        let game = Game.savedGame()
         
-        delegate?.didContinueGame(game)
+        onContinueGame?(game)
     }
 }
 

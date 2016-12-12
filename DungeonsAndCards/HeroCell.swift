@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HeroItemCell: HeroCell {
+class HeroItemCell: UICollectionViewCell {
     
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var healthLabel: UILabel!
@@ -19,36 +19,42 @@ class HeroItemCell: HeroCell {
     var item: Item?
     
     override func awakeFromNib() {
-        healthLabel.adjustsFontSizeToFitWidth = true
-        attackLabel.adjustsFontSizeToFitWidth = true
-    }
-    
-    override func setHero(_ hero: Hero?) {
         
-        super.setHero(hero)
-        
-        if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.image)
-            self.attackLabel.text = hero.attack.description
-            self.healthLabel.text = hero.health.description
-        } else {
-            self.heroImageView.image = nil
-            self.attackLabel.text = "?"
-            self.healthLabel.text = "?"
+        self.subviews.forEach {
+            $0.isHidden = true
         }
     }
     
-    func setItem(_ item: Item?) {
+    func displayHero(_ hero: Hero) {
         
-        if let item = item {
-            self.itemImageView.image = UIImage(named: item.image)
-        } else {
-            self.heroImageView.image = nil
+        self.subviews.forEach {
+            $0.isHidden = false
         }
+        
+        self.heroImageView.image = UIImage(named: hero.image)
+        self.attackLabel.text = hero.attack.description
+        self.healthLabel.text = hero.health.description
+    }
+    
+    func hideHero() {
+        
+        self.subviews.forEach {
+            $0.isHidden = true
+        }
+    }
+    
+    func displayItem(_ item: Item) {
+        
+        self.itemImageView.image = UIImage(named: item.image)
+    }
+    
+    func hideItem() {
+        
+        self.itemImageView.image = nil
     }
 }
 
-class HeroPartyCell: HeroCell {
+class HeroPartyCell: UICollectionViewCell {
 
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var healthLabel: UILabel!
@@ -56,27 +62,34 @@ class HeroPartyCell: HeroCell {
     @IBOutlet weak var heroImageView: UIImageView!
     
     override func awakeFromNib() {
+        self.subviews.forEach {
+            $0.isHidden = true
+        }
+        
         healthLabel.adjustsFontSizeToFitWidth = true
         attackLabel.adjustsFontSizeToFitWidth = true
     }
     
-    override func setHero(_ hero: Hero?) {
+    func displayHero(_ hero: Hero) {
         
-        super.setHero(hero)
+        self.subviews.forEach {
+            $0.isHidden = false
+        }
         
-        if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.image)
-            self.attackLabel.text = hero.attack.description
-            self.healthLabel.text = hero.health.description
-        } else {
-            self.heroImageView.image = nil
-            self.attackLabel.text = "?"
-            self.healthLabel.text = "?"
+        self.heroImageView.image = UIImage(named: hero.image)
+        self.attackLabel.text = hero.attack.description
+        self.healthLabel.text = hero.health.description
+    }
+    
+    func hideHero() {
+        
+        self.subviews.forEach {
+            $0.isHidden = true
         }
     }
 }
 
-class HeroHandCell: HeroCell {
+class HeroShopCell: UICollectionViewCell {
     
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var attackLabel: UILabel!
@@ -91,31 +104,12 @@ class HeroHandCell: HeroCell {
         attackLabel.adjustsFontSizeToFitWidth = true
     }
     
-    override func setHero(_ hero: Hero?) {
+    func displayHero(_ hero: Hero) {
         
-        super.setHero(hero)
-        
-        if let hero = hero {
-            self.heroImageView.image = UIImage(named: hero.image)
-            self.titleLabel.text = hero.name
-            self.attackLabel.text = hero.attack.description
-            self.healthLabel.text = hero.health.description
-            self.costLabel.text = hero.price.description
-        } else {
-            self.heroImageView.image = nil
-            self.titleLabel.text = "???"
-            self.attackLabel.text = "?"
-            self.healthLabel.text = "?"
-            self.costLabel.text = "?"
-        }
-    }
-}
-
-class HeroCell: UICollectionViewCell {
-    
-    weak var hero: Hero?
-
-    func setHero(_ hero: Hero?) {
-        self.hero = hero
+        self.heroImageView.image = UIImage(named: hero.image)
+        self.titleLabel.text = hero.name
+        self.attackLabel.text = hero.attack.description
+        self.healthLabel.text = hero.health.description
+        self.costLabel.text = hero.price.description
     }
 }

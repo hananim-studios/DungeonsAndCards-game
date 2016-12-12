@@ -11,13 +11,14 @@ import SwiftyJSON
 
 class HeroShop {
     
+    let heroCount = 5
     private var heroes : [Hero]
     
     init() {
         
         self.heroes = []
         
-        for i in 0...5 {
+        for i in 0..<heroCount {
             
             heroes.append(HeroesJSON.heroAtIndex(index: i))
         }
@@ -37,9 +38,17 @@ class HeroShop {
         return heroes[index]
     }
     
-    func set(hero: Hero, atIndex index: Int) {
+    var onSetHeroAtIndex: ((Hero, Int) -> Void)?
+    func setHero(_ hero: Hero, atIndex index: Int) {
+        
+        guard hasHero(atIndex: index) else {
+            
+            assertionFailure("(🚩) - tried to set hero at invalid index")
+            return
+        }
         
         heroes[index] = hero
+        onSetHeroAtIndex?(hero, index)
     }
     
     func price(forHeroAtIndex index: Int) -> Int {

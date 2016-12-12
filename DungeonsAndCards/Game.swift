@@ -9,7 +9,7 @@
 import Foundation
 import SwiftyJSON
 
-protocol GameDelegate {
+/*protocol GameDelegate {
     
     func game(_ game: Game, changedmoneyTo money: Int)
     
@@ -22,9 +22,9 @@ protocol GameDelegate {
     
     func game(_ game: Game, didAttack slot: Int)
     
-}
+}*/
 
-extension GameDelegate {
+/*extension GameDelegate {
     
     // money
     func game(_ game: Game, changedmoneyTo money: Int){
@@ -32,6 +32,7 @@ extension GameDelegate {
     
     // Hero
     func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int){
+        
     }
     func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int){
     }
@@ -48,7 +49,7 @@ extension GameDelegate {
     func game(_ game: Game, didAttack slot: Int){
     }
     
-}
+}*/
 
 class Game {
     
@@ -56,9 +57,15 @@ class Game {
         return UserDefaults.standard.bool(forKey: "hasSavedGame")
     }
     
-    var delegate: GameDelegate?
+    //var delegate: GameDelegate?
 
-    private(set) var money: Int = 200
+    var onMoneyChanged: ((Int) -> Void)?
+    private(set) var money: Int = 200 {
+        
+        didSet {
+            onMoneyChanged?(self.money)
+        }
+    }
     
     var dungeonLevel: Int = 0
     
@@ -82,7 +89,7 @@ class Game {
         return newGame
     }
     
-    static func savedGame() throws -> Game {
+    static func savedGame() -> Game {
         
         if Game.hasSavedGame {
             
@@ -90,7 +97,7 @@ class Game {
             return Game()
             
         } else {
-            assertionFailure("(🚩) called Game.saveGame(), but Game.hasSavedGame is false")
+            assertionFailure("(🚩) - called Game.saveGame(), but Game.hasSavedGame is false")
             
             // fallback to new game
             return Game.newGame()
@@ -99,6 +106,12 @@ class Game {
     
     func canSpendMoney(_ money: Int) -> Bool {
         return self.money >= money
+    }
+    
+    func spendMoney(_ money: Int) {
+        assert(canSpendMoney(money), "(🚩) - pre condition failed")
+        
+        self.money -= money
     }
     
 }
