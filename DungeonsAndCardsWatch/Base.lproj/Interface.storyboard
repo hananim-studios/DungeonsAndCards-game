@@ -28,7 +28,7 @@
                                                 <items>
                                                     <separator width="2" alignment="left" verticalAlignment="center" id="i18-YM-b9v"/>
                                                     <label width="98" height="0.90000000000000002" alignment="left" verticalAlignment="center" text="Label" numberOfLines="0" id="oCk-fM-99v">
-                                                        <fontDescription key="font" style="UICTFontTextStyleCaption2"/>
+                                                        <fontDescription key="font" type="system" pointSize="13"/>
                                                     </label>
                                                 </items>
                                             </group>

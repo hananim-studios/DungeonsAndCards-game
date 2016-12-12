@@ -36,9 +36,29 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
         populateTable(self.questsTable)
     }
     
+    //MARK: - QuestManagerDelegate Methods
+    func questRemoved(_ quest: Quest) {
+        var index: Int?
+        for element in self.array{
+            if element == quest {
+                index = self.array.index(of: element)
+            }
+        }
+        if let i = index {
+            self.array.remove(at: i)
+            print("Quest: \(quest.name) was removed from VIEW (size: \(self.array.count)")
+        }
+        populateTable(self.questsTable)
+    }
+    
+    func refillQuestArray(array: [Quest]) {
+        self.array.removeAll()
+        for quest in array {
+            self.array.append(quest)
+        }
+    }
+    
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double) {
-        
-        //Configuring Table Cells
         
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         
@@ -60,22 +80,28 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
                 case .tap:
                     nextValue = tap
                 }
-                print("current:\(nextValue!) , next:\(content.currentQuestObjective) ")
+                print("Quest: \(content.name)")
+                print("current:\(content.currentQuestObjective) , next:\(nextValue!) ")
+                print("Current%: \(Int(content.currentQuestObjective*100/content.questObjective)), next %: \(Int(nextValue!*100/content.questObjective))")
+                
                 if nextValue! > 0 && nextValue! != content.currentQuestObjective {
-                    controller.ringQuest.startAnimatingWithImages(in: NSMakeRange(Int(content.currentQuestObjective), Int(nextValue!)), duration: 0.5, repeatCount: 1)
+                    controller.ringQuest.startAnimatingWithImages(in:
+                        NSMakeRange(
+                            Int(content.completionPercentage*100),
+                            Int(nextValue!*100/content.questObjective)),
+                                                                  duration: 0.5,
+                                                                  repeatCount: 1)
                 }
             }
             else {
                 controller.mainLabel.setAlpha(0.5)
             }
-            
         }
     }
     
+    //MARK: - Convenience Methods
     func populateTable(_ table: WKInterfaceTable) {
-        
-        //Configuring Table Cells
-        
+                
         table.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         
         for (index, content) in self.array.enumerated() {
@@ -90,7 +116,6 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
             else {
                 controller.mainLabel.setAlpha(0.5)
             }
-            
         }
     }
 
