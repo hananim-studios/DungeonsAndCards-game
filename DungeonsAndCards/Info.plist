@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSHealthShareUsageDescription</key>
-	<string>share</string>
+	<string>We need it.</string>
 	<key>NSHealthUpdateUsageDescription</key>
-	<string>update</string>
+	<string>We need it too.</string>
 	<key>UIAppFonts</key>
 	<array>
 		<string>MorrisRoman-Black.ttf</string>

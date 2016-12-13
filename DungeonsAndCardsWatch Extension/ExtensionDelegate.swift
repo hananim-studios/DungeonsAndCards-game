@@ -8,6 +8,7 @@
 
 import WatchKit
 import WatchConnectivity
+import HealthKit
 
 class ExtensionDelegate: NSObject, WKExtensionDelegate {
     

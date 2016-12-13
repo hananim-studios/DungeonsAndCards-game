@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        self.requestAccessToHealthKit()
-        
         // MARK: - Watch Connectivity
         if WCSession.isSupported() {
             let defaultSession = WCSession.default()
             defaultSession.delegate = ConnectionManager.sharedConnectionManager
             defaultSession.activate()
         }
+        // MARK: - HealthKit
+        self.requestAccessToHealthKit()
         
         // MARK: - Load JSON
         if !HeroesJSON.load()   { fatalError("(☠) - HeroesJSON.load() failed") }

@@ -20,18 +20,20 @@ class HealthKitManager {
     public var timer = Timer()
     
     init(){
-
-        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(query), userInfo: nil, repeats: true)
         healthStore.requestAuthorization(toShare: [], read: [HKObjectType.activitySummaryType()]) { (success, error) in
+            
             if success {
                 print("success")
+            }else {
+                print(error!.localizedDescription)
             }
         }
+        
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(query), userInfo: nil, repeats: true)
     }
     
     //MARK: - Methods
     @objc func query() {
-        i += 20
         var components = Calendar.current.dateComponents([.day, .month, .year, .era], from: Date())
         components.calendar = Calendar.current
         let predicate = NSPredicate(format: "%K = %@", argumentArray: [HKPredicateKeyPathDateComponents, components])
@@ -42,9 +44,9 @@ class HealthKitManager {
             if let summary = summaries?.first {
                 DispatchQueue.main.async {
                     self.delegate?.didUpdateSummary(
-                    withExercise: self.i*0.3/*summary.appleExerciseTime.doubleValue(for: HKUnit.hour())*/,
-                    Move: self.i*0.5/*summary.activeEnergyBurned.doubleValue(for: HKUnit.calorie())*/,
-                    Stand: self.i*0.7/*summary.appleStandHours.doubleValue(for: HKUnit.count())*/,
+                    withExercise: summary.appleExerciseTime.doubleValue(for: HKUnit.hour()),
+                    Move: summary.activeEnergyBurned.doubleValue(for: HKUnit.calorie()),
+                    Stand: summary.appleStandHours.doubleValue(for: HKUnit.count()),
                     andTap: self.i)
                 }
             }
