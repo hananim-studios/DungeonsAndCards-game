@@ -41,8 +41,8 @@
                             <constraint firstAttribute="height" constant="29" id="sBF-iI-ZTU"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orO-K6-8Km" userLabel="Name Label">
-                        <rect key="frame" x="33.5" y="4.5" width="97.5" height="20.5"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD NAME" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="orO-K6-8Km" userLabel="Name Label">
+                        <rect key="frame" x="0.5" y="0.0" width="164" height="29"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -94,16 +94,18 @@
                 <constraint firstItem="jt7-rf-6L4" firstAttribute="centerX" secondItem="mXF-HZ-ff6" secondAttribute="centerX" id="HP0-Qq-Qkh"/>
                 <constraint firstItem="p8F-Wg-2sM" firstAttribute="width" secondItem="xpO-IL-rEQ" secondAttribute="width" id="IxH-cM-mxJ"/>
                 <constraint firstItem="fWj-lK-pVA" firstAttribute="centerX" secondItem="Tjn-Lt-x4s" secondAttribute="centerX" id="KcP-0y-qRz"/>
-                <constraint firstItem="orO-K6-8Km" firstAttribute="bottom" secondItem="p8F-Wg-2sM" secondAttribute="bottom" constant="-4" id="Mdo-fR-txe"/>
                 <constraint firstItem="xpO-IL-rEQ" firstAttribute="centerX" secondItem="qdy-sD-16J" secondAttribute="centerX" id="Ocb-GU-8U9"/>
+                <constraint firstItem="orO-K6-8Km" firstAttribute="centerX" secondItem="p8F-Wg-2sM" secondAttribute="centerX" id="PAj-6k-UNw"/>
                 <constraint firstItem="jt7-rf-6L4" firstAttribute="height" secondItem="mXF-HZ-ff6" secondAttribute="height" id="UVc-az-kW6"/>
                 <constraint firstItem="xpO-IL-rEQ" firstAttribute="width" secondItem="qdy-sD-16J" secondAttribute="width" id="XLi-hb-gdT"/>
-                <constraint firstItem="orO-K6-8Km" firstAttribute="centerX" secondItem="p8F-Wg-2sM" secondAttribute="centerX" id="bZ1-Ok-ByT"/>
+                <constraint firstItem="orO-K6-8Km" firstAttribute="height" secondItem="p8F-Wg-2sM" secondAttribute="height" id="XbN-lk-fmA"/>
+                <constraint firstItem="orO-K6-8Km" firstAttribute="width" secondItem="p8F-Wg-2sM" secondAttribute="width" id="bfR-zp-7Wo"/>
                 <constraint firstItem="jt7-rf-6L4" firstAttribute="centerY" secondItem="mXF-HZ-ff6" secondAttribute="centerY" id="cXr-Dv-9Sd"/>
                 <constraint firstItem="Tjn-Lt-x4s" firstAttribute="bottom" secondItem="xpO-IL-rEQ" secondAttribute="bottom" id="e9J-fB-uVS"/>
                 <constraint firstItem="fWj-lK-pVA" firstAttribute="width" secondItem="Tjn-Lt-x4s" secondAttribute="width" id="ef0-mt-HCx"/>
                 <constraint firstItem="jt7-rf-6L4" firstAttribute="width" secondItem="mXF-HZ-ff6" secondAttribute="width" id="oNL-8I-MvO"/>
                 <constraint firstItem="fWj-lK-pVA" firstAttribute="height" secondItem="Tjn-Lt-x4s" secondAttribute="height" id="oPY-08-Daa"/>
+                <constraint firstItem="orO-K6-8Km" firstAttribute="centerY" secondItem="p8F-Wg-2sM" secondAttribute="centerY" id="orO-AT-grX"/>
                 <constraint firstItem="mXF-HZ-ff6" firstAttribute="width" secondItem="xpO-IL-rEQ" secondAttribute="width" multiplier="0.45" id="pQd-7k-0Yh"/>
                 <constraint firstItem="xpO-IL-rEQ" firstAttribute="centerY" secondItem="qdy-sD-16J" secondAttribute="centerY" id="qaY-zZ-gmP"/>
                 <constraint firstItem="p8F-Wg-2sM" firstAttribute="centerX" secondItem="xpO-IL-rEQ" secondAttribute="centerX" id="v21-Oc-TzP"/>

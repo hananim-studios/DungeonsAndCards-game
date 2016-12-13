@@ -76,48 +76,19 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v3l-eL-nmu">
-                                <rect key="frame" x="222" y="72" width="42" height="41"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="0al-OD-YxB"/>
-                                </constraints>
-                                <state key="normal" backgroundImage="gold"/>
-                                <connections>
-                                    <segue destination="Rlh-ow-zwy" kind="presentation" modalTransitionStyle="crossDissolve" id="vGR-iZ-eVp"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="MD4-ig-Lau">
-                                <rect key="frame" x="272" y="77" width="32" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="akN-wx-UBI"/>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="200" id="rf3-mS-1Wb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
-                                <state key="normal" title="90">
-                                    <color key="titleColor" red="0.98937231299999995" green="0.80151832099999998" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <segue destination="Rlh-ow-zwy" kind="presentation" modalTransitionStyle="crossDissolve" id="JLT-zk-oOh"/>
-                                </connections>
-                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="0.61553276909999999" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3fC-2p-l22" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="13" id="3Fr-sb-C8T"/>
                             <constraint firstItem="3fC-2p-l22" firstAttribute="top" secondItem="T7G-fG-TE2" secondAttribute="bottom" constant="112" id="60u-U7-nZd"/>
-                            <constraint firstItem="v3l-eL-nmu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="BNg-og-KOh"/>
-                            <constraint firstItem="MD4-ig-Lau" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="Cfc-dq-vmi"/>
                             <constraint firstItem="DXl-uc-JT9" firstAttribute="centerX" secondItem="jxQ-1i-emc" secondAttribute="centerX" id="MZI-2O-J6N"/>
-                            <constraint firstItem="v3l-eL-nmu" firstAttribute="centerY" secondItem="MD4-ig-Lau" secondAttribute="centerY" id="UmJ-TD-dZ2"/>
                             <constraint firstItem="jxQ-1i-emc" firstAttribute="top" secondItem="1Yp-4K-GHd" secondAttribute="bottom" constant="8" symbolic="YES" id="Umh-br-FJF"/>
                             <constraint firstItem="3fC-2p-l22" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aQa-c3-DMp"/>
                             <constraint firstItem="T7G-fG-TE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="dYS-8D-MRd"/>
                             <constraint firstItem="1Yp-4K-GHd" firstAttribute="top" secondItem="3fC-2p-l22" secondAttribute="bottom" constant="9" id="ebv-ra-aSx"/>
-                            <constraint firstItem="MD4-ig-Lau" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="13" id="ffz-qH-RNR"/>
                             <constraint firstItem="1Yp-4K-GHd" firstAttribute="centerX" secondItem="3fC-2p-l22" secondAttribute="centerX" id="fjs-rU-wL0"/>
                             <constraint firstItem="jxQ-1i-emc" firstAttribute="centerX" secondItem="1Yp-4K-GHd" secondAttribute="centerX" id="gkr-vS-8Yt"/>
                             <constraint firstItem="DXl-uc-JT9" firstAttribute="top" secondItem="jxQ-1i-emc" secondAttribute="bottom" constant="8" symbolic="YES" id="mnt-CC-GH0"/>
-                            <constraint firstItem="MD4-ig-Lau" firstAttribute="leading" secondItem="v3l-eL-nmu" secondAttribute="trailing" constant="8" symbolic="YES" id="pDp-To-ehs"/>
                             <constraint firstAttribute="trailingMargin" secondItem="T7G-fG-TE2" secondAttribute="trailing" constant="8" id="xvs-3p-lf1"/>
                         </constraints>
                     </view>
@@ -222,7 +193,7 @@
                                     <constraint firstAttribute="width" constant="228" id="S2x-w5-3g0"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-uX-hm4" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="8Jl-uX-hm4" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="191" width="328" height="244"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="dr1-Ex-phX">
@@ -233,7 +204,7 @@
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-IU-X1n" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="N6N-IU-X1n" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="65" width="328" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="BXH-Ds-2H0">
@@ -479,7 +450,7 @@ find a TREASURE</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ui-x5-1YM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="tIt-mW-LeJ">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tIt-mW-LeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -573,8 +544,8 @@ find a TREASURE</string>
                                     <constraint firstAttribute="height" constant="37" id="rec-Ar-YdI"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-Ej-fsL" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="312.5" width="328" height="122.5"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-Ej-fsL" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="313" width="328" height="122"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wgw-t3-QXc">
                                     <size key="itemSize" width="137" height="216"/>
@@ -584,8 +555,8 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-B0-9Wg" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="63" width="328" height="245.5"/>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-B0-9Wg" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="63" width="328" height="246"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v4Y-fJ-z3o">
                                     <size key="itemSize" width="88" height="133"/>
@@ -670,28 +641,28 @@ find a TREASURE</string>
             <point key="canvasLocation" x="2450.625" y="907.5"/>
         </scene>
         <!--Battle View Controller-->
-        <scene sceneID="uRx-Tz-hHB">
+        <scene sceneID="cBs-to-lU4">
             <objects>
-                <viewController storyboardIdentifier="battle" id="A59-hp-s9u" customClass="BattleViewController" customModule="DungeonsAndCards" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="battle" id="Lud-wM-CQN" customClass="BattleViewController" customModule="DungeonsAndCards" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="nQd-Zo-CML"/>
-                        <viewControllerLayoutGuide type="bottom" id="aTF-Ao-g5r"/>
+                        <viewControllerLayoutGuide type="top" id="8Re-P8-6QJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="ruH-Cp-ZGr"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="M7a-WA-YvW">
+                    <view key="view" contentMode="scaleToFill" id="b0D-iA-rY1">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barBattle" translatesAutoresizingMaskIntoConstraints="NO" id="njK-3Y-fZM">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barBattle" translatesAutoresizingMaskIntoConstraints="NO" id="SIT-0D-yvI">
                                 <rect key="frame" x="46" y="439" width="228" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="228" id="L4W-V6-paa"/>
-                                    <constraint firstAttribute="height" constant="37" id="sF9-Ze-TFD"/>
+                                    <constraint firstAttribute="width" constant="228" id="N2Z-O6-jrY"/>
+                                    <constraint firstAttribute="height" constant="37" id="aPe-h8-8Gv"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZfH-RI-sIK" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-OS-rg9" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="251" width="328" height="184"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="e0h-A4-907">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0S9-Z8-PDG">
                                     <size key="itemSize" width="137" height="216"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -699,10 +670,10 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="g1z-cO-a02" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0fB-Ic-P4j" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
                                 <rect key="frame" x="-4" y="63" width="328" height="184"/>
                                 <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="8be-xv-0OX">
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zuj-Wv-wCX">
                                     <size key="itemSize" width="88" height="133"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
@@ -710,78 +681,75 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gSF-Ck-KXc">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-q5-S4W">
                                 <rect key="frame" x="115" y="22" width="91" height="37"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="KcQ-n4-XBu"/>
-                                    <constraint firstAttribute="height" constant="37" id="uuI-Ja-3e0"/>
+                                    <constraint firstAttribute="width" constant="91" id="IGg-MH-LH1"/>
+                                    <constraint firstAttribute="height" constant="37" id="vBU-r1-hmn"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XkZ-cs-LQl">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4x-JV-i0H">
                                 <rect key="frame" x="63" y="439" width="59" height="37"/>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
                                 <state key="normal" title="Next">
-                                    <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="x4F-FZ-mpG">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sO8-TX-PVq">
                                 <rect key="frame" x="248" y="20" width="66" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="asd-xg-K7f"/>
+                                    <constraint firstAttribute="height" constant="30" id="nW1-lk-OyA"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
                                 <state key="normal" title="2000">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3e-8i-iAN">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-hT-Gh9">
                                 <rect key="frame" x="216" y="20" width="30" height="30"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="30" id="7cT-ks-Bkb"/>
+                                    <constraint firstAttribute="width" constant="30" id="WPw-Cs-Bgc"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="money"/>
-                                <connections>
-                                    <action selector="goldButtonPressed:" destination="ds4-Wv-P3J" eventType="touchUpInside" id="ylh-aI-X4f"/>
-                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="gSF-Ck-KXc" firstAttribute="centerX" secondItem="M7a-WA-YvW" secondAttribute="centerX" id="5J3-IF-ndl"/>
-                            <constraint firstItem="XkZ-cs-LQl" firstAttribute="centerY" secondItem="njK-3Y-fZM" secondAttribute="centerY" id="8qi-I0-Obw"/>
-                            <constraint firstItem="ZfH-RI-sIK" firstAttribute="height" secondItem="g1z-cO-a02" secondAttribute="height" id="Acq-qm-arr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="g1z-cO-a02" secondAttribute="trailing" constant="-20" id="CJg-fV-SCX"/>
-                            <constraint firstItem="njK-3Y-fZM" firstAttribute="centerX" secondItem="M7a-WA-YvW" secondAttribute="centerX" id="HYm-Hx-Bef"/>
-                            <constraint firstItem="XkZ-cs-LQl" firstAttribute="leading" secondItem="njK-3Y-fZM" secondAttribute="leading" constant="17" id="IbQ-cU-GYi"/>
-                            <constraint firstItem="x4F-FZ-mpG" firstAttribute="top" secondItem="nQd-Zo-CML" secondAttribute="bottom" id="N9h-RM-3qr"/>
-                            <constraint firstAttribute="leadingMargin" secondItem="g1z-cO-a02" secondAttribute="leading" constant="20" id="PFM-sX-zCo"/>
-                            <constraint firstItem="ZfH-RI-sIK" firstAttribute="leading" secondItem="M7a-WA-YvW" secondAttribute="leadingMargin" constant="-20" id="RpA-TQ-rMN"/>
-                            <constraint firstItem="XkZ-cs-LQl" firstAttribute="height" secondItem="njK-3Y-fZM" secondAttribute="height" id="VM9-hc-ffV"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="njK-3Y-fZM" secondAttribute="bottom" constant="4" id="Xlt-Nv-eK7"/>
-                            <constraint firstItem="gSF-Ck-KXc" firstAttribute="top" secondItem="nQd-Zo-CML" secondAttribute="bottom" constant="2" id="ZbV-qo-64R"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ZfH-RI-sIK" secondAttribute="trailing" constant="-20" id="ZyI-uY-USq"/>
-                            <constraint firstItem="ZfH-RI-sIK" firstAttribute="top" secondItem="g1z-cO-a02" secondAttribute="bottom" constant="4" id="ajS-el-c5a"/>
-                            <constraint firstItem="x4F-FZ-mpG" firstAttribute="leading" secondItem="r3e-8i-iAN" secondAttribute="trailing" constant="2" id="eC3-eE-2oU"/>
-                            <constraint firstItem="njK-3Y-fZM" firstAttribute="top" secondItem="ZfH-RI-sIK" secondAttribute="bottom" constant="4" id="m4A-52-zIy"/>
-                            <constraint firstItem="r3e-8i-iAN" firstAttribute="top" secondItem="nQd-Zo-CML" secondAttribute="bottom" id="nV0-ur-b2H"/>
-                            <constraint firstItem="g1z-cO-a02" firstAttribute="top" secondItem="gSF-Ck-KXc" secondAttribute="bottom" constant="4" id="qCX-Vd-mqd"/>
-                            <constraint firstItem="r3e-8i-iAN" firstAttribute="height" secondItem="x4F-FZ-mpG" secondAttribute="height" id="xPG-YF-f5B"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="x4F-FZ-mpG" secondAttribute="trailing" constant="-10" id="yvP-Cg-i5C"/>
+                            <constraint firstItem="B4x-JV-i0H" firstAttribute="leading" secondItem="SIT-0D-yvI" secondAttribute="leading" constant="17" id="1U5-i8-3oZ"/>
+                            <constraint firstItem="JtI-OS-rg9" firstAttribute="top" secondItem="0fB-Ic-P4j" secondAttribute="bottom" constant="4" id="2WT-6a-dQL"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="0fB-Ic-P4j" secondAttribute="trailing" constant="-20" id="5bt-1a-LC3"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="0fB-Ic-P4j" secondAttribute="leading" constant="20" id="5zm-6e-RcM"/>
+                            <constraint firstItem="0fB-Ic-P4j" firstAttribute="top" secondItem="iOb-q5-S4W" secondAttribute="bottom" constant="4" id="Ask-k5-bed"/>
+                            <constraint firstItem="sO8-TX-PVq" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" id="DAn-q8-2tD"/>
+                            <constraint firstItem="iOb-q5-S4W" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" constant="2" id="G0u-Lz-Oz5"/>
+                            <constraint firstItem="B4x-JV-i0H" firstAttribute="height" secondItem="SIT-0D-yvI" secondAttribute="height" id="IKX-U2-ZXA"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="JtI-OS-rg9" secondAttribute="trailing" constant="-20" id="KFY-bH-TXq"/>
+                            <constraint firstItem="sO8-TX-PVq" firstAttribute="leading" secondItem="HCc-hT-Gh9" secondAttribute="trailing" constant="2" id="VHX-nR-R9u"/>
+                            <constraint firstItem="iOb-q5-S4W" firstAttribute="centerX" secondItem="b0D-iA-rY1" secondAttribute="centerX" id="Z3O-Ch-B6U"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SIT-0D-yvI" secondAttribute="bottom" constant="4" id="ZO1-Aa-Tqu"/>
+                            <constraint firstItem="HCc-hT-Gh9" firstAttribute="height" secondItem="sO8-TX-PVq" secondAttribute="height" id="cpO-mM-fCo"/>
+                            <constraint firstItem="SIT-0D-yvI" firstAttribute="top" secondItem="JtI-OS-rg9" secondAttribute="bottom" constant="4" id="eH4-dN-eLf"/>
+                            <constraint firstItem="JtI-OS-rg9" firstAttribute="leading" secondItem="b0D-iA-rY1" secondAttribute="leadingMargin" constant="-20" id="fZP-Bl-EW8"/>
+                            <constraint firstItem="SIT-0D-yvI" firstAttribute="centerX" secondItem="b0D-iA-rY1" secondAttribute="centerX" id="guX-QF-Hc0"/>
+                            <constraint firstItem="HCc-hT-Gh9" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" id="sgu-Z4-FdQ"/>
+                            <constraint firstItem="JtI-OS-rg9" firstAttribute="height" secondItem="0fB-Ic-P4j" secondAttribute="height" id="sqG-M0-gWD"/>
+                            <constraint firstItem="B4x-JV-i0H" firstAttribute="centerY" secondItem="SIT-0D-yvI" secondAttribute="centerY" id="toU-ij-Mp5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="sO8-TX-PVq" secondAttribute="trailing" constant="-10" id="uWQ-Nk-aJm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="urD-Dr-Ldp"/>
+                    <navigationItem key="navigationItem" id="6pz-Mn-dGj"/>
                     <connections>
-                        <outlet property="battleCollectionView" destination="g1z-cO-a02" id="xsG-V1-ZOi"/>
-                        <outlet property="goldButton" destination="x4F-FZ-mpG" id="kom-dl-lko"/>
-                        <outlet property="partyCollectionView" destination="ZfH-RI-sIK" id="PGp-ZA-42N"/>
+                        <outlet property="battleCollectionView" destination="0fB-Ic-P4j" id="KAV-8h-PFq"/>
+                        <outlet property="goldButton" destination="sO8-TX-PVq" id="6wT-Fa-qXJ"/>
+                        <outlet property="partyCollectionView" destination="JtI-OS-rg9" id="iGh-bT-vkZ"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="v7V-r8-zvh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9AX-3o-vOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3069.375" y="907.5"/>
+            <point key="canvasLocation" x="3066" y="906"/>
         </scene>
     </scenes>
     <resources>
@@ -789,10 +757,6 @@ find a TREASURE</string>
         <image name="barHeroShop" width="6215" height="1004"/>
         <image name="barItemShop" width="6215" height="1004"/>
         <image name="door" width="800" height="600"/>
-        <image name="gold" width="132" height="128"/>
         <image name="money" width="1764" height="1763"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="vGR-iZ-eVp"/>
-    </inferredMetricsTieBreakers>
 </document>
