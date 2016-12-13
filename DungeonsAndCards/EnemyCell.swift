@@ -18,6 +18,7 @@ class EnemyCell: UICollectionViewCell {
     @IBOutlet weak var enemyImageView: UIImageView!
     
     override func awakeFromNib() {
+        
         titleLabel.adjustsFontSizeToFitWidth = true
         healthLabel.adjustsFontSizeToFitWidth = true
         attackLabel.adjustsFontSizeToFitWidth = true

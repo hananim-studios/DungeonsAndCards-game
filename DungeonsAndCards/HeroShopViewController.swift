@@ -83,8 +83,8 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
     }
     override func viewDidAppear(_ animated: Bool) {
         
-        partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
-        shopCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
+        partyCollectionView.scrollToItem(at: IndexPath.init(row:partyCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
+        shopCollectionView.scrollToItem(at: IndexPath.init(row:shopCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
     }
     
     override func viewDidLoad() {
@@ -92,7 +92,7 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         
         assert(context != nil, "loaded without context")
         
-        shopCollectionView.backgroundColor = UIColor.clear
+        //shopCollectionView.backgroundColor = UIColor.clear
         shopCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 2.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
         
         shopCollectionView.delegate = self
@@ -101,7 +101,7 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         shopCollectionView.dioDelegate = self
         shopCollectionView.register(UINib(nibName: "HeroShopCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroShopCell")
         
-        partyCollectionView.backgroundColor = UIColor.clear
+        //partyCollectionView.backgroundColor = UIColor.clear
         partyCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 1.0, minScale: 1.0, maxAlpha: 1.0, minAlpha: 1.0)
         
         partyCollectionView.delegate = self
@@ -222,12 +222,6 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         }
         
         return CGSize.zero
-    }
-    
-    //MARK - ScrollView Delegates
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        shopCollectionView.scaledVisibleCells()
-        partyCollectionView.scaledVisibleCells()
     }
     
     // MARK: - Navigation

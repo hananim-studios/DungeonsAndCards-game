@@ -89,8 +89,8 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
         self.shopCollectionView.reloadData()
         self.shopCollectionView.layoutIfNeeded()
         
-        partyCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
-        shopCollectionView.scrollToItem(at: IndexPath.init(row: 1, section: 0), at: .centeredHorizontally, animated: false)
+        partyCollectionView.scrollToItem(at: IndexPath.init(row:partyCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
+        shopCollectionView.scrollToItem(at: IndexPath.init(row:shopCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
     }
     
     override func viewDidLoad() {
@@ -98,7 +98,7 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
         
         assert(context != nil, "loaded without context")
         
-        shopCollectionView.backgroundColor = UIColor.clear
+        //shopCollectionView.backgroundColor = UIColor.clear
         shopCollectionView.setScaledDesginParam(scaledPattern: .HorizontalCenter, maxScale: 2.2, minScale: 0.8, maxAlpha: 1.0, minAlpha: 0.85)
         
         shopCollectionView.delegate = self
@@ -227,17 +227,6 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        if collectionView == partyCollectionView {
-            // size of party cell
-            //let width = collectionView.bounds.width
-            //let height = 0.9*collectionView.bounds.height
-            //return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
-            
-            let height = 0.9*collectionView.frame.height
-            
-            return CGSize(width: height/3, height: height)
-        }
-        
         if collectionView == shopCollectionView {
             // size of hand cell
             //let width = collectionView.bounds.width
@@ -245,7 +234,18 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
             //return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
             let height = 0.9*collectionView.bounds.height
             
-            return CGSize(width: height, height: height)
+            return CGSize(width: height/2, height: height)
+        }
+        
+        if collectionView == partyCollectionView {
+            // size of party cell
+            //let width = collectionView.bounds.width
+            //let height = 0.9*collectionView.bounds.height
+            //return CGSize(width: CGFloat(Float(width)/Float(3)), height: height)
+            
+            let height = 0.9*collectionView.bounds.height
+            
+            return CGSize(width: height/2, height: height)
         }
         
         return CGSize.zero

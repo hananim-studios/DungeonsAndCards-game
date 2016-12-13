@@ -12,6 +12,7 @@ enum BattleResponse {
     
     case noHeroAtPartyIndex
     case noItemAtPartyIndex
+    case noEnemy
     case success
 }
 
@@ -26,9 +27,15 @@ class BattleContext: Context {
             return .noHeroAtPartyIndex
         }
         
+        guard battle.hasEnemy else {
+            
+            return .noEnemy
+        }
+        
         return .success
     }
     
+    var onAttackEnemyWithHeroAtIndex: ((Int) -> Void)?
     func attackEnemy(withHeroAtIndex index: Int) {
         
         assert(canAttackEnemy(withHeroAtIndex: index) == .success,
@@ -42,6 +49,8 @@ class BattleContext: Context {
         
         if e.health <= 0 { killCurrentEnemy()       }
         if h.health <= 0 { killHero(atIndex: index) }
+        
+        onAttackEnemyWithHeroAtIndex?(index)
     }
     
     func canUseItem(atIndex index: Int) -> BattleResponse {

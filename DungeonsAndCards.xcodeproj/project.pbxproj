@@ -150,7 +150,7 @@
 		D12677EC1DFE4AB800DA93F9 /* BattleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */; };
 		D12677EE1DFECA2F00DA93F9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677ED1DFECA2F00DA93F9 /* Battle.swift */; };
 		D13003661DFF3B0400E70F6D /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13003651DFF3B0400E70F6D /* BattleViewController.swift */; };
-		D13003691DFF3B7B00E70F6D /* EnemyBattleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13003681DFF3B7B00E70F6D /* EnemyBattleCell.xib */; };
+		D13003691DFF3B7B00E70F6D /* EnemyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13003681DFF3B7B00E70F6D /* EnemyCell.xib */; };
 		D130036B1DFF8D2A00E70F6D /* EnemyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130036A1DFF8D2A00E70F6D /* EnemyCell.swift */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
@@ -386,7 +386,7 @@
 		D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleContext.swift; sourceTree = "<group>"; };
 		D12677ED1DFECA2F00DA93F9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
 		D13003651DFF3B0400E70F6D /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
-		D13003681DFF3B7B00E70F6D /* EnemyBattleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyBattleCell.xib; sourceTree = "<group>"; };
+		D13003681DFF3B7B00E70F6D /* EnemyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyCell.xib; sourceTree = "<group>"; };
 		D130036A1DFF8D2A00E70F6D /* EnemyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyCell.swift; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -415,6 +415,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		18EADD8B5E1C37D2B5971F12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		C68475251DE714290081DA95 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -774,7 +781,7 @@
 				D15155011DF8301400C25638 /* HeroShopCell.xib */,
 				D17445B81DF850C3000527F5 /* HeroPartyCell.xib */,
 				D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */,
-				D13003681DFF3B7B00E70F6D /* EnemyBattleCell.xib */,
+				D13003681DFF3B7B00E70F6D /* EnemyCell.xib */,
 				D14EE1DD1DF992B500820FB5 /* ItemCell.xib */,
 				D11BFE6B1DEE48290046086C /* HeroCell.swift */,
 				D14EE1D91DF992A500820FB5 /* ItemCell.swift */,
@@ -842,6 +849,7 @@
 			buildPhases = (
 				C684751A1DE714290081DA95 /* Resources */,
 				C68475421DE714290081DA95 /* Embed App Extensions */,
+				18EADD8B5E1C37D2B5971F12 /* Frameworks */,
 			);
 			buildRules = (
 			);
@@ -968,6 +976,7 @@
 					D14E4E131DDF493A002A0ED0 = {
 						CreatedOnToolsVersion = 8.1;
 						DevelopmentTeam = 526YR6WHWC;
+						LastSwiftMigration = 0810;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -1142,7 +1151,7 @@
 				D14EE1DE1DF992B500820FB5 /* ItemCell.xib in Resources */,
 				14973A351DF8459600FDFC8E /* enemies.json in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
-				D13003691DFF3B7B00E70F6D /* EnemyBattleCell.xib in Resources */,
+				D13003691DFF3B7B00E70F6D /* EnemyCell.xib in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1177,7 +1186,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		B5EC3D1E56EB5EA3403462E1 /* [CP] Embed Pods Frameworks */ = {
@@ -1554,12 +1563,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCards/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -1570,6 +1581,7 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = 526YR6WHWC;
 				INFOPLIST_FILE = DungeonsAndCards/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;

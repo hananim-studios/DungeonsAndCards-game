@@ -20,7 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Watch Connectivity
         if WCSession.isSupported() {
             let defaultSession = WCSession.default()
-            defaultSession.delegate = ConnectionManager.sharedConnectionManager
+            //defaultSession.delegate = ConnectionManager.sharedConnectionManager
             defaultSession.activate()
         }
         
