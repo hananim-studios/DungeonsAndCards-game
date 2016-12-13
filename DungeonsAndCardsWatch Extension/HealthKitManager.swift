@@ -17,10 +17,11 @@ class HealthKitManager {
     var i: Double = 0
     var delegate:HeathKitManagerDelegate?
     let healthStore = HKHealthStore()
+    public var timer = Timer()
     
     init(){
-        Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(query), userInfo: nil, repeats: true)
-        
+
+        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(query), userInfo: nil, repeats: true)
         healthStore.requestAuthorization(toShare: [], read: [HKObjectType.activitySummaryType()]) { (success, error) in
             if success {
                 print("success")
@@ -30,7 +31,7 @@ class HealthKitManager {
     
     //MARK: - Methods
     @objc func query() {
-        i += 10
+        i += 20
         var components = Calendar.current.dateComponents([.day, .month, .year, .era], from: Date())
         components.calendar = Calendar.current
         let predicate = NSPredicate(format: "%K = %@", argumentArray: [HKPredicateKeyPathDateComponents, components])

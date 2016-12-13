@@ -12,6 +12,8 @@ protocol QuestManagerDelegate {
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double)
     func questRemoved(_ quest: Quest)
     func refillQuestArray( array: [Quest])
+    func questSorted(quest: Quest)
+    func didInvalidateTimer()
 }
 
 class QuestManager: HeathKitManagerDelegate {
@@ -38,22 +40,30 @@ class QuestManager: HeathKitManagerDelegate {
     //MARK: - Methods
     private func sortQuest(){
         
-        //Randomize a quest
-        let index = Int(arc4random_uniform(UInt32(quests.count)))
-        let quest = quests[index]
-        
-        //Initialize a quest
-        initQuest(quest)
-        
-        //Add quest in the beginning of array
-        quests.remove(at: index)
-        quests.insert(quest, at: 0)
+        if quests.count > 0 {
+            //Randomize a quest
+            print(quests)
+            let index = Int(arc4random_uniform(UInt32(quests.count)))
+            let quest = quests[index]
+            
+            //Initialize a quest
+            initQuest(quest)
+            
+            //Add quest in the beginning of array
+            quests.remove(at: index)
+            quests.insert(quest, at: 0)
+            
+            //Inform Delegate
+            self.delegate?.questSorted(quest: quest)
+        }
+
     }
     
     private func initQuest(_ quest :Quest){
 
         for element in quests {
             if quest == element {
+                quest.active = true
                 element.active = true
             }
         }
@@ -104,11 +114,10 @@ class QuestManager: HeathKitManagerDelegate {
     private func shouldReset() {
       
         if quests.count == 0 {
-            for element in inactive {
-                quests.append(element)
+            healthKitManager.timer.invalidate()
+            DispatchQueue.main.async {
+                self.delegate?.didInvalidateTimer()
             }
-            self.delegate?.refillQuestArray(array: quests)
-            inactive.removeAll()
         }
     }
     

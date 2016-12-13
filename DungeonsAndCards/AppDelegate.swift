@@ -8,7 +8,7 @@
 
 import UIKit
 import HealthKit
-
+import WatchConnectivity
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
@@ -16,6 +16,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.requestAccessToHealthKit()
+        
+        // MARK: - Watch Connectivity
+        if WCSession.isSupported() {
+            let defaultSession = WCSession.default()
+            defaultSession.delegate = ConnectionManager.sharedConnectionManager
+            defaultSession.activate()
+        }
         
         // MARK: - Load JSON
         if !HeroesJSON.load()   { fatalError("(☠) - HeroesJSON.load() failed") }
