@@ -8,17 +8,6 @@
 
 import Foundation
 
-/*protocol MainMenuDelegate {
-    func didStartGame(_ game: Game)
-    func didContinueGame(_ game: Game)
-}
-
-extension MainMenuDelegate {
-    
-    func didStartGame(_ game: Game)     {}
-    func didContinueGame(_ game: Game)  {}
-}*/
-
 class MainMenu {
     
     //var delegate: MainMenuDelegate?

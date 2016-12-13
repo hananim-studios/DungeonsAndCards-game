@@ -8,8 +8,6 @@
 
 import UIKit
 
-
-
 class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model

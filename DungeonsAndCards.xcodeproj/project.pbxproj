@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		146670F21DF981DC00102CD1 /* ItemShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146670F11DF981DC00102CD1 /* ItemShop.swift */; };
-		146670F41DFAD02B00102CD1 /* Dungeon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146670F31DFAD02B00102CD1 /* Dungeon.swift */; };
 		14973A351DF8459600FDFC8E /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A331DF8459600FDFC8E /* enemies.json */; };
 		14973A361DF8459600FDFC8E /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A341DF8459600FDFC8E /* items.json */; };
 		8F7F8537AE186B226F32B20B /* Pods_DungeonsAndCards.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B645E0373DF549D60E8E5673 /* Pods_DungeonsAndCards.framework */; };
@@ -117,7 +116,6 @@
 		C64376761DF9AD1C00BAFDCA /* quest99.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376111DF9AD1C00BAFDCA /* quest99.png */; };
 		C64376771DF9AD1C00BAFDCA /* quest100.png in Resources */ = {isa = PBXBuildFile; fileRef = C64376121DF9AD1C00BAFDCA /* quest100.png */; };
 		C64376791DF9AD3300BAFDCA /* HealthKitManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C64376781DF9AD3300BAFDCA /* HealthKitManager.swift */; };
-		C68063711DF04CF7003ACD19 /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063701DF04CF7003ACD19 /* BattleViewController.swift */; };
 		C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063721DF04DDE003ACD19 /* AboutViewController.swift */; };
 		C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063741DF04DEC003ACD19 /* SettingsViewController.swift */; };
 		C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */; };
@@ -150,6 +148,10 @@
 		D12677E61DFCD93900DA93F9 /* GameObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677E51DFCD93900DA93F9 /* GameObject.swift */; };
 		D12677E81DFDCFA900DA93F9 /* ItemShopContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677E71DFDCFA900DA93F9 /* ItemShopContext.swift */; };
 		D12677EC1DFE4AB800DA93F9 /* BattleContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */; };
+		D12677EE1DFECA2F00DA93F9 /* Battle.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677ED1DFECA2F00DA93F9 /* Battle.swift */; };
+		D13003661DFF3B0400E70F6D /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D13003651DFF3B0400E70F6D /* BattleViewController.swift */; };
+		D13003691DFF3B7B00E70F6D /* EnemyBattleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D13003681DFF3B7B00E70F6D /* EnemyBattleCell.xib */; };
+		D130036B1DFF8D2A00E70F6D /* EnemyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D130036A1DFF8D2A00E70F6D /* EnemyCell.swift */; };
 		D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */; };
 		D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1B1DDF493A002A0ED0 /* Main.storyboard */; };
 		D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */; };
@@ -157,8 +159,6 @@
 		D14EE1DA1DF992A500820FB5 /* ItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14EE1D91DF992A500820FB5 /* ItemCell.swift */; };
 		D14EE1DC1DF992AE00820FB5 /* HeroItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */; };
 		D14EE1DE1DF992B500820FB5 /* ItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DD1DF992B500820FB5 /* ItemCell.xib */; };
-		D14EE1E01DF9A60C00820FB5 /* EnemyView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */; };
-		D14EE1E21DF9A6AF00820FB5 /* EnemyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */; };
 		D15155021DF8301400C25638 /* HeroShopCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D15155011DF8301400C25638 /* HeroShopCell.xib */; };
 		D17445B91DF850C3000527F5 /* HeroPartyCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = D17445B81DF850C3000527F5 /* HeroPartyCell.xib */; };
 		D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = D1D014E21DE5C4CC00E52C03 /* Game.swift */; };
@@ -235,7 +235,6 @@
 /* Begin PBXFileReference section */
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
 		146670F11DF981DC00102CD1 /* ItemShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemShop.swift; sourceTree = "<group>"; };
-		146670F31DFAD02B00102CD1 /* Dungeon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dungeon.swift; sourceTree = "<group>"; };
 		14973A331DF8459600FDFC8E /* enemies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
 		14973A341DF8459600FDFC8E /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
 		4DD7E1832371A03C67530109 /* Pods-DungeonsAndCards.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.debug.xcconfig"; sourceTree = "<group>"; };
@@ -345,7 +344,6 @@
 		C64376111DF9AD1C00BAFDCA /* quest99.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest99.png; sourceTree = "<group>"; };
 		C64376121DF9AD1C00BAFDCA /* quest100.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = quest100.png; sourceTree = "<group>"; };
 		C64376781DF9AD3300BAFDCA /* HealthKitManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HealthKitManager.swift; sourceTree = "<group>"; };
-		C68063701DF04CF7003ACD19 /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		C68063721DF04DDE003ACD19 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		C68063741DF04DEC003ACD19 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		C68063761DF05B8A003ACD19 /* GoldOverlayViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GoldOverlayViewController.swift; sourceTree = "<group>"; };
@@ -386,6 +384,10 @@
 		D12677E51DFCD93900DA93F9 /* GameObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameObject.swift; sourceTree = "<group>"; };
 		D12677E71DFDCFA900DA93F9 /* ItemShopContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemShopContext.swift; sourceTree = "<group>"; };
 		D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleContext.swift; sourceTree = "<group>"; };
+		D12677ED1DFECA2F00DA93F9 /* Battle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battle.swift; sourceTree = "<group>"; };
+		D13003651DFF3B0400E70F6D /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
+		D13003681DFF3B7B00E70F6D /* EnemyBattleCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyBattleCell.xib; sourceTree = "<group>"; };
+		D130036A1DFF8D2A00E70F6D /* EnemyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyCell.swift; sourceTree = "<group>"; };
 		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E1C1DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -395,8 +397,6 @@
 		D14EE1D91DF992A500820FB5 /* ItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemCell.swift; sourceTree = "<group>"; };
 		D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroItemCell.xib; sourceTree = "<group>"; };
 		D14EE1DD1DF992B500820FB5 /* ItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ItemCell.xib; sourceTree = "<group>"; };
-		D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyView.xib; sourceTree = "<group>"; };
-		D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyView.swift; sourceTree = "<group>"; };
 		D15155011DF8301400C25638 /* HeroShopCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroShopCell.xib; sourceTree = "<group>"; };
 		D17445B81DF850C3000527F5 /* HeroPartyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeroPartyCell.xib; sourceTree = "<group>"; };
 		D1D014E21DE5C4CC00E52C03 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
@@ -658,8 +658,6 @@
 		C68475631DE71B0A0081DA95 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D14EE1DF1DF9A60C00820FB5 /* EnemyView.xib */,
-				D14EE1E11DF9A6AF00820FB5 /* EnemyView.swift */,
 				D15155001DF82FF600C25638 /* Cells */,
 				D11BFE691DEE48180046086C /* DACCollectionView.swift */,
 			);
@@ -672,7 +670,7 @@
 				C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */,
 				C68475881DE85C130081DA95 /* HeroShopViewController.swift */,
 				C627A5C41DEDCB38002F6533 /* ItemShopViewController.swift */,
-				C68063701DF04CF7003ACD19 /* BattleViewController.swift */,
+				D13003651DFF3B0400E70F6D /* BattleViewController.swift */,
 				C684756E1DE7301F0081DA95 /* CustomSegue.swift */,
 				C68063741DF04DEC003ACD19 /* SettingsViewController.swift */,
 				C68063721DF04DDE003ACD19 /* AboutViewController.swift */,
@@ -776,9 +774,11 @@
 				D15155011DF8301400C25638 /* HeroShopCell.xib */,
 				D17445B81DF850C3000527F5 /* HeroPartyCell.xib */,
 				D14EE1DB1DF992AE00820FB5 /* HeroItemCell.xib */,
+				D13003681DFF3B7B00E70F6D /* EnemyBattleCell.xib */,
 				D14EE1DD1DF992B500820FB5 /* ItemCell.xib */,
 				D11BFE6B1DEE48290046086C /* HeroCell.swift */,
 				D14EE1D91DF992A500820FB5 /* ItemCell.swift */,
+				D130036A1DFF8D2A00E70F6D /* EnemyCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -794,13 +794,13 @@
 				D1D12B2E1DF1A7960045CE29 /* HeroesJSON.swift */,
 				D1D12B301DF1A7AE0045CE29 /* ItemsJSON.swift */,
 				D1D12B321DF1A7C50045CE29 /* EnemiesJSON.swift */,
-				D1D014E41DE5C4FB00E52C03 /* Party.swift */,
 				D1D12B2C1DF1A7450045CE29 /* HeroShop.swift */,
 				146670F11DF981DC00102CD1 /* ItemShop.swift */,
-				D1D12B361DF1A9BB0045CE29 /* Enemy.swift */,
-				146670F31DFAD02B00102CD1 /* Dungeon.swift */,
+				D12677ED1DFECA2F00DA93F9 /* Battle.swift */,
 				D1D014E61DE5C52000E52C03 /* Hero.swift */,
 				D1D12B341DF1A7D00045CE29 /* Item.swift */,
+				D1D12B361DF1A9BB0045CE29 /* Enemy.swift */,
+				D1D014E41DE5C4FB00E52C03 /* Party.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -1137,12 +1137,12 @@
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D15155021DF8301400C25638 /* HeroShopCell.xib in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
-				D14EE1E01DF9A60C00820FB5 /* EnemyView.xib in Resources */,
 				D14EE1DC1DF992AE00820FB5 /* HeroItemCell.xib in Resources */,
 				14973A361DF8459600FDFC8E /* items.json in Resources */,
 				D14EE1DE1DF992B500820FB5 /* ItemCell.xib in Resources */,
 				14973A351DF8459600FDFC8E /* enemies.json in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
+				D13003691DFF3B7B00E70F6D /* EnemyBattleCell.xib in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1234,18 +1234,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				D12677E81DFDCFA900DA93F9 /* ItemShopContext.swift in Sources */,
-				C68063711DF04CF7003ACD19 /* BattleViewController.swift in Sources */,
 				D1D014E71DE5C52000E52C03 /* Hero.swift in Sources */,
 				D12677E41DFCA85900DA93F9 /* Context.swift in Sources */,
 				C68475651DE71B2D0081DA95 /* MainMenuViewController.swift in Sources */,
+				D12677EE1DFECA2F00DA93F9 /* Battle.swift in Sources */,
 				C68475891DE85C130081DA95 /* HeroShopViewController.swift in Sources */,
 				D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */,
 				D12677DC1DFC922A00DA93F9 /* MainMenu.swift in Sources */,
-				D14EE1E21DF9A6AF00820FB5 /* EnemyView.swift in Sources */,
 				D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */,
 				D11BFE6A1DEE48180046086C /* DACCollectionView.swift in Sources */,
 				D12677EC1DFE4AB800DA93F9 /* BattleContext.swift in Sources */,
 				C627A5C51DEDCB38002F6533 /* ItemShopViewController.swift in Sources */,
+				D130036B1DFF8D2A00E70F6D /* EnemyCell.swift in Sources */,
 				D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */,
 				D1D014E31DE5C4CC00E52C03 /* Game.swift in Sources */,
 				C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */,
@@ -1257,6 +1257,7 @@
 				D12677E61DFCD93900DA93F9 /* GameObject.swift in Sources */,
 				D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */,
 				D1D12B2D1DF1A7450045CE29 /* HeroShop.swift in Sources */,
+				D13003661DFF3B0400E70F6D /* BattleViewController.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
 				D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */,
 				D1D12B351DF1A7D00045CE29 /* Item.swift in Sources */,
@@ -1267,7 +1268,6 @@
 				D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */,
 				146670F21DF981DC00102CD1 /* ItemShop.swift in Sources */,
 				D14EE1DA1DF992A500820FB5 /* ItemCell.swift in Sources */,
-				146670F41DFAD02B00102CD1 /* Dungeon.swift in Sources */,
 				C68063751DF04DEC003ACD19 /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -42,8 +42,8 @@ enum ItemEffect {
 
 class Item: GameObject {
     
-    var name: String = ""
-    var image: String = ""
+    var name: String = "Uninitialized Item"
+    var image: String = "invalid"
     var price: Int = 1
     var effects: [ItemEffect] = []
     
@@ -51,7 +51,7 @@ class Item: GameObject {
         let item = Item()
         item.isValid = false
         
-        item.name = "Invalid"
+        item.name = "Invalid Item"
         item.image = "invalid"
         item.price = 1
         

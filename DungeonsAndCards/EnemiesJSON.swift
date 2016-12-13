@@ -33,13 +33,13 @@ class EnemiesJSON {
         }
     }
     
-    static func enemyAtIndex(index: Int) ->  Enemy? {
+    static func enemyAtIndex(index: Int) ->  Enemy {
         
         if let json = self.json {
             return Enemy(json: json["enemies"][index])
         }
         
-        return nil
+        return Enemy.invalid()
     }
     
     static func count() -> Int {

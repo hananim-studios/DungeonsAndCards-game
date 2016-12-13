@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -12,96 +13,116 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="dlU-hL-JMU" customClass="HeroItemCell" customModule="DungeonsAndCards" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="189" height="370"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="Ua7-pp-GWY" customClass="HeroItemCell" customModule="DungeonsAndCards">
+            <rect key="frame" x="0.0" y="0.0" width="171" height="282"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="189" height="370"/>
+                <rect key="frame" x="0.0" y="0.0" width="171" height="282"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NSA-sU-5Fg" userLabel="Card Image">
-                        <rect key="frame" x="0.0" y="0.0" width="189" height="277.5"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemSlot" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-qS-JvX" userLabel="Item Slot Image View">
+                        <rect key="frame" x="54" y="215" width="62.5" height="62.5"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gQj-x8-m25" userLabel="Health Container">
-                        <rect key="frame" x="10" y="0.0" width="170.5" height="24"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shiny_wizard" translatesAutoresizingMaskIntoConstraints="NO" id="9FI-Lh-1eT" userLabel="Card Image">
+                        <rect key="frame" x="0.0" y="0.0" width="171" height="211.5"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="o5R-Og-Eng" userLabel="Attack Container">
+                        <rect key="frame" x="43" y="179" width="85.5" height="32.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="sbr-hB-t5A"/>
+                            <constraint firstAttribute="width" secondItem="o5R-Og-Eng" secondAttribute="height" multiplier="95:36" id="aGk-1P-AZT"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eKk-1q-wxm">
-                        <rect key="frame" x="34" y="0.0" width="146.5" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="AlN-5F-u5U" userLabel="Health Icon">
-                        <rect key="frame" x="10" y="0.0" width="24" height="24"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ue5-EY-lIZ" userLabel="Attack Container">
-                        <rect key="frame" x="9" y="253.5" width="170.5" height="24"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="d7Z-VK-3c8" userLabel="Health Container">
+                        <rect key="frame" x="43" y="0.0" width="85.5" height="32.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="HRH-an-pKM"/>
+                            <constraint firstAttribute="width" secondItem="d7Z-VK-3c8" secondAttribute="height" multiplier="95:36" id="kXh-gV-Mbm"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JXb-xj-JP8">
-                        <rect key="frame" x="33.5" y="253.5" width="146" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="BCg-Ah-lJg" userLabel="Attack Icon">
-                        <rect key="frame" x="9" y="253.5" width="24.5" height="24"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xGL-Gv-Q57">
-                        <rect key="frame" x="0.0" y="277.5" width="189" height="92.5"/>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGZ-vk-RA9">
+                        <rect key="frame" x="43" y="179" width="85.5" height="32.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attack" translatesAutoresizingMaskIntoConstraints="NO" id="wHe-hp-z3K" userLabel="Attack Icon">
+                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wHe-hp-z3K" secondAttribute="height" multiplier="1:1" id="hlb-F2-vRW"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="8DT-It-zcn" userLabel="Attack Label">
+                                <rect key="frame" x="32" y="0.0" width="53.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ovL-IA-yST">
+                        <rect key="frame" x="43" y="0.5" width="85.5" height="32.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="37k-0W-bSF" userLabel="Health Icon">
+                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="37k-0W-bSF" secondAttribute="height" multiplier="1:1" id="lye-pa-ZTl"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="So6-WM-mwH" userLabel="Health Label">
+                                <rect key="frame" x="32.5" y="0.0" width="53" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9f-be-R4N">
+                        <rect key="frame" x="54.5" y="215.5" width="62.5" height="62.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="I9f-be-R4N" secondAttribute="height" multiplier="1:1" id="b3a-R8-usv"/>
+                        </constraints>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="AlN-5F-u5U" firstAttribute="leading" secondItem="gQj-x8-m25" secondAttribute="leading" id="0QZ-aa-r05"/>
-                <constraint firstItem="AlN-5F-u5U" firstAttribute="width" secondItem="gQj-x8-m25" secondAttribute="height" id="0gu-Ud-vNP"/>
-                <constraint firstItem="BCg-Ah-lJg" firstAttribute="centerY" secondItem="ue5-EY-lIZ" secondAttribute="centerY" id="3We-04-oPf"/>
-                <constraint firstItem="JXb-xj-JP8" firstAttribute="leading" secondItem="BCg-Ah-lJg" secondAttribute="trailing" id="4ai-TD-wOq"/>
-                <constraint firstItem="AlN-5F-u5U" firstAttribute="centerY" secondItem="gQj-x8-m25" secondAttribute="centerY" id="4hf-Fu-hVM"/>
-                <constraint firstItem="eKk-1q-wxm" firstAttribute="bottom" secondItem="gQj-x8-m25" secondAttribute="bottom" id="8ty-FZ-nGx"/>
-                <constraint firstItem="ue5-EY-lIZ" firstAttribute="bottom" secondItem="NSA-sU-5Fg" secondAttribute="bottom" id="CPN-TA-F6Z"/>
-                <constraint firstItem="gQj-x8-m25" firstAttribute="centerX" secondItem="NSA-sU-5Fg" secondAttribute="centerX" id="FDc-0t-86V"/>
-                <constraint firstItem="JXb-xj-JP8" firstAttribute="top" secondItem="ue5-EY-lIZ" secondAttribute="top" id="MM5-vA-aWE"/>
-                <constraint firstAttribute="bottom" secondItem="xGL-Gv-Q57" secondAttribute="bottom" id="Q7y-h5-poe"/>
-                <constraint firstItem="gQj-x8-m25" firstAttribute="width" secondItem="NSA-sU-5Fg" secondAttribute="width" multiplier="0.9" id="Ss0-Dc-mjU"/>
-                <constraint firstItem="AlN-5F-u5U" firstAttribute="height" secondItem="gQj-x8-m25" secondAttribute="height" id="VPZ-8Q-XCT"/>
-                <constraint firstItem="eKk-1q-wxm" firstAttribute="top" secondItem="gQj-x8-m25" secondAttribute="top" id="YJn-Cg-Pgh"/>
-                <constraint firstItem="JXb-xj-JP8" firstAttribute="bottom" secondItem="ue5-EY-lIZ" secondAttribute="bottom" id="YQf-TA-tir"/>
-                <constraint firstItem="eKk-1q-wxm" firstAttribute="leading" secondItem="AlN-5F-u5U" secondAttribute="trailing" id="Yn4-Oc-UfH"/>
-                <constraint firstItem="xGL-Gv-Q57" firstAttribute="leading" secondItem="dlU-hL-JMU" secondAttribute="leading" id="bfT-Eu-ytu"/>
-                <constraint firstAttribute="trailing" secondItem="xGL-Gv-Q57" secondAttribute="trailing" id="fkz-Sh-SXS"/>
-                <constraint firstItem="BCg-Ah-lJg" firstAttribute="height" secondItem="ue5-EY-lIZ" secondAttribute="height" id="g7x-33-2WP"/>
-                <constraint firstItem="NSA-sU-5Fg" firstAttribute="centerX" secondItem="dlU-hL-JMU" secondAttribute="centerX" id="hmy-Db-XtP"/>
-                <constraint firstItem="ue5-EY-lIZ" firstAttribute="width" secondItem="NSA-sU-5Fg" secondAttribute="width" multiplier="0.9" id="i8b-Dc-T46"/>
-                <constraint firstItem="NSA-sU-5Fg" firstAttribute="width" secondItem="dlU-hL-JMU" secondAttribute="width" id="is7-rg-O3Y"/>
-                <constraint firstItem="BCg-Ah-lJg" firstAttribute="width" secondItem="ue5-EY-lIZ" secondAttribute="height" id="khQ-Lq-Kbq"/>
-                <constraint firstItem="NSA-sU-5Fg" firstAttribute="top" secondItem="dlU-hL-JMU" secondAttribute="top" id="m4f-ca-kAn"/>
-                <constraint firstItem="eKk-1q-wxm" firstAttribute="trailing" secondItem="gQj-x8-m25" secondAttribute="trailing" id="nMN-tL-qGF"/>
-                <constraint firstItem="BCg-Ah-lJg" firstAttribute="leading" secondItem="ue5-EY-lIZ" secondAttribute="leading" id="rmE-XU-Vqo"/>
-                <constraint firstItem="JXb-xj-JP8" firstAttribute="trailing" secondItem="ue5-EY-lIZ" secondAttribute="trailing" id="sfw-UR-t4f"/>
-                <constraint firstItem="xGL-Gv-Q57" firstAttribute="top" secondItem="NSA-sU-5Fg" secondAttribute="bottom" id="xJp-z5-lTc"/>
-                <constraint firstItem="NSA-sU-5Fg" firstAttribute="height" secondItem="dlU-hL-JMU" secondAttribute="height" multiplier="0.75" id="xab-VP-B8T"/>
-                <constraint firstItem="gQj-x8-m25" firstAttribute="top" secondItem="NSA-sU-5Fg" secondAttribute="top" id="yOb-2b-zeP"/>
-                <constraint firstItem="ue5-EY-lIZ" firstAttribute="centerX" secondItem="NSA-sU-5Fg" secondAttribute="centerX" id="zzX-Mz-f34"/>
+                <constraint firstItem="4m2-qS-JvX" firstAttribute="centerX" secondItem="I9f-be-R4N" secondAttribute="centerX" id="0L8-xO-Ilo"/>
+                <constraint firstItem="ovL-IA-yST" firstAttribute="height" secondItem="d7Z-VK-3c8" secondAttribute="height" id="0o5-8A-iB3"/>
+                <constraint firstItem="o5R-Og-Eng" firstAttribute="centerX" secondItem="9FI-Lh-1eT" secondAttribute="centerX" id="1LH-6n-daF"/>
+                <constraint firstItem="o5R-Og-Eng" firstAttribute="bottom" secondItem="9FI-Lh-1eT" secondAttribute="bottom" id="1uW-ix-JUs"/>
+                <constraint firstItem="4m2-qS-JvX" firstAttribute="width" secondItem="I9f-be-R4N" secondAttribute="width" id="8gq-ch-20c"/>
+                <constraint firstItem="9FI-Lh-1eT" firstAttribute="height" secondItem="Ua7-pp-GWY" secondAttribute="height" multiplier="0.75" id="B6Y-ny-Xkn"/>
+                <constraint firstItem="uGZ-vk-RA9" firstAttribute="width" secondItem="o5R-Og-Eng" secondAttribute="width" id="BX9-te-05w"/>
+                <constraint firstItem="d7Z-VK-3c8" firstAttribute="top" secondItem="9FI-Lh-1eT" secondAttribute="top" id="EeR-ce-Fy6"/>
+                <constraint firstItem="d7Z-VK-3c8" firstAttribute="width" secondItem="9FI-Lh-1eT" secondAttribute="width" multiplier="0.5" id="Ege-sn-AeR"/>
+                <constraint firstItem="I9f-be-R4N" firstAttribute="centerX" secondItem="Ua7-pp-GWY" secondAttribute="centerX" id="IBc-lv-hTU"/>
+                <constraint firstAttribute="bottom" secondItem="I9f-be-R4N" secondAttribute="bottom" constant="4" id="JGt-ye-rzX"/>
+                <constraint firstItem="ovL-IA-yST" firstAttribute="centerX" secondItem="d7Z-VK-3c8" secondAttribute="centerX" id="Lbp-gc-LlT"/>
+                <constraint firstItem="I9f-be-R4N" firstAttribute="top" secondItem="9FI-Lh-1eT" secondAttribute="bottom" constant="4" id="Lj6-aW-qbR"/>
+                <constraint firstItem="uGZ-vk-RA9" firstAttribute="height" secondItem="o5R-Og-Eng" secondAttribute="height" id="S4y-pC-MzZ"/>
+                <constraint firstItem="9FI-Lh-1eT" firstAttribute="centerX" secondItem="Ua7-pp-GWY" secondAttribute="centerX" id="Vrs-ea-c2X"/>
+                <constraint firstItem="ovL-IA-yST" firstAttribute="centerY" secondItem="d7Z-VK-3c8" secondAttribute="centerY" id="X2r-K1-uli"/>
+                <constraint firstItem="d7Z-VK-3c8" firstAttribute="centerX" secondItem="9FI-Lh-1eT" secondAttribute="centerX" id="ZdQ-It-Bih"/>
+                <constraint firstItem="uGZ-vk-RA9" firstAttribute="centerY" secondItem="o5R-Og-Eng" secondAttribute="centerY" id="gm9-Fe-Kso"/>
+                <constraint firstItem="uGZ-vk-RA9" firstAttribute="centerX" secondItem="o5R-Og-Eng" secondAttribute="centerX" id="kVE-gL-G6k"/>
+                <constraint firstItem="ovL-IA-yST" firstAttribute="width" secondItem="d7Z-VK-3c8" secondAttribute="width" id="kl0-27-eRF"/>
+                <constraint firstItem="4m2-qS-JvX" firstAttribute="centerY" secondItem="I9f-be-R4N" secondAttribute="centerY" id="tHf-Tv-eEA"/>
+                <constraint firstItem="o5R-Og-Eng" firstAttribute="width" secondItem="9FI-Lh-1eT" secondAttribute="width" multiplier="0.5" id="w8q-6G-sSj"/>
+                <constraint firstItem="4m2-qS-JvX" firstAttribute="height" secondItem="I9f-be-R4N" secondAttribute="height" id="wTU-wW-Dde"/>
+                <constraint firstItem="9FI-Lh-1eT" firstAttribute="width" secondItem="Ua7-pp-GWY" secondAttribute="width" id="x2g-7y-2qH"/>
+                <constraint firstItem="9FI-Lh-1eT" firstAttribute="centerY" secondItem="Ua7-pp-GWY" secondAttribute="centerY" multiplier="0.75" id="zq8-5y-gXw"/>
             </constraints>
-            <size key="customSize" width="189" height="370"/>
+            <size key="customSize" width="171" height="282"/>
             <connections>
-                <outlet property="attackLabel" destination="JXb-xj-JP8" id="URC-tC-8vF"/>
-                <outlet property="healthLabel" destination="eKk-1q-wxm" id="rib-oX-Tgt"/>
-                <outlet property="heroImageView" destination="NSA-sU-5Fg" id="R0i-dp-Uyi"/>
-                <outlet property="itemImageView" destination="xGL-Gv-Q57" id="TrP-uh-ica"/>
+                <outlet property="attackLabel" destination="8DT-It-zcn" id="tKg-XR-rNP"/>
+                <outlet property="healthLabel" destination="So6-WM-mwH" id="pad-Wo-HG5"/>
+                <outlet property="heroImageView" destination="9FI-Lh-1eT" id="sCZ-Ea-wUa"/>
+                <outlet property="itemImageView" destination="I9f-be-R4N" id="odh-cx-tqs"/>
             </connections>
-            <point key="canvasLocation" x="165.5" y="137"/>
+            <point key="canvasLocation" x="156.5" y="93"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="gold" width="132" height="128"/>
+        <image name="attack" width="1502" height="1542"/>
+        <image name="footer" width="5430" height="2015"/>
+        <image name="header" width="5735" height="1420"/>
+        <image name="health" width="1460" height="1204"/>
+        <image name="itemSlot" width="500" height="500"/>
+        <image name="shiny_wizard" width="668" height="946"/>
     </resources>
 </document>

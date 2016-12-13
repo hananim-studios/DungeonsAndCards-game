@@ -18,8 +18,61 @@ class BattleViewController: UIViewController {
     // MARK: - IBOutlets
     
     @IBOutlet weak var goldButton: UIButton!
-    @IBOutlet weak var partyCollectionView: DIOCollectionView!
-    @IBOutlet weak var enemyView: EnemyView!
+    @IBOutlet weak var battleCollectionView: DACCollectionView!
+    @IBOutlet weak var partyCollectionView: DACCollectionView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        // INIT AND BIND UI
+        
+        self.partyCollectionView.reloadData()
+        self.partyCollectionView.layoutIfNeeded()
+        
+        // money
+        let updateMoney = { (value: Int) -> Void in
+            self.goldButton.setTitle(value.description, for: .normal)
+        }
+        updateMoney(context.game.money)
+        context.game.onMoneyChanged = updateMoney
+        
+        // party
+        for i in 0..<context.game.party.slotCount {
+            let updateItem = { (item: Item) -> Void in
+                
+                let indexPath = IndexPath(row: i, section: 0)
+                guard let cell = self.partyCollectionView.cellForItem(at: indexPath)
+                    as? HeroItemCell else {
+                        assertionFailure("wrong cell type in collectionView")
+                        return
+                }
+                
+                cell.displayItem(item)
+            }
+            
+            let removeItem = {
+                let indexPath = IndexPath(row: i, section: 0)
+                guard let cell = self.partyCollectionView.cellForItem(at: indexPath)
+                    as? HeroItemCell else {
+                        assertionFailure("wrong cell type in collectionView")
+                        return
+                }
+                
+                cell.hideItem()
+            }
+            
+            let slot = context.game.party.slot(atIndex: i)
+            
+            slot.onSetItem = updateItem
+            slot.onRemoveItem = removeItem
+        }
+        
+        // enemy
+        let updateEnemy = { (enemy: Enemy) -> Void in
+            
+            //enemyView.displayEnemy(enemy)
+        }
+        
+        //context.battle.onAddEnemy.onSetItemAtIndex = updateItemAtIndex
+    }
     
     //MARK: - ViewController
     override func viewDidLoad() {
@@ -27,16 +80,12 @@ class BattleViewController: UIViewController {
         
         assert(context != nil, "loaded without context")
         
+        battleCollectionView.dataSource = self
+        
         partyCollectionView.register(UINib(nibName: "HeroItemCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroItemCell")
         partyCollectionView.dataSource = self
         partyCollectionView.dioDelegate = self
         partyCollectionView.dioDataSource = self
-        
-        let oldView = enemyView
-        enemyView = Bundle.main.loadNibNamed("EnemyView", owner: self, options: nil)![0] as! EnemyView
-        enemyView.frame = oldView!.frame
-        oldView!.removeFromSuperview()
-        self.view.addSubview(enemyView)
         
         updateGold()
     }
@@ -79,7 +128,7 @@ extension BattleViewController: DIOCollectionViewDataSource, DIOCollectionViewDe
             return context.party.slot(atIndex: indexPath.row).hasHero
         }
         else {
-            return true
+            return false
         }
     }
     
@@ -96,7 +145,17 @@ extension BattleViewController: UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        
+        if collectionView == partyCollectionView {
+            return context.party.slotCount
+        }
+        
+        if collectionView == battleCollectionView {
+            return 0//1
+        }
+        
+        assertionFailure("collectionView not implemented")
+        return 0
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -106,8 +165,32 @@ extension BattleViewController: UICollectionViewDataSource, UICollectionViewDele
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroItemCell",
                                                           for: indexPath) as! HeroItemCell
             
-            cell.displayHero(context.party.slot(atIndex: indexPath.row).getHero())
-            cell.displayItem(context.party.slot(atIndex: indexPath.row).getItem())
+            let slot = context.game.party.slot(atIndex: indexPath.row)
+            if slot.hasItem {
+                cell.displayItem(slot.getItem())
+            } else {
+                cell.hideItem()
+            }
+            
+            if slot.hasHero {
+                cell.displayHero(slot.getHero())
+            } else {
+                cell.hideHero()
+            }
+            
+            return cell
+        }
+        
+        if collectionView == battleCollectionView {
+            
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EnemyCell",
+                                                          for: indexPath) as! EnemyCell
+            
+            if context.battle.hasEnemy {
+                cell.displayEnemy(context.battle.currentEnemy())
+            } else {
+                cell.hideEnemy()
+            }
             
             return cell
         }

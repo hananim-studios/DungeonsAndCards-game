@@ -9,53 +9,59 @@
 import Foundation
 import SwiftyJSON
 
-class Enemy {
+class Enemy: GameObject {
     
-    var name: String
-    var description: String
-    var pic: String
-    var damage: Int
-    var health: Int
-    let gold: Int
+    var name: String = "Uninitialized Hero"
+    var description: String = "This Hero is uninitialized"
+    var image: String = "invalid"
+    var attack: Int = 1
+    var health: Int = 1
+    var reward: Int = 1
+    
+    static func invalid() -> Enemy {
+        let enemy = Enemy()
+        enemy.isValid = false
+        
+        enemy.name = "Invalid"
+        enemy.description = "This Enemy is the result of an error"
+        enemy.image = "invalid"
+        enemy.attack = 1
+        enemy.health = 1
+        enemy.reward = 1
+        
+        return enemy
+    }
+    
+    private override init() {
+        super.init()
+    }
     
     init(json: JSON) {
         
-        if let name = json["name"].string {
-            self.name = name
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let name = json["name"].string
+        assert(name != nil, "(🚩) - name not found in json")
+        self.name = name ?? "JSON Error"
         
-        if let description = json["description"].string {
-            self.description = description
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let description = json["description"].string
+        assert(description != nil, "(🚩) - description not found in json")
+        self.description = description ?? "JSON Error"
         
-        if let pic = json["pic"].string {
-            self.pic = pic
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let image = json["image"].string
+        assert(image != nil, "(🚩) - image not found in json")
+        self.image = image ?? "jsonerror"
         
-        if let damage = json["damage"].int {
-            self.damage = damage
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let attack = json["attack"].int
+        assert(attack != nil, "(🚩) - attack not found in json")
+        self.attack = attack ?? 1
         
-        if let health = json["health"].int {
-            self.health = health
-        } else {
-            fatalError("Malformed JSON")
-        }
+        let health = json["health"].int
+        assert(health != nil, "(🚩) - health not found in json")
+        self.health = health ?? 1
         
-        if let gold = json["gold"].int {
-            self.gold = gold
-        } else {
-            fatalError("Malformed JSON")
-        }
         
+        let reward = json["reward"].int
+        assert(reward != nil, "(🚩) - reward not found in json")
+        self.reward = reward ?? 1
     }
 }
 

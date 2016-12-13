@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="qdy-sD-16J" customClass="EnemyCell" customModule="DungeonsAndCards">
+            <rect key="frame" x="0.0" y="0.0" width="164" height="283"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="164" height="283"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cockroach" translatesAutoresizingMaskIntoConstraints="NO" id="xpO-IL-rEQ" userLabel="Card Image">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="283"/>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="mXF-HZ-ff6" userLabel="Health Container">
+                        <rect key="frame" x="86.5" y="255" width="74" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="mXF-HZ-ff6" secondAttribute="height" multiplier="95:36" id="6Dn-fX-cRB"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="Tjn-Lt-x4s" userLabel="Attack Container">
+                        <rect key="frame" x="4" y="255" width="74" height="28"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Tjn-Lt-x4s" secondAttribute="height" multiplier="95:36" id="25I-E8-de3"/>
+                        </constraints>
+                    </imageView>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="p8F-Wg-2sM" userLabel="Name Container">
+                        <rect key="frame" x="0.0" y="0.0" width="164" height="29"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="29" id="sBF-iI-ZTU"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CARD NAME" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="orO-K6-8Km" userLabel="Name Label">
+                        <rect key="frame" x="33.5" y="4.5" width="97.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fWj-lK-pVA" userLabel="Health">
+                        <rect key="frame" x="4.5" y="255" width="74" height="28"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attack" translatesAutoresizingMaskIntoConstraints="NO" id="Lvq-e4-3CF" userLabel="Attack Icon">
+                                <rect key="frame" x="0.0" y="0.0" width="28" height="28"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Lvq-e4-3CF" secondAttribute="height" multiplier="1:1" id="kd0-99-PKK"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="8E6-Vf-Fly" userLabel="Attack Label">
+                                <rect key="frame" x="28" y="0.0" width="46" height="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jt7-rf-6L4" userLabel="Health">
+                        <rect key="frame" x="86.5" y="255" width="74" height="28.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="jNV-yU-YAQ" userLabel="Health Icon">
+                                <rect key="frame" x="0.0" y="0.0" width="28.5" height="28.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="jNV-yU-YAQ" secondAttribute="height" multiplier="1:1" id="bdp-L9-EWb"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="ndn-jc-hrK" userLabel="Health Label">
+                                <rect key="frame" x="28.5" y="0.0" width="45.5" height="28.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="fWj-lK-pVA" firstAttribute="centerY" secondItem="Tjn-Lt-x4s" secondAttribute="centerY" id="091-1v-VgQ"/>
+                <constraint firstItem="mXF-HZ-ff6" firstAttribute="centerX" secondItem="xpO-IL-rEQ" secondAttribute="centerX" multiplier="1.5" id="33s-lD-KYn"/>
+                <constraint firstItem="xpO-IL-rEQ" firstAttribute="height" secondItem="qdy-sD-16J" secondAttribute="height" id="621-GA-4Gb"/>
+                <constraint firstItem="p8F-Wg-2sM" firstAttribute="top" secondItem="xpO-IL-rEQ" secondAttribute="top" id="6Xc-Yd-oKG"/>
+                <constraint firstItem="Tjn-Lt-x4s" firstAttribute="centerX" secondItem="xpO-IL-rEQ" secondAttribute="centerX" multiplier="0.5" id="6fs-iU-0AO"/>
+                <constraint firstItem="Tjn-Lt-x4s" firstAttribute="width" secondItem="xpO-IL-rEQ" secondAttribute="width" multiplier="0.45" id="B2r-vP-6Pj"/>
+                <constraint firstItem="mXF-HZ-ff6" firstAttribute="bottom" secondItem="xpO-IL-rEQ" secondAttribute="bottom" id="EkG-HM-MpO"/>
+                <constraint firstItem="jt7-rf-6L4" firstAttribute="centerX" secondItem="mXF-HZ-ff6" secondAttribute="centerX" id="HP0-Qq-Qkh"/>
+                <constraint firstItem="p8F-Wg-2sM" firstAttribute="width" secondItem="xpO-IL-rEQ" secondAttribute="width" id="IxH-cM-mxJ"/>
+                <constraint firstItem="fWj-lK-pVA" firstAttribute="centerX" secondItem="Tjn-Lt-x4s" secondAttribute="centerX" id="KcP-0y-qRz"/>
+                <constraint firstItem="orO-K6-8Km" firstAttribute="bottom" secondItem="p8F-Wg-2sM" secondAttribute="bottom" constant="-4" id="Mdo-fR-txe"/>
+                <constraint firstItem="xpO-IL-rEQ" firstAttribute="centerX" secondItem="qdy-sD-16J" secondAttribute="centerX" id="Ocb-GU-8U9"/>
+                <constraint firstItem="jt7-rf-6L4" firstAttribute="height" secondItem="mXF-HZ-ff6" secondAttribute="height" id="UVc-az-kW6"/>
+                <constraint firstItem="xpO-IL-rEQ" firstAttribute="width" secondItem="qdy-sD-16J" secondAttribute="width" id="XLi-hb-gdT"/>
+                <constraint firstItem="orO-K6-8Km" firstAttribute="centerX" secondItem="p8F-Wg-2sM" secondAttribute="centerX" id="bZ1-Ok-ByT"/>
+                <constraint firstItem="jt7-rf-6L4" firstAttribute="centerY" secondItem="mXF-HZ-ff6" secondAttribute="centerY" id="cXr-Dv-9Sd"/>
+                <constraint firstItem="Tjn-Lt-x4s" firstAttribute="bottom" secondItem="xpO-IL-rEQ" secondAttribute="bottom" id="e9J-fB-uVS"/>
+                <constraint firstItem="fWj-lK-pVA" firstAttribute="width" secondItem="Tjn-Lt-x4s" secondAttribute="width" id="ef0-mt-HCx"/>
+                <constraint firstItem="jt7-rf-6L4" firstAttribute="width" secondItem="mXF-HZ-ff6" secondAttribute="width" id="oNL-8I-MvO"/>
+                <constraint firstItem="fWj-lK-pVA" firstAttribute="height" secondItem="Tjn-Lt-x4s" secondAttribute="height" id="oPY-08-Daa"/>
+                <constraint firstItem="mXF-HZ-ff6" firstAttribute="width" secondItem="xpO-IL-rEQ" secondAttribute="width" multiplier="0.45" id="pQd-7k-0Yh"/>
+                <constraint firstItem="xpO-IL-rEQ" firstAttribute="centerY" secondItem="qdy-sD-16J" secondAttribute="centerY" id="qaY-zZ-gmP"/>
+                <constraint firstItem="p8F-Wg-2sM" firstAttribute="centerX" secondItem="xpO-IL-rEQ" secondAttribute="centerX" id="v21-Oc-TzP"/>
+            </constraints>
+            <size key="customSize" width="164" height="283"/>
+            <connections>
+                <outlet property="attackLabel" destination="8E6-Vf-Fly" id="BZr-dp-kER"/>
+                <outlet property="enemyImageView" destination="xpO-IL-rEQ" id="nUe-8B-6Qg"/>
+                <outlet property="healthLabel" destination="ndn-jc-hrK" id="fdo-oy-1Ii"/>
+                <outlet property="titleLabel" destination="orO-K6-8Km" id="igB-8z-9ts"/>
+            </connections>
+            <point key="canvasLocation" x="-202" y="93.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="attack" width="1502" height="1542"/>
+        <image name="cockroach" width="3389" height="6114"/>
+        <image name="footer" width="5430" height="2015"/>
+        <image name="header" width="5735" height="1420"/>
+        <image name="health" width="1460" height="1204"/>
+    </resources>
+</document>

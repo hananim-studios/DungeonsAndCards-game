@@ -11,23 +11,23 @@ import SwiftyJSON
 
 class Hero: GameObject {
 
-    var name: String = ""
-    var image: String = ""
-    var description: String = ""
-    var attack: Int = 0
-    var health: Int = 0
-    var price: Int = 0
+    var name: String = "Uninitialized Hero"
+    var image: String = "invalid"
+    var description: String = "This Hero is uninitialized"
+    var attack: Int = 1
+    var health: Int = 1
+    var price: Int = 1
     
     static func invalid() -> Hero {
         let hero = Hero()
         hero.isValid = false
         
-        hero.name = "Invalid"
+        hero.name = "Invalid Hero"
         hero.description = "This Hero is the result of an error"
         hero.image = "invalid"
-        hero.attack = 0
-        hero.health = 0
-        hero.price = 0
+        hero.attack = 1
+        hero.health = 1
+        hero.price = 1
         
         return hero
     }
@@ -59,7 +59,7 @@ class Hero: GameObject {
         self.health = health ?? 1
         
         
-        let price = json["health"].int
+        let price = json["price"].int
         assert(price != nil, "(🚩) - price not found in json")
         self.price = price ?? 1
     }

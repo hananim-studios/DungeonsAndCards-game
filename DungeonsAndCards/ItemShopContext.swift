@@ -29,7 +29,7 @@ class ItemShopContext: Context {
     
     func canBuyItem(atShopIndex shopIndex: Int) -> ItemShopResponse {
         
-        guard shop.item(atIndex: shopIndex).isValid else {
+        guard shop.hasItem(atIndex: shopIndex) else {
             
             return .noItemAtShopIndex
         }

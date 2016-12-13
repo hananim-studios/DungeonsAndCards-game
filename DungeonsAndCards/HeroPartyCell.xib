@@ -14,87 +14,97 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="2Ih-Mq-pWQ" customClass="HeroPartyCell" customModule="DungeonsAndCards">
-            <rect key="frame" x="0.0" y="0.0" width="189" height="296"/>
+            <rect key="frame" x="0.0" y="0.0" width="171" height="282"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                <rect key="frame" x="0.0" y="0.0" width="189" height="296"/>
+                <rect key="frame" x="0.0" y="0.0" width="171" height="282"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="WHd-MM-MQ1" userLabel="Card Image">
-                        <rect key="frame" x="0.0" y="0.0" width="189" height="296"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="shiny_wizard" translatesAutoresizingMaskIntoConstraints="NO" id="WHd-MM-MQ1" userLabel="Card Image">
+                        <rect key="frame" x="0.0" y="0.0" width="171" height="282"/>
                     </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="S3J-pM-LG7" userLabel="Health Container">
-                        <rect key="frame" x="10" y="0.0" width="170.5" height="24"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="footer" translatesAutoresizingMaskIntoConstraints="NO" id="AFQ-Hj-PNf" userLabel="Attack Container">
+                        <rect key="frame" x="43" y="249.5" width="85.5" height="32.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="ybG-3W-AXh"/>
+                            <constraint firstAttribute="width" secondItem="AFQ-Hj-PNf" secondAttribute="height" multiplier="95:36" id="VEI-gM-k2y"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g42-K0-HiB">
-                        <rect key="frame" x="34" y="0.0" width="146.5" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="piX-aU-7th" userLabel="Health Icon">
-                        <rect key="frame" x="10" y="0.0" width="24" height="24"/>
-                    </imageView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="GbE-vv-BBf" userLabel="Attack Container">
-                        <rect key="frame" x="9" y="272" width="170.5" height="24"/>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="header" translatesAutoresizingMaskIntoConstraints="NO" id="XQg-VA-2J9" userLabel="Health Container">
+                        <rect key="frame" x="43" y="0.0" width="85.5" height="32.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="24" id="FcU-rl-ZOb"/>
+                            <constraint firstAttribute="width" secondItem="XQg-VA-2J9" secondAttribute="height" multiplier="95:36" id="Be6-Jx-BI4"/>
                         </constraints>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xhh-yF-Cg7">
-                        <rect key="frame" x="33.5" y="272" width="146" height="24"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="gold" translatesAutoresizingMaskIntoConstraints="NO" id="8TF-Zf-jCQ" userLabel="Attack Icon">
-                        <rect key="frame" x="9" y="272" width="24.5" height="24"/>
-                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iDJ-Bk-0xw">
+                        <rect key="frame" x="43" y="249.5" width="85.5" height="32.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="attack" translatesAutoresizingMaskIntoConstraints="NO" id="kK6-ix-2g9" userLabel="Attack Icon">
+                                <rect key="frame" x="0.0" y="0.0" width="32" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="kK6-ix-2g9" secondAttribute="height" multiplier="1:1" id="dGh-NR-NTy"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ATTACK" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="uKs-T1-WEL" userLabel="Attack Label">
+                                <rect key="frame" x="32" y="0.0" width="53.5" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h5e-jd-dQY">
+                        <rect key="frame" x="43" y="0.5" width="85.5" height="32.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="health" translatesAutoresizingMaskIntoConstraints="NO" id="biy-0P-6Jv" userLabel="Health Icon">
+                                <rect key="frame" x="0.0" y="0.0" width="32.5" height="32.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="biy-0P-6Jv" secondAttribute="height" multiplier="1:1" id="InC-Vz-sM8"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HEALTH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uw1-Mc-Hjl" userLabel="Health Label">
+                                <rect key="frame" x="32.5" y="0.0" width="53" height="32.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="g42-K0-HiB" firstAttribute="bottom" secondItem="S3J-pM-LG7" secondAttribute="bottom" id="4Gz-Vu-ejr"/>
-                <constraint firstItem="8TF-Zf-jCQ" firstAttribute="width" secondItem="GbE-vv-BBf" secondAttribute="height" id="4Vp-rP-9xh"/>
-                <constraint firstItem="S3J-pM-LG7" firstAttribute="top" secondItem="WHd-MM-MQ1" secondAttribute="top" id="5zQ-BB-3mW"/>
-                <constraint firstItem="g42-K0-HiB" firstAttribute="top" secondItem="S3J-pM-LG7" secondAttribute="top" id="8RF-sO-HaR"/>
+                <constraint firstItem="XQg-VA-2J9" firstAttribute="centerX" secondItem="WHd-MM-MQ1" secondAttribute="centerX" id="5bt-S6-b3D"/>
+                <constraint firstItem="iDJ-Bk-0xw" firstAttribute="centerY" secondItem="AFQ-Hj-PNf" secondAttribute="centerY" id="8CE-8p-MSz"/>
                 <constraint firstItem="WHd-MM-MQ1" firstAttribute="centerX" secondItem="2Ih-Mq-pWQ" secondAttribute="centerX" id="9hJ-q0-3zP"/>
-                <constraint firstItem="g42-K0-HiB" firstAttribute="leading" secondItem="piX-aU-7th" secondAttribute="trailing" id="Fdb-l9-2dm"/>
-                <constraint firstItem="GbE-vv-BBf" firstAttribute="centerX" secondItem="WHd-MM-MQ1" secondAttribute="centerX" id="NzA-Fk-abg"/>
-                <constraint firstItem="piX-aU-7th" firstAttribute="height" secondItem="S3J-pM-LG7" secondAttribute="height" id="Onh-A4-bY8"/>
-                <constraint firstItem="piX-aU-7th" firstAttribute="centerY" secondItem="S3J-pM-LG7" secondAttribute="centerY" id="Pj2-87-ee4"/>
-                <constraint firstItem="8TF-Zf-jCQ" firstAttribute="centerY" secondItem="GbE-vv-BBf" secondAttribute="centerY" id="Sz9-2M-EYl"/>
-                <constraint firstItem="8TF-Zf-jCQ" firstAttribute="leading" secondItem="GbE-vv-BBf" secondAttribute="leading" id="Yw4-RI-Ke7"/>
-                <constraint firstItem="Xhh-yF-Cg7" firstAttribute="bottom" secondItem="GbE-vv-BBf" secondAttribute="bottom" id="Z1y-KT-dbN"/>
-                <constraint firstItem="piX-aU-7th" firstAttribute="leading" secondItem="S3J-pM-LG7" secondAttribute="leading" id="Z4p-Ub-zsf"/>
-                <constraint firstItem="GbE-vv-BBf" firstAttribute="bottom" secondItem="WHd-MM-MQ1" secondAttribute="bottom" id="ZfZ-Pj-mlo"/>
-                <constraint firstItem="g42-K0-HiB" firstAttribute="trailing" secondItem="S3J-pM-LG7" secondAttribute="trailing" id="aRj-qN-rfr"/>
-                <constraint firstItem="Xhh-yF-Cg7" firstAttribute="top" secondItem="GbE-vv-BBf" secondAttribute="top" id="bca-Co-kia"/>
+                <constraint firstItem="AFQ-Hj-PNf" firstAttribute="centerX" secondItem="WHd-MM-MQ1" secondAttribute="centerX" id="Ioi-B3-om0"/>
+                <constraint firstItem="XQg-VA-2J9" firstAttribute="width" secondItem="WHd-MM-MQ1" secondAttribute="width" multiplier="0.5" id="J7f-Ql-p1U"/>
+                <constraint firstItem="AFQ-Hj-PNf" firstAttribute="bottom" secondItem="WHd-MM-MQ1" secondAttribute="bottom" id="JCZ-fz-7v3"/>
+                <constraint firstItem="h5e-jd-dQY" firstAttribute="height" secondItem="XQg-VA-2J9" secondAttribute="height" id="JJb-A7-g11"/>
+                <constraint firstItem="h5e-jd-dQY" firstAttribute="width" secondItem="XQg-VA-2J9" secondAttribute="width" id="KU2-1w-ciK"/>
+                <constraint firstItem="iDJ-Bk-0xw" firstAttribute="centerX" secondItem="AFQ-Hj-PNf" secondAttribute="centerX" id="Nix-Ya-Btv"/>
+                <constraint firstItem="iDJ-Bk-0xw" firstAttribute="width" secondItem="AFQ-Hj-PNf" secondAttribute="width" id="RyV-9E-9Dt"/>
+                <constraint firstItem="XQg-VA-2J9" firstAttribute="top" secondItem="WHd-MM-MQ1" secondAttribute="top" id="X8d-gZ-AuI"/>
+                <constraint firstItem="h5e-jd-dQY" firstAttribute="centerX" secondItem="XQg-VA-2J9" secondAttribute="centerX" id="bNx-KE-HKb"/>
                 <constraint firstItem="WHd-MM-MQ1" firstAttribute="width" secondItem="2Ih-Mq-pWQ" secondAttribute="width" id="cev-gc-IkZ"/>
-                <constraint firstItem="S3J-pM-LG7" firstAttribute="width" secondItem="WHd-MM-MQ1" secondAttribute="width" multiplier="0.9" id="eyw-Wz-dsF"/>
                 <constraint firstItem="WHd-MM-MQ1" firstAttribute="height" secondItem="2Ih-Mq-pWQ" secondAttribute="height" id="gnd-Ls-h3x"/>
-                <constraint firstItem="Xhh-yF-Cg7" firstAttribute="trailing" secondItem="GbE-vv-BBf" secondAttribute="trailing" id="ima-zI-lE7"/>
-                <constraint firstItem="8TF-Zf-jCQ" firstAttribute="height" secondItem="GbE-vv-BBf" secondAttribute="height" id="lQ0-mE-sMJ"/>
-                <constraint firstItem="GbE-vv-BBf" firstAttribute="width" secondItem="WHd-MM-MQ1" secondAttribute="width" multiplier="0.9" id="mhk-v8-xYK"/>
-                <constraint firstItem="S3J-pM-LG7" firstAttribute="centerX" secondItem="WHd-MM-MQ1" secondAttribute="centerX" id="sSQ-gG-aZ6"/>
-                <constraint firstItem="piX-aU-7th" firstAttribute="width" secondItem="S3J-pM-LG7" secondAttribute="height" id="t9K-Zw-L90"/>
-                <constraint firstItem="Xhh-yF-Cg7" firstAttribute="leading" secondItem="8TF-Zf-jCQ" secondAttribute="trailing" id="vAB-aw-bTa"/>
+                <constraint firstItem="AFQ-Hj-PNf" firstAttribute="width" secondItem="WHd-MM-MQ1" secondAttribute="width" multiplier="0.5" id="j6W-XS-Mtj"/>
+                <constraint firstItem="iDJ-Bk-0xw" firstAttribute="height" secondItem="AFQ-Hj-PNf" secondAttribute="height" id="r0m-oW-CfD"/>
+                <constraint firstItem="h5e-jd-dQY" firstAttribute="centerY" secondItem="XQg-VA-2J9" secondAttribute="centerY" id="wp9-q8-zQf"/>
                 <constraint firstItem="WHd-MM-MQ1" firstAttribute="centerY" secondItem="2Ih-Mq-pWQ" secondAttribute="centerY" id="wzO-rO-jVJ"/>
             </constraints>
-            <size key="customSize" width="189" height="296"/>
+            <size key="customSize" width="171" height="282"/>
             <connections>
-                <outlet property="attackLabel" destination="Xhh-yF-Cg7" id="IkQ-Vc-fau"/>
-                <outlet property="healthLabel" destination="g42-K0-HiB" id="Uv5-hG-ena"/>
+                <outlet property="attackLabel" destination="uKs-T1-WEL" id="lXB-mu-vjU"/>
+                <outlet property="healthLabel" destination="Uw1-Mc-Hjl" id="QbT-Z7-du7"/>
                 <outlet property="heroImageView" destination="WHd-MM-MQ1" id="89P-bb-Dey"/>
             </connections>
-            <point key="canvasLocation" x="166" y="100"/>
+            <point key="canvasLocation" x="156.5" y="93"/>
         </collectionViewCell>
     </objects>
     <resources>
-        <image name="gold" width="132" height="128"/>
+        <image name="attack" width="1502" height="1542"/>
+        <image name="footer" width="5430" height="2015"/>
+        <image name="header" width="5735" height="1420"/>
+        <image name="health" width="1460" height="1204"/>
+        <image name="shiny_wizard" width="668" height="946"/>
     </resources>
 </document>

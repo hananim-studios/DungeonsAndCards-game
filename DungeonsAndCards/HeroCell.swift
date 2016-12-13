@@ -56,8 +56,8 @@ class HeroItemCell: UICollectionViewCell {
 
 class HeroPartyCell: UICollectionViewCell {
 
-    @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var healthLabel: UILabel!
+    @IBOutlet weak var attackLabel: UILabel!
     
     @IBOutlet weak var heroImageView: UIImageView!
     

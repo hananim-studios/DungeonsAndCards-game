@@ -4,6 +4,7 @@
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -17,6 +18,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemSlot" translatesAutoresizingMaskIntoConstraints="NO" id="BPN-15-lU1" userLabel="Slot Image View">
+                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                    </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uWs-tC-vvI">
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     </imageView>
@@ -25,8 +29,12 @@
             <constraints>
                 <constraint firstItem="uWs-tC-vvI" firstAttribute="leading" secondItem="hSt-ee-CAm" secondAttribute="leading" id="14X-ka-Kfk"/>
                 <constraint firstAttribute="bottom" secondItem="uWs-tC-vvI" secondAttribute="bottom" id="2bd-l5-O01"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="width" secondItem="uWs-tC-vvI" secondAttribute="width" id="3aG-1H-3hk"/>
                 <constraint firstItem="uWs-tC-vvI" firstAttribute="top" secondItem="hSt-ee-CAm" secondAttribute="top" id="FhM-YK-Bat"/>
                 <constraint firstAttribute="trailing" secondItem="uWs-tC-vvI" secondAttribute="trailing" id="HRO-AK-oRe"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="height" secondItem="uWs-tC-vvI" secondAttribute="height" id="KIr-2Z-UPY"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="centerY" secondItem="uWs-tC-vvI" secondAttribute="centerY" id="Sj8-2s-58h"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="centerX" secondItem="uWs-tC-vvI" secondAttribute="centerX" id="VxF-CB-PSM"/>
             </constraints>
             <size key="customSize" width="200" height="200"/>
             <connections>
@@ -35,4 +43,7 @@
             <point key="canvasLocation" x="747" y="502"/>
         </collectionViewCell>
     </objects>
+    <resources>
+        <image name="itemSlot" width="500" height="500"/>
+    </resources>
 </document>

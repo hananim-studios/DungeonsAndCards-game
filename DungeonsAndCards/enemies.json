@@ -2,83 +2,83 @@
     "enemies": [
                 {
                 "name": "Cockroach",
-                "pic": "cockroach",
+                "image": "cockroach",
                 "description": "The cockroach (a.k.a. roach) can awaken one's deepest fears...",
                 "health": 10,
-                "damage": 5,
-                "gold": 7
+                "attack": 5,
+                "reward": 7
                 },
                 {
                 "name": "Rat",
-                "pic": "rat",
+                "image": "rat",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 8,
-                "damage": 8,
-                "gold": 12
+                "attack": 8,
+                "reward": 12
                 },
                 {
                 "name": "Bat",
-                "pic": "bat",
+                "image": "bat",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 26,
-                "damage": 5,
-                "gold": 19
+                "attack": 5,
+                "reward": 19
                 },
                 {
                 "name": "Troll",
-                "pic": "troll",
+                "image": "troll",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 6,
-                "damage": 15,
-                "gold": 22
+                "attack": 15,
+                "reward": 22
                 },
                 {
                 "name": "Shadow",
-                "pic": "shadow",
+                "image": "shadow",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 28,
-                "damage": 14,
-                "gold": 29
+                "attack": 14,
+                "reward": 29
                 },
                 {
                 "name": "Undead",
-                "pic": "undead",
+                "image": "undead",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 8,
-                "damage": 12,
-                "gold": 24
+                "attack": 12,
+                "reward": 24
                 },
                 {
                 "name": "Salamander",
-                "pic": "salamander",
+                "image": "salamander",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 17,
-                "damage": 22,
-                "gold": 31
+                "attack": 22,
+                "reward": 31
                 },
                 {
                 "name": "Minotaur",
-                "pic": "minotaur",
+                "image": "minotaur",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 20,
-                "damage": 25,
-                "gold": 37
+                "attack": 25,
+                "reward": 37
                 },
                 {
                 "name": "Fire Elemental",
-                "pic": "fireElemental",
+                "image": "fireElemental",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 16,
-                "damage": 17,
-                "gold": 29
+                "attack": 17,
+                "reward": 29
                 },
                 {
                 "name": "Dragon",
-                "pic": "dragon",
+                "image": "dragon",
                 "description": "Isn't it a cute little murderous thing?",
                 "health": 29,
-                "damage": 25,
-                "gold": 50
+                "attack": 25,
+                "reward": 50
                 }
                 ]
 }

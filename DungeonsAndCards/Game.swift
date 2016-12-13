@@ -69,7 +69,8 @@ class Game {
     
     var dungeonLevel: Int = 0
     
-    var party: Party
+    var party   : Party
+    var battle  : Battle
     
     var heroShop: HeroShop
     var itemShop: ItemShop
@@ -77,9 +78,10 @@ class Game {
     //var dungeon: Dungeon
     
     private init() {
-        self.party = Party()
-        self.heroShop = HeroShop()
-        self.itemShop = ItemShop()
+        self.party      = Party()
+        self.battle     = Battle()
+        self.heroShop   = HeroShop()
+        self.itemShop   = ItemShop()
     }
     
     static func newGame() -> Game {
