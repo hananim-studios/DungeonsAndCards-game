@@ -67,7 +67,7 @@ class Game {
         }
     }
     
-    var dungeonLevel: Int = 0
+    var level: Int = 0
     
     var party   : Party
     var battle  : Battle

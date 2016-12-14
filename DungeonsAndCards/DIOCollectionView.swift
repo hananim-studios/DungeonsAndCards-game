@@ -95,7 +95,7 @@ class DIOCollectionView: UICollectionView {
         
         if self.longPress == nil {
             self.longPress = UILongPressGestureRecognizer(target: self, action: #selector(handleLongPress))
-            self.longPress?.minimumPressDuration = 0.2
+            self.longPress?.minimumPressDuration = 0.1
             
             self.addGestureRecognizer(self.longPress!)
         }

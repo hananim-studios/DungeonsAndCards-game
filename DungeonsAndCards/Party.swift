@@ -87,6 +87,20 @@ class Party {
     let slotCount = 3
     private var slots: [PartySlot]
     
+    var hasHeroes: Bool {
+        get {
+            for i in 0..<slotCount {
+                let hasHero = slot(atIndex: i).hasHero
+                
+                if hasHero {
+                    return true
+                }
+            }
+            
+            return false
+        }
+    }
+    
     init() {
         
         slots = [PartySlot]()
