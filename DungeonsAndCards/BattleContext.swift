@@ -71,13 +71,43 @@ class BattleContext: Context {
         party.slot(atIndex: index).removeItem()
     }
 
+    var onKillCurrentEnemy: (()->Void)?
     func killCurrentEnemy() {
         
         battle.removeCurrentEnemy()
+        
+        onKillCurrentEnemy?()
+        
+        if !battle.hasEnemy {
+            
+            finishBattle()
+        }
     }
     
+    var onKillHeroAtIndex: ((Int)->Void)?
     func killHero(atIndex index: Int) {
         
         party.slot(atIndex: index).removeHero()
+        
+        onKillHeroAtIndex?(index)
+        
+        if !party.hasHeroes {
+            
+            failBattle()
+        }
+    }
+    
+    var onFinishBattle: (()->Void)?
+    func finishBattle() {
+        
+        game.level += 1
+        
+        onFinishBattle?()
+    }
+
+    var onFailBattle: (()->Void)?
+    func failBattle() {
+        
+        onFailBattle?()
     }
 }

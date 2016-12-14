@@ -96,6 +96,46 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         
         context.onAttackEnemyWithHeroAtIndex = updateBattle
+        
+        let finishBattle = {
+            
+            let alert = UIAlertController(title: "Congratulations!", message: "You defeated all the enemies!", preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: "Next Level", style: .default) {
+                _ in
+                
+                let vc = self.storyboard!.instantiateViewController(withIdentifier: "heroShop") as! HeroShopViewController
+                vc.context = HeroShopContext(withGame: self.context.game)
+                
+                let nav = self.navigationController!
+                nav.popViewController(animated: false)
+                nav.pushViewController(vc, animated: false)
+            })
+            
+            self.present(alert, animated: true)
+        }
+        
+        context.onFinishBattle = finishBattle
+        
+        let failBattle = {
+            
+            let alert = UIAlertController(title: "Oh no!", message: "You heroes are dead!", preferredStyle: .actionSheet)
+            
+            alert.addAction(UIAlertAction(title: "Try again", style: .default) {
+                _ in
+                
+                let vc = self.storyboard!.instantiateViewController(withIdentifier: "heroShop") as! HeroShopViewController
+                vc.context = HeroShopContext(withGame: self.context.game)
+                
+                let nav = self.navigationController!
+                nav.popViewController(animated: false)
+                nav.pushViewController(vc, animated: false)
+            })
+            
+            self.present(alert, animated: true)
+        }
+        
+        context.onFailBattle = failBattle
     }
     override func viewDidAppear(_ animated: Bool) {
         
@@ -341,7 +381,9 @@ extension BattleViewController: DACCollectionViewDelegate {
                 let battleIndex = indexPath.row
                 let partyIndex = dragInfo.indexPath.row
                 
-                context.attackEnemy(withHeroAtIndex: partyIndex)
+                if context.canAttackEnemy(withHeroAtIndex: partyIndex) == .success {
+                    context.attackEnemy(withHeroAtIndex: partyIndex)
+                }
                 
                 
                 /*guard context.canBuyHero(toPartyIndex: indexPath.row) == .success else {
