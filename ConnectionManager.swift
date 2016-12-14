@@ -13,22 +13,13 @@ protocol WatchConnectionManagerPhoneDelegate: class {
     func connectionManager(_ connectionManager: ConnectionManager, updatedWithResponse response: String)
 }
 
-protocol WatchConnectionManagerWatchDelegate: class {
-    func connectionManager(_ connectionManager: ConnectionManager, updatedWithCardText text: String, cardTitle title: String, andAttributes attributes: [String])
-    //func connectionManager(_ connectionManager: ConnectionManager, sessionIsActive isActive: Bool)
-}
-
 class ConnectionManager: NSObject, WCSessionDelegate {
     
     static let sharedConnectionManager = ConnectionManager()
     
     // MARK: Attributes
     
-    #if os(iOS)
     weak var delegate: WatchConnectionManagerPhoneDelegate?
-    #else
-    weak var delegate: WatchConnectionManagerWatchDelegate?
-    #endif
     
     // MARK: Init
     
@@ -37,30 +28,17 @@ class ConnectionManager: NSObject, WCSessionDelegate {
     }
     
     // MARK: Convenience
-    
-    func configureDeviceDetailsWithApplicationContext(applicationContext: [String: Any]){
-        #if os(iOS)
-            //Configura iOS Interface com dados do Context (usar delegate)
-            guard let response = applicationContext["response"] as? String else {
-                //Standard response in case of expected values are unavailable in `applicationContext`
-                //delegate?.connectionManager(self, updatedWithResponse: "-")
-                return
-            }
-            delegate?.connectionManager(self, updatedWithResponse: response)
-        #endif
-    }
-    
-    
     // MARK: WCSessionDelegate
     
-    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
-        print("session (in state: \(session.activationState.rawValue)) received application context \(applicationContext)")
+    func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+        guard let morseCode = userInfo["watchGold"] as? String else {
+            // If the expected values are unavailable in the `userInfo`, then skip it.
+            return
+        }
         
-        configureDeviceDetailsWithApplicationContext(applicationContext: applicationContext)
+        // Inform the delegate.
+        delegate?.connectionManager(self, updatedWithResponse: morseCode)
         
-        #if os(iOS)
-            print("session watch directory URL: \(session.watchDirectoryURL?.absoluteString)")
-        #endif
     }
     
     func session(_ session: WCSession, activationDidCompleteWith activationState: WCSessionActivationState, error: Error?) {

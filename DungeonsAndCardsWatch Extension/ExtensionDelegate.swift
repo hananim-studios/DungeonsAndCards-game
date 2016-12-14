@@ -19,7 +19,7 @@ class ExtensionDelegate: NSObject, WKExtensionDelegate {
         super.init()
         
         let defaultSession = WCSession.default()
-        //defaultSession.delegate = ConnectionManager.sharedConnectionManager
+        defaultSession.delegate = ConnectionManager.sharedConnectionManager
         
         /*
          Here we add KVO on the session properties that this class is interested in before activating
