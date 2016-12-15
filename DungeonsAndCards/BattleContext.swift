@@ -20,6 +20,13 @@ class BattleContext: Context {
     var party       : Party     { return game.party  }
     var battle      : Battle    { return game.battle }
     
+    override init(withGame game: Game) {
+        
+        super.init(withGame: game)
+        
+        battle.loadEnemies(forLevel: game.level)
+    }
+    
     func canAttackEnemy(withHeroAtIndex index: Int) -> BattleResponse {
         
         guard party.slot(atIndex: index).hasHero else {

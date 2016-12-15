@@ -118,7 +118,7 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         partyCollectionView.dioDelegate = self
         partyCollectionView.dacDelegate = self
         partyCollectionView.receiveDrag = true
-        partyCollectionView.allowFeedback = false
+        partyCollectionView.allowFeedback = true
         partyCollectionView.register(UINib(nibName: "HeroPartyCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroPartyCell")
         
     }
@@ -288,12 +288,22 @@ extension HeroShopViewController: DIOCollectionViewDataSource, DIOCollectionView
     // DIOCollectionView Delegate
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, draggedItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) {
         
+        
         if dioCollectionView == partyCollectionView {
+        
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroPartyCell else {
+                assertionFailure("wrong cell type in collectionView")
+                return
+            }
             
             switch dragState {
             case .cancelled:
                 
                 dioCollectionView.dragView?.removeFromSuperview()
+                
+            case .began:
+                
+                cell.hideHero()
                 
             case .ended:
                 
@@ -301,14 +311,25 @@ extension HeroShopViewController: DIOCollectionViewDataSource, DIOCollectionView
                 
                 if context.canRemoveHero(atPartyIndex: indexPath.row) == .success {
                     context.removeHero(atPartyIndex: indexPath.row)
-                    
-                    guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroPartyCell else {
-                        assertionFailure("wrong cell type in collectionView")
-                        return
-                    }
-                    
                     cell.hideHero()
+                } else {
+                    
+                    cell.displayHero(context.party.slot(atIndex: indexPath.row).getHero())
                 }
+            default:
+                break
+            }
+        }
+        
+        if dioCollectionView == shopCollectionView {
+            
+            switch dragState {
+            case .cancelled:
+                dioCollectionView.dragView?.removeFromSuperview()
+                
+            case .ended:
+                dioCollectionView.dragView?.removeFromSuperview()
+                
             default:
                 break
             }
@@ -320,11 +341,9 @@ extension HeroShopViewController: DACCollectionViewDelegate {
     
     func dacCollectionView(_ dacCollectionView: DACCollectionView, dragEnteredWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
         
-        
     }
     
     func dacCollectionView(_ dacCollectionView: DACCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
-        
         
     }
     
@@ -350,6 +369,25 @@ extension HeroShopViewController: DACCollectionViewDelegate {
                 context.buyHero(atShopIndex: shopIndex, toPartyIndex: partyIndex)
             }
             
+        }
+        
+        if dacCollectionView == partyCollectionView {
+            
+            if dragInfo.sender == partyCollectionView {
+                
+                let startIndex = dragInfo.indexPath.row
+                let endIndex = indexPath.row
+                
+                
+                guard context.canSwapHero(fromPartyIndex: startIndex, toPartyIndex: endIndex) == .success else {
+                    // TODO: - Feedback
+                    // could not buy hero to party index
+                    
+                    return
+                }
+                
+                context.swapHero(fromPartyIndex: startIndex , toPartyIndex: endIndex)
+            }
         }
     }
 }
