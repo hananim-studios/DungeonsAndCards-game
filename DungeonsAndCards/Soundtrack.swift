@@ -48,16 +48,15 @@ class Soundtrack {
                 return name == $0.fileName
                 }.forEach { track in
                     if fade {
-                        DispatchQueue.main.async {
+                        DispatchQueue(label: "disable").async {
                             while (track.avAudioPlayer.volume > 0){
-                                track.avAudioPlayer.volume -= 0.0001
+                                track.avAudioPlayer.volume -= 0.01
                             }
                         }
-                        
                     } else {
                         track.avAudioPlayer.volume = 0
                     }
-                            
+                    
                     
             }
         }
@@ -72,13 +71,11 @@ class Soundtrack {
                 return name == $0.fileName
                 }.forEach { track in
                     if fade {
-                        DispatchQueue.main.async {
+                        DispatchQueue(label: "enable").async {
                             while (track.avAudioPlayer.volume < volume){
-                                track.avAudioPlayer.volume += 0.1
-                                sleep(2)
+                                track.avAudioPlayer.volume += 0.00001
                             }
                         }
-                        
                     } else {
                         track.avAudioPlayer.volume = volume
                     }
