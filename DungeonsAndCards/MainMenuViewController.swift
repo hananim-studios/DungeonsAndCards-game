@@ -25,6 +25,10 @@ class MainMenuViewController: UIViewController {
     //MARK: - ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Soundtrack
+        Soundtrack.sharedInstance.enableTracks(named: ["harp","guitar"], volume: 0.7, fade: false)
+        
         // setup model
         menu.onStartGame = {
             game in
@@ -50,6 +54,8 @@ class MainMenuViewController: UIViewController {
         
         // setup UI
         continueGameButton.isEnabled = Game.hasSavedGame
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

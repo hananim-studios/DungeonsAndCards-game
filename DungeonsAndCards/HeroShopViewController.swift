@@ -90,6 +90,10 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        //Soundtrack
+        Soundtrack.sharedInstance.disableTracks(named: ["drums1","drums2","drums3","erhu","strings"], withFade: true)
+        Soundtrack.sharedInstance.enableTracks(named: ["percussion"], volume: 1, fade: false)
+        
         assert(context != nil, "loaded without context")
         
         //shopCollectionView.backgroundColor = UIColor.clear
@@ -112,6 +116,7 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         partyCollectionView.receiveDrag = true
         partyCollectionView.allowFeedback = false
         partyCollectionView.register(UINib(nibName: "HeroPartyCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroPartyCell")
+        
     }
     
     override func didReceiveMemoryWarning() {

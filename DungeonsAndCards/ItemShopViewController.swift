@@ -96,6 +96,9 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Soundtrack
+        Soundtrack.sharedInstance.enableTracks(named: ["erhu"], volume: 1, fade: true)
+        
         assert(context != nil, "loaded without context")
         
         //shopCollectionView.backgroundColor = UIColor.clear
