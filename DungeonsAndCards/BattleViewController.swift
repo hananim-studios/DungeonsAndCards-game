@@ -78,18 +78,22 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
             let indexPath = IndexPath(row: 0, section: 0)
             
             let cell = self.battleCollectionView.cellForItem(at: indexPath) as! EnemyCell
+            let slot = self.context.game.party.slot(atIndex: index)
+            let enemy = self.context.battle.currentEnemy()
             
             if self.context.battle.hasEnemy {
-                cell.displayEnemy(self.context.battle.currentEnemy())
+                cell.displayEnemy(enemy)
+                cell.healthLabel.doGhostAnimation(text: "-\(slot.getHero().attack)", color: .red)
             } else {
                 cell.hideEnemy()
             }
             
             let hCell = self.partyCollectionView.cellForItem(at: IndexPath(row: index, section: 0)) as! HeroPartyCell
             
-            let slot = self.context.game.party.slot(atIndex: index)
+            
             if slot.hasHero {
                 hCell.displayHero(slot.getHero())
+                hCell.healthLabel.doGhostAnimation(text: "-\(enemy.attack)", color: .red)
             } else {
                 hCell.hideHero()
             }
