@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1417A89F1E01DFF500CFD10A /* Soundtrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417A89E1E01DFF500CFD10A /* Soundtrack.swift */; };
+		1417A8A11E020E8E00CFD10A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417A8A01E020E8E00CFD10A /* Track.swift */; };
+		1417A8AD1E0221A700CFD10A /* drums1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A31E0221A700CFD10A /* drums1.mp3 */; };
+		1417A8AE1E0221A700CFD10A /* drums2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A41E0221A700CFD10A /* drums2.mp3 */; };
+		1417A8AF1E0221A700CFD10A /* drums3.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A51E0221A700CFD10A /* drums3.mp3 */; };
+		1417A8B01E0221A700CFD10A /* erhu.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A61E0221A700CFD10A /* erhu.mp3 */; };
+		1417A8B11E0221A700CFD10A /* flute.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A71E0221A700CFD10A /* flute.mp3 */; };
+		1417A8B21E0221A700CFD10A /* guitar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A81E0221A700CFD10A /* guitar.mp3 */; };
+		1417A8B31E0221A700CFD10A /* harp.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A91E0221A700CFD10A /* harp.mp3 */; };
+		1417A8B41E0221A700CFD10A /* percussion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8AA1E0221A700CFD10A /* percussion.mp3 */; };
+		1417A8B51E0221A700CFD10A /* sax.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8AB1E0221A700CFD10A /* sax.mp3 */; };
+		1417A8B61E0221A700CFD10A /* strings.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8AC1E0221A700CFD10A /* strings.mp3 */; };
 		146670F21DF981DC00102CD1 /* ItemShop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 146670F11DF981DC00102CD1 /* ItemShop.swift */; };
 		14973A351DF8459600FDFC8E /* enemies.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A331DF8459600FDFC8E /* enemies.json */; };
 		14973A361DF8459600FDFC8E /* items.json in Resources */ = {isa = PBXBuildFile; fileRef = 14973A341DF8459600FDFC8E /* items.json */; };
@@ -238,6 +250,18 @@
 
 /* Begin PBXFileReference section */
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
+		1417A89E1E01DFF500CFD10A /* Soundtrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soundtrack.swift; sourceTree = "<group>"; };
+		1417A8A01E020E8E00CFD10A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		1417A8A31E0221A700CFD10A /* drums1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drums1.mp3; sourceTree = "<group>"; };
+		1417A8A41E0221A700CFD10A /* drums2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drums2.mp3; sourceTree = "<group>"; };
+		1417A8A51E0221A700CFD10A /* drums3.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drums3.mp3; sourceTree = "<group>"; };
+		1417A8A61E0221A700CFD10A /* erhu.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = erhu.mp3; sourceTree = "<group>"; };
+		1417A8A71E0221A700CFD10A /* flute.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = flute.mp3; sourceTree = "<group>"; };
+		1417A8A81E0221A700CFD10A /* guitar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = guitar.mp3; sourceTree = "<group>"; };
+		1417A8A91E0221A700CFD10A /* harp.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = harp.mp3; sourceTree = "<group>"; };
+		1417A8AA1E0221A700CFD10A /* percussion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = percussion.mp3; sourceTree = "<group>"; };
+		1417A8AB1E0221A700CFD10A /* sax.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = sax.mp3; sourceTree = "<group>"; };
+		1417A8AC1E0221A700CFD10A /* strings.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = strings.mp3; sourceTree = "<group>"; };
 		146670F11DF981DC00102CD1 /* ItemShop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItemShop.swift; sourceTree = "<group>"; };
 		14973A331DF8459600FDFC8E /* enemies.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = enemies.json; sourceTree = "<group>"; };
 		14973A341DF8459600FDFC8E /* items.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = items.json; sourceTree = "<group>"; };
@@ -464,6 +488,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1417A8B81E0231AB00CFD10A /* Soundtrack */ = {
+			isa = PBXGroup;
+			children = (
+				1417A89E1E01DFF500CFD10A /* Soundtrack.swift */,
+				1417A8A01E020E8E00CFD10A /* Track.swift */,
+			);
+			name = Soundtrack;
+			sourceTree = "<group>";
+		};
+		1417A8B91E0231D500CFD10A /* Soundtrack */ = {
+			isa = PBXGroup;
+			children = (
+				1417A8A31E0221A700CFD10A /* drums1.mp3 */,
+				1417A8A41E0221A700CFD10A /* drums2.mp3 */,
+				1417A8A51E0221A700CFD10A /* drums3.mp3 */,
+				1417A8A61E0221A700CFD10A /* erhu.mp3 */,
+				1417A8A71E0221A700CFD10A /* flute.mp3 */,
+				1417A8A81E0221A700CFD10A /* guitar.mp3 */,
+				1417A8A91E0221A700CFD10A /* harp.mp3 */,
+				1417A8AA1E0221A700CFD10A /* percussion.mp3 */,
+				1417A8AB1E0221A700CFD10A /* sax.mp3 */,
+				1417A8AC1E0221A700CFD10A /* strings.mp3 */,
+			);
+			name = Soundtrack;
+			sourceTree = "<group>";
+		};
 		28662B0E9030E8BC112ECADE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -488,6 +538,7 @@
 			children = (
 				C60A67D21DEDAB4100C109D8 /* MorrisRoman-Black.ttf */,
 				C60A67D31DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf */,
+				1417A8B91E0231D500CFD10A /* Soundtrack */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -701,6 +752,7 @@
 		C68475711DE7345A0081DA95 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				1417A8B81E0231AB00CFD10A /* Soundtrack */,
 			);
 			name = Shared;
 			sourceTree = "<group>";
@@ -1167,17 +1219,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D17445B91DF850C3000527F5 /* HeroPartyCell.xib in Resources */,
+				1417A8B41E0221A700CFD10A /* percussion.mp3 in Resources */,
+				1417A8B31E0221A700CFD10A /* harp.mp3 in Resources */,
 				D1D12B391DF1AAD50045CE29 /* heroes.json in Resources */,
 				C60A67D41DEDAB4100C109D8 /* MorrisRoman-Black.ttf in Resources */,
+				1417A8B51E0221A700CFD10A /* sax.mp3 in Resources */,
+				1417A8B11E0221A700CFD10A /* flute.mp3 in Resources */,
 				D14E4E221DDF493A002A0ED0 /* LaunchScreen.storyboard in Resources */,
 				D15155021DF8301400C25638 /* HeroShopCell.xib in Resources */,
+				1417A8AE1E0221A700CFD10A /* drums2.mp3 in Resources */,
+				1417A8AF1E0221A700CFD10A /* drums3.mp3 in Resources */,
 				D14E4E1F1DDF493A002A0ED0 /* Assets.xcassets in Resources */,
 				D14EE1DC1DF992AE00820FB5 /* HeroItemCell.xib in Resources */,
 				14973A361DF8459600FDFC8E /* items.json in Resources */,
 				D14EE1DE1DF992B500820FB5 /* ItemCell.xib in Resources */,
 				14973A351DF8459600FDFC8E /* enemies.json in Resources */,
+				1417A8B01E0221A700CFD10A /* erhu.mp3 in Resources */,
+				1417A8B61E0221A700CFD10A /* strings.mp3 in Resources */,
 				C60A67D51DEDAB4100C109D8 /* MorrisRomanAlternate-Black.ttf in Resources */,
+				1417A8B21E0221A700CFD10A /* guitar.mp3 in Resources */,
 				D13003691DFF3B7B00E70F6D /* EnemyCell.xib in Resources */,
+				1417A8AD1E0221A700CFD10A /* drums1.mp3 in Resources */,
 				D14E4E1D1DDF493A002A0ED0 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1279,6 +1341,7 @@
 				D1D12B2B1DF0B1210045CE29 /* CGAffineTransform+Extensions.swift in Sources */,
 				D12677DC1DFC922A00DA93F9 /* MainMenu.swift in Sources */,
 				D1D12B371DF1A9BB0045CE29 /* Enemy.swift in Sources */,
+				1417A89F1E01DFF500CFD10A /* Soundtrack.swift in Sources */,
 				D11BFE6A1DEE48180046086C /* DACCollectionView.swift in Sources */,
 				D12677EC1DFE4AB800DA93F9 /* BattleContext.swift in Sources */,
 				C627A5C51DEDCB38002F6533 /* ItemShopViewController.swift in Sources */,
@@ -1292,6 +1355,7 @@
 				D1D12B331DF1A7C50045CE29 /* EnemiesJSON.swift in Sources */,
 				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
 				D1D12B311DF1A7AE0045CE29 /* ItemsJSON.swift in Sources */,
+				1417A8A11E020E8E00CFD10A /* Track.swift in Sources */,
 				D12677E61DFCD93900DA93F9 /* GameObject.swift in Sources */,
 				D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */,
 				D1D12B2D1DF1A7450045CE29 /* HeroShop.swift in Sources */,

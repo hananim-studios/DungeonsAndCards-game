@@ -68,7 +68,7 @@ class PartySlot: GameObject {
     
     var onRemoveItem: (() -> Void)?
     func removeItem() {
-        self.hero = nil
+        self.item = nil
     }
     
     static func invalid() -> PartySlot {
@@ -124,5 +124,36 @@ class Party {
         }
         
         return slots[index]
+    }
+    
+    func swapHero(fromIndex i: Int, toIndex j: Int) {
+        
+        guard hasSlot(atIndex: i) && hasSlot(atIndex: j) else {
+            assertionFailure("(🚩) - tried to access PartySlot at invalid index")
+            return
+        }
+        
+        guard slot(atIndex: i).hasHero else {
+            assertionFailure("(🚩) - tried swapping hero from slot without hero")
+            return
+        }
+        
+        let iSlot = slot(atIndex: i)
+        let jSlot = slot(atIndex: j)
+        
+        let iHero = iSlot.getHero()
+        
+        if jSlot.hasHero {
+            
+            let jHero = jSlot.getHero()
+            
+            iSlot.setHero(jHero)
+            jSlot.setHero(iHero)
+            
+        } else {
+            
+            iSlot.removeHero()
+            jSlot.setHero(iHero)
+        }
     }
 }

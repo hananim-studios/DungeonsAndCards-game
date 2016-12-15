@@ -113,6 +113,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
             })
             
             self.present(alert, animated: true)
+            
         }
         
         context.onFinishBattle = finishBattle
@@ -133,6 +134,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
             })
             
             self.present(alert, animated: true)
+        
         }
         
         context.onFailBattle = failBattle
@@ -145,6 +147,10 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Soundtrack
+        Soundtrack.sharedInstance.enableTracks(named: ["drums1","drums2","drums3"], volume: 2, fade: false)
+        Soundtrack.sharedInstance.enableTracks(named: ["strings"], volume: 0.5, fade: true)
         
         assert(context != nil, "loaded without context")
         
@@ -184,6 +190,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         let nav = self.navigationController!
         nav.popViewController(animated: false)
         nav.pushViewController(vc, animated: false)
+
     }
     
     @IBAction func menuButtonPressed(_ sender: UIButton) {
@@ -349,7 +356,7 @@ extension BattleViewController: DIOCollectionViewDataSource, DIOCollectionViewDe
             case .ended:
                 
                 dioCollectionView.dragView?.removeFromSuperview()
-                    
+                
                 cell.displayHero(context.party.slot(atIndex: indexPath.row).getHero())
             default:
                 break
