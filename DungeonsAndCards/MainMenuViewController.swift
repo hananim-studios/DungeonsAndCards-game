@@ -10,7 +10,7 @@ import UIKit
 import WatchConnectivity
 
 // MARK: - UIViewController
-class MainMenuViewController: UIViewController, WatchConnectionManagerPhoneDelegate {
+class MainMenuViewController: UIViewController {
     
     // MARK: - Model
     var menu = MainMenu()
@@ -25,8 +25,11 @@ class MainMenuViewController: UIViewController, WatchConnectionManagerPhoneDeleg
     //MARK: - ViewController
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Soundtrack
+        Soundtrack.sharedInstance.enableTracks(named: ["harp","guitar"], volume: 0.7, fade: false)
+        
         // setup model
-        ConnectionManager.sharedConnectionManager.delegate = self
         menu.onStartGame = {
             game in
             
@@ -51,10 +54,8 @@ class MainMenuViewController: UIViewController, WatchConnectionManagerPhoneDeleg
         
         // setup UI
         continueGameButton.isEnabled = Game.hasSavedGame
-    }
-    
-    func connectionManager(_ connectionManager: ConnectionManager, updatedWithResponse response: String) {
-        self.newGameButton.setTitle(response, for: .normal)
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {

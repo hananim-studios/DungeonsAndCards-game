@@ -18,7 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // MARK: - Watch Connectivity
         if WCSession.isSupported() {
             let defaultSession = WCSession.default()
-            //defaultSession.delegate = ConnectionManager.sharedConnectionManager
+            defaultSession.delegate = ConnectionManager.sharedConnectionManager
             defaultSession.activate()
         }
         // MARK: - HealthKit
@@ -37,6 +37,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             
             UserDefaults.standard.synchronize()
         }
+        
+        // MARK: - Soundtrack
+        Soundtrack.sharedInstance.setTracks(withNames: ["drums1","drums2","drums3","erhu","flute","guitar","harp","percussion","sax","strings"])
+        let soundtrack = Soundtrack.sharedInstance
+        soundtrack.playAll(numberOfLoops: -1)
+        soundtrack.muteAll()
         
         return true
     }

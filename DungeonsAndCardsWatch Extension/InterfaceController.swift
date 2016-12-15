@@ -18,24 +18,12 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
+        
         self.emptyMessageLabel.setHidden(true)
+        QuestManager.sharedInstance.delegate = self
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         populateTable(self.questsTable)
-
-    }
-    
-    override func table(_ table: WKInterfaceTable, didSelectRowAt rowIndex: Int) {
-        let defaultSession = WCSession.default()
         
-        do {
-            try defaultSession.updateApplicationContext([
-                "response": "oizao",
-                ])
-        }
-        catch let error as NSError {
-            print("\(error.localizedDescription)")
-        }
-
     }
     
     override func willActivate() {
@@ -117,9 +105,9 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
                 case .tap:
                     nextValue = tap
                 }
-//                print("Quest: \(content.name)")
-//                print("current:\(content.currentQuestObjective) , next:\(nextValue!) ")
-//                print("Current%: \(Int(content.currentQuestObjective*100/content.questObjective)), next %: \(Int(nextValue!*100/content.questObjective))")
+                print("Quest: \(content.name)")
+                print("current:\(content.currentQuestObjective) , next:\(nextValue!) ")
+                print("Current%: \(Int(content.currentQuestObjective*100/content.questObjective)), next %: \(Int(nextValue!*100/content.questObjective))")
                 
                 if nextValue! > 0 && nextValue! != content.currentQuestObjective {
                     controller.ringQuest.startAnimatingWithImages(in:

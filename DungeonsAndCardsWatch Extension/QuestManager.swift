@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import WatchConnectivity
 
 protocol QuestManagerDelegate {
     func didUpdateQuests(withExercise exercise: Double, Move move: Double, Stand stand: Double, andTap tap: Double)
@@ -15,6 +16,7 @@ protocol QuestManagerDelegate {
     func questSorted(quest: Quest)
     func didInvalidateTimer()
 }
+
 
 class QuestManager: HeathKitManagerDelegate {
 
@@ -75,6 +77,7 @@ class QuestManager: HeathKitManagerDelegate {
             
             if quest.currentQuestObjective >= quest.questObjective {
                 print("Quest: \(quest.name) is completed with current Objective: \(quest.currentQuestObjective)")
+                WCSession.default().transferUserInfo(["watchGold": "50" as AnyObject])
                 return true
             }
         }
