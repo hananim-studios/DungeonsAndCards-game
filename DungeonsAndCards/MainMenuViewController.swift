@@ -27,7 +27,8 @@ class MainMenuViewController: UIViewController {
         super.viewDidLoad()
         
         // Soundtrack
-        Soundtrack.sharedInstance.enableTracks(named: ["harp","guitar"], volume: 0.7, fade: false)
+        Soundtrack.sharedInstance.enableTracks(named: ["harp"], volume: 1, fade: false)
+        Soundtrack.sharedInstance.enableTracks(named: ["percussion"], volume: 0.3, fade: false)
         
         // setup model
         menu.onStartGame = {

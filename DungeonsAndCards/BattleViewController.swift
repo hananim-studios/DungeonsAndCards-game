@@ -149,8 +149,8 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         super.viewDidLoad()
         
         // Soundtrack
-        Soundtrack.sharedInstance.enableTracks(named: ["drums1","drums2","drums3"], volume: 2, fade: false)
-        Soundtrack.sharedInstance.enableTracks(named: ["strings"], volume: 0.5, fade: true)
+        Soundtrack.sharedInstance.enableTracks(named: ["drums1","drums2","drums3"], volume: 2.5, fade: false)
+        Soundtrack.sharedInstance.enableTracks(named: ["strings"], volume: 1, fade: true)
         
         assert(context != nil, "loaded without context")
         

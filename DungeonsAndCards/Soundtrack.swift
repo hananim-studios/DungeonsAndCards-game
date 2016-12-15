@@ -21,7 +21,7 @@ class Soundtrack {
             let newTrack = Track(fileNamed: name)
             tracks.append(newTrack)
         }
-
+        
     }
     
     func playAll(numberOfLoops: Int) {
@@ -46,14 +46,19 @@ class Soundtrack {
         names.forEach { name in
             self.tracks.filter {
                 return name == $0.fileName
-                }.forEach {
+                }.forEach { track in
                     if fade {
-                        while ($0.avAudioPlayer.volume > 0){
-                            $0.avAudioPlayer.volume -= 0.1
+                        DispatchQueue.main.async {
+                            while (track.avAudioPlayer.volume > 0){
+                                track.avAudioPlayer.volume -= 0.0001
+                            }
                         }
+                        
                     } else {
-                        $0.avAudioPlayer.volume = 0
+                        track.avAudioPlayer.volume = 0
                     }
+                            
+                    
             }
         }
         
@@ -65,13 +70,17 @@ class Soundtrack {
         names.forEach { name in
             self.tracks.filter {
                 return name == $0.fileName
-                }.forEach {
+                }.forEach { track in
                     if fade {
-                        while ($0.avAudioPlayer.volume < volume){
-                            $0.avAudioPlayer.volume += 0.001
+                        DispatchQueue.main.async {
+                            while (track.avAudioPlayer.volume < volume){
+                                track.avAudioPlayer.volume += 0.1
+                                sleep(2)
+                            }
                         }
+                        
                     } else {
-                        $0.avAudioPlayer.volume = volume
+                        track.avAudioPlayer.volume = volume
                     }
             }
         }
