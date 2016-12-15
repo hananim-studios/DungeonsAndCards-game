@@ -23,6 +23,13 @@ class HeroShopContext: Context {
     var party   : Party     { return game.party     }
     var shop    : HeroShop  { return game.heroShop  }
     
+    override init(withGame game: Game) {
+        
+        super.init(withGame: game)
+        
+        shop.loadHeroes(forLevel: game.level)
+    }
+    
     func canBuyHero(atShopIndex shopIndex: Int) -> HeroShopResponse {
         
         guard shop.hero(atIndex: shopIndex).isValid else {
@@ -83,5 +90,25 @@ class HeroShopContext: Context {
                "(🚩) - failed pre condition")
         
         party.slot(atIndex: partyIndex).removeHero()
+    }
+    
+    func canSwapHero(fromPartyIndex i: Int, toPartyIndex j: Int) -> HeroShopResponse {
+        
+        guard party.hasSlot(atIndex: i) else {
+            return .noSlotAtPartyIndex
+        }
+        
+        guard party.slot(atIndex: i).hasHero else {
+            return .noHeroAtPartyIndex
+        }
+        
+        return .success
+    }
+    
+    func swapHero(fromPartyIndex i: Int, toPartyIndex j: Int) {
+        assert(canSwapHero(fromPartyIndex: i, toPartyIndex: j) == .success,
+               "(🚩) - failed pre condition")
+        
+        party.swapHero(fromIndex: i, toIndex: j)
     }
 }

@@ -292,11 +292,18 @@ extension ItemShopViewController: DIOCollectionViewDataSource, DIOCollectionView
         
         if dioCollectionView == partyCollectionView {
             
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroItemCell else {
+                assertionFailure("wrong cell type in collectionView")
+                return
+            }
+            
             switch dragState {
             case .cancelled:
                 
                 dioCollectionView.dragView?.removeFromSuperview()
+            case .began:
                 
+                cell.hideItem()
             case .ended:
                 
                 dioCollectionView.dragView?.removeFromSuperview()
@@ -310,7 +317,24 @@ extension ItemShopViewController: DIOCollectionViewDataSource, DIOCollectionView
                     }
                     
                     cell.hideItem()
+                } else {
+                    
+                    cell.displayItem(context.party.slot(atIndex: indexPath.row).getItem())
                 }
+            default:
+                break
+            }
+        }
+        
+        if dioCollectionView == shopCollectionView {
+            
+            switch dragState {
+            case .cancelled:
+                dioCollectionView.dragView?.removeFromSuperview()
+                
+            case .ended:
+                dioCollectionView.dragView?.removeFromSuperview()
+                
             default:
                 break
             }

@@ -15,8 +15,14 @@ class HeroShop {
     private var heroes : [Hero]
     
     init() {
-        
         self.heroes = []
+        
+        loadHeroes(forLevel: 0)
+    }
+    
+    func loadHeroes(forLevel: Int) {
+        
+        self.heroes.removeAll()
         
         for i in 0..<heroCount {
             

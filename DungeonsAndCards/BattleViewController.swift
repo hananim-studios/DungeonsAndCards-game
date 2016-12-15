@@ -349,7 +349,7 @@ extension BattleViewController: DIOCollectionViewDataSource, DIOCollectionViewDe
             case .ended:
                 
                 dioCollectionView.dragView?.removeFromSuperview()
-                    
+                
                 cell.displayHero(context.party.slot(atIndex: indexPath.row).getHero())
             default:
                 break

@@ -15,12 +15,18 @@ class Battle {
     private      var enemies : [Enemy]
     
     init() {
-        
         self.enemies = []
+        
+        loadEnemies(forLevel: 0)
+    }
+    
+    func loadEnemies(forLevel: Int) {
+        
+        self.enemies.removeAll()
         
         for i in 0..<enemyCount {
             
-            addEnemy(EnemiesJSON.enemyAtIndex(index: i))
+            enemies.append(EnemiesJSON.enemyAtIndex(index: i))
         }
     }
     

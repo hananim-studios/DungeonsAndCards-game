@@ -24,6 +24,7 @@ class ItemShopContext: Context {
     var shop    : ItemShop  { return game.itemShop  }
     
     override init(withGame game: Game) {
+        
         super.init(withGame: game)
     }
     
