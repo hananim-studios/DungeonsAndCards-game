@@ -10,6 +10,10 @@ import UIKit
 
 class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
+    //MARK - Soundtrack
+    let enabledTracks = ["guitar"]
+    let disabledTracks = ["drums1","drums2","drums3","erhu","strings"]
+    
     //MARK - Model
     var context: HeroShopContext!
     
@@ -91,8 +95,8 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         super.viewDidLoad()
         
         //Soundtrack
-        Soundtrack.sharedInstance.disableTracks(named: ["drums1","drums2","drums3","erhu","strings"], withFade: true)
-        Soundtrack.sharedInstance.enableTracks(named: ["percussion"], volume: 1, fade: false)
+        Soundtrack.sharedInstance.disableTracks(named: disabledTracks, withFade: true)
+        Soundtrack.sharedInstance.enableTracks(named: enabledTracks, volume: 0.3, fade: true)
         
         assert(context != nil, "loaded without context")
         

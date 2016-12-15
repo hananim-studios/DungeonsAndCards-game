@@ -23,6 +23,7 @@ class Quest {
     var currentQuestObjective: Double
     var completionPercentage: Float
     var questType: QuestType
+    var questBounty: String
     
     init(with questType: QuestType) {
         self.currentQuestObjective = 0
@@ -33,12 +34,16 @@ class Quest {
         switch self.questType{
         case .exercise:
             self.name = "Exercise"
+            self.questBounty = "50"
         case .move:
             self.name = "Move"
+            self.questBounty = "20"
         case .stand:
             self.name = "Get up"
+            self.questBounty = "30"
         case .tap:
             self.name = "Tap"
+            self.questBounty = "10"
 
         }
     }

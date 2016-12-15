@@ -24,9 +24,9 @@ class HealthKitManager {
         healthStore.requestAuthorization(toShare: [], read: [HKObjectType.activitySummaryType()]) { (success, error) in
             
             if success {
-                print("success")
+                //print("success")
             }else {
-                print(error!.localizedDescription)
+                //print(error!.localizedDescription)
             }
         }
         
