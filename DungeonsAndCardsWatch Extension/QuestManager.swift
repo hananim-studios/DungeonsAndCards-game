@@ -44,7 +44,7 @@ class QuestManager: HeathKitManagerDelegate {
         
         if quests.count > 0 {
             //Randomize a quest
-            print(quests)
+            //print(quests)
             let index = Int(arc4random_uniform(UInt32(quests.count)))
             let quest = quests[index]
             
@@ -76,8 +76,8 @@ class QuestManager: HeathKitManagerDelegate {
         if quest.active == true {
             
             if quest.currentQuestObjective >= quest.questObjective {
-                print("Quest: \(quest.name) is completed with current Objective: \(quest.currentQuestObjective)")
-                WCSession.default().transferUserInfo(["watchGold": "50" as AnyObject])
+                //print("Quest: \(quest.name) is completed with current Objective: \(quest.currentQuestObjective)")
+                WCSession.default().transferUserInfo(["watchGold": quest.questBounty as AnyObject])
                 return true
             }
         }
@@ -88,7 +88,7 @@ class QuestManager: HeathKitManagerDelegate {
        
         if quest.active == true {
         
-            print("Quest: \(quest.name) was set inactive")
+            //print("Quest: \(quest.name) was set inactive")
             quest.currentQuestObjective = 0
             quest.active = false
         }
@@ -109,7 +109,7 @@ class QuestManager: HeathKitManagerDelegate {
                 setInactive(quest)
                 delegate?.questRemoved(quest)
                 inactive.append(quest)
-                print("Quest: \(quest.name) was removed from quests array (size: \(quests.count) and sent to inactiveArray (size: \(inactive.count))")
+                //print("Quest: \(quest.name) was removed from quests array (size: \(quests.count) and sent to inactiveArray (size: \(inactive.count))")
             }
         }
     }

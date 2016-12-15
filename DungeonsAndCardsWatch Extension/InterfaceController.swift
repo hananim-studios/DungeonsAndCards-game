@@ -71,7 +71,7 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
         }
         if let i = index {
             self.array.remove(at: i)
-            print("Quest: \(quest.name) was removed from VIEW (size: \(self.array.count)")
+            //print("Quest: \(quest.name) was removed from VIEW (size: \(self.array.count)")
         }
         populateTable(self.questsTable)
     }
@@ -105,9 +105,9 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
                 case .tap:
                     nextValue = tap
                 }
-                print("Quest: \(content.name)")
-                print("current:\(content.currentQuestObjective) , next:\(nextValue!) ")
-                print("Current%: \(Int(content.currentQuestObjective*100/content.questObjective)), next %: \(Int(nextValue!*100/content.questObjective))")
+//                print("Quest: \(content.name)")
+//                print("current:\(content.currentQuestObjective) , next:\(nextValue!) ")
+//                print("Current%: \(Int(content.currentQuestObjective*100/content.questObjective)), next %: \(Int(nextValue!*100/content.questObjective))")
                 
                 if nextValue! > 0 && nextValue! != content.currentQuestObjective {
                     controller.ringQuest.startAnimatingWithImages(in:
