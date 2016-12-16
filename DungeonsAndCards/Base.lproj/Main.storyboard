@@ -219,11 +219,11 @@
                                 <cells/>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="ZOe-Hh-Oo7">
-                                <rect key="frame" x="258" y="24" width="56" height="30"/>
+                                <rect key="frame" x="256" y="24" width="58" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nd2-bB-gLI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="24"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <state key="normal" title="2000">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
@@ -232,7 +232,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89M-Hh-Z5E">
-                                <rect key="frame" x="226" y="24" width="30" height="30"/>
+                                <rect key="frame" x="224" y="24" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="1vF-nr-Qc9"/>
                                 </constraints>
@@ -242,11 +242,11 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="bottom" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cP6-EC-UDk">
-                                <rect key="frame" x="105" y="-20" width="110" height="90"/>
+                                <rect key="frame" x="100" y="-20" width="120" height="90"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="90" id="2rf-YA-7iV"/>
-                                    <constraint firstAttribute="width" constant="110" id="kOw-PW-Dhp"/>
+                                    <constraint firstAttribute="width" constant="120" id="kOw-PW-Dhp"/>
                                 </constraints>
                                 <string key="text">
 Party</string>
@@ -260,8 +260,11 @@ Party</string>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-O5-IF5">
-                                <rect key="frame" x="63" y="428" width="59" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7Z9-O5-IF5">
+                                <rect key="frame" x="63" y="428" width="199" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="199" id="QYd-0I-FgT"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -553,16 +556,19 @@ find a TREASURE</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="redraw" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="kWO-ta-MmV">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barItemShop" translatesAutoresizingMaskIntoConstraints="NO" id="DKM-Cy-FGm">
-                                <rect key="frame" x="46" y="439" width="228" height="37"/>
+                                <rect key="frame" x="46" y="428" width="228" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="228" id="akE-4j-Sb5"/>
                                     <constraint firstAttribute="height" constant="37" id="rec-Ar-YdI"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-Ej-fsL" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="312.5" width="328" height="122.5"/>
-                                <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-Ej-fsL" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="299.5" width="328" height="123.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wgw-t3-QXc">
                                     <size key="itemSize" width="137" height="216"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -571,29 +577,41 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-B0-9Wg" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="63" width="328" height="245.5"/>
-                                <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-B0-9Wg" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="110" width="328" height="189.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v4Y-fJ-z3o">
                                     <size key="itemSize" width="88" height="133"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                    <inset key="sectionInset" minX="100" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shop" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-Ev-ZC2">
-                                <rect key="frame" x="115" y="22" width="91" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-Ev-ZC2">
+                                <rect key="frame" x="100.5" y="-20" width="120" height="90"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="Kg2-gj-P0Z"/>
-                                    <constraint firstAttribute="height" constant="37" id="Q8K-Yr-Lur"/>
+                                    <constraint firstAttribute="width" constant="120" id="Kg2-gj-P0Z"/>
+                                    <constraint firstAttribute="height" constant="90" id="Q8K-Yr-Lur"/>
                                 </constraints>
+                                <string key="text">
+Shop</string>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-ZN-FNH">
-                                <rect key="frame" x="63" y="439" width="59" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Mb-ZN-FNH">
+                                <rect key="frame" x="63" y="428" width="204" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="RxX-Zn-Bqo"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -602,18 +620,18 @@ find a TREASURE</string>
                                     <action selector="nextButtonPressed:" destination="ZUf-8j-kFx" eventType="touchUpInside" id="9IN-Ju-e0R"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s4h-3A-Bbx">
-                                <rect key="frame" x="248" y="20" width="66" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="s4h-3A-Bbx">
+                                <rect key="frame" x="256" y="20" width="58" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="lpa-fO-yfz"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <state key="normal" title="2000">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DUu-xd-36N">
-                                <rect key="frame" x="216" y="20" width="30" height="30"/>
+                                <rect key="frame" x="224" y="20" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="Z0Q-5W-jri"/>
                                 </constraints>
@@ -622,25 +640,29 @@ find a TREASURE</string>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="DKM-Cy-FGm" firstAttribute="top" secondItem="NhL-Ej-fsL" secondAttribute="bottom" constant="4" id="1ed-md-P4Y"/>
+                            <constraint firstItem="DKM-Cy-FGm" firstAttribute="top" secondItem="NhL-Ej-fsL" secondAttribute="bottom" constant="5" id="1ed-md-P4Y"/>
                             <constraint firstItem="s4h-3A-Bbx" firstAttribute="top" secondItem="Bma-qo-Sbj" secondAttribute="bottom" id="55Q-Tr-139"/>
+                            <constraint firstItem="kWO-ta-MmV" firstAttribute="height" secondItem="hhg-no-3Uk" secondAttribute="height" id="8SM-3z-WQi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Aa4-B0-9Wg" secondAttribute="trailing" constant="-20" id="8Zd-tj-4KB"/>
                             <constraint firstAttribute="trailingMargin" secondItem="s4h-3A-Bbx" secondAttribute="trailing" constant="-10" id="IAR-Ed-UaD"/>
-                            <constraint firstItem="ljj-Ev-ZC2" firstAttribute="top" secondItem="Bma-qo-Sbj" secondAttribute="bottom" constant="2" id="MXG-KU-g1O"/>
+                            <constraint firstItem="ljj-Ev-ZC2" firstAttribute="top" secondItem="Bma-qo-Sbj" secondAttribute="bottom" constant="-40" id="MXG-KU-g1O"/>
                             <constraint firstItem="ljj-Ev-ZC2" firstAttribute="centerX" secondItem="hhg-no-3Uk" secondAttribute="centerX" id="MeZ-Zv-QkO"/>
                             <constraint firstItem="4Mb-ZN-FNH" firstAttribute="height" secondItem="DKM-Cy-FGm" secondAttribute="height" id="OMi-8A-VHU"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="DKM-Cy-FGm" secondAttribute="bottom" constant="4" id="TL3-6C-01t"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="DKM-Cy-FGm" secondAttribute="bottom" constant="15" id="TL3-6C-01t"/>
                             <constraint firstItem="4Mb-ZN-FNH" firstAttribute="centerY" secondItem="DKM-Cy-FGm" secondAttribute="centerY" id="U33-cu-hxY"/>
+                            <constraint firstItem="kWO-ta-MmV" firstAttribute="centerY" secondItem="hhg-no-3Uk" secondAttribute="centerY" id="VWe-kZ-68V"/>
                             <constraint firstAttribute="trailingMargin" secondItem="NhL-Ej-fsL" secondAttribute="trailing" constant="-20" id="VxW-qa-eJG"/>
                             <constraint firstItem="DKM-Cy-FGm" firstAttribute="centerX" secondItem="hhg-no-3Uk" secondAttribute="centerX" id="XWQ-mq-adP"/>
-                            <constraint firstItem="NhL-Ej-fsL" firstAttribute="height" secondItem="Aa4-B0-9Wg" secondAttribute="height" multiplier="0.5" id="YPD-Md-T5X"/>
-                            <constraint firstItem="Aa4-B0-9Wg" firstAttribute="top" secondItem="ljj-Ev-ZC2" secondAttribute="bottom" constant="4" id="eQU-1w-iqU"/>
+                            <constraint firstItem="NhL-Ej-fsL" firstAttribute="height" secondItem="Aa4-B0-9Wg" secondAttribute="height" multiplier="0.65" id="YPD-Md-T5X"/>
+                            <constraint firstItem="Aa4-B0-9Wg" firstAttribute="top" secondItem="ljj-Ev-ZC2" secondAttribute="bottom" constant="40" id="eQU-1w-iqU"/>
                             <constraint firstItem="4Mb-ZN-FNH" firstAttribute="leading" secondItem="DKM-Cy-FGm" secondAttribute="leading" constant="17" id="f1p-yn-4b6"/>
                             <constraint firstAttribute="leadingMargin" secondItem="Aa4-B0-9Wg" secondAttribute="leading" constant="20" id="gyz-G0-WfL"/>
-                            <constraint firstItem="NhL-Ej-fsL" firstAttribute="top" secondItem="Aa4-B0-9Wg" secondAttribute="bottom" constant="4" id="lT7-AW-zhO"/>
+                            <constraint firstItem="NhL-Ej-fsL" firstAttribute="top" secondItem="Aa4-B0-9Wg" secondAttribute="bottom" id="lT7-AW-zhO"/>
                             <constraint firstItem="DUu-xd-36N" firstAttribute="top" secondItem="Bma-qo-Sbj" secondAttribute="bottom" id="oAe-a7-FeI"/>
+                            <constraint firstItem="kWO-ta-MmV" firstAttribute="width" secondItem="hhg-no-3Uk" secondAttribute="width" id="syt-pe-eSu"/>
                             <constraint firstItem="NhL-Ej-fsL" firstAttribute="leading" secondItem="hhg-no-3Uk" secondAttribute="leadingMargin" constant="-20" id="uUT-l3-tnz"/>
                             <constraint firstItem="DUu-xd-36N" firstAttribute="height" secondItem="s4h-3A-Bbx" secondAttribute="height" id="xUe-vr-EcP"/>
+                            <constraint firstItem="kWO-ta-MmV" firstAttribute="centerX" secondItem="hhg-no-3Uk" secondAttribute="centerX" id="yj5-Wu-Sol"/>
                             <constraint firstItem="s4h-3A-Bbx" firstAttribute="leading" secondItem="DUu-xd-36N" secondAttribute="trailing" constant="2" id="z24-gl-Iud"/>
                         </constraints>
                     </view>
@@ -668,16 +690,19 @@ find a TREASURE</string>
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="wK8-hj-SLf">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="barBattle" translatesAutoresizingMaskIntoConstraints="NO" id="SIT-0D-yvI">
-                                <rect key="frame" x="46" y="439" width="228" height="37"/>
+                                <rect key="frame" x="46" y="428" width="228" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="228" id="N2Z-O6-jrY"/>
                                     <constraint firstAttribute="height" constant="37" id="aPe-h8-8Gv"/>
                                 </constraints>
                             </imageView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-OS-rg9" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="251" width="328" height="184"/>
-                                <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-OS-rg9" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="269.5" width="328" height="153.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0S9-Z8-PDG">
                                     <size key="itemSize" width="137" height="216"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -686,9 +711,10 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0fB-Ic-P4j" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="63" width="328" height="184"/>
-                                <color key="backgroundColor" white="1" alpha="0.25" colorSpace="calibratedWhite"/>
+                            <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0fB-Ic-P4j" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
+                                <rect key="frame" x="-4" y="74" width="328" height="191.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.5" y="0.5" width="1" height="1"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zuj-Wv-wCX">
                                     <size key="itemSize" width="88" height="133"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -697,35 +723,47 @@ find a TREASURE</string>
                                 </collectionViewFlowLayout>
                                 <cells/>
                             </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battle" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-q5-S4W">
-                                <rect key="frame" x="115" y="22" width="91" height="37"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-q5-S4W">
+                                <rect key="frame" x="100.5" y="-20" width="120" height="90"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="91" id="IGg-MH-LH1"/>
-                                    <constraint firstAttribute="height" constant="37" id="vBU-r1-hmn"/>
+                                    <constraint firstAttribute="width" constant="120" id="IGg-MH-LH1"/>
+                                    <constraint firstAttribute="height" constant="90" id="vBU-r1-hmn"/>
                                 </constraints>
+                                <string key="text">
+Battle</string>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="30"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4x-JV-i0H">
-                                <rect key="frame" x="63" y="439" width="59" height="37"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B4x-JV-i0H">
+                                <rect key="frame" x="63" y="428" width="204" height="37"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="VGC-X5-mG3"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="top" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sO8-TX-PVq">
-                                <rect key="frame" x="248" y="20" width="66" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sO8-TX-PVq">
+                                <rect key="frame" x="256" y="20" width="58" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="nW1-lk-OyA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="38"/>
+                                <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="25"/>
                                 <state key="normal" title="2000">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HCc-hT-Gh9">
-                                <rect key="frame" x="216" y="20" width="30" height="30"/>
+                                <rect key="frame" x="224" y="20" width="30" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="30" id="WPw-Cs-Bgc"/>
                                 </constraints>
@@ -738,20 +776,24 @@ find a TREASURE</string>
                             <constraint firstItem="JtI-OS-rg9" firstAttribute="top" secondItem="0fB-Ic-P4j" secondAttribute="bottom" constant="4" id="2WT-6a-dQL"/>
                             <constraint firstAttribute="trailingMargin" secondItem="0fB-Ic-P4j" secondAttribute="trailing" constant="-20" id="5bt-1a-LC3"/>
                             <constraint firstAttribute="leadingMargin" secondItem="0fB-Ic-P4j" secondAttribute="leading" constant="20" id="5zm-6e-RcM"/>
+                            <constraint firstItem="wK8-hj-SLf" firstAttribute="centerY" secondItem="b0D-iA-rY1" secondAttribute="centerY" id="6tV-5S-GkN"/>
                             <constraint firstItem="0fB-Ic-P4j" firstAttribute="top" secondItem="iOb-q5-S4W" secondAttribute="bottom" constant="4" id="Ask-k5-bed"/>
                             <constraint firstItem="sO8-TX-PVq" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" id="DAn-q8-2tD"/>
-                            <constraint firstItem="iOb-q5-S4W" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" constant="2" id="G0u-Lz-Oz5"/>
+                            <constraint firstItem="iOb-q5-S4W" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" constant="-40" id="G0u-Lz-Oz5"/>
                             <constraint firstItem="B4x-JV-i0H" firstAttribute="height" secondItem="SIT-0D-yvI" secondAttribute="height" id="IKX-U2-ZXA"/>
                             <constraint firstAttribute="trailingMargin" secondItem="JtI-OS-rg9" secondAttribute="trailing" constant="-20" id="KFY-bH-TXq"/>
+                            <constraint firstItem="wK8-hj-SLf" firstAttribute="centerX" secondItem="b0D-iA-rY1" secondAttribute="centerX" id="Kve-Ya-61Q"/>
+                            <constraint firstItem="wK8-hj-SLf" firstAttribute="width" secondItem="b0D-iA-rY1" secondAttribute="width" id="O1B-KV-4fS"/>
+                            <constraint firstItem="wK8-hj-SLf" firstAttribute="height" secondItem="b0D-iA-rY1" secondAttribute="height" id="TnO-2l-KQA"/>
                             <constraint firstItem="sO8-TX-PVq" firstAttribute="leading" secondItem="HCc-hT-Gh9" secondAttribute="trailing" constant="2" id="VHX-nR-R9u"/>
                             <constraint firstItem="iOb-q5-S4W" firstAttribute="centerX" secondItem="b0D-iA-rY1" secondAttribute="centerX" id="Z3O-Ch-B6U"/>
-                            <constraint firstAttribute="bottomMargin" secondItem="SIT-0D-yvI" secondAttribute="bottom" constant="4" id="ZO1-Aa-Tqu"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="SIT-0D-yvI" secondAttribute="bottom" constant="15" id="ZO1-Aa-Tqu"/>
                             <constraint firstItem="HCc-hT-Gh9" firstAttribute="height" secondItem="sO8-TX-PVq" secondAttribute="height" id="cpO-mM-fCo"/>
-                            <constraint firstItem="SIT-0D-yvI" firstAttribute="top" secondItem="JtI-OS-rg9" secondAttribute="bottom" constant="4" id="eH4-dN-eLf"/>
+                            <constraint firstItem="SIT-0D-yvI" firstAttribute="top" secondItem="JtI-OS-rg9" secondAttribute="bottom" constant="5" id="eH4-dN-eLf"/>
                             <constraint firstItem="JtI-OS-rg9" firstAttribute="leading" secondItem="b0D-iA-rY1" secondAttribute="leadingMargin" constant="-20" id="fZP-Bl-EW8"/>
                             <constraint firstItem="SIT-0D-yvI" firstAttribute="centerX" secondItem="b0D-iA-rY1" secondAttribute="centerX" id="guX-QF-Hc0"/>
                             <constraint firstItem="HCc-hT-Gh9" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" id="sgu-Z4-FdQ"/>
-                            <constraint firstItem="JtI-OS-rg9" firstAttribute="height" secondItem="0fB-Ic-P4j" secondAttribute="height" id="sqG-M0-gWD"/>
+                            <constraint firstItem="JtI-OS-rg9" firstAttribute="height" secondItem="0fB-Ic-P4j" secondAttribute="height" multiplier="0.8" id="sqG-M0-gWD"/>
                             <constraint firstItem="B4x-JV-i0H" firstAttribute="centerY" secondItem="SIT-0D-yvI" secondAttribute="centerY" id="toU-ij-Mp5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sO8-TX-PVq" secondAttribute="trailing" constant="-10" id="uWQ-Nk-aJm"/>
                         </constraints>
@@ -765,7 +807,7 @@ find a TREASURE</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AX-3o-vOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3066" y="906"/>
+            <point key="canvasLocation" x="3065.625" y="905"/>
         </scene>
     </scenes>
     <resources>

@@ -55,7 +55,7 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
                         assertionFailure("wrong cell type in collectionView")
                         return
                 }
-                
+            
                 cell.displayHero(hero)
             }
             

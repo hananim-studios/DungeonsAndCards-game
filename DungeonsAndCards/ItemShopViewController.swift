@@ -222,7 +222,7 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
     //MARK - UICollectionViewFlowLayoutDelegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let screenSize = UIScreen.main.bounds.width
-        let collectionSize = collectionView.contentSize.width
+        let collectionSize = collectionView.contentSize.width/3
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
         return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)
@@ -248,7 +248,7 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
             
             let height = 0.9*collectionView.bounds.height
             
-            return CGSize(width: height/2, height: height)
+            return CGSize(width: height/2, height: height*1.2)
         }
         
         return CGSize.zero

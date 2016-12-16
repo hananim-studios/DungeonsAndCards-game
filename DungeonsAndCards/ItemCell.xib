@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -22,19 +23,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uWs-tC-vvI">
-                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                        <rect key="frame" x="40.5" y="5" width="120" height="160"/>
                     </imageView>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="uWs-tC-vvI" firstAttribute="leading" secondItem="hSt-ee-CAm" secondAttribute="leading" id="14X-ka-Kfk"/>
-                <constraint firstAttribute="bottom" secondItem="uWs-tC-vvI" secondAttribute="bottom" id="2bd-l5-O01"/>
-                <constraint firstItem="BPN-15-lU1" firstAttribute="width" secondItem="uWs-tC-vvI" secondAttribute="width" id="3aG-1H-3hk"/>
-                <constraint firstItem="uWs-tC-vvI" firstAttribute="top" secondItem="hSt-ee-CAm" secondAttribute="top" id="FhM-YK-Bat"/>
-                <constraint firstAttribute="trailing" secondItem="uWs-tC-vvI" secondAttribute="trailing" id="HRO-AK-oRe"/>
-                <constraint firstItem="BPN-15-lU1" firstAttribute="height" secondItem="uWs-tC-vvI" secondAttribute="height" id="KIr-2Z-UPY"/>
-                <constraint firstItem="BPN-15-lU1" firstAttribute="centerY" secondItem="uWs-tC-vvI" secondAttribute="centerY" id="Sj8-2s-58h"/>
-                <constraint firstItem="BPN-15-lU1" firstAttribute="centerX" secondItem="uWs-tC-vvI" secondAttribute="centerX" id="VxF-CB-PSM"/>
+                <constraint firstItem="uWs-tC-vvI" firstAttribute="centerX" secondItem="BPN-15-lU1" secondAttribute="centerX" id="2fY-bx-BRD"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="centerY" secondItem="hSt-ee-CAm" secondAttribute="centerY" id="65x-SC-vjh"/>
+                <constraint firstItem="uWs-tC-vvI" firstAttribute="top" secondItem="BPN-15-lU1" secondAttribute="top" constant="5" id="WAB-Hr-GxC"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="centerX" secondItem="hSt-ee-CAm" secondAttribute="centerX" id="Y6R-iH-zLD"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="width" secondItem="hSt-ee-CAm" secondAttribute="width" id="cqE-NG-tbK"/>
+                <constraint firstItem="BPN-15-lU1" firstAttribute="height" secondItem="hSt-ee-CAm" secondAttribute="height" id="gws-L9-YUH"/>
+                <constraint firstItem="uWs-tC-vvI" firstAttribute="width" secondItem="BPN-15-lU1" secondAttribute="width" multiplier="0.6" id="hQY-uE-Ksf"/>
+                <constraint firstItem="uWs-tC-vvI" firstAttribute="height" secondItem="BPN-15-lU1" secondAttribute="height" multiplier="0.8" id="zz5-el-EEJ"/>
             </constraints>
             <size key="customSize" width="200" height="200"/>
             <connections>

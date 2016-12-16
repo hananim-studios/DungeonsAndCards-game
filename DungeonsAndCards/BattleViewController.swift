@@ -262,7 +262,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         let collectionSize = collectionView.contentSize.width
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
-        return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)
+        return UIEdgeInsetsMake(0, leftInset*1, 0, rightInset*1)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
