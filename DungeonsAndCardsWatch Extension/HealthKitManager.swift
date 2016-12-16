@@ -20,11 +20,11 @@ class HealthKitManager {
     public var timer = Timer()
     
     init(){
-        timer = Timer.scheduledTimer(timeInterval: 2, target: self, selector: #selector(query), userInfo: nil, repeats: true)
+        timer = Timer.scheduledTimer(timeInterval: 3, target: self, selector: #selector(query), userInfo: nil, repeats: true)
         healthStore.requestAuthorization(toShare: [], read: [HKObjectType.activitySummaryType()]) { (success, error) in
             
             if success {
-                //print("success")
+                self.timer.fire()
             }else {
                 //print(error!.localizedDescription)
             }
@@ -34,7 +34,7 @@ class HealthKitManager {
     
     //MARK: - Methods
     @objc func query() {
-        i = i + 20
+        i = i + 49
         var components = Calendar.current.dateComponents([.day, .month, .year, .era], from: Date())
         components.calendar = Calendar.current
         let predicate = NSPredicate(format: "%K = %@", argumentArray: [HKPredicateKeyPathDateComponents, components])
@@ -45,10 +45,10 @@ class HealthKitManager {
             if let summary = summaries?.first {
                 DispatchQueue.main.async {
                     self.delegate?.didUpdateSummary(
-                        withExercise: self.i*0.7,
-                        Move: self.i*0.3,
-                        Stand: self.i*0.2,
-                        andTap: self.i*0.6)
+                        withExercise: self.i*0.5,
+                        Move: self.i*0.5,
+                        Stand: self.i*0.5,
+                        andTap: self.i*0.5)
 
 //                    self.delegate?.didUpdateSummary(
 //                    withExercise: summary.appleExerciseTime.doubleValue(for: HKUnit.hour()),

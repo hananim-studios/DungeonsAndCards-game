@@ -18,8 +18,12 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
     
     override func awake(withContext context: Any?) {
         super.awake(withContext: context)
-        
-        self.emptyMessageLabel.setHidden(true)
+        if array.isEmpty{
+            self.emptyMessageLabel.setHidden(false)
+        }
+        else {
+            self.emptyMessageLabel.setHidden(true)
+        }
         QuestManager.sharedInstance.delegate = self
         questsTable.setNumberOfRows(self.array.count, withRowType: "QuestRow")
         populateTable(self.questsTable)
@@ -114,7 +118,7 @@ class InterfaceController: WKInterfaceController, QuestManagerDelegate {
                         NSMakeRange(
                             Int(content.completionPercentage*100),
                             Int(nextValue!*100/content.questObjective)),
-                                                                  duration: 0.5,
+                                                                  duration: 1.5,
                                                                   repeatCount: 1)
                 }
             }

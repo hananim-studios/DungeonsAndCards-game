@@ -16,15 +16,19 @@
                     <items>
                         <group width="1" height="1" alignment="left" layout="vertical" id="fgZ-iS-5bZ">
                             <items>
-                                <imageView width="1" alignment="center" verticalAlignment="center" image="logo" contentMode="scaleAspectFit" id="eDZ-Ov-rm7">
+                                <imageView width="1" height="100" alignment="center" verticalAlignment="center" image="logo" contentMode="scaleAspectFit" id="eDZ-Ov-rm7">
                                     <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </imageView>
-                                <button width="132" alignment="center" verticalAlignment="bottom" title="See quests" id="Fz2-WD-RSj">
-                                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                    <connections>
-                                        <segue destination="AgC-eL-Hgc" kind="push" id="Fax-AW-5Nq"/>
-                                    </connections>
-                                </button>
+                                <group width="1" alignment="left" verticalAlignment="center" id="Gpz-uc-yK0">
+                                    <items>
+                                        <button width="127" alignment="center" verticalAlignment="bottom" title="See quests" id="Fz2-WD-RSj">
+                                            <color key="backgroundColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <connections>
+                                                <segue destination="AgC-eL-Hgc" kind="push" id="Fax-AW-5Nq"/>
+                                            </connections>
+                                        </button>
+                                    </items>
+                                </group>
                             </items>
                         </group>
                     </items>
@@ -35,7 +39,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="13" y="348"/>
+            <point key="canvasLocation" x="-25" y="345"/>
         </scene>
         <!--Interface Controller-->
         <scene sceneID="aou-V4-d1y">
@@ -45,9 +49,6 @@
                         <group width="1" alignment="left" layout="vertical" id="oTS-bX-gA7">
                             <items>
                                 <label alignment="left" text="Quests" id="wek-Fq-7Z8"/>
-                                <label alignment="center" verticalAlignment="center" text="No quests available" id="73p-cq-Wwe">
-                                    <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
-                                </label>
                             </items>
                         </group>
                         <table alignment="left" id="gHP-MD-Ags">
@@ -72,7 +73,7 @@
                                                 <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
                                             </group>
                                         </items>
-                                        <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="backgroundColor" red="0.51764705882352935" green="0.51764705882352935" blue="0.51764705882352935" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                     </group>
                                     <connections>
                                         <outlet property="mainLabel" destination="oCk-fM-99v" id="ca2-xy-n7I"/>
@@ -82,6 +83,9 @@
                                 </tableRow>
                             </items>
                         </table>
+                        <label alignment="center" verticalAlignment="center" text="No quests available" id="73p-cq-Wwe">
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                        </label>
                     </items>
                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                     <connections>
