@@ -84,11 +84,6 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func viewDidAppear(_ animated: Bool) {
         
-        self.partyCollectionView.reloadData()
-        self.partyCollectionView.layoutIfNeeded()
-        self.shopCollectionView.reloadData()
-        self.shopCollectionView.layoutIfNeeded()
-        
         partyCollectionView.scrollToItem(at: IndexPath.init(row:partyCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
         shopCollectionView.scrollToItem(at: IndexPath.init(row:shopCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
     }
@@ -126,6 +121,11 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
         
         //self.game.delegate = self
         updateGold()
+        
+        self.partyCollectionView.reloadData()
+        self.partyCollectionView.layoutIfNeeded()
+        self.shopCollectionView.reloadData()
+        self.shopCollectionView.layoutIfNeeded()
     }
     
     override func didReceiveMemoryWarning() {

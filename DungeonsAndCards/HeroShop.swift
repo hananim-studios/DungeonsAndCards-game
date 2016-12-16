@@ -11,7 +11,11 @@ import SwiftyJSON
 
 class HeroShop {
     
-    let heroCount = 5
+    let heroMaxCount = 5
+    
+    var heroCount: Int {
+        return heroes.count
+    }
     private var heroes : [Hero]
     
     init() {
@@ -24,7 +28,7 @@ class HeroShop {
         
         self.heroes.removeAll()
         
-        for i in 0..<heroCount {
+        for i in heroCount..<heroMaxCount {
             
             heroes.append(HeroesJSON.heroAtIndex(index: i))
         }
@@ -55,6 +59,19 @@ class HeroShop {
         
         heroes[index] = hero
         onSetHeroAtIndex?(hero, index)
+    }
+    
+    var onRemoveHeroAtIndex: ((Int) -> Void)?
+    func removeHero(atIndex index: Int) {
+        
+        guard hasHero(atIndex: index) else {
+            
+            assertionFailure("(🚩) - tried to remove hero at invalid index")
+            return
+        }
+        
+        heroes.remove(at: index)
+        onRemoveHeroAtIndex?(index)
     }
     
     func price(forHeroAtIndex index: Int) -> Int {

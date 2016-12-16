@@ -33,10 +33,7 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         
         // INIT AND BIND UI
         
-        self.partyCollectionView.reloadData()
-        self.partyCollectionView.layoutIfNeeded()
-        self.shopCollectionView.reloadData()
-        self.shopCollectionView.layoutIfNeeded()
+
         
         // money
         let updateMoney = { (value: Int) -> Void in
@@ -82,8 +79,13 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
             let indexPath = IndexPath(row: index, section: 0)
             self.shopCollectionView.reloadItems(at: [indexPath])
         }
-        
         context.game.heroShop.onSetHeroAtIndex = updateHeroAtIndex
+        
+        let removeHeroAtIndex = { (index: Int) -> Void in
+        
+            self.shopCollectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
+        }
+        context.game.heroShop.onRemoveHeroAtIndex = removeHeroAtIndex
     }
     override func viewDidAppear(_ animated: Bool) {
         
@@ -121,6 +123,10 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
         partyCollectionView.allowFeedback = true
         partyCollectionView.register(UINib(nibName: "HeroPartyCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroPartyCell")
         
+        self.partyCollectionView.reloadData()
+        self.partyCollectionView.layoutIfNeeded()
+        self.shopCollectionView.reloadData()
+        self.shopCollectionView.layoutIfNeeded()
     }
     
     override func didReceiveMemoryWarning() {
@@ -201,7 +207,7 @@ class HeroShopViewController: UIViewController, UICollectionViewDataSource, UICo
     //MARK - UICollectionViewFlowLayoutDelegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let screenSize = UIScreen.main.bounds.width
-        let collectionSize = collectionView.contentSize.width
+        let collectionSize = collectionView.contentSize.width/3
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
         return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)

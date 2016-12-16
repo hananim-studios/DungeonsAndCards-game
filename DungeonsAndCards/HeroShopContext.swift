@@ -68,6 +68,7 @@ class HeroShopContext: Context {
         
         game.spendMoney(hero.price)
         party.slot(atIndex: partyIndex).setHero(hero)
+        shop.removeHero(atIndex: shopIndex)
     }
     
     func canRemoveHero(atPartyIndex partyIndex: Int) -> HeroShopResponse {
@@ -90,6 +91,24 @@ class HeroShopContext: Context {
                "(🚩) - failed pre condition")
         
         party.slot(atIndex: partyIndex).removeHero()
+    }
+    
+    func canRemoveHero(atShopIndex shopIndex: Int) -> HeroShopResponse {
+        
+        guard shop.hasHero(atIndex: shopIndex) else {
+            return .noHeroAtShopIndex
+        }
+        
+        
+        return .success
+    }
+    
+    func removeHero(atShopIndex shopIndex: Int) {
+        
+        assert(canRemoveHero(atShopIndex: shopIndex) == .success,
+               "(🚩) - failed pre condition")
+        
+        party.slot(atIndex: shopIndex).removeHero()
     }
     
     func canSwapHero(fromPartyIndex i: Int, toPartyIndex j: Int) -> HeroShopResponse {
