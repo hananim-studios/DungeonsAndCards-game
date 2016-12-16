@@ -54,10 +54,15 @@ class BattleContext: Context {
         e.health -= h.attack
         h.health -= e.attack
         
-        if e.health <= 0 { killCurrentEnemy()       }
-        if h.health <= 0 { killHero(atIndex: index) }
-        
         onAttackEnemyWithHeroAtIndex?(index)
+        
+        if e.health <= 0 {
+            killCurrentEnemy()
+        }
+        
+        if h.health <= 0 {
+            killHero(atIndex: index)
+        }
     }
     
     func canUseItem(atIndex index: Int) -> BattleResponse {

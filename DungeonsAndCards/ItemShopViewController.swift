@@ -84,11 +84,6 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
     
     override func viewDidAppear(_ animated: Bool) {
         
-        self.partyCollectionView.reloadData()
-        self.partyCollectionView.layoutIfNeeded()
-        self.shopCollectionView.reloadData()
-        self.shopCollectionView.layoutIfNeeded()
-        
         partyCollectionView.scrollToItem(at: IndexPath.init(row:partyCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
         shopCollectionView.scrollToItem(at: IndexPath.init(row:shopCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
     }
@@ -126,6 +121,11 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
         
         //self.game.delegate = self
         updateGold()
+        
+        self.partyCollectionView.reloadData()
+        self.partyCollectionView.layoutIfNeeded()
+        self.shopCollectionView.reloadData()
+        self.shopCollectionView.layoutIfNeeded()
     }
     
     override func didReceiveMemoryWarning() {
@@ -222,7 +222,7 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
     //MARK - UICollectionViewFlowLayoutDelegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let screenSize = UIScreen.main.bounds.width
-        let collectionSize = collectionView.contentSize.width
+        let collectionSize = collectionView.contentSize.width/3
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
         return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)

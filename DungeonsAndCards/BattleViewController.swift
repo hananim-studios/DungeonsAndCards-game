@@ -27,12 +27,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
     //MARK - ViewController
     override func viewWillAppear(_ animated: Bool) {
         
-        // INIT AND BIND UI
-        
-        self.partyCollectionView.reloadData()
-        self.partyCollectionView.layoutIfNeeded()
-        self.battleCollectionView.reloadData()
-        self.battleCollectionView.layoutIfNeeded()
+        // BIND UI
         
         // money
         let updateMoney = { (value: Int) -> Void in
@@ -73,13 +68,14 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         }
         
         // battle
-        let updateBattle = { (index: Int) -> Void in
+        let attackEnemy = { (index: Int) -> Void in
             
-            let indexPath = IndexPath(row: 0, section: 0)
-            
-            let cell = self.battleCollectionView.cellForItem(at: indexPath) as! EnemyCell
+
             let slot = self.context.game.party.slot(atIndex: index)
             let enemy = self.context.battle.currentEnemy()
+            
+            let indexPath = IndexPath(row: 0, section: 0)
+            let cell = self.battleCollectionView.cellForItem(at: indexPath) as! EnemyCell
             
             if self.context.battle.hasEnemy {
                 cell.displayEnemy(enemy)
@@ -99,7 +95,23 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
             }
         }
         
-        context.onAttackEnemyWithHeroAtIndex = updateBattle
+        let killEnemy = {
+            
+            let indexPath = IndexPath(row: 0, section: 0)
+            
+            let cell = self.battleCollectionView.cellForItem(at: indexPath) as! EnemyCell
+
+            
+            if self.context.battle.hasEnemy {
+                let enemy = self.context.battle.currentEnemy()
+                cell.displayEnemy(enemy)
+            } else {
+                cell.hideEnemy()
+            }
+        }
+        
+        context.onAttackEnemyWithHeroAtIndex = attackEnemy
+        context.onKillCurrentEnemy = killEnemy
         
         let finishBattle = {
             
@@ -146,7 +158,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
     override func viewDidAppear(_ animated: Bool) {
         
         partyCollectionView.scrollToItem(at: IndexPath.init(row:partyCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
-        battleCollectionView.scrollToItem(at: IndexPath.init(row:battleCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
+        battleCollectionView.scrollToItem(at: IndexPath.init(row:0, section: 0), at: .centeredHorizontally, animated: false)
     }
     
     override func viewDidLoad() {
@@ -179,6 +191,11 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         partyCollectionView.receiveDrag = true
         partyCollectionView.allowFeedback = false
         partyCollectionView.register(UINib(nibName: "HeroPartyCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroPartyCell")
+        
+        self.partyCollectionView.reloadData()
+        self.partyCollectionView.layoutIfNeeded()
+        self.battleCollectionView.reloadData()
+        self.battleCollectionView.layoutIfNeeded()
     }
     
     override func didReceiveMemoryWarning() {
@@ -263,7 +280,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
     //MARK - UICollectionViewFlowLayoutDelegates
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
         let screenSize = UIScreen.main.bounds.width
-        let collectionSize = collectionView.contentSize.width
+        let collectionSize = collectionView.contentSize.width/3
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
         return UIEdgeInsetsMake(0, leftInset*0.5, 0, rightInset*0.5)
