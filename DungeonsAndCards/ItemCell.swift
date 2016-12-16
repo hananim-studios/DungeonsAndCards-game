@@ -20,6 +20,7 @@ class ItemCell: UICollectionViewCell {
         }
         
         self.imageView.image = UIImage(named: item.image)
+        
     }
     
     func hideItem() {

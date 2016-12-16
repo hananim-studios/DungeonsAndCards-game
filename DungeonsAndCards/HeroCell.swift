@@ -46,6 +46,7 @@ class HeroItemCell: UICollectionViewCell {
     func displayItem(_ item: Item) {
         
         self.itemImageView.image = UIImage(named: item.image)
+        
     }
     
     func hideItem() {

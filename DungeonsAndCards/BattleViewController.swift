@@ -283,6 +283,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         let collectionSize = collectionView.contentSize.width
         let leftInset = (screenSize - collectionSize)/2
         let rightInset = leftInset
+        
         return UIEdgeInsetsMake(0, leftInset, 0, rightInset)
     }
     

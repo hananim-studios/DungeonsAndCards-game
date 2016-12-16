@@ -248,7 +248,7 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
             
             let height = 0.9*collectionView.bounds.height
             
-            return CGSize(width: height/2, height: height)
+            return CGSize(width: height/2, height: height*1.2)
         }
         
         return CGSize.zero
