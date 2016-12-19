@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -11,6 +11,9 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <array key="MorrisRoman-Black.ttf">
+            <string>MorrisRoman-Black</string>
+        </array>
         <array key="MorrisRomanAlternate-Black.ttf">
             <string>MorrisRomanAlternate-Black</string>
         </array>
@@ -170,7 +173,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5ac-Qp-0Xj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3791" y="78"/>
+            <point key="canvasLocation" x="2724" y="79"/>
         </scene>
         <!--Hero Shop View Controller-->
         <scene sceneID="fxe-tn-OQt">
@@ -334,13 +337,13 @@ Party</string>
                                             <rect key="frame" x="0.0" y="43" width="320" height="120"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You need more Gold!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="33" translatesAutoresizingMaskIntoConstraints="NO" id="XzL-MW-zVL">
-                                                    <rect key="frame" x="8" y="25" width="258" height="28.5"/>
+                                                    <rect key="frame" x="8" y="25" width="258" height="29"/>
                                                     <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="and the King doesn't have it..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0NL-YB-nmd">
-                                                    <rect key="frame" x="48" y="61.5" width="264" height="20"/>
+                                                    <rect key="frame" x="48" y="62" width="264" height="20"/>
                                                     <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="23"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -374,31 +377,31 @@ find a TREASURE</string>
                                             <rect key="frame" x="0.0" y="359" width="320" height="120"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="or complete one of your" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gJ0-RA-AN7">
-                                                    <rect key="frame" x="8" y="8" width="244" height="24.5"/>
+                                                    <rect key="frame" x="8" y="8" width="244" height="25"/>
                                                     <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Daily Quests" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xLT-qs-WAB">
-                                                    <rect key="frame" x="28" y="32.5" width="161" height="28.5"/>
+                                                    <rect key="frame" x="28" y="33" width="161" height="29"/>
                                                     <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="33"/>
                                                     <color key="textColor" red="0.94269293546676636" green="0.72619825601577759" blue="0.07447882741689682" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="on the Apple Watch" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vgI-32-Cco">
-                                                    <rect key="frame" x="50" y="69" width="206" height="24.5"/>
+                                                    <rect key="frame" x="50" y="70" width="206" height="25"/>
                                                     <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="to earn a" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fVV-zD-2Sc">
-                                                    <rect key="frame" x="50" y="101.5" width="96" height="24.5"/>
+                                                    <rect key="frame" x="50" y="103" width="96" height="25"/>
                                                     <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="28"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qf-9E-wyC">
-                                                    <rect key="frame" x="154" y="100.5" width="110" height="32"/>
+                                                    <rect key="frame" x="154" y="102" width="110" height="32"/>
                                                     <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="37"/>
                                                     <color key="textColor" red="0.9426929355" green="0.72619825599999999" blue="0.074478827420000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -467,7 +470,7 @@ find a TREASURE</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ui-x5-1YM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tIt-mW-LeJ">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="tIt-mW-LeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -565,7 +568,7 @@ find a TREASURE</string>
                                 </constraints>
                             </imageView>
                             <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="NhL-Ej-fsL" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="299.5" width="328" height="123.5"/>
+                                <rect key="frame" x="-4" y="300" width="328" height="123"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Wgw-t3-QXc">
                                     <size key="itemSize" width="137" height="216"/>
@@ -576,7 +579,7 @@ find a TREASURE</string>
                                 <cells/>
                             </collectionView>
                             <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Aa4-B0-9Wg" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="110" width="328" height="189.5"/>
+                                <rect key="frame" x="-4" y="110" width="328" height="190"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="v4Y-fJ-z3o">
                                     <size key="itemSize" width="88" height="133"/>
@@ -587,7 +590,7 @@ find a TREASURE</string>
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ljj-Ev-ZC2">
-                                <rect key="frame" x="100.5" y="-20" width="120" height="90"/>
+                                <rect key="frame" x="100" y="-20" width="120" height="90"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="Kg2-gj-P0Z"/>
@@ -699,7 +702,7 @@ Shop</string>
                                 </constraints>
                             </imageView>
                             <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="JtI-OS-rg9" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="269.5" width="328" height="153.5"/>
+                                <rect key="frame" x="-4" y="264.5" width="328" height="158.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="0S9-Z8-PDG">
                                     <size key="itemSize" width="137" height="216"/>
@@ -710,7 +713,7 @@ Shop</string>
                                 <cells/>
                             </collectionView>
                             <collectionView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" multipleTouchEnabled="YES" contentMode="center" semanticContentAttribute="playback" alwaysBounceHorizontal="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="0fB-Ic-P4j" customClass="DACCollectionView" customModule="DungeonsAndCards" customModuleProvider="target">
-                                <rect key="frame" x="-4" y="74" width="328" height="191.5"/>
+                                <rect key="frame" x="-4" y="74" width="328" height="186.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <rect key="contentStretch" x="0.5" y="0.5" width="1" height="1"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Zuj-Wv-wCX">
@@ -722,7 +725,7 @@ Shop</string>
                                 <cells/>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iOb-q5-S4W">
-                                <rect key="frame" x="100.5" y="-20" width="120" height="90"/>
+                                <rect key="frame" x="100" y="-20" width="120" height="90"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="120" id="IGg-MH-LH1"/>
@@ -791,7 +794,7 @@ Battle</string>
                             <constraint firstItem="JtI-OS-rg9" firstAttribute="leading" secondItem="b0D-iA-rY1" secondAttribute="leadingMargin" constant="-20" id="fZP-Bl-EW8"/>
                             <constraint firstItem="SIT-0D-yvI" firstAttribute="centerX" secondItem="b0D-iA-rY1" secondAttribute="centerX" id="guX-QF-Hc0"/>
                             <constraint firstItem="HCc-hT-Gh9" firstAttribute="top" secondItem="8Re-P8-6QJ" secondAttribute="bottom" id="sgu-Z4-FdQ"/>
-                            <constraint firstItem="JtI-OS-rg9" firstAttribute="height" secondItem="0fB-Ic-P4j" secondAttribute="height" multiplier="0.8" id="sqG-M0-gWD"/>
+                            <constraint firstItem="JtI-OS-rg9" firstAttribute="height" secondItem="0fB-Ic-P4j" secondAttribute="height" multiplier="0.85" id="sqG-M0-gWD"/>
                             <constraint firstItem="B4x-JV-i0H" firstAttribute="centerY" secondItem="SIT-0D-yvI" secondAttribute="centerY" id="toU-ij-Mp5"/>
                             <constraint firstAttribute="trailingMargin" secondItem="sO8-TX-PVq" secondAttribute="trailing" constant="-10" id="uWQ-Nk-aJm"/>
                         </constraints>
@@ -807,8 +810,121 @@ Battle</string>
             </objects>
             <point key="canvasLocation" x="3065.625" y="905"/>
         </scene>
+        <!--Aftermath View Controller-->
+        <scene sceneID="1J5-v6-VlU">
+            <objects>
+                <viewController title="Aftermath View Controller" id="Ddr-1B-f6I" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="74c-XJ-ooy"/>
+                        <viewControllerLayoutGuide type="bottom" id="x8P-xF-AUN"/>
+                    </layoutGuides>
+                    <view key="view" opaque="NO" contentMode="scaleToFill" id="aX5-05-tFA">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <visualEffectView opaque="NO" alpha="0.80000000000000004" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tUt-RP-6f8">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="LvS-Gs-gCd">
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                </view>
+                                <blurEffect style="dark"/>
+                            </visualEffectView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="aftermathLayer" translatesAutoresizingMaskIntoConstraints="NO" id="9n7-RY-cA3">
+                                <rect key="frame" x="0.0" y="20" width="320" height="360"/>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="7lu-A0-znu">
+                                <rect key="frame" x="64.5" y="360" width="191.5" height="74"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="TopLeft" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-8B-U59">
+                                        <rect key="frame" x="0.0" y="0.0" width="191.5" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Floor:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s8e-l2-l8z">
+                                                <rect key="frame" x="0.0" y="0.0" width="131" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="MorrisRoman-Black" family="Morris Roman" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="5" height="3"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99th" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QJg-Z7-Xpz">
+                                                <rect key="frame" x="131" y="0.0" width="60.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="MorrisRoman-Black" family="Morris Roman" pointSize="35"/>
+                                                <color key="textColor" red="0.99856251480000002" green="0.93510055540000003" blue="0.43526262040000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="5" height="3"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Osz-PP-IE6">
+                                        <rect key="frame" x="0.0" y="40.5" width="191.5" height="33.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Reward:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kGS-mb-NqF">
+                                                <rect key="frame" x="0.0" y="0.0" width="116" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="MorrisRoman-Black" family="Morris Roman" pointSize="35"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="5" height="3"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$999" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fzk-5R-HoW">
+                                                <rect key="frame" x="127" y="0.0" width="64.5" height="33.5"/>
+                                                <fontDescription key="fontDescription" name="MorrisRoman-Black" family="Morris Roman" pointSize="35"/>
+                                                <color key="textColor" red="1" green="0.93333333333333335" blue="0.43587239583333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                                <color key="shadowColor" white="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <size key="shadowOffset" width="5" height="3"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="win" translatesAutoresizingMaskIntoConstraints="NO" id="Z7g-fj-eDw">
+                                <rect key="frame" x="54" y="94" width="213" height="213"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="213" id="Ifm-Ua-F9b"/>
+                                    <constraint firstAttribute="height" constant="213" id="bz0-R0-eor"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="You Win" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tSV-xT-94c">
+                                <rect key="frame" x="1" y="169" width="319.5" height="63.5"/>
+                                <fontDescription key="fontDescription" name="MorrisRoman-Black" family="Morris Roman" pointSize="76"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="highlightedColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="0.34999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <size key="shadowOffset" width="5" height="3"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9n7-RY-cA3" firstAttribute="leading" secondItem="aX5-05-tFA" secondAttribute="leadingMargin" constant="-16" id="12p-3O-UiC"/>
+                            <constraint firstItem="x8P-xF-AUN" firstAttribute="top" secondItem="tUt-RP-6f8" secondAttribute="bottom" id="4ae-IS-ljK"/>
+                            <constraint firstItem="tUt-RP-6f8" firstAttribute="leading" secondItem="aX5-05-tFA" secondAttribute="leading" id="8iO-Ei-MNe"/>
+                            <constraint firstItem="Z7g-fj-eDw" firstAttribute="centerY" secondItem="9n7-RY-cA3" secondAttribute="centerY" id="CEM-Yc-4HS"/>
+                            <constraint firstItem="x8P-xF-AUN" firstAttribute="top" secondItem="9n7-RY-cA3" secondAttribute="bottom" constant="100" id="Egr-3e-8jJ"/>
+                            <constraint firstItem="tSV-xT-94c" firstAttribute="width" secondItem="Z7g-fj-eDw" secondAttribute="width" multiplier="1.5" id="IRq-rw-IrW"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="9n7-RY-cA3" secondAttribute="trailing" constant="-16" id="QpG-ZS-pbl"/>
+                            <constraint firstItem="tSV-xT-94c" firstAttribute="centerY" secondItem="Z7g-fj-eDw" secondAttribute="centerY" id="WUa-kT-ncz"/>
+                            <constraint firstAttribute="trailing" secondItem="tUt-RP-6f8" secondAttribute="trailing" id="Wqw-KU-GC1"/>
+                            <constraint firstItem="Z7g-fj-eDw" firstAttribute="centerX" secondItem="9n7-RY-cA3" secondAttribute="centerX" id="cHb-Si-h3e"/>
+                            <constraint firstItem="tUt-RP-6f8" firstAttribute="top" secondItem="aX5-05-tFA" secondAttribute="top" id="ctH-Hx-dWr"/>
+                            <constraint firstItem="7lu-A0-znu" firstAttribute="centerX" secondItem="aX5-05-tFA" secondAttribute="centerX" id="ebE-9Y-9DF"/>
+                            <constraint firstItem="tSV-xT-94c" firstAttribute="centerX" secondItem="Z7g-fj-eDw" secondAttribute="centerX" id="ly2-SZ-rqw"/>
+                            <constraint firstItem="9n7-RY-cA3" firstAttribute="centerX" secondItem="aX5-05-tFA" secondAttribute="centerX" id="pmH-xn-dxa"/>
+                            <constraint firstItem="tSV-xT-94c" firstAttribute="height" secondItem="Z7g-fj-eDw" secondAttribute="height" multiplier="0.3" id="qlp-LO-HMu"/>
+                            <constraint firstItem="9n7-RY-cA3" firstAttribute="top" secondItem="74c-XJ-ooy" secondAttribute="bottom" id="rSt-Gp-tq4"/>
+                            <constraint firstItem="7lu-A0-znu" firstAttribute="top" secondItem="9n7-RY-cA3" secondAttribute="bottom" constant="-20" id="vL9-fV-fmf"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sr2-Dn-WWa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3696" y="908"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="aftermathLayer" width="690" height="1024"/>
         <image name="background" width="614" height="1137"/>
         <image name="barBattle" width="6215" height="1004"/>
         <image name="barHeroShop" width="6215" height="1004"/>
@@ -816,5 +932,6 @@ Battle</string>
         <image name="door" width="800" height="600"/>
         <image name="logo" width="1744" height="810"/>
         <image name="money" width="1764" height="1763"/>
+        <image name="win" width="1018" height="1024"/>
     </resources>
 </document>

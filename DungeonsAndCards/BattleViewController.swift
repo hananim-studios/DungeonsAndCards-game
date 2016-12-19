@@ -352,7 +352,7 @@ class BattleViewController: GameViewController, UICollectionViewDataSource, UICo
             
             let height = 0.9*collectionView.bounds.height
             
-            return CGSize(width: height/2, height: height)
+            return CGSize(width: height/2.5, height: height)
         }
         
         return CGSize.zero
