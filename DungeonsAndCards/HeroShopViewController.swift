@@ -66,6 +66,9 @@ class HeroShopViewController: GameViewController, UICollectionViewDataSource, UI
                 }
             
                 cell.displayHero(hero)
+                
+                // next
+                self.nextButton.isEnabled = self.context.party.hasHeroes
             }
             
             let removeHero = {
@@ -77,6 +80,9 @@ class HeroShopViewController: GameViewController, UICollectionViewDataSource, UI
                 }
                 
                 cell.hideHero()
+                
+                // next
+                self.nextButton.isEnabled = self.context.party.hasHeroes
             }
             
             let slot = context.game.party.slot(atIndex: i)
@@ -98,6 +104,9 @@ class HeroShopViewController: GameViewController, UICollectionViewDataSource, UI
             self.shopCollectionView.deleteItems(at: [IndexPath(row: index, section: 0)])
         }
         context.game.heroShop.onRemoveHeroAtIndex = removeHeroAtIndex
+        
+        // next
+        self.nextButton.isEnabled = self.context.party.hasHeroes
     }
     override func viewDidAppear(_ animated: Bool) {
         

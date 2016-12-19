@@ -84,6 +84,8 @@ class BattleContext: Context {
     var onKillCurrentEnemy: (()->Void)?
     func killCurrentEnemy() {
         
+        game.winMoney(battle.currentEnemy().reward)
+        
         battle.removeCurrentEnemy()
         
         onKillCurrentEnemy?()

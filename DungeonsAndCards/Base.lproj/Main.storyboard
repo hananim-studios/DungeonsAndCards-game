@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="6ui-x5-1YM">
     <device id="retina3_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -70,26 +70,24 @@
                                     <segue destination="RJL-Jl-5GK" kind="presentation" id="yLy-Oj-acR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dungeons &amp; Cards" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7G-fG-TE2">
-                                <rect key="frame" x="25" y="95.5" width="271" height="27.5"/>
-                                <fontDescription key="fontDescription" name="MorrisRomanAlternate-Black" family="Morris Roman Alternate" pointSize="32"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="ge0-bZ-oPd">
+                                <rect key="frame" x="0.0" y="72" width="320" height="160"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="3fC-2p-l22" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="13" id="3Fr-sb-C8T"/>
-                            <constraint firstItem="3fC-2p-l22" firstAttribute="top" secondItem="T7G-fG-TE2" secondAttribute="bottom" constant="112" id="60u-U7-nZd"/>
                             <constraint firstItem="DXl-uc-JT9" firstAttribute="centerX" secondItem="jxQ-1i-emc" secondAttribute="centerX" id="MZI-2O-J6N"/>
                             <constraint firstItem="jxQ-1i-emc" firstAttribute="top" secondItem="1Yp-4K-GHd" secondAttribute="bottom" constant="8" symbolic="YES" id="Umh-br-FJF"/>
+                            <constraint firstItem="ge0-bZ-oPd" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="Y4F-YD-zqE"/>
+                            <constraint firstItem="3fC-2p-l22" firstAttribute="top" secondItem="ge0-bZ-oPd" secondAttribute="bottom" constant="3" id="YBX-7R-GTf"/>
                             <constraint firstItem="3fC-2p-l22" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="aQa-c3-DMp"/>
-                            <constraint firstItem="T7G-fG-TE2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="9" id="dYS-8D-MRd"/>
+                            <constraint firstItem="ge0-bZ-oPd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bl2-MZ-s3I"/>
                             <constraint firstItem="1Yp-4K-GHd" firstAttribute="top" secondItem="3fC-2p-l22" secondAttribute="bottom" constant="9" id="ebv-ra-aSx"/>
                             <constraint firstItem="1Yp-4K-GHd" firstAttribute="centerX" secondItem="3fC-2p-l22" secondAttribute="centerX" id="fjs-rU-wL0"/>
                             <constraint firstItem="jxQ-1i-emc" firstAttribute="centerX" secondItem="1Yp-4K-GHd" secondAttribute="centerX" id="gkr-vS-8Yt"/>
+                            <constraint firstItem="ge0-bZ-oPd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="h6A-AF-Dc8"/>
                             <constraint firstItem="DXl-uc-JT9" firstAttribute="top" secondItem="jxQ-1i-emc" secondAttribute="bottom" constant="8" symbolic="YES" id="mnt-CC-GH0"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="T7G-fG-TE2" secondAttribute="trailing" constant="8" id="xvs-3p-lf1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="oA2-u5-udr"/>
@@ -101,7 +99,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1021.6" y="120.08995502248877"/>
+            <point key="canvasLocation" x="1020" y="120"/>
         </scene>
         <!--Intro View Controller-->
         <scene sceneID="bG6-9o-HXH">
@@ -469,7 +467,7 @@ find a TREASURE</string>
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6ui-x5-1YM" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" misplaced="YES" id="tIt-mW-LeJ">
+                    <navigationBar key="navigationBar" hidden="YES" contentMode="scaleToFill" id="tIt-mW-LeJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -816,6 +814,7 @@ Battle</string>
         <image name="barHeroShop" width="6215" height="1004"/>
         <image name="barItemShop" width="6215" height="1004"/>
         <image name="door" width="800" height="600"/>
+        <image name="logo" width="1744" height="810"/>
         <image name="money" width="1764" height="1763"/>
     </resources>
 </document>

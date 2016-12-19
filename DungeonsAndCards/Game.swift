@@ -100,4 +100,8 @@ class Game {
         self.money -= money
     }
     
+    func winMoney(_ money: Int) {
+        self.money += money
+    }
+    
 }
