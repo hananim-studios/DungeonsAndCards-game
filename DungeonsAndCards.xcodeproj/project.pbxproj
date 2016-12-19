@@ -156,6 +156,7 @@
 		C6CAC7961E0042AB007C82D1 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CAC7951E0042AB007C82D1 /* ConnectionManager.swift */; };
 		C6CAC7971E0042AB007C82D1 /* ConnectionManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CAC7951E0042AB007C82D1 /* ConnectionManager.swift */; };
 		D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */; };
+		D11959551E0759A100582451 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11959541E0759A100582451 /* GameViewController.swift */; };
 		D11BFE6A1DEE48180046086C /* DACCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE691DEE48180046086C /* DACCollectionView.swift */; };
 		D11BFE6C1DEE48290046086C /* HeroCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D11BFE6B1DEE48290046086C /* HeroCell.swift */; };
 		D12677DC1DFC922A00DA93F9 /* MainMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = D12677DB1DFC922A00DA93F9 /* MainMenu.swift */; };
@@ -408,6 +409,7 @@
 		C6C100FD1E018D3800D80568 /* InitialInterfaceController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InitialInterfaceController.swift; sourceTree = "<group>"; };
 		C6CAC7951E0042AB007C82D1 /* ConnectionManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectionManager.swift; sourceTree = "<group>"; };
 		D100495D1DEDA4FF004CCFAA /* UIView+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		D11959541E0759A100582451 /* GameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		D11BFE691DEE48180046086C /* DACCollectionView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DACCollectionView.swift; sourceTree = "<group>"; };
 		D11BFE6B1DEE48290046086C /* HeroCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HeroCell.swift; sourceTree = "<group>"; };
 		D12677DB1DFC922A00DA93F9 /* MainMenu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenu.swift; sourceTree = "<group>"; };
@@ -420,7 +422,7 @@
 		D13003651DFF3B0400E70F6D /* BattleViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
 		D13003681DFF3B7B00E70F6D /* EnemyCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EnemyCell.xib; sourceTree = "<group>"; };
 		D130036A1DFF8D2A00E70F6D /* EnemyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EnemyCell.swift; sourceTree = "<group>"; };
-		D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DungeonsAndCards.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D14E4E141DDF493A002A0ED0 /* D&C.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "D&C.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D14E4E171DDF493A002A0ED0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D14E4E1C1DDF493A002A0ED0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D14E4E1E1DDF493A002A0ED0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -736,6 +738,7 @@
 		C68475701DE7344D0081DA95 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				D11959541E0759A100582451 /* GameViewController.swift */,
 				C68475641DE71B2D0081DA95 /* MainMenuViewController.swift */,
 				C68475881DE85C130081DA95 /* HeroShopViewController.swift */,
 				C627A5C41DEDCB38002F6533 /* ItemShopViewController.swift */,
@@ -818,7 +821,7 @@
 		D14E4E151DDF493A002A0ED0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */,
+				D14E4E141DDF493A002A0ED0 /* D&C.app */,
 				C684751C1DE714290081DA95 /* DungeonsAndCardsWatch.app */,
 				C68475281DE714290081DA95 /* DungeonsAndCardsWatch Extension.appex */,
 				C68475491DE715BA0081DA95 /* DungeonsAndCardsTests.xctest */,
@@ -1006,7 +1009,7 @@
 			);
 			name = DungeonsAndCards;
 			productName = DungeonsAndCards;
-			productReference = D14E4E141DDF493A002A0ED0 /* DungeonsAndCards.app */;
+			productReference = D14E4E141DDF493A002A0ED0 /* D&C.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -1352,6 +1355,7 @@
 				C68063731DF04DDE003ACD19 /* AboutViewController.swift in Sources */,
 				D1D12B2F1DF1A7960045CE29 /* HeroesJSON.swift in Sources */,
 				C6AD7AAC1DE8758800FBCE99 /* ScaledVisibleCellsCollectionView.swift in Sources */,
+				D11959551E0759A100582451 /* GameViewController.swift in Sources */,
 				D1D12B331DF1A7C50045CE29 /* EnemiesJSON.swift in Sources */,
 				C68475671DE71C450081DA95 /* IntroViewController.swift in Sources */,
 				D1D12B311DF1A7AE0045CE29 /* ItemsJSON.swift in Sources */,
@@ -1663,7 +1667,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = DungeonsAndCards;
+				PRODUCT_NAME = "D&C";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
@@ -1682,7 +1687,8 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.hananim.DungeonsAndCards;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_MODULE_NAME = DungeonsAndCards;
+				PRODUCT_NAME = "D&C";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

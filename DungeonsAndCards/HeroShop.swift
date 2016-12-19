@@ -24,6 +24,26 @@ class HeroShop {
         loadHeroes(forLevel: 0)
     }
     
+    init(withUserDefaultsKey key: String) {
+        
+        self.heroes = []
+        
+        if let heroCount = UserDefaults.standard.value(forKey: "\(key).heroCount") as? Int {
+            for i in 0..<heroCount {
+                heroes.append(Hero(withUserDefaultsKey: "\(key).hero\(i)"))
+            }
+        } else {
+            assertionFailure("(🚩) - heroCount not found in UserDefaults")
+        }
+    }
+    
+    func save(toUserDefaultsKey key: String) {
+        UserDefaults.standard.set(heroCount, forKey: "\(key).heroCount")
+        for i in 0..<heroCount {
+            heroes[i].save(toUserDefaultsKey: "\(key).hero\(i)")
+        }
+    }
+    
     func loadHeroes(forLevel: Int) {
         
         self.heroes.removeAll()

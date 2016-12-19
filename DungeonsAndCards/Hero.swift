@@ -63,6 +63,53 @@ class Hero: GameObject {
         assert(price != nil, "(🚩) - price not found in json")
         self.price = price ?? 1
     }
+    
+    init(withUserDefaultsKey key: String) {
+        
+        let dict = UserDefaults.standard.dictionary(forKey: key)
+        
+        if let dict = dict {
+        
+            let name = dict["name"] as? String
+            assert(name != nil, "(🚩) - name not found in UserDefaults")
+            self.name = name ?? "UserDefaults Error"
+            
+            let description = dict["description"] as? String
+            assert(description != nil, "(🚩) - description not found in json")
+            self.description = description ?? "UserDefaults Error"
+            
+            let image = dict["image"] as? String
+            assert(image != nil, "(🚩) - image not found in UserDefaults")
+            self.image = image ?? "userdefaultserror"
+            
+            let attack = dict["attack"] as? Int
+            assert(attack != nil, "(🚩) - attack not found in UserDefaults")
+            self.attack = attack ?? 1
+            
+            let health = dict["health"] as? Int
+            assert(health != nil, "(🚩) - health not found in UserDefaults")
+            self.health = health ?? 1
+            
+            
+            let price = dict["price"] as? Int
+            assert(price != nil, "(🚩) - price not found in UserDefaults")
+            self.price = price ?? 1
+        }
+    }
+    
+    func save(toUserDefaultsKey key: String) {
+        
+        var dict = [String: Any]()
+        
+        dict.updateValue(self.name, forKey: "name")
+        dict.updateValue(self.description, forKey: "description")
+        dict.updateValue(self.image, forKey: "image")
+        dict.updateValue(self.attack, forKey: "attack")
+        dict.updateValue(self.health, forKey: "health")
+        dict.updateValue(self.price, forKey: "price")
+        
+        UserDefaults.standard.set(dict, forKey: key)
+    }
 
 }
 

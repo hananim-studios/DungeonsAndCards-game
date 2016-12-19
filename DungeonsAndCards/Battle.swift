@@ -11,8 +11,12 @@ import SwiftyJSON
 
 class Battle {
     
-    private(set) var enemyCount = 3
-    private      var enemies : [Enemy]
+    let enemyMaxCount = 5
+    
+    var enemyCount: Int {
+        return enemies.count
+    }
+    private var enemies : [Enemy]
     
     init() {
         self.enemies = []
@@ -20,11 +24,32 @@ class Battle {
         loadEnemies(forLevel: 0)
     }
     
+    init(withUserDefaultsKey key: String) {
+        
+         self.enemies = []
+        
+        if let enemyCount = UserDefaults.standard.value(forKey: "\(key).enemyCount") as? Int {
+            for i in 0..<enemyCount {
+                addEnemy(Enemy(withUserDefaultsKey: "\(key).enemy\(i)"))
+            }
+        } else {
+            assertionFailure("(🚩) - \(key).enemyCount not found in UserDefaults")
+        }
+    }
+    
+    func save(toUserDefaultsKey key: String) {
+        
+        UserDefaults.standard.set(enemyCount, forKey: "\(key).enemyCount")
+        for i in 0..<enemyCount {
+            enemies[i].save(toUserDefaultsKey: "\(key).enemy\(i)")
+        }
+    }
+    
     func loadEnemies(forLevel: Int) {
         
         self.enemies.removeAll()
         
-        for i in 0..<enemyCount {
+        for i in 0..<enemyMaxCount {
             
             enemies.append(EnemiesJSON.enemyAtIndex(index: i))
         }

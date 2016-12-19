@@ -8,10 +8,17 @@
 
 import UIKit
 
-class BattleViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
+class BattleViewController: GameViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model
-    var context: BattleContext!
+    var context: BattleContext {
+        get {
+            return super.baseContext as! BattleContext
+        }
+        set {
+            self.baseContext = newValue
+        }
+    }
     
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -23,6 +30,11 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var goldButton: UIButton!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        UserDefaults.standard.set("battle", forKey: "view")
+        context.game.saveGame()
+    }
     
     //MARK - ViewController
     override func viewWillAppear(_ animated: Bool) {
@@ -42,7 +54,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
                 
                 let indexPath = IndexPath(row: i, section: 0)
                 guard let cell = self.partyCollectionView.cellForItem(at: indexPath)
-                    as? HeroPartyCell else {
+                    as? HeroItemCell else {
                         assertionFailure("wrong cell type in collectionView")
                         return
                 }
@@ -53,7 +65,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
             let removeHero = {
                 let indexPath = IndexPath(row: i, section: 0)
                 guard let cell = self.partyCollectionView.cellForItem(at: indexPath)
-                    as? HeroPartyCell else {
+                    as? HeroItemCell else {
                         assertionFailure("wrong cell type in collectionView")
                         return
                 }
@@ -61,10 +73,35 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
                 cell.hideHero()
             }
             
+            let updateItem = { (item: Item) -> Void in
+                
+                let indexPath = IndexPath(row: i, section: 0)
+                guard let cell = self.partyCollectionView.cellForItem(at: indexPath)
+                    as? HeroItemCell else {
+                        assertionFailure("wrong cell type in collectionView")
+                        return
+                }
+                
+                cell.displayItem(item)
+            }
+            
+            let removeItem = {
+                let indexPath = IndexPath(row: i, section: 0)
+                guard let cell = self.partyCollectionView.cellForItem(at: indexPath)
+                    as? HeroItemCell else {
+                        assertionFailure("wrong cell type in collectionView")
+                        return
+                }
+                
+                cell.hideItem()
+            }
+            
             let slot = context.game.party.slot(atIndex: i)
             
             slot.onSetHero = updateHero
             slot.onRemoveHero = removeHero
+            slot.onSetItem = updateItem
+            slot.onRemoveItem = removeItem
         }
         
         // battle
@@ -84,7 +121,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
                 cell.hideEnemy()
             }
             
-            let hCell = self.partyCollectionView.cellForItem(at: IndexPath(row: index, section: 0)) as! HeroPartyCell
+            let hCell = self.partyCollectionView.cellForItem(at: IndexPath(row: index, section: 0)) as! HeroItemCell
             
             
             if slot.hasHero {
@@ -190,7 +227,7 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         partyCollectionView.dacDelegate = self
         partyCollectionView.receiveDrag = true
         partyCollectionView.allowFeedback = false
-        partyCollectionView.register(UINib(nibName: "HeroPartyCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroPartyCell")
+        partyCollectionView.register(UINib(nibName: "HeroItemCell", bundle: Bundle.main), forCellWithReuseIdentifier: "HeroItemCell")
         
         self.partyCollectionView.reloadData()
         self.partyCollectionView.layoutIfNeeded()
@@ -260,8 +297,8 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
         
         if collectionView == partyCollectionView {
             
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroPartyCell",
-                                                          for: indexPath) as! HeroPartyCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HeroItemCell",
+                                                          for: indexPath) as! HeroItemCell
             
             let slot = context.game.party.slot(atIndex: indexPath.row)
             if slot.hasHero {
@@ -269,6 +306,14 @@ class BattleViewController: UIViewController, UICollectionViewDataSource, UIColl
             } else {
                 cell.hideHero()
             }
+            
+            if slot.hasItem {
+                cell.displayItem(slot.getItem())
+            } else {
+                cell.hideItem()
+            }
+
+            
             
             
             return cell
@@ -361,7 +406,7 @@ extension BattleViewController: DIOCollectionViewDataSource, DIOCollectionViewDe
         
         if dioCollectionView == partyCollectionView {
             
-            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroPartyCell else {
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroItemCell else {
                 assertionFailure("wrong cell type in collectionView")
                 return
             }

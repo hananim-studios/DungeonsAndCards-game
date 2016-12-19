@@ -26,8 +26,6 @@ class HeroShopContext: Context {
     override init(withGame game: Game) {
         
         super.init(withGame: game)
-        
-        shop.loadHeroes(forLevel: game.level)
     }
     
     func canBuyHero(atShopIndex shopIndex: Int) -> HeroShopResponse {

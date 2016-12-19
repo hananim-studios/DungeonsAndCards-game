@@ -26,10 +26,6 @@ class MainMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Soundtrack
-        Soundtrack.sharedInstance.enableTracks(named: ["harp"], volume: 1, fade: false)
-        Soundtrack.sharedInstance.enableTracks(named: ["percussion"], volume: 0.3, fade: false)
-        
         // setup model
         menu.onStartGame = {
             game in
@@ -45,25 +41,40 @@ class MainMenuViewController: UIViewController {
         menu.onContinueGame = {
             game in
             
-            let vc = self.storyboard!.instantiateViewController(withIdentifier: "heroShop") as! HeroShopViewController
-            vc.context = HeroShopContext(withGame: game)
+            let viewId = UserDefaults.standard.string(forKey: "view") ?? "heroShop"
+            let vc = self.storyboard!.instantiateViewController(withIdentifier: viewId) as! GameViewController
+            
+            switch(viewId) {
+            case "heroShop":
+                vc.baseContext = HeroShopContext(withGame: game)
+            case "itemShop":
+                vc.baseContext = ItemShopContext(withGame: game)
+            case "battle":
+                vc.baseContext = BattleContext(withGame: game)
+            default:
+                assertionFailure("unknown view id \(viewId)")
+                vc.baseContext = HeroShopContext(withGame: game)
+            }
             
             let nav = self.navigationController!
             nav.popViewController(animated: false)
             nav.pushViewController(vc, animated: false)
         }
-        
-        // setup UI
-        continueGameButton.isEnabled = Game.hasSavedGame
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.newGameButton.alpha = 1;
-        self.continueGameButton.alpha = 1;
-        self.continueGameButton.isHidden = false;
+        
+        //self.newGameButton.alpha = 1;
+        //self.continueGameButton.alpha = 1;
+        //self.continueGameButton.isHidden = false;
+        
+        // Soundtrack
+        Soundtrack.sharedInstance.enableTracks(named: ["harp"], volume: 1, fade: false)
+        Soundtrack.sharedInstance.enableTracks(named: ["percussion"], volume: 0.3, fade: false)
+        
+        // setup UI
+        continueGameButton.isHidden = !Game.hasSavedGame
     }
 
     override func didReceiveMemoryWarning() {
@@ -72,11 +83,7 @@ class MainMenuViewController: UIViewController {
     
     //MARK: - Button Actions
     @IBAction func continueGameButtonPressed(_ sender: Any) {
-        /*performSegue(withIdentifier: "menuToManagePartySegue", sender: nil)
-        UIView.animate(withDuration: 0.1, animations:{
-            self.newGameButton.alpha = 0.0
-            self.continueGameButton.alpha = 0.0
-        })*/
+        menu.continueGame()
     }
     
     @IBAction func newGameButtonPressed(_ sender: Any) {

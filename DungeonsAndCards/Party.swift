@@ -20,6 +20,35 @@ class PartySlot: GameObject {
     private var item: Item?
     
     
+    override init() {
+        super.init()
+    }
+    
+    init(withUserDefaultsKey key: String) {
+        if UserDefaults.standard.object(forKey: "\(key).hero") != nil {
+            self.hero = Hero(withUserDefaultsKey: "\(key).hero")
+        }
+        
+        if UserDefaults.standard.object(forKey: "\(key).item") != nil {
+            self.item = Item(withUserDefaultsKey: "\(key).item")
+        }
+    }
+    
+    func save(toUserDefaultsKey key: String) {
+
+        if let hero = self.hero{
+            hero.save(toUserDefaultsKey: "\(key).hero")
+        } else {
+            UserDefaults.standard.removeObject(forKey: "\(key).hero")
+        }
+        
+        if let item = self.item {
+            item.save(toUserDefaultsKey: "\(key).item")
+        } else {
+            UserDefaults.standard.removeObject(forKey: "\(key).item")
+        }
+    }
+    
     var hasHero: Bool {
         return hero != nil
     }
@@ -112,8 +141,25 @@ class Party {
         assert(slots.count == slotCount, "(🚩) - slot count is < slotCount after Party initialization")
     }
     
+    convenience init(withUserDefaultsKey key: String) {
+        
+        self.init()
+        
+        for i in 0..<self.slots.count {
+            self.slots[i] = PartySlot(withUserDefaultsKey: "\(key).slot\(i)")
+        }
+    }
+    
+    func save(toUserDefaultsKey key: String) {
+        
+        for i in 0..<self.slots.count {
+            self.slots[i].save(toUserDefaultsKey: "\(key).slot\(i)")
+        }
+    }
+    
+
     func hasSlot(atIndex index: Int) -> Bool {
-        return (0...slots.count).contains(index)
+        return (0...self.slots.count).contains(index)
     }
     
     func slot(atIndex index: Int) -> PartySlot {

@@ -9,32 +9,28 @@
 import Foundation
 import SwiftyJSON
 
-enum ItemEffect {
+class ItemEffect {
     
-    case None
+    enum Effect: String {
+        case None = "none"
+        case AddHealth = "addHealth"
+        case AddDamage = "addDamage"
+        case SuperArmor = "superArmor"
+    }
     
-    case AddHealth(value: Int)
+    let effect: Effect
+    let value: Int
     
-    case AddDamage(value: Int)
-    
-    case SuperArmor(value: Int)
-    
-    init(tuple: (key: String, value: JSON)) {
+    init(withEffectName effectName: String, andValue value: Int) {
         
-        switch(tuple.key) {
-            
-        case "addHealth":
-            self = .AddHealth(value: tuple.value.intValue)
-            
-        case "addDamage":
-            self = .AddDamage(value: tuple.value.intValue)
-            
-        case "superArmor":
-            self = .SuperArmor(value: tuple.value.intValue)
-            
-        default:
-            self = .None
-        }
+        self.effect = Effect(rawValue: effectName) ?? .None
+        self.value = value
+    }
+    
+    init(withEffect effect: Effect, andValue value: Int) {
+        
+        self.effect = effect
+        self.value = value
     }
     
     
@@ -78,7 +74,77 @@ class Item: GameObject {
         
         let effects = json["effects"].dictionary
         assert(price != nil, "(🚩) - effects not found in json")
-        self.effects = effects?.map { ItemEffect(tuple: $0) } ?? []
+        self.effects = effects?.map { ItemEffect(withEffectName: $0.key, andValue: $0.value.intValue) } ?? []
+    }
+    
+    init(withUserDefaultsKey key: String) {
+        
+        let dict = UserDefaults.standard.dictionary(forKey: key)
+        
+        self.effects = []
+        
+        if let dict = dict {
+            
+            let name = dict["name"] as? String
+            assert(name != nil, "(🚩) - name not found in UserDefaults")
+            self.name = name ?? "UserDefaults Error"
+            
+            let image = dict["image"] as? String
+            assert(image != nil, "(🚩) - image not found in UserDefaults")
+            self.image = image ?? "userdefaultserror"
+            
+            let price = dict["price"] as? Int
+            assert(price != nil, "(🚩) - price not found in UserDefaults")
+            self.price = price ?? 1
+            
+            guard let effectCount = dict["effectCount"] as? Int else {
+                assertionFailure("(🚩) - effect count not found in UserDefaults")
+                return
+            }
+            
+            guard let effectNames = dict["effectNames"] as? [String] else {
+                assertionFailure("(🚩) - effect names not found in UserDefaults")
+                return
+            }
+            
+            guard let effectValues = dict["effectValues"] as? [Int] else {
+                assertionFailure("(🚩) - effect names not found in UserDefaults")
+                return
+            }
+            
+            guard effectCount == effectNames.count && effectCount == effectValues.count else {
+                assertionFailure("(🚩) - effects data mismatch")
+                return
+            }
+            
+            for i in 0..<effectCount {
+                
+                self.effects.append(ItemEffect(withEffectName: effectNames[i], andValue: effectValues[i]))
+            }
+        }
+    }
+    
+    func save(toUserDefaultsKey key: String) {
+        
+        var dict = [String: Any]()
+        
+        dict.updateValue(self.name, forKey: "name")
+        dict.updateValue(self.image, forKey: "image")
+        dict.updateValue(self.price, forKey: "price")
+        
+        dict.updateValue(self.effects.count, forKey: "effectCount")
+        dict.updateValue(self.effects.map {
+            effect in
+            
+            return effect.effect.rawValue
+        }, forKey: "effectNames")
+        dict.updateValue(self.effects.map {
+            effect in
+            
+            return effect.value
+        }, forKey: "effectValues")
+        
+        UserDefaults.standard.set(dict, forKey: key)
     }
 }
 

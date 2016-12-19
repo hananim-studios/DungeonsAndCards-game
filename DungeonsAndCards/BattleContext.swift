@@ -23,8 +23,6 @@ class BattleContext: Context {
     override init(withGame game: Game) {
         
         super.init(withGame: game)
-        
-        battle.loadEnemies(forLevel: game.level)
     }
     
     func canAttackEnemy(withHeroAtIndex index: Int) -> BattleResponse {
@@ -113,12 +111,17 @@ class BattleContext: Context {
     func finishBattle() {
         
         game.level += 1
+        battle.loadEnemies(forLevel: game.level)
+        game.heroShop.loadHeroes(forLevel: game.level)
         
         onFinishBattle?()
     }
 
     var onFailBattle: (()->Void)?
     func failBattle() {
+        
+        battle.loadEnemies(forLevel: game.level)
+        game.heroShop.loadHeroes(forLevel: game.level)
         
         onFailBattle?()
     }

@@ -9,48 +9,6 @@
 import Foundation
 import SwiftyJSON
 
-/*protocol GameDelegate {
-    
-    func game(_ game: Game, changedmoneyTo money: Int)
-    
-    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int)
-    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int)
-    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int)
-    
-    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int)
-    func game(_ game: Game, didUseItem item: Item, onHeroAtSlot slot: Int)
-    
-    func game(_ game: Game, didAttack slot: Int)
-    
-}*/
-
-/*extension GameDelegate {
-    
-    // money
-    func game(_ game: Game, changedmoneyTo money: Int){
-    }
-    
-    // Hero
-    func game(_ game: Game, didHireHero hero: Hero, atSlot slot: Int){
-        
-    }
-    func game(_ game: Game, didSwapHero selectedHeroIndex: Int, swapHeroIndex: Int){
-    }
-    func game(_ game: Game, didDismissHero hero: Hero, atSlot slot: Int){
-    }
-    
-    // Item
-    func game(_ game: Game, didBuyItem item: Item, atSlot slot: Int){
-    }
-    func game(_ game: Game, didUseItem item: Item, onHeroAtSlot slot: Int){
-    }
-    
-    //Battle
-    func game(_ game: Game, didAttack slot: Int){
-    }
-    
-}*/
-
 class Game {
     
     static var hasSavedGame: Bool {
@@ -84,7 +42,23 @@ class Game {
         self.itemShop   = ItemShop()
     }
     
+    func saveGame() {
+        UserDefaults.standard.set(true, forKey: "hasSavedGame")
+        
+        party.save(toUserDefaultsKey: "party")
+        heroShop.save(toUserDefaultsKey: "heroShop")
+        itemShop.save(toUserDefaultsKey: "itemShop")
+        battle.save(toUserDefaultsKey: "battle")
+        
+        UserDefaults.standard.set(money, forKey: "money")
+        UserDefaults.standard.set(level, forKey: "level")
+        
+        UserDefaults.standard.synchronize()
+    }
+    
     static func newGame() -> Game {
+        
+        UserDefaults.standard.set(false, forKey: "hasSavedGame")
         
         let newGame = Game()
         
@@ -96,7 +70,17 @@ class Game {
         if Game.hasSavedGame {
             
             // TODO: - Implement loading savedGame
-            return Game()
+            let savedGame = Game()
+            
+            savedGame.party = Party(withUserDefaultsKey: "party")
+            savedGame.heroShop = HeroShop(withUserDefaultsKey: "heroShop")
+            savedGame.itemShop = ItemShop(withUserDefaultsKey: "itemShop")
+            savedGame.battle = Battle(withUserDefaultsKey: "battle")
+            
+            savedGame.money = UserDefaults.standard.integer(forKey: "money") 
+            savedGame.level = UserDefaults.standard.integer(forKey: "level")
+            
+            return savedGame
             
         } else {
             assertionFailure("(🚩) - called Game.saveGame(), but Game.hasSavedGame is false")
@@ -117,100 +101,3 @@ class Game {
     }
     
 }
-
-/*extension Game {
-    
-    //static var sharedInstance = Game()
-    
-    //MARK - Implement Protocol Functions
-    func hireHero(hero: Hero, atSlot slot: Int) {
-        
-        if self.money >= hero.price {
-            
-            self.money -= hero.price
-            
-            self.party.heroes[slot] = hero
-    
-/// Remove hired hero from hand
-//            for i in 0...self.hand.heroes.count-1{
-//                if self.hand.heroes[i] == hero {
-//                  //self.hand.heroes[i] = nil
-//                    self.hand.heroes.remove(at: i)
-//                    return
-//                }
-//            }
-        
-            delegate?.game(self, didHireHero: hero, atSlot: slot)
-            delegate?.game(self, changedmoneyTo: self.money)
-        }
-    }
-    
-    func dismissHero(hero: Hero, atSlot slot: Int) {
-            
-        //self.party. = nil
-        
-        delegate?.game(self, didDismissHero: hero, atSlot: slot)
-    }
-    
-    func swapHero(heroAt selectedIndex: Int, withHeroAtIndex swapIndex: Int){
-        
-        //let swap = self.party.heroes[selectedIndex]
-        //self.party.heroes[selectedIndex] = self.party.heroes[swapIndex]
-        //self.party.heroes[swapIndex] = swap
-        
-        delegate?.game(self, didSwapHero: selectedIndex, swapHeroIndex: swapIndex)
-    }
-    
-    func buyItem(item: Item, atSlot slot: Int) {
-        if self.money >= item.price {
-            
-            //self.money -= item.price
-            
-            //self.itemBag.bag[slot] = item
-            
-            delegate?.game(self, didBuyItem: item, atSlot: slot)
-            delegate?.game(self, changedmoneyTo: self.money)
-        }
-    }
-    
-    func useItem(item: Item, onHeroAtSlot slot: Int){
-        for effect in item.effects {
-            switch effect {
-            case let .AddHealth(value: health):
-                self.party.heroes[slot]?.health += health
-                break
-            case let .AddDamage(value: damage):
-                self.party.heroes[slot]?.damage += damage
-                break
-            case let .SuperArmor(value: superArmor):
-                self.party.heroes[slot]?.health += superArmor
-                break
-            default:
-                print("unknown effect")
-                break
-            }
-        }
-        self.itemBag.bag.remove(at: slot)
-        delegate?.game(self, didUseItem: item, onHeroAtSlot: slot)
-    }
-    
-    func attack(slot: Int) {
-        
-        self.party.heroes[slot]!.health -= self.dungeon.enemies.last!.damage
-        self.dungeon.enemies.last!.health -= self.party.heroes[slot]!.damage
-        
-        if self.dungeon.enemies.last!.health <= 0 {
-            self.dungeon.enemies.removeLast()
-            print("Enemy defeated!")
-        }
-        
-        if self.party.heroes[slot]!.health <= 0 {
-            self.party.heroes.remove(at: slot)
-            print("You lost a hero!")
-        }
-        
-        delegate?.game(self, didAttack: slot)
-    }
-
-
-}*/

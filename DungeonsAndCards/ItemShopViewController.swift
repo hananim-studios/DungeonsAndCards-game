@@ -8,10 +8,17 @@
 
 import UIKit
 
-class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
+class ItemShopViewController: GameViewController, UICollectionViewDataSource, UICollectionViewDelegate, UIScrollViewDelegate, UICollectionViewDelegateFlowLayout {
     
     //MARK - Model
-    var context: ItemShopContext!
+    var context: ItemShopContext {
+        get {
+            return super.baseContext as! ItemShopContext
+        }
+        set {
+            self.baseContext = newValue
+        }
+    }
     
     //MARK - Variables
     override var prefersStatusBarHidden: Bool{ return true }
@@ -23,6 +30,11 @@ class ItemShopViewController: UIViewController, UICollectionViewDataSource, UICo
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var goldButton: UIButton!
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        UserDefaults.standard.set("itemShop", forKey: "view")
+        context.game.saveGame()
+    }
     
     //MARK - ViewController
     
@@ -292,6 +304,14 @@ extension ItemShopViewController: DIOCollectionViewDataSource, DIOCollectionView
     
     // DIOCollectionView Delegate
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, draggedItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) {
+        
+        switch(dragState) {
+        case .began:
+            partyCollectionView.visibleCells.forEach { $0.isUserInteractionEnabled = false }
+            shopCollectionView.visibleCells.forEach { $0.isUserInteractionEnabled = false }
+        default:
+            break
+        }
         
         if dioCollectionView == partyCollectionView {
             
