@@ -96,6 +96,7 @@ class HeroShopCell: UICollectionViewCell {
     @IBOutlet weak var attackLabel: UILabel!
     @IBOutlet weak var healthLabel: UILabel!
     @IBOutlet weak var costLabel: UILabel!
+    @IBOutlet weak var costStackView: UIStackView!
     
     @IBOutlet weak var heroImageView: UIImageView!
     

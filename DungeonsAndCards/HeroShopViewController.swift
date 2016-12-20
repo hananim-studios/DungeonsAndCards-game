@@ -323,6 +323,38 @@ extension HeroShopViewController: DIOCollectionViewDataSource, DIOCollectionView
         fatalError("collectionView not implemented")
     }
     
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, viewForItemAtIndexPath indexPath: IndexPath) -> UIView {
+        
+        if dioCollectionView == shopCollectionView {
+            
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroShopCell else {
+                fatalError("Unexpected behavior: no cell at index path")
+            }
+            
+            cell.costStackView.isHidden = true
+            guard let view = cell.snapshotView(afterScreenUpdates: true) else {
+                fatalError("Unexpected behavior: cannot snapshot view from cell")
+            }
+            cell.costStackView.isHidden = false
+            
+            view.frame.origin = dioCollectionView.convert(cell.frame.origin, to: dioCollectionView.superview)
+            
+            return view
+        }
+        
+        guard let cell = dioCollectionView.cellForItem(at: indexPath) else {
+            fatalError("Unexpected behavior: no cell at index path")
+        }
+        
+        guard let view = cell.snapshotView(afterScreenUpdates: false) else {
+            fatalError("Unexpected behavior: cannot snapshot view from cell")
+        }
+        
+        view.frame.origin = dioCollectionView.convert(cell.frame.origin, to: dioCollectionView.superview)
+        
+        return view
+    }
+    
     // DIOCollectionView Delegate
     func dioCollectionView(_ dioCollectionView: DIOCollectionView, draggedItemAtIndexPath indexPath: IndexPath, withDragState dragState: DIODragState) {
         
@@ -392,7 +424,6 @@ extension HeroShopViewController: DACCollectionViewDelegate {
     }
     
     func dacCollectionView(_ dacCollectionView: DACCollectionView, dragLeftWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {
-        
     }
     
     func dacCollectionView(_ dacCollectionView: DACCollectionView, dragEndedWithDragInfo dragInfo: DIODragInfo?, atIndexPath indexPath: IndexPath) {

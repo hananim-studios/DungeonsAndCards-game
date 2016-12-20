@@ -23,26 +23,59 @@ class DIODragInfo {
 }
 
 enum DIODragState {
+    
     // user long pressed inside cell
+    
     case began(location: CGPoint)
     
     // user entered a view
+    
     case entered(location: CGPoint)
     
     // user moved
+    
     case moved(location: CGPoint)
     
     // user lifted finger
+    
     case ended(location: CGPoint)
     
     // user left a view
+    
     case left(location: CGPoint)
     
     // system cancelled
+    
     case cancelled(location: CGPoint)
+    
+    // location unwrapping
+    
+    var location: CGPoint? {
+        
+        switch (self) {
+            
+        case let .began(location):
+            return location
+            
+        case let .entered(location):
+            return location
+            
+        case let .moved(location):
+            return location
+            
+        case let .ended(location):
+            return location
+            
+        case let .left(location):
+            return location
+            
+        case let .cancelled(location):
+            return location
+            
+        }
+        
+    }
 }
-
-
 
 protocol DIOCollectionViewDelegate: class {
     
@@ -134,11 +167,6 @@ class DIOCollectionView: UICollectionView {
             isValidIndexPath(indexPath: indexPath) else { return }
         guard let cell = self.cellForItem(at: indexPath) else { return }
         
-        // ask DataSource if should drag
-        if !dataSource.dioCollectionView(self, shouldDragItemAtIndexPath: indexPath) {
-            return
-        }
-        
         // get dragInfo from dataSource
         self.dragInfo = DIODragInfo(
             withUserData: self.dioDataSource?.dioCollectionView(self, userDataForItemAtIndexPath: indexPath),
@@ -146,7 +174,8 @@ class DIOCollectionView: UICollectionView {
         
         // make a fake view and add to superview, hide real cell
         self.dragView = dataSource.dioCollectionView(self, viewForItemAtIndexPath: indexPath)
-        self.dragView!.frame = self.convert(cell.frame, to: self.superview)
+        //self.dragView!.frame = self.convert(cell.frame, to: self.superview)
+        self.dragView!.frame = dataSource.dioCollectionView(self, frameForItemAtIndexPath: indexPath)
         self.dragView!.isUserInteractionEnabled = false // for hitTests
         self.superview!.addSubview(self.dragView!)
         
