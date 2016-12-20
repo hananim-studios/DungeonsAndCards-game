@@ -12,7 +12,7 @@
               },
               {
               "name": "pink",
-              "image": "red",
+              "image": "pink",
               "price": 10,
               "effects": {
               "addHealth": 10,
@@ -22,7 +22,7 @@
               },
               {
               "name": "violet",
-              "image": "red",
+              "image": "violet",
               "price": 10,
               "effects": {
               "addHealth": 5,
@@ -32,7 +32,7 @@
               },
               {
               "name": "blue",
-              "image": "red",
+              "image": "blue",
               "price": 5,
               "effects": {
               "addHealth": 0,
@@ -42,7 +42,7 @@
               },
               {
               "name": "cyan",
-              "image": "red",
+              "image": "cyan",
               "price": 10,
               "effects": {
               "addHealth": 0,
@@ -52,7 +52,7 @@
               },
               {
               "name": "Indigo",
-              "image": "red",
+              "image": "indigo",
               "price": 15,
               "effects": {
               "addHealth": 10,
@@ -62,7 +62,7 @@
               },
               {
               "name": "Milk",
-              "image": "red",
+              "image": "white",
               "price": 15,
               "effects": {
               "addHealth": 0,
@@ -72,7 +72,7 @@
               },
               {
               "name": "Black",
-              "image": "red",
+              "image": "black",
               "price": 20,
               "effects": {
               "addHealth": 0,
@@ -82,7 +82,7 @@
               },
               {
               "name": "Green",
-              "image": "red",
+              "image": "green",
               "price": 9,
               "effects": {
               "addHealth": 9,
@@ -92,7 +92,7 @@
               },
               {
               "name": "Orange",
-              "image": "red",
+              "image": "orange",
               "price": 4,
               "effects": {
               "addHealth": 4,

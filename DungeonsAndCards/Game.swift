@@ -25,7 +25,7 @@ class Game {
         }
     }
     
-    var level: Int = 0
+    var level: Int = 1
     
     var party   : Party
     var battle  : Battle

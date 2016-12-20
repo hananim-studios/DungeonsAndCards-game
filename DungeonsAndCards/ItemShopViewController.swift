@@ -30,6 +30,7 @@ class ItemShopViewController: GameViewController, UICollectionViewDataSource, UI
     @IBOutlet weak var menuButton: UIButton!
     @IBOutlet weak var nextButton: UIButton!
     @IBOutlet weak var goldButton: UIButton!
+    @IBOutlet weak var levelLabel: UILabel!
     
     override func viewWillDisappear(_ animated: Bool) {
         UserDefaults.standard.set("itemShop", forKey: "view")
@@ -45,6 +46,18 @@ class ItemShopViewController: GameViewController, UICollectionViewDataSource, UI
         self.partyCollectionView.layoutIfNeeded()
         self.shopCollectionView.reloadData()
         self.shopCollectionView.layoutIfNeeded()
+        
+        //level
+        switch(self.context.game.level) {
+        case 1: levelLabel.text = "\(self.context.game.level)st"
+        break;
+        case 2: levelLabel.text = "\(self.context.game.level)nd"
+        break;
+        case 3: levelLabel.text = "\(self.context.game.level)rd"
+        break;
+        default: levelLabel.text = "\(self.context.game.level)th"
+        break;
+        }
         
         // money
         let updateMoney = { (value: Int) -> Void in

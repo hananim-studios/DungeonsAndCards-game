@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1411D4B01E08A3C200167AE7 /* AftermathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411D4AF1E08A3C200167AE7 /* AftermathViewController.swift */; };
 		1417A89F1E01DFF500CFD10A /* Soundtrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417A89E1E01DFF500CFD10A /* Soundtrack.swift */; };
 		1417A8A11E020E8E00CFD10A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417A8A01E020E8E00CFD10A /* Track.swift */; };
 		1417A8AD1E0221A700CFD10A /* drums1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A31E0221A700CFD10A /* drums1.mp3 */; };
@@ -251,6 +252,7 @@
 
 /* Begin PBXFileReference section */
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
+		1411D4AF1E08A3C200167AE7 /* AftermathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AftermathViewController.swift; sourceTree = "<group>"; };
 		1417A89E1E01DFF500CFD10A /* Soundtrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soundtrack.swift; sourceTree = "<group>"; };
 		1417A8A01E020E8E00CFD10A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		1417A8A31E0221A700CFD10A /* drums1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drums1.mp3; sourceTree = "<group>"; };
@@ -743,6 +745,7 @@
 				C68475881DE85C130081DA95 /* HeroShopViewController.swift */,
 				C627A5C41DEDCB38002F6533 /* ItemShopViewController.swift */,
 				D13003651DFF3B0400E70F6D /* BattleViewController.swift */,
+				1411D4AF1E08A3C200167AE7 /* AftermathViewController.swift */,
 				C684756E1DE7301F0081DA95 /* CustomSegue.swift */,
 				C68063741DF04DEC003ACD19 /* SettingsViewController.swift */,
 				C68063721DF04DDE003ACD19 /* AboutViewController.swift */,
@@ -1369,6 +1372,7 @@
 				D1D12B351DF1A7D00045CE29 /* Item.swift in Sources */,
 				C68063771DF05B8A003ACD19 /* GoldOverlayViewController.swift in Sources */,
 				D12677E11DFCA5F500DA93F9 /* HeroShopContext.swift in Sources */,
+				1411D4B01E08A3C200167AE7 /* AftermathViewController.swift in Sources */,
 				D1D014E51DE5C4FB00E52C03 /* Party.swift in Sources */,
 				D14E4E181DDF493A002A0ED0 /* AppDelegate.swift in Sources */,
 				D1E74A281DEC5E1B0007F6AA /* DIOCollectionView.swift in Sources */,

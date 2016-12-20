@@ -122,6 +122,9 @@ class BattleContext: Context {
     var onFailBattle: (()->Void)?
     func failBattle() {
         
+        if game.level > 1 {
+            game.level -= 1
+        }
         battle.loadEnemies(forLevel: game.level)
         game.heroShop.loadHeroes(forLevel: game.level)
         
