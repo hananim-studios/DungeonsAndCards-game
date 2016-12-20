@@ -368,11 +368,44 @@ extension ItemShopViewController: DIOCollectionViewDataSource, DIOCollectionView
         
         if(dioCollectionView == partyCollectionView) {
             
-            return UIImageView(image: UIImage(named: context.party.slot(atIndex: indexPath.row).getItem().image))
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroItemCell else {
+                fatalError("Unexpected behavior: no cell at index path")
+            }
+            
+            return cell.itemImageView.snapshotView(afterScreenUpdates: false)!
         }
         
         if(dioCollectionView == shopCollectionView) {
-            return UIImageView(image: UIImage(named: context.shop.item(atIndex: indexPath.row).image))
+            
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? ItemCell else {
+                fatalError("Unexpected behavior: no cell at index path")
+            }
+            
+            return cell.imageView.snapshotView(afterScreenUpdates: false)!
+        }
+        
+        fatalError("collectionView not implemented")
+    }
+    
+    func dioCollectionView(_ dioCollectionView: DIOCollectionView, frameForItemAtIndexPath indexPath: IndexPath) -> CGRect {
+        
+        
+        if(dioCollectionView == partyCollectionView) {
+            
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? HeroItemCell else {
+                fatalError("Unexpected behavior: no cell at index path")
+            }
+            
+            return cell.convert(cell.itemImageView.frame, to: self.view)
+        }
+        
+        if(dioCollectionView == shopCollectionView) {
+            
+            guard let cell = dioCollectionView.cellForItem(at: indexPath) as? ItemCell else {
+                fatalError("Unexpected behavior: no cell at index path")
+            }
+            
+            return cell.convert(cell.imageView.frame, to: self.view)
         }
         
         fatalError("collectionView not implemented")
