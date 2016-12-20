@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1411D4B01E08A3C200167AE7 /* AftermathViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411D4AF1E08A3C200167AE7 /* AftermathViewController.swift */; };
+		1411D4B41E094DF900167AE7 /* AftermathContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1411D4B31E094DF900167AE7 /* AftermathContext.swift */; };
 		1417A89F1E01DFF500CFD10A /* Soundtrack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417A89E1E01DFF500CFD10A /* Soundtrack.swift */; };
 		1417A8A11E020E8E00CFD10A /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1417A8A01E020E8E00CFD10A /* Track.swift */; };
 		1417A8AD1E0221A700CFD10A /* drums1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1417A8A31E0221A700CFD10A /* drums1.mp3 */; };
@@ -253,6 +254,7 @@
 /* Begin PBXFileReference section */
 		09F77FB39E27C870F7DBE751 /* Pods-DungeonsAndCards.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DungeonsAndCards.release.xcconfig"; path = "Pods/Target Support Files/Pods-DungeonsAndCards/Pods-DungeonsAndCards.release.xcconfig"; sourceTree = "<group>"; };
 		1411D4AF1E08A3C200167AE7 /* AftermathViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AftermathViewController.swift; sourceTree = "<group>"; };
+		1411D4B31E094DF900167AE7 /* AftermathContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AftermathContext.swift; sourceTree = "<group>"; };
 		1417A89E1E01DFF500CFD10A /* Soundtrack.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Soundtrack.swift; sourceTree = "<group>"; };
 		1417A8A01E020E8E00CFD10A /* Track.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
 		1417A8A31E0221A700CFD10A /* drums1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = drums1.mp3; sourceTree = "<group>"; };
@@ -794,6 +796,7 @@
 				D12677E01DFCA5F500DA93F9 /* HeroShopContext.swift */,
 				D12677E71DFDCFA900DA93F9 /* ItemShopContext.swift */,
 				D12677EB1DFE4AB800DA93F9 /* BattleContext.swift */,
+				1411D4B31E094DF900167AE7 /* AftermathContext.swift */,
 			);
 			name = Context;
 			sourceTree = "<group>";
@@ -1366,6 +1369,7 @@
 				D12677E61DFCD93900DA93F9 /* GameObject.swift in Sources */,
 				D100495E1DEDA4FF004CCFAA /* UIView+Extensions.swift in Sources */,
 				D1D12B2D1DF1A7450045CE29 /* HeroShop.swift in Sources */,
+				1411D4B41E094DF900167AE7 /* AftermathContext.swift in Sources */,
 				D13003661DFF3B0400E70F6D /* BattleViewController.swift in Sources */,
 				C684756F1DE7301F0081DA95 /* CustomSegue.swift in Sources */,
 				D1D12B281DF0B0F80045CE29 /* DIOCollectionViewDataSource.swift in Sources */,

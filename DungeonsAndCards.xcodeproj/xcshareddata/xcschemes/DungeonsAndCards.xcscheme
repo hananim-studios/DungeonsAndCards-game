@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D14E4E131DDF493A002A0ED0"
-               BuildableName = "DungeonsAndCards.app"
+               BuildableName = "D&amp;C.app"
                BlueprintName = "DungeonsAndCards"
                ReferencedContainer = "container:DungeonsAndCards.xcodeproj">
             </BuildableReference>
@@ -53,7 +53,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D14E4E131DDF493A002A0ED0"
-            BuildableName = "DungeonsAndCards.app"
+            BuildableName = "D&amp;C.app"
             BlueprintName = "DungeonsAndCards"
             ReferencedContainer = "container:DungeonsAndCards.xcodeproj">
          </BuildableReference>
@@ -76,7 +76,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D14E4E131DDF493A002A0ED0"
-            BuildableName = "DungeonsAndCards.app"
+            BuildableName = "D&amp;C.app"
             BlueprintName = "DungeonsAndCards"
             ReferencedContainer = "container:DungeonsAndCards.xcodeproj">
          </BuildableReference>
@@ -95,7 +95,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D14E4E131DDF493A002A0ED0"
-            BuildableName = "DungeonsAndCards.app"
+            BuildableName = "D&amp;C.app"
             BlueprintName = "DungeonsAndCards"
             ReferencedContainer = "container:DungeonsAndCards.xcodeproj">
          </BuildableReference>

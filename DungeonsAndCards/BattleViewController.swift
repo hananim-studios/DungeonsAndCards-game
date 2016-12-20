@@ -165,20 +165,16 @@ class BattleViewController: GameViewController, UICollectionViewDataSource, UICo
         
         let finishBattle = {
             
-            let alert = UIAlertController(title: "Congratulations!", message: "You defeated all the enemies!", preferredStyle: .actionSheet)
+            //let alert = UIAlertController(title: "Congratulations!", message: "You defeated all the enemies!", preferredStyle: .actionSheet)
             
-            alert.addAction(UIAlertAction(title: "Next Level", style: .default) {
-                _ in
-                
-                let vc = self.storyboard!.instantiateViewController(withIdentifier: "heroShop") as! HeroShopViewController
-                vc.context = HeroShopContext(withGame: self.context.game)
-                
-                let nav = self.navigationController!
-                nav.popViewController(animated: false)
-                nav.pushViewController(vc, animated: false)
-            })
+            //alert.addAction(UIAlertAction(title: "Next Level", style: .default) {
+            //    _ in
             
-            self.present(alert, animated: true)
+            //})
+            
+            //self.present(alert, animated: true)
+
+            self.performSegue(withIdentifier: "aftermath", sender: nil)
             
         }
         
@@ -186,25 +182,20 @@ class BattleViewController: GameViewController, UICollectionViewDataSource, UICo
         
         let failBattle = {
             
-            let alert = UIAlertController(title: "Oh no!", message: "You heroes are dead!", preferredStyle: .actionSheet)
+            //let alert = UIAlertController(title: "Oh no!", message: "You heroes are dead!", preferredStyle: .actionSheet)
             
-            alert.addAction(UIAlertAction(title: "Try again", style: .default) {
-                _ in
-                
-                let vc = self.storyboard!.instantiateViewController(withIdentifier: "heroShop") as! HeroShopViewController
-                vc.context = HeroShopContext(withGame: self.context.game)
-                
-                let nav = self.navigationController!
-                nav.popViewController(animated: false)
-                nav.pushViewController(vc, animated: false)
-            })
+            //alert.addAction(UIAlertAction(title: "Try again", style: .default) {
+            //    _ in
+            self.performSegue(withIdentifier: "aftermath", sender: nil)
+            //})
             
-            self.present(alert, animated: true)
+            //self.present(alert, animated: true)
         
         }
         
         context.onFailBattle = failBattle
     }
+    
     override func viewDidAppear(_ animated: Bool) {
         
         partyCollectionView.scrollToItem(at: IndexPath.init(row:partyCollectionView.numberOfItems(inSection: 0)/2, section: 0), at: .centeredHorizontally, animated: false)
@@ -373,6 +364,18 @@ class BattleViewController: GameViewController, UICollectionViewDataSource, UICo
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "aftermath" {
+            let vc = segue.destination as! AftermathViewController
+            vc.context = AftermathContext(withGame: self.context.game)
+            vc.onDismiss = {
+                let vc = self.storyboard!.instantiateViewController(withIdentifier: "heroShop") as! HeroShopViewController
+                vc.context = HeroShopContext(withGame: self.context.game)
+                
+                let nav = self.navigationController!
+                nav.popViewController(animated: false)
+                nav.pushViewController(vc, animated: false)
+            }
+        }
         
     }
     

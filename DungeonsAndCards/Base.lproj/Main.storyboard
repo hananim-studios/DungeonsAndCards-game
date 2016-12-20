@@ -799,9 +799,6 @@ Battle</string>
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
-                                <connections>
-                                    <segue destination="Ddr-1B-f6I" kind="presentation" identifier="aftermath" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="EMF-TB-nhO"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="sO8-TX-PVq">
                                 <rect key="frame" x="256" y="23" width="58" height="30"/>
@@ -874,6 +871,7 @@ Battle</string>
                         <outlet property="goldButton" destination="sO8-TX-PVq" id="6wT-Fa-qXJ"/>
                         <outlet property="levelLabel" destination="9lt-wY-Adw" id="RAs-DF-E5q"/>
                         <outlet property="partyCollectionView" destination="JtI-OS-rg9" id="iGh-bT-vkZ"/>
+                        <segue destination="Ddr-1B-f6I" kind="presentation" identifier="aftermath" modalPresentationStyle="overCurrentContext" modalTransitionStyle="crossDissolve" id="b6O-Gg-2PX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9AX-3o-vOe" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -904,7 +902,7 @@ Battle</string>
                                 <rect key="frame" x="-4" y="20" width="328" height="360"/>
                             </imageView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="7lu-A0-znu">
-                                <rect key="frame" x="54" y="360" width="212.5" height="74"/>
+                                <rect key="frame" x="54.5" y="360" width="212.5" height="74"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="TopLeft" translatesAutoresizingMaskIntoConstraints="NO" id="QpT-8B-U59">
                                         <rect key="frame" x="0.0" y="0.0" width="212.5" height="33.5"/>
@@ -993,10 +991,9 @@ Battle</string>
                     </view>
                     <connections>
                         <outlet property="battleResultLabel" destination="tSV-xT-94c" id="c0i-bM-z40"/>
-                        <outlet property="dungeonLevelLabel" destination="QJg-Z7-Xpz" id="Gwe-ta-1dJ"/>
-                        <outlet property="levelLabel" destination="QJg-Z7-Xpz" id="0T3-d8-per"/>
-                        <outlet property="rewardLabel" destination="fzk-5R-HoW" id="mjj-wm-gBK"/>
-                        <outlet property="rewardWordLabel" destination="kGS-mb-NqF" id="rHT-sx-oqU"/>
+                        <outlet property="levelLabel" destination="QJg-Z7-Xpz" id="KUu-oV-6vQ"/>
+                        <outlet property="rewardLabel" destination="kGS-mb-NqF" id="dut-pB-BQf"/>
+                        <outlet property="rewardValueLabel" destination="fzk-5R-HoW" id="nVZ-Vc-LDi"/>
                         <outlet property="winnerImage" destination="Z7g-fj-eDw" id="n3k-zt-BPZ"/>
                     </connections>
                 </viewController>

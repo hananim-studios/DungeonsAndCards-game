@@ -21,7 +21,10 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="itemSlot" translatesAutoresizingMaskIntoConstraints="NO" id="4m2-qS-JvX" userLabel="Item Slot Image View">
-                        <rect key="frame" x="38.5" y="259" width="94" height="86"/>
+                        <rect key="frame" x="42.5" y="259" width="86" height="86"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="4m2-qS-JvX" secondAttribute="height" multiplier="1:1" id="ssM-b3-rB4"/>
+                        </constraints>
                     </imageView>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" preservesSuperviewLayoutMargins="YES" image="shiny_wizard" translatesAutoresizingMaskIntoConstraints="NO" id="9FI-Lh-1eT" userLabel="Card Image">
                         <rect key="frame" x="13" y="8.5" width="145" height="245.5"/>
@@ -72,8 +75,8 @@
                             </label>
                         </subviews>
                     </stackView>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9f-be-R4N">
-                        <rect key="frame" x="57" y="259" width="56" height="69"/>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I9f-be-R4N">
+                        <rect key="frame" x="59.5" y="259" width="51" height="64.5"/>
                     </imageView>
                 </subviews>
             </view>
@@ -85,7 +88,7 @@
                 <constraint firstItem="4m2-qS-JvX" firstAttribute="centerX" secondItem="Ua7-pp-GWY" secondAttribute="centerX" id="AnB-o1-CDo"/>
                 <constraint firstItem="9FI-Lh-1eT" firstAttribute="height" secondItem="Ua7-pp-GWY" secondAttribute="height" multiplier="0.7" id="B6Y-ny-Xkn"/>
                 <constraint firstItem="uGZ-vk-RA9" firstAttribute="width" secondItem="o5R-Og-Eng" secondAttribute="width" id="BX9-te-05w"/>
-                <constraint firstItem="I9f-be-R4N" firstAttribute="height" secondItem="4m2-qS-JvX" secondAttribute="height" multiplier="0.8" id="DbD-TC-djH"/>
+                <constraint firstItem="I9f-be-R4N" firstAttribute="height" secondItem="4m2-qS-JvX" secondAttribute="height" multiplier="0.75" id="DbD-TC-djH"/>
                 <constraint firstItem="d7Z-VK-3c8" firstAttribute="top" secondItem="9FI-Lh-1eT" secondAttribute="top" id="EeR-ce-Fy6"/>
                 <constraint firstItem="d7Z-VK-3c8" firstAttribute="width" secondItem="9FI-Lh-1eT" secondAttribute="width" multiplier="0.5" id="Ege-sn-AeR"/>
                 <constraint firstItem="ovL-IA-yST" firstAttribute="centerX" secondItem="d7Z-VK-3c8" secondAttribute="centerX" id="Lbp-gc-LlT"/>
@@ -96,7 +99,6 @@
                 <constraint firstItem="ovL-IA-yST" firstAttribute="centerY" secondItem="d7Z-VK-3c8" secondAttribute="centerY" id="X2r-K1-uli"/>
                 <constraint firstItem="4m2-qS-JvX" firstAttribute="top" secondItem="9FI-Lh-1eT" secondAttribute="bottom" constant="5" id="ZAy-T5-TQP"/>
                 <constraint firstItem="d7Z-VK-3c8" firstAttribute="centerX" secondItem="9FI-Lh-1eT" secondAttribute="centerX" id="ZdQ-It-Bih"/>
-                <constraint firstItem="4m2-qS-JvX" firstAttribute="width" secondItem="9FI-Lh-1eT" secondAttribute="width" multiplier="0.65" id="alS-a2-G9f"/>
                 <constraint firstItem="uGZ-vk-RA9" firstAttribute="centerY" secondItem="o5R-Og-Eng" secondAttribute="centerY" id="gm9-Fe-Kso"/>
                 <constraint firstItem="uGZ-vk-RA9" firstAttribute="centerX" secondItem="o5R-Og-Eng" secondAttribute="centerX" id="kVE-gL-G6k"/>
                 <constraint firstItem="ovL-IA-yST" firstAttribute="width" secondItem="d7Z-VK-3c8" secondAttribute="width" id="kl0-27-eRF"/>
