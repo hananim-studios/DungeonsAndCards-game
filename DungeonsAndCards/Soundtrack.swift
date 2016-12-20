@@ -50,7 +50,7 @@ class Soundtrack {
                     if fade {
                         DispatchQueue(label: "disable").async {
                             while (track.avAudioPlayer.volume > 0){
-                                track.avAudioPlayer.volume -= 0.01
+                                track.avAudioPlayer.volume -= 0.0001
                             }
                         }
                     } else {
